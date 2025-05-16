@@ -1,0 +1,16 @@
+# Remote data source configuration
+remote:
+  bookdata: "https://mcauleylab.ucsd.edu/public_datasets/gdrive/goodreads/goodreads_books.json.gz"
+
+# Local file paths
+paths:
+  data_dir: "data"
+  compressed_data: "data/goodreads_books.json.gz"
+  raw_data: "data/goodreads_books.json"
+  filtered_data: "data/scifi_fantasy.json"
+
+# Filter configuration
+filter:
+  genres: ["fantasy", "scifi", "science fiction"] 
+  ratings_threshold: 1000
+  tag_threshold: 0.05

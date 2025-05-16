@@ -6,21 +6,22 @@ At the moment this repo manages the python environment using [pixi](pixi.sh).
 
 The data download and extraction proccess uses
 
-- `curl` to download
 - `gzip/gunzip` to extract the json file
-- `jq` to prefilter the json file to somethinmg more manageable
-- [`just`](just.systems) as a task runner
 - `nbdime` for merge notebook changes
+
+The workflow for data extraction is contained in the `Snakefile`.
+To populate date into the data directory run
+
+```sh
+pixi run snakemake --cores 1
+```
 
 ## Data Sources
 
 Data were collected from the following sources:
 
 - Goodreads book data circa 2017: <https://cseweb.ucsd.edu/~jmcauley/datasets/goodreads.html>
-- Nebula award winners: <https://nebulas.sfwa.org/awards-by-year/>
-- Hugo award winners: <https://www.thehugoawards.org/hugo-history/>
-- World Fantasy award winners: <https://worldfantasy.org/awards/winners/>
-- A larger list of major scifi/fantasy awards is available here: <http://www.sfadb.com/Awards_Directory>
+- Scifi/fantasy awards were scraped from the all nominees pages at <http://www.sfadb.com/Awards_Directory> using `scrapy`
 
 ## Project Brainstorming
 
