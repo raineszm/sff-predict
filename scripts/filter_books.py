@@ -3,14 +3,7 @@ from isal import igzip
 import json
 import tqdm
 
-from itertools import takewhile, repeat
-
-
-def rawbigcount(filename):
-    f = open(filename, "rb")
-    bufgen = takewhile(lambda x: x, (f.raw.read(1024 * 1024) for _ in repeat(None)))
-    return sum(buf.count(b"\n") for buf in bufgen if buf)
-
+from helpers.files import rawbigcount
 
 SCIFI_FANTASY_SHELVES = snakemake.config["filter"]["genres"]
 RATINGS_THRESHOLD = snakemake.config["filter"]["ratings_threshold"]
@@ -30,9 +23,10 @@ def is_scifi_fantasy(book):
 
 
 total_lines = rawbigcount(snakemake.input[0])
-with igzip.open(snakemake.input[0], "r") as f:
-    with open(snakemake.output[0], "w") as out:
-        for line in tqdm.tqdm(f, total=total_lines):
-            book = json.loads(line)
-            if is_scifi_fantasy(book):
-                out.write(json.dumps(book) + "\n")
+with igzip.open(snakemake.input[0], "r") as f, open(snakemake.output[0], "w") as out:
+    for line in tqdm.tqdm(
+        f, total=total_lines, desc="Filtering books", unit_scale=True
+    ):
+        book = json.loads(line)
+        if is_scifi_fantasy(book):
+            out.write(json.dumps(book) + "\n")

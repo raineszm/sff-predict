@@ -32,3 +32,12 @@ rule filter_scifi_fantasy:
         "Filtering for top scifi/fantasy books"
     script:
         "scripts/filter_books.py" 
+
+rule filter_reviews:
+    input:
+        config["paths"]["raw_review_data"],
+        books=config["paths"]["filtered_book_data"]
+    output:
+        config["paths"]["filtered_review_data"]
+    script:
+        "scripts/filter_reviews.py"
