@@ -7,8 +7,8 @@ remote:
 paths:
   raw_book_data: "data/raw/goodreads_books.json.gz"
   raw_review_data: "data/raw/goodreads_reviews_dedup.json.gz"
-  filtered_book_data: "data/scifi_fantasy.json"
-  filtered_review_data: "data/scifi_fantasy_reviews.json"
+  filtered_book_data: "data/scifi_fantasy.json.gz"
+  filtered_review_data: "data/scifi_fantasy_reviews.json.gz"
 
 # Filter configuration
 filter:

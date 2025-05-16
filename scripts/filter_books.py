@@ -23,10 +23,13 @@ def is_scifi_fantasy(book):
 
 
 total_lines = rawbigcount(snakemake.input[0])
-with igzip.open(snakemake.input[0], "r") as f, open(snakemake.output[0], "w") as out:
+with (
+    igzip.open(snakemake.input[0], "r") as f,
+    igzip.open(snakemake.output[0], "w") as out,
+):
     for line in tqdm.tqdm(
         f, total=total_lines, desc="Filtering books", unit_scale=True
     ):
         book = json.loads(line)
         if is_scifi_fantasy(book):
-            out.write(json.dumps(book) + "\n")
+            out.write(line)
