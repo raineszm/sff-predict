@@ -4,17 +4,16 @@
 
 At the moment this repo manages the python environment using [pixi](pixi.sh).
 
-The data download and extraction proccess uses
-
-- `gzip/gunzip` to extract the json file
-- `nbdime` for merge notebook changes
-
 The workflow for data extraction is contained in the `Snakefile`.
 To populate date into the data directory run
 
 ```sh
 pixi run snakemake --cores 1
 ```
+
+Supply more cores to the argument if you'd like.
+
+This will download the gzipped data and filter it according to the settings in `config.yaml`.
 
 ## Data Sources
 

@@ -26,3 +26,4 @@ snakemake = { version = ">=9,<10", channel = "bioconda" }
 python-lsp-server = ">=1.12.2,<2"
 snakemake-storage-plugin-http = ">=0.3.0,<0.4"
 tqdm = ">=4.67.1,<5"
+python-isal = ">=1.7.2,<2"

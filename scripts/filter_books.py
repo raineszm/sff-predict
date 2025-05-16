@@ -1,4 +1,5 @@
 from snakemake.script import snakemake
+from isal import igzip
 import json
 import tqdm
 
@@ -29,7 +30,7 @@ def is_scifi_fantasy(book):
 
 
 total_lines = rawbigcount(snakemake.input[0])
-with open(snakemake.input[0], "r") as f:
+with igzip.open(snakemake.input[0], "r") as f:
     with open(snakemake.output[0], "w") as out:
         for line in tqdm.tqdm(f, total=total_lines):
             book = json.loads(line)
