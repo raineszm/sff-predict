@@ -11,7 +11,8 @@ rule all:
 rule download_data:
     input:
         config["paths"]["raw_book_data"],
-        config["paths"]["raw_review_data"]
+        config["paths"]["raw_review_data"],
+        config["paths"]["raw_author_data"]
 
 rule download_raw_goodreads_data:
     output:
