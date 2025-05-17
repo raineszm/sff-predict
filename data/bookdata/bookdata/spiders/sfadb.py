@@ -36,11 +36,14 @@ def is_novel_category(award, title_mid):
     return (award not in MULTI_CATEGORY_AWARDS) or NOVEL_RE.search(title_mid)
 
 
-def get_title_and_result(title_mid):
+def get_title_and_result(award, title_mid):
     components = [c.strip() for c in remove_tags(title_mid).split("\x97")]
     if len(components) < 2:
         return False, None, None
-    return True, components[0], components[1]
+    if award in MULTI_CATEGORY_AWARDS:
+        return True, components[0], components[2]
+    else:
+        return True, components[0], components[1]
 
 
 class SfadbSpider(scrapy.Spider):
@@ -60,7 +63,7 @@ class SfadbSpider(scrapy.Spider):
                 if not is_novel_category(award, title_mid):
                     continue
 
-                is_valid, title, result = get_title_and_result(title_mid)
+                is_valid, title, result = get_title_and_result(award, title_mid)
 
                 if not is_valid:
                     continue
