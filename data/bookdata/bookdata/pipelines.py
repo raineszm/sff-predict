@@ -10,4 +10,8 @@ from itemadapter import ItemAdapter
 
 class BookdataPipeline:
     def process_item(self, item, spider):
+        adapter = ItemAdapter(item)
+        nominee = adapter.get("nominee")
+        last, first = nominee.split(",")
+        adapter["nominee"] = f"{first.strip()} {last.strip()}"
         return item

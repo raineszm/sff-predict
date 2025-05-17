@@ -11,6 +11,7 @@ paths:
   raw_awards_data: "data/raw/awards.json"
   filtered_book_data: "data/scifi_fantasy.json.gz"
   filtered_review_data: "data/scifi_fantasy_reviews.json.gz"
+  cleaned_awards_data: "data/awards.json"
 
 # Filter configuration
 filter:
