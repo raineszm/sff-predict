@@ -6,7 +6,9 @@
 import scrapy
 
 
-class BookdataItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class BookDataItem(scrapy.Item):
+    title = scrapy.Field()  # Book title
+    year = scrapy.Field()  # Year of the award
+    result = scrapy.Field()  # Award result (winner, finalist, etc.)
+    award = scrapy.Field()  # Name of the award
+    nominee = scrapy.Field()  # Author(s) nominated for the award

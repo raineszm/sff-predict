@@ -1,6 +1,7 @@
 import scrapy
 import re
-import w3lib.html
+from w3lib.html import remove_tags
+from bookdata.items import BookDataItem
 
 NOVEL_RE = re.compile(r"\x97\s*\bnovel\b\s*\x97", re.IGNORECASE)
 
@@ -31,6 +32,17 @@ def get_award_from_url(url):
     return url.split("/")[-1].replace("_All_Nominees", "").replace("_", " ").title()
 
 
+def is_novel_category(award, title_mid):
+    return (award not in MULTI_CATEGORY_AWARDS) or NOVEL_RE.search(title_mid)
+
+
+def get_title_and_result(title_mid):
+    components = [c.strip() for c in remove_tags(title_mid).split("\x97")]
+    if len(components) < 2:
+        return False, None, None
+    return True, components[0], components[1]
+
+
 class SfadbSpider(scrapy.Spider):
     name = "sfadb"
     allowed_domains = ["sfadb.com"]
@@ -40,30 +52,23 @@ class SfadbSpider(scrapy.Spider):
         award = get_award_from_url(response.url)
 
         for nomineeblock in response.css(".nomineeblock"):
-            for year, nominee, title_mid in zip(
+            nominee = nomineeblock.css(".nominee a::text").getall()
+            for year, title_mid in zip(
                 nomineeblock.css(".dateleftindent a::text").getall(),
-                nomineeblock.css(".nominee::text").getall(),
                 nomineeblock.css(".titlemid").getall(),
             ):
-                if award in MULTI_CATEGORY_AWARDS and not NOVEL_RE.search(title_mid):
+                if not is_novel_category(award, title_mid):
                     continue
 
-                components = [
-                    c.strip() for c in w3lib.html.remove_tags(title_mid).split("\x97")
-                ]
+                is_valid, title, result = get_title_and_result(title_mid)
 
-                # skip year with no award
-                if len(components) < 2:
+                if not is_valid:
                     continue
 
-                if award in MULTI_CATEGORY_AWARDS:
-                    title, _, result = components
-                else:
-                    title, result = components
-
-                yield {
-                    "title": title,
-                    "year": year,
-                    "result": result,
-                    "award": award,
-                }
+                yield BookDataItem(
+                    title=title,
+                    year=year,
+                    result=result,
+                    award=award,
+                    nominee=" ".join(nominee).strip(),
+                )
