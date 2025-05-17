@@ -12,7 +12,8 @@ TAG_THRESHOLD = RATINGS_THRESHOLD * snakemake.config["filter"]["tag_threshold"]
 
 def shelf_matches(shelf):
     return (
-        shelf["name"] in SCIFI_FANTASY_SHELVES and int(shelf["count"]) >= TAG_THRESHOLD
+        any(tag in shelf["name"] for tag in SCIFI_FANTASY_SHELVES)
+        and int(shelf["count"]) >= TAG_THRESHOLD
     )
 
 
