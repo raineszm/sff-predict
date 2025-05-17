@@ -8,6 +8,7 @@ paths:
   raw_book_data: "data/raw/goodreads_books.json.gz"
   raw_review_data: "data/raw/goodreads_reviews_dedup.json.gz"
   raw_author_data: "data/raw/goodreads_book_authors.json.gz"
+  raw_awards_data: "data/raw/awards.json"
   filtered_book_data: "data/scifi_fantasy.json.gz"
   filtered_review_data: "data/scifi_fantasy_reviews.json.gz"
 

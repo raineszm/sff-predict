@@ -14,6 +14,14 @@ rule download_data:
         config["paths"]["raw_review_data"],
         config["paths"]["raw_author_data"]
 
+rule scrape_raw_awards_data:
+    output:
+        awards=config["paths"]["raw_awards_data"]
+    params:
+        rel_path=lambda _, _, output: os.path.relpath(output.awards, "data/bookdata")
+    shell:
+        "cd data/bookdata && pixi run scrapy crawl sfadb -o {params.rel_path}"
+
 rule download_raw_goodreads_data:
     output:
         "data/raw/{data_name}"
