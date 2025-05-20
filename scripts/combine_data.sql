@@ -125,7 +125,7 @@ COPY (
 -- of the work
 CREATE TABLE combined_works AS
 SELECT
-    *
+    * EXCEPT (books.work_id)
 FROM
     tagged_works
 INNER JOIN books ON tagged_works.best_book_id = books.book_id;
