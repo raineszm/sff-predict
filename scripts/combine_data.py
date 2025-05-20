@@ -10,7 +10,7 @@ raw_works = (
     pl.scan_ndjson(snakemake.input["works"])
     .filter(
         pl.col("ratings_count").cast(int) >= RATINGS_THRESHOLD,
-        pl.col("original_publication_year").cast(int, strict=False) >= 1959,
+        # pl.col("original_publication_year").cast(int, strict=False) >= 1959,
     )
     .collect(engine="streaming")
 )
@@ -18,7 +18,7 @@ raw_works = (
 books = pl.scan_ndjson(snakemake.input["books"], infer_schema_length=1000).filter(
     pl.col("language_code").str.starts_with("en"),
     pl.col("work_id").is_in(raw_works["work_id"].to_list()),
-    pl.col("publication_year").cast(int, strict=False) >= 1959,
+    # pl.col("publication_year").cast(int, strict=False) >= 1959,
 )
 
 print("Collecting tags for selected works")
