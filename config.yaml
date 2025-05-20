@@ -1,17 +1,21 @@
 # Remote data source configuration
 remote:
-  goodreads_data: "https://mcauleylab.ucsd.edu/public_datasets/gdrive/goodreads"
-  bookdata: "https://mcauleylab.ucsd.edu/public_datasets/gdrive/goodreads/goodreads_books.json.gz"
-  reviewdata: "https://mcauleylab.ucsd.edu/public_datasets/gdrive/goodreads/goodreads_reviews_deduped.json.gz"
+  goodreads_data_root: "https://mcauleylab.ucsd.edu/public_datasets/gdrive/goodreads"
+
+
 # Local file paths
 paths:
-  raw_book_data: "data/raw/goodreads_books.json.gz"
-  raw_works_data: "data/raw/goodreads_book_works.json.gz"
-  raw_author_data: "data/raw/goodreads_book_authors.json.gz"
-  raw_awards_data: "data/raw/awards.json"
-  selected_works_data: "data/sff_works.parquet"
-  augmented_works_data: "data/sff_works_augmented.parquet"
-  cleaned_awards_data: "data/awards.json"
+  basenames:
+    book_data: "goodreads_books.json.gz"
+    author_data: "goodreads_book_authors.json.gz"
+    works_data: "goodreads_book_works.json.gz"
+    awards_data: "awards.json"
+    selected_works_data: "sff_works.parquet"
+    augmented_works_data: "sff_works_augmented.parquet"
+    cleaned_awards_data: "awards.json"
+  roots:
+    data: "data"
+    raw_data: "data/raw"
 
 # Filter configuration
 filter:
