@@ -6,20 +6,20 @@ configfile: "config.yaml"
 
 rule all:
     input:
-        config["paths"]["filtered_book_data"]
+        config["paths"]["combined_works_data"]
 
 rule clean_all:
     input:
-        config["paths"]["filtered_book_data"],
-        config["paths"]["filtered_review_data"],
+        config["paths"]["filtered_works_data"],
+        config["paths"]["combined_works_data"],
         config["paths"]["cleaned_awards_data"]
 
 rule download_data:
     input:
         config["paths"]["raw_book_data"],
-        config["paths"]["raw_review_data"],
         config["paths"]["raw_author_data"],
-        config["paths"]["raw_awards_data"]
+        config["paths"]["raw_awards_data"],
+        config["paths"]["raw_works_data"]
 
 rule scrape_raw_awards_data:
     output:
@@ -47,21 +47,14 @@ rule download_raw_goodreads_data:
     script:
         "scripts/download_data.py"
 
-rule filter_scifi_fantasy:
+rule combine_data:
     input:
-        config["paths"]["raw_book_data"]
+        books=config["paths"]["raw_book_data"],
+        works=config["paths"]["raw_works_data"]
     output:
-        config["paths"]["filtered_book_data"]
+        filtered_works=config["paths"]["filtered_works_data"],
+        combined_works=config["paths"]["combined_works_data"]
     message:
         "Filtering for top scifi/fantasy books"
     script:
-        "scripts/filter_books.py" 
-
-rule filter_reviews:
-    input:
-        config["paths"]["raw_review_data"],
-        books=config["paths"]["filtered_book_data"]
-    output:
-        config["paths"]["filtered_review_data"]
-    script:
-        "scripts/filter_reviews.py"
+        "scripts/combine_data.py"
