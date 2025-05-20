@@ -15,6 +15,5 @@ paths:
 
 # Filter configuration
 filter:
-  genres: ["fantasy", "scifi", "science fiction"] 
   ratings_threshold: 1000
   tag_threshold: 0.05
