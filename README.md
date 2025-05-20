@@ -22,6 +22,14 @@ Data were collected from the following sources:
 - Goodreads book data circa 2017: <https://cseweb.ucsd.edu/~jmcauley/datasets/goodreads.html>
 - Scifi/fantasy awards were scraped from the all nominees pages at <http://www.sfadb.com/Awards_Directory> using `scrapy`
 
+## Data processing
+
+The data is filtered and reformatted to allow easier analysis usings the Snakemake workflow.
+This uses `duckdb` in the background to filter and combine the raw data tables.
+After this process is complete
+- **data/sff_works.parquet** contains all identified scifi and fantasy works on the dataset
+- **data/sff_works_augmented.parquet** contains the same works but augmented with data from a representative edition of the work
+
 ## Project Brainstorming
 
 The basic idea is to try break data into years and train a ranking model on each year independently.

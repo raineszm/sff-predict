@@ -9,8 +9,8 @@ paths:
   raw_works_data: "data/raw/goodreads_book_works.json.gz"
   raw_author_data: "data/raw/goodreads_book_authors.json.gz"
   raw_awards_data: "data/raw/awards.json"
-  filtered_works_data: "data/works.parquet"
-  combined_works_data: "data/scifi_fantasy.parquet"
+  selected_works_data: "data/sff_works.parquet"
+  augmented_works_data: "data/sff_works_augmented.parquet"
   cleaned_awards_data: "data/awards.json"
 
 # Filter configuration

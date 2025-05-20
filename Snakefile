@@ -6,12 +6,12 @@ configfile: "config.yaml"
 
 rule all:
     input:
-        config["paths"]["combined_works_data"]
+        config["paths"]["augmented_works_data"]
 
 rule clean_all:
     input:
-        config["paths"]["filtered_works_data"],
-        config["paths"]["combined_works_data"],
+        config["paths"]["selected_works_data"],
+        config["paths"]["augmented_works_data"],
         config["paths"]["cleaned_awards_data"]
 
 rule download_data:
@@ -52,9 +52,24 @@ rule combine_data:
         books=config["paths"]["raw_book_data"],
         works=config["paths"]["raw_works_data"]
     output:
-        filtered_works=config["paths"]["filtered_works_data"],
-        combined_works=config["paths"]["combined_works_data"]
+        selected_works=config["paths"]["selected_works_data"],
+        augmented_works=config["paths"]["augmented_works_data"]
     message:
-        "Filtering for top scifi/fantasy books"
-    script:
-        "scripts/combine_data.py"
+        "Filtering and combining input datasets"
+    params:
+        # Minimum number of ratings for a work to be included
+        ratings_threshold=config["filter"]["ratings_threshold"],
+        # Minimum number of times a work must be tagged as scifi/fantasy
+        # to be included
+        tag_threshold=config["filter"]["tag_threshold"]
+    shell:
+        """
+        export RATINGS_THRESHOLD={params.ratings_threshold}
+        export TAG_THRESHOLD="{params.tag_threshold}"
+        export INPUT_WORKS="{input.works}"
+        export INPUT_BOOKS="{input.books}"
+        export OUTPUT_SELECTED_WORKS="{output.selected_works}"
+        export OUTPUT_AUGMENTED_WORKS="{output.augmented_works}"
+
+        envsubst < scripts/combine_data.sql | duckdb
+        """
