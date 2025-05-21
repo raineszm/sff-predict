@@ -35,6 +35,7 @@ duckdb = ">=1.2.2,<2"
 hishel = ">=0.1.2,<0.2"
 wikipedia-api = ">=0.8.1,<0.9"
 requests-cache = ">=1.2.1,<2"
+google-api-python-client = ">=2.170.0,<3"
 
 [pypi-dependencies]
 httpx-retries = ">=0.4.0, <0.5"
