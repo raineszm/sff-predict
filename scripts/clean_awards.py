@@ -16,7 +16,7 @@ df["title"] = df.title.map(html.unescape)
 # \u201c...\u201d (expanded as ...)
 # we use the book title
 df["title"] = df.title.str.replace(
-    r"\u201c.*\u201d\s*\((?:expanded as|book title)\s+(.*)\)", r"\1", regex=True
+    r"\u201c.*\u201d\s*\((?:expanded as|book title)\s+([^)]*)\)", r"\1", regex=True
 ).str.rstrip()
 
 # and remove the quotes
@@ -27,7 +27,16 @@ df["title"] = df.title.str.replace(r"\u201c(.*)\u201d", r"\1", regex=True).str.r
 # (by [author])
 # or (series title ...)
 # we remove these to normalize the titles
-df["title"] = df.title.str.strip().str.replace(r"(\([^)]+\)\s*)+$", "", regex=True)
+df["title"] = df.title.str.replace(r"(\([^)]+\)\s*)+\s*$", "", regex=True)
+
+# Replace hyphens with spaces
+df["title"] = df.title.str.replace(r"\b-\b", " ", regex=True)
+
+# Collapse multiple hyphens into a single hyphen
+df["title"] = df.title.str.replace(r"-+", "-", regex=True)
+
+# and strip whitespace for good measure
+df["title"] = df.title.str.strip()
 
 
 # collapse books with multiple authors
