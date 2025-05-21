@@ -19,5 +19,5 @@ paths:
 
 # Filter configuration
 filter:
-  ratings_threshold: 1000
-  tag_threshold: 0.05
+  ratings_threshold: 100
+  tag_threshold: 2

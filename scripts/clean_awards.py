@@ -1,12 +1,13 @@
 from snakemake.script import snakemake
 import pandas as pd
+import html
 
+# Let's clean the awards data
+# so we can match it with the books data
 df = pd.read_json(snakemake.input[0])
 
-# some titles include (by [author])
-# but the author isn't always written the same
-# we remove this since it's redundant with the nominee field anyway
-df["title"] = df.title.str.replace(r"\(by [^)]+\)", "", regex=True)
+# decode HTML entities
+df["title"] = df.title.map(html.unescape)
 
 # some titles were originally written as a short story
 # and then later a book
@@ -15,8 +16,18 @@ df["title"] = df.title.str.replace(r"\(by [^)]+\)", "", regex=True)
 # \u201c...\u201d (expanded as ...)
 # we use the book title
 df["title"] = df.title.str.replace(
-    r"\u201c(.*)\u201d.*", r"\1", regex=True
+    r"\u201c.*\u201d\s*\((?:expanded as|book title)\s+(.*)\)", r"\1", regex=True
 ).str.rstrip()
+
+# and remove the quotes
+df["title"] = df.title.str.replace(r"\u201c(.*)\u201d", r"\1", regex=True).str.rstrip()
+
+# some titles include trailing parentheticals
+# e.g.
+# (by [author])
+# or (series title ...)
+# we remove these to normalize the titles
+df["title"] = df.title.str.strip().str.replace(r"(\([^)]+\)\s*)+$", "", regex=True)
 
 
 # collapse books with multiple authors

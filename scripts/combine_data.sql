@@ -21,7 +21,8 @@ SELECT -- explicitly choose the columns we want to read
 FROM
     '${INPUT_WORKS}'
 WHERE
-    TRY_CAST(ratings_count as BIGINT) >= ${RATINGS_THRESHOLD}; -- only include works with at least ${RATINGS_THRESHOLD} ratings
+    TRY_CAST(ratings_count as BIGINT) >= ${RATINGS_THRESHOLD}
+    or TRY_CAST(reviews_count as BIGINT) >= ${RATINGS_THRESHOLD}; -- only include works with at least ${RATINGS_THRESHOLD} ratings
 
 -- Load the books that are part of the works we have kept
 CREATE TABLE books AS
@@ -60,7 +61,8 @@ FROM
     '${INPUT_BOOKS}'
 SEMI JOIN works USING (work_id) -- only include books that are part of a work we have kept
 WHERE
-    language_code LIKE 'en%' -- only include English books
+    (language_code ILIKE 'en%' -- only include English books
+    OR language_code = '') -- or no language code
     AND work_id != '' -- Drop entries with no work ID since we don't know what work they belong to
 ;
 
@@ -86,7 +88,7 @@ GROUP BY
 HAVING
     SUM(tags.count) FILTER ( -- filter for works with at least ${TAG_THRESHOLD} tags
         WHERE
-            tags.name ~ '(?i)fantasy|sci(ence)?-fi'
+            tags.name ~ '(?i).*(?:fantasy|sci(ence)?-fi).*'
     ) >= ${TAG_THRESHOLD};
 -- and finally, see the SELECT clause above where we collapse the multiple rows,
 -- back down to one row, with a list of tags

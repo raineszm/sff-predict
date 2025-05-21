@@ -5,23 +5,19 @@ from bookdata.items import BookDataItem
 
 NOVEL_RE = re.compile(r"\x97\s*\bnovel\b\s*\x97", re.IGNORECASE)
 
-AWARDS = [
-    "Hugo Awards",
-    "Nebula Awards",
-    "World Fantasy Awards",
-    "John W Campbell Memorial Award",
-    "Dragon Awards",
-    "International Fantasy Awards",
-    "Philip K Dick Award",
-]
-
-MULTI_CATEGORY_AWARDS = [
-    "Hugo Awards",
-    "Nebula Awards",
-    "World Fantasy Awards",
-    "International Fantasy Awards",
-    "Dragon Awards",
-]
+AWARDS = {
+    "Hugo Awards": {"is_multi_category": True, "short_name": "Hugo"},
+    "Nebula Awards": {"is_multi_category": True, "short_name": "Nebula"},
+    "World Fantasy Awards": {"is_multi_category": True, "short_name": "WFA"},
+    "John W Campbell Memorial Award": {
+        "is_multi_category": False,
+        "short_name": "Campbell",
+    },
+    "Dragon Awards": {"is_multi_category": True, "short_name": "Dragon"},
+    "International Fantasy Awards": {"is_multi_category": True, "short_name": "IFA"},
+    "Philip K Dick Award": {"is_multi_category": False, "short_name": "PKD"},
+    "Locus Awards": {"is_multi_category": True, "short_name": "Locus"},
+}
 
 
 def get_url_from_award(award):
@@ -33,14 +29,14 @@ def get_award_from_url(url):
 
 
 def is_novel_category(award, title_mid):
-    return (award not in MULTI_CATEGORY_AWARDS) or NOVEL_RE.search(title_mid)
+    return (not AWARDS[award]["is_multi_category"]) or NOVEL_RE.search(title_mid)
 
 
 def get_title_and_result(award, title_mid):
     components = [c.strip() for c in remove_tags(title_mid).split("\x97")]
     if len(components) < 2:
         return False, None, None
-    if award in MULTI_CATEGORY_AWARDS:
+    if AWARDS[award]["is_multi_category"]:
         return True, components[0], components[2]
     else:
         return True, components[0], components[1]
@@ -72,6 +68,6 @@ class SfadbSpider(scrapy.Spider):
                     title=title,
                     year=year,
                     result=result,
-                    award=award,
+                    award=AWARDS[award]["short_name"],
                     nominee=" ".join(nominee).strip(),
                 )
