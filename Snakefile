@@ -66,7 +66,8 @@ rule download_raw_goodreads_data:
 rule combine_data:
     input:
         books=raw_data_path("book_data"),
-        works=raw_data_path("works_data")
+        works=raw_data_path("works_data"),
+        authors=raw_data_path("author_data")
     output:
         selected_works=local_data_path("selected_works_data"),
         augmented_works=local_data_path("augmented_works_data")
@@ -84,6 +85,7 @@ rule combine_data:
         export TAG_THRESHOLD="{params.tag_threshold}"
         export INPUT_WORKS="{input.works}"
         export INPUT_BOOKS="{input.books}"
+        export INPUT_AUTHORS="{input.authors}"
         export OUTPUT_SELECTED_WORKS="{output.selected_works}"
         export OUTPUT_AUGMENTED_WORKS="{output.augmented_works}"
 

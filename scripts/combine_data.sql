@@ -1,6 +1,7 @@
 -- Load the works with at least ${RATINGS_THRESHOLD} ratings
 CREATE TABLE works AS
-SELECT
+SELECT -- explicitly choose the columns we want to read
+    -- and cast them to the correct types
     CAST(work_id as BIGINT) as work_id,
     CAST(best_book_id as BIGINT) as best_book_id,
     -- TRY_CAST(books_count as BIGINT) as books_count,
@@ -18,15 +19,14 @@ SELECT
     -- media_type,
     -- rating_dist,
 FROM
-    read_ndjson_auto('${INPUT_WORKS}', convert_strings_to_integers = true)
+    '${INPUT_WORKS}'
 WHERE
-    ratings_count >= ${RATINGS_THRESHOLD};
+    TRY_CAST(ratings_count as BIGINT) >= ${RATINGS_THRESHOLD}; -- only include works with at least ${RATINGS_THRESHOLD} ratings
 
-ALTER TABLE works
-ADD PRIMARY KEY (work_id);
-
+-- Load the books that are part of the works we have kept
 CREATE TABLE books AS
-SELECT
+SELECT -- explicitly choose the columns we want to read
+    -- and cast them to the correct types
     CAST(work_id as BIGINT) as work_id,
     CAST(book_id as BIGINT) as book_id,
     isbn,
@@ -35,9 +35,9 @@ SELECT
     -- kindle_asin,
     title,
     title_without_series,
-    TRY_CAST(text_reviews_count as BIGINT) as text_reviews_count,
-    TRY_CAST(ratings_count as BIGINT) as ratings_count,
-    TRY_CAST(average_rating as DOUBLE) as average_rating,
+    -- TRY_CAST(text_reviews_count as BIGINT) as text_reviews_count,
+    -- TRY_CAST(ratings_count as BIGINT) as ratings_count,
+    -- TRY_CAST(average_rating as DOUBLE) as average_rating,
     TRY_CAST(num_pages as BIGINT) as num_pages,
     -- format,
     publisher,
@@ -49,38 +49,32 @@ SELECT
     country_code,
     CAST(is_ebook as BOOLEAN) as is_ebook,
     description,
-    url,
+    -- url,
     -- link,
     -- image_url,
     series,
     CAST(popular_shelves as STRUCT(count BIGINT, name VARCHAR)[]) as popular_shelves,
-    CAST(authors as STRUCT(author_id BIGINT, role VARCHAR)[]) as authors,
-    CAST(similar_books as BIGINT[]) as similar_books,
+    list_transform(authors, s -> s.author_id) as author_ids,
+    -- CAST(similar_books as BIGINT[]) as similar_books,
 FROM
     '${INPUT_BOOKS}'
+SEMI JOIN works USING (work_id) -- only include books that are part of a work we have kept
 WHERE
-    language_code LIKE 'en%'
+    language_code LIKE 'en%' -- only include English books
     AND work_id != '' -- Drop entries with no work ID since we don't know what work they belong to
-    AND CAST(work_id as BIGINT) IN (
-        SELECT
-            work_id
-        FROM
-            works
-    );
+;
 
-
-ALTER TABLE books
-ADD PRIMARY KEY (book_id);
-
--- Create a table of all tags for each work
--- and filter for only those which are tagged as scifi/fantasy
+-- Create a view of all tags for each work
+-- and filter for only those works which are tagged as scifi/fantasy
 -- enough times
-CREATE TABLE work_tags AS
+CREATE VIEW tags_by_work_id AS
 SELECT
     work_id,
-    LIST (tags)
+    LIST (tags) as tags -- combine the tags into a list
 FROM
     (
+        -- this subsquery explodes each book into multiple rows,
+        -- one for each popular shelf it is on
         SELECT
             work_id,
             UNNEST (popular_shelves) as tags
@@ -88,30 +82,22 @@ FROM
             books
     )
 GROUP BY
-    work_id
+    work_id -- we then group by work_id to get the list of tags for each work
 HAVING
-    work_id IN (
-        SELECT
-            work_id
-        FROM
-            works
-    )
-    AND SUM(tags.count) FILTER (
+    SUM(tags.count) FILTER ( -- filter for works with at least ${TAG_THRESHOLD} tags
         WHERE
             tags.name ~ '(?i)fantasy|sci(ence)?-fi'
     ) >= ${TAG_THRESHOLD};
+-- and finally, see the SELECT clause above where we collapse the multiple rows,
+-- back down to one row, with a list of tags
 
--- Combine the selected works with 
--- the date in the works table
+-- Add the tags to the works table
 CREATE TABLE tagged_works AS
 SELECT
     *
 FROM
-    work_tags
-INNER JOIN works USING (work_id);
-
-ALTER TABLE tagged_works
-ADD PRIMARY KEY (work_id);
+    works
+INNER JOIN tags_by_work_id USING (work_id);
 
 -- Save the filtered works to a parquet file
 COPY (
@@ -125,18 +111,38 @@ COPY (
 -- of the work
 CREATE TABLE combined_works AS
 SELECT
-    * EXCEPT (books.work_id)
+    *
 FROM
     tagged_works
 INNER JOIN books ON tagged_works.best_book_id = books.book_id;
 
-ALTER TABLE combined_works
-ADD PRIMARY KEY (work_id);
+CREATE TABLE authors_by_work_id AS
+WITH all_authors AS (
+    SELECT 
+        author_id,
+        name as author_name
+    FROM '${INPUT_AUTHORS}'
+),
+used_author_ids AS (
+    SELECT
+        work_id,
+        UNNEST(author_ids) as author_id
+    FROM combined_works
+)
+SELECT
+    work_id, array_to_string(
+        list_sort(LIST(author_name))
+        , ', ') as authors
+FROM
+    used_author_ids
+INNER JOIN all_authors USING (author_id)
+GROUP BY work_id;
 
 -- And save the augmented works to a parquet file
 COPY (
     SELECT
-        *
+        * EXCLUDE(author_ids)
     FROM
         combined_works
+    INNER JOIN authors_by_work_id USING (work_id)
 ) TO '${OUTPUT_AUGMENTED_WORKS}' (FORMAT PARQUET, COMPRESSION ZSTD);
