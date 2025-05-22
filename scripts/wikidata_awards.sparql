@@ -1,0 +1,53 @@
+# This is sort of impenetrible without some reference to what
+# the various entities and relations mean
+# I reccomend pasting it into the online editor
+# https://query.wikidata.org/
+# which gives hover information for each entity and relation
+SELECT DISTINCT 
+    ?title 
+    (GROUP_CONCAT(DISTINCT ?authorLabel; SEPARATOR = ", ") AS ?authors) 
+    (MIN(YEAR(?date)) AS ?year) 
+    ?awardLabel 
+    (GROUP_CONCAT(DISTINCT ?work_id; SEPARATOR = ";") AS ?work_ids) 
+    (GROUP_CONCAT(DISTINCT ?ol_id; SEPARATOR = ";") AS ?ol_ids) 
+    (GROUP_CONCAT(DISTINCT ?isfdb_id; SEPARATOR = ";") AS ?isdfb_ids) 
+    (GROUP_CONCAT(DISTINCT ?isbn; SEPARATOR = ";") AS ?isbns) 
+    ?status 
+WHERE {
+    VALUES (?prop ?ps ?status) {
+        (p:P166 ps:P166 "winner")
+        (p:P1411 ps:P1411 "nominated")
+    }
+
+    ?item ?prop ?stmt.
+    ?stmt ?ps ?award;
+        pq:P585 ?date.
+
+    VALUES ?award {
+        wd:Q255032 # Hugo Award
+        wd:Q2576795 # Locus Award
+        wd:Q266012 # Nebula Award
+        wd:Q898527 # World Fantasy Award
+        wd:Q1341487 # Philip K. Dick Award
+        wd:Q1030402 # John W. Campbell Memorial Award
+        wd:Q39060754 # Dragon Award
+        wd:Q1666525 # International Fantasy Award
+    }
+
+    FILTER(?date < "2017-01-01"^^xsd:dateTime)
+
+    ?item wdt:P7937 wd:Q8261;
+        wdt:P50 ?author.
+
+    OPTIONAL { ?item wdt:P8383 ?work_id. }    # goodreads
+    OPTIONAL { ?item wdt:P648 ?ol_id. }       # openlibrary
+    OPTIONAL { ?item (wdt:P747/(wdt:P957|wdt:P212)) ?isbn. } # isbn-10 or 13
+
+    SERVICE wikibase:label {
+        bd:serviceParam wikibase:language "en".
+        ?item rdfs:label ?title.
+        ?author rdfs:label ?authorLabel.
+        ?award rdfs:label ?awardLabel.
+    }
+}
+GROUP BY ?item ?title ?awardLabel ?status

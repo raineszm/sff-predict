@@ -37,21 +37,22 @@ rule download_data:
         raw_data_path("works_data"),
         raw_data_path("awards_data")
 
-rule scrape_raw_awards_data:
+rule download_raw_awards_data:
+    input:
+        sparql='scripts/wikidata_awards.sparql'
     output:
         awards=raw_data_path("awards_data")
-    params:
-        rel_path=lambda wildcards, input, output: os.path.relpath(output.awards, "data/bookdata")
-    shell:
-        "cd data/bookdata && pixi run scrapy crawl sfadb -o {params.rel_path}"
-
-rule clean_awards_data:
-    input:
-        raw_data_path("awards_data")
-    output:
-        local_data_path("cleaned_awards_data")
+    message:
+        "Downloading awards data from Wikidata"
     script:
-        "scripts/clean_awards.py"
+        "scripts/download_wikidata_awards.py"
+# rule clean_awards_data:
+#     input:
+#         raw_data_path("awards_data")
+#     output:
+#         local_data_path("cleaned_awards_data")
+#     script:
+#         "scripts/clean_awards.py"
 
 rule download_raw_goodreads_data:
     output:
