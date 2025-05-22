@@ -46,13 +46,14 @@ rule download_raw_awards_data:
         "Downloading awards data from Wikidata"
     script:
         "scripts/download_wikidata_awards.py"
-# rule clean_awards_data:
-#     input:
-#         raw_data_path("awards_data")
-#     output:
-#         local_data_path("cleaned_awards_data")
-#     script:
-#         "scripts/clean_awards.py"
+rule clean_awards_data:
+    input:
+        awards=raw_data_path("awards_data"),
+        works=raw_data_path("works_data")
+    output:
+        local_data_path("cleaned_awards_data")
+    script:
+        "scripts/clean_awards.py"
 
 rule download_raw_goodreads_data:
     output:
