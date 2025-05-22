@@ -109,6 +109,30 @@ COPY (
         tagged_works
 ) TO '${OUTPUT_SELECTED_WORKS}' (FORMAT PARQUET, COMPRESSION ZSTD);
 
+-- Write a lookup table of all included work_ids from the selected works
+-- based on any available identifiers
+--- this is simply a list of triples (work_id, identifier_type, identifier_value)
+CREATE TABLE identifiers AS UNPIVOT (
+    SELECT
+        work_id,
+        CAST(book_id as VARCHAR) as book_id,
+        isbn,
+        isbn13,
+        asin
+    FROM
+        books SEMI
+        JOIN tagged_works USING (work_id)
+) ON COLUMNS (* EXCLUDE (work_id)) INTO NAME kind VALUE value;
+
+COPY (
+    SELECT
+        *
+    FROM
+        identifiers
+    WHERE
+        value != ''
+) TO '${OUTPUT_IDENTIFIERS}' (FORMAT PARQUET, COMPRESSION ZSTD);
+
 -- Augment the works data with data from a representative edition
 -- of the work
 CREATE TABLE combined_works AS
