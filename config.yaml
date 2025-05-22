@@ -13,6 +13,7 @@ paths:
     selected_works_data: "sff_works.parquet"
     augmented_works_data: "sff_works_augmented.parquet"
     cleaned_awards_data: "awards.json"
+    identifiers_data: "identifiers.parquet"
   roots:
     data: "data"
     raw_data: "data/raw"

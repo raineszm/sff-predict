@@ -46,6 +46,7 @@ rule download_raw_awards_data:
         "Downloading awards data from Wikidata"
     script:
         "scripts/download_wikidata_awards.py"
+
 rule clean_awards_data:
     input:
         awards=raw_data_path("awards_data"),
@@ -72,7 +73,8 @@ rule combine_data:
         authors=raw_data_path("author_data")
     output:
         selected_works=local_data_path("selected_works_data"),
-        augmented_works=local_data_path("augmented_works_data")
+        augmented_works=local_data_path("augmented_works_data"),
+        identifiers=local_data_path("identifiers_data")
     message:
         "Filtering and combining input datasets"
     params:
@@ -90,6 +92,7 @@ rule combine_data:
         export INPUT_AUTHORS="{input.authors}"
         export OUTPUT_SELECTED_WORKS="{output.selected_works}"
         export OUTPUT_AUGMENTED_WORKS="{output.augmented_works}"
+        export OUTPUT_IDENTIFIERS="{output.identifiers}"
 
         envsubst < scripts/combine_data.sql | duckdb
         """
