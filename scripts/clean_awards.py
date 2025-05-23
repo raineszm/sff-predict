@@ -1,96 +1,27 @@
-from typing import Optional
+from pandas._libs.missing import NAType
 from snakemake.script import snakemake
 import pandas as pd
-import httpx
 from tqdm.auto import tqdm
-from httpx_retries import RetryTransport, Retry
 import duckdb
-from hishel import CacheTransport, Controller, FileStorage
+from utils.metadata import (
+    AwardIdentifiers,
+    LocalIdentifierMetadataProvider,
+    OpenLibraryMetadataProvider,
+)
 
 # load the identifiers data
 identifiers = pd.read_parquet(snakemake.input["identifiers"])
 
-WORK_IDS = set(identifiers.work_id)
-
-# Be a good citizen
-retry = Retry(
-    total=3,
-    backoff_factor=0.5,
-    status_forcelist=[429],
-)
-
-retry_transport = RetryTransport(
-    retry=retry,
-)
-
-cache_transport = CacheTransport(
-    transport=retry_transport,
-    storage=FileStorage(),
-    controller=Controller(
-        always_revalidate=False,
-    ),
-    force_cache=True,
-)
-
-client = httpx.Client(
-    http2=True,
-    headers={
-        "User-Agent": "scifi-fantasy/0.1 (dev@zmraines.com)",
-    },
-    transport=cache_transport,
-)
+local_provider = LocalIdentifierMetadataProvider(identifiers)
+openlibrary_provider = OpenLibraryMetadataProvider(local_provider)
 
 
-def query_openlibrary(query: str) -> dict:
-    response = client.get(
-        "https://openlibrary.org/search.json",
-        params={
-            "q": query,
-            "fields": "key,id_goodreads",
-            "limit": 1,
-        },
-    )
-    response.raise_for_status()
-    json = response.json()
-    if json["numFound"] == 0 or "id_goodreads" not in json["docs"][0]:
-        return None
-
-    for work_id in json["docs"][0]["id_goodreads"]:
-        # check if this is a valid work id
-        if int(work_id) in WORK_IDS:
-            return int(work_id)
-
-        # sometimes openlibrary returns a book id instead of a work id
-        # so we check if this is a valid book id and if so, return the work id
-        by_book_id = identifiers.loc[
-            (identifiers.kind == "book_id") & (identifiers.value == work_id)
-        ].work_id
-        if not by_book_id.empty:
-            return by_book_id.iloc[0]
-
-
-def find_work_id_from_ol_ids(ol_ids: list[str]) -> Optional[str]:
-    for ol_id in ol_ids:
-        work_id = query_openlibrary(f"key:/works/{ol_id}")
-        if work_id is not None:
-            return work_id
-    return None
-
-
-def find_work_id_from_isbns(isbns: list[str]) -> Optional[str]:
-    for isbn in isbns:
-        isbn = isbn.replace("-", "")
-        work_id = query_openlibrary(f"isbn:{isbn}")
-        if work_id is not None:
-            return work_id
-    return None
-
-
-def find_work_id(row: pd.Series) -> Optional[str]:
-    if row.ol_ids != "":
-        return find_work_id_from_ol_ids(row.ol_ids.split(";"))
-    if row.isbns != "":
-        return find_work_id_from_isbns(row.isbns.split(";"))
+def find_work_id(row: pd.Series) -> int | NAType:
+    identifiers = AwardIdentifiers.from_award(row)
+    if (work_id := local_provider.lookup(identifiers)) is not None:
+        return work_id
+    if (work_id := openlibrary_provider.lookup(identifiers)) is not None:
+        return work_id
     return pd.NA
 
 
@@ -137,7 +68,9 @@ awards.loc[has_multiple_work_ids, "work_id"] = awards.loc[
 # convert the work_id column to an integer type
 # and set any values that are not valid work ids to NA
 awards.work_id = awards.work_id.replace("", pd.NA).astype("Int64")
-awards.loc[awards.work_id.notna() & ~awards.work_id.isin(WORK_IDS), "work_id"] = pd.NA
+awards.loc[
+    awards.work_id.notna() & ~awards.work_id.isin(set(identifiers.work_id)), "work_id"
+] = pd.NA
 
 print(f"{awards.work_id.isna().sum()} awards are missing work_ids")
 # fill in the missing work_ids
