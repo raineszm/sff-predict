@@ -18,9 +18,9 @@ openlibrary_provider = OpenLibraryMetadataProvider(local_provider)
 
 def find_work_id(row: pd.Series) -> int | NAType:
     identifiers = AwardIdentifiers.from_award(row)
-    if (work_id := local_provider.lookup(identifiers)) is not None:
+    if work_id := local_provider.lookup(identifiers):
         return work_id
-    if (work_id := openlibrary_provider.lookup(identifiers)) is not None:
+    if work_id := openlibrary_provider.lookup(identifiers):
         return work_id
     return pd.NA
 
@@ -72,8 +72,10 @@ awards.loc[
     awards.work_id.notna() & ~awards.work_id.isin(set(identifiers.work_id)), "work_id"
 ] = pd.NA
 
-print(f"{awards.work_id.isna().sum()} awards are missing work_ids")
 # fill in the missing work_ids
+
+print(f"{awards.work_id.isna().sum()} awards are missing work_ids")
+
 for i, row in tqdm(
     awards[awards.work_id.isna()].iterrows(),
     total=awards.work_id.isna().sum(),

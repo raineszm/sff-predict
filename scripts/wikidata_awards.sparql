@@ -44,7 +44,7 @@ WHERE {
     OPTIONAL { ?item (wdt:P747/(wdt:P957|wdt:P212)) ?isbn. } # isbn-10 or 13
 
     SERVICE wikibase:label {
-        bd:serviceParam wikibase:language "en".
+        bd:serviceParam wikibase:language "[AUTO_LANGUAGE],mul,en".
         ?item rdfs:label ?title.
         ?author rdfs:label ?authorLabel.
         ?award rdfs:label ?awardLabel.
