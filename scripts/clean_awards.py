@@ -5,6 +5,7 @@ import httpx
 from tqdm.auto import tqdm
 from httpx_retries import RetryTransport, Retry
 import duckdb
+from hishel import CacheTransport, Controller, FileStorage
 
 # load the identifiers data
 identifiers = pd.read_parquet(snakemake.input["identifiers"])
@@ -18,8 +19,17 @@ retry = Retry(
     status_forcelist=[429],
 )
 
-transport = RetryTransport(
+retry_transport = RetryTransport(
     retry=retry,
+)
+
+cache_transport = CacheTransport(
+    transport=retry_transport,
+    storage=FileStorage(),
+    controller=Controller(
+        always_revalidate=False,
+    ),
+    force_cache=True,
 )
 
 client = httpx.Client(
@@ -27,7 +37,7 @@ client = httpx.Client(
     headers={
         "User-Agent": "scifi-fantasy/0.1 (dev@zmraines.com)",
     },
-    transport=transport,
+    transport=cache_transport,
 )
 
 
