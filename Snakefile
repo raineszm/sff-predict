@@ -37,24 +37,6 @@ rule download_data:
         raw_data_path("works_data"),
         raw_data_path("awards_data")
 
-rule download_raw_awards_data:
-    input:
-        sparql='scripts/wikidata_awards.sparql'
-    output:
-        awards=raw_data_path("awards_data")
-    message:
-        "Downloading awards data from Wikidata"
-    script:
-        "scripts/download_wikidata_awards.py"
-
-rule clean_awards_data:
-    input:
-        awards=raw_data_path("awards_data"),
-        works=raw_data_path("works_data")
-    output:
-        local_data_path("cleaned_awards_data")
-    script:
-        "scripts/clean_awards.py"
 
 rule download_raw_goodreads_data:
     output:
@@ -96,3 +78,30 @@ rule combine_data:
 
         envsubst < scripts/combine_data.sql | duckdb
         """
+
+rule download_raw_awards_data:
+    input:
+        sparql='scripts/wikidata_awards.sparql'
+    output:
+        awards=raw_data_path("awards_data")
+    message:
+        "Downloading awards data from Wikidata"
+    script:
+        "scripts/download_wikidata_awards.py"
+
+rule pivot_awards_data:
+    input:
+        awards=raw_data_path("awards_data")
+    output:
+        local_data_path("award_counts_data")
+    script:
+        "scripts/pivot_awards.py"
+
+rule clean_awards_data:
+    input:
+        awards=raw_data_path("awards_data"),
+        identifiers=local_data_path("identifiers_data")
+    output:
+        local_data_path("cleaned_awards_data")
+    script:
+        "scripts/clean_awards.py"

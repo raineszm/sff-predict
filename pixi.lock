@@ -85,6 +85,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/docstring-to-markdown-0.17-pyhe01879c_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/docutils-0.21.2-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/dpath-2.2.0-pyha770c72_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/duckdb-1.2.2-hca7485f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/duckdb-cli-1.2.2-h286801f_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/eido-0.2.4-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/exceptiongroup-1.3.0-pyhd8ed1ab_0.conda
@@ -100,6 +101,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/glog-0.7.1-heb240a5_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/h11-0.16.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/h2-4.2.0-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/hishel-0.1.2-pyh29332c3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/hpack-4.1.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/httpcore-1.0.9-pyh29332c3_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/httpx-0.28.1-pyhd8ed1ab_0.conda
@@ -269,6 +271,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/pytest-8.3.5-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/python-3.11.12-hc22306f_0_cpython.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/python-dateutil-2.9.0.post0-pyhff2d567_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/python-duckdb-1.2.2-py311h155a34a_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/python-fastjsonschema-2.21.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/python-isal-1.7.2-py311h917b07b_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/python-json-logger-2.0.7-pyhd8ed1ab_0.conda
@@ -1436,6 +1439,16 @@ packages:
   - pkg:pypi/dpath?source=hash-mapping
   size: 21344
   timestamp: 1718243548474
+- conda: https://conda.anaconda.org/conda-forge/noarch/duckdb-1.2.2-hca7485f_0.conda
+  sha256: a491c8872a7ed94d2ea4959ff9c1b476588fc8f5f383f4a12c8707995b485403
+  md5: 39e3be092236c8c95d5cddd466a0a490
+  depends:
+  - python-duckdb >=1.2.2,<1.2.3.0a0
+  license: MIT
+  license_family: MIT
+  purls: []
+  size: 8221
+  timestamp: 1744974386396
 - conda: https://conda.anaconda.org/conda-forge/osx-arm64/duckdb-cli-1.2.2-h286801f_0.conda
   sha256: 3d4afe726e26ea9f58faf6c14d1a9e61389fb7d8727b56055c312154f3e57017
   md5: e934ddf2276400a3b514d2b2c7444300
@@ -1622,6 +1635,19 @@ packages:
   - pkg:pypi/h2?source=hash-mapping
   size: 53888
   timestamp: 1738578623567
+- conda: https://conda.anaconda.org/conda-forge/noarch/hishel-0.1.2-pyh29332c3_0.conda
+  sha256: 71c7ebe27bb50c34a3a263858bc714838c6fe4589f06105c0b3d6edc6417b6a4
+  md5: 12a05b14ee95f059f51ae52d8d74b205
+  depends:
+  - python >=3.9
+  - httpx >=0.28.0
+  - python
+  license: BSD-3-Clause
+  license_family: BSD
+  purls:
+  - pkg:pypi/hishel?source=hash-mapping
+  size: 34136
+  timestamp: 1743842116953
 - conda: https://conda.anaconda.org/conda-forge/noarch/hpack-4.1.0-pyhd8ed1ab_0.conda
   sha256: 6ad78a180576c706aabeb5b4c8ceb97c0cb25f1e112d76495bff23e3779948ba
   md5: 0a802cb9888dd14eeefc611f05c40b6e
@@ -4026,6 +4052,21 @@ packages:
   - pkg:pypi/python-dateutil?source=hash-mapping
   size: 222505
   timestamp: 1733215763718
+- conda: https://conda.anaconda.org/conda-forge/osx-arm64/python-duckdb-1.2.2-py311h155a34a_0.conda
+  sha256: 7fe8444397858bc0a516ae34cfc2a0684b4f5c5ca02698face31e68bfeb97342
+  md5: ac6fa9975db6479e8ea4f9bc9699b0ae
+  depends:
+  - __osx >=11.0
+  - libcxx >=18
+  - python >=3.11,<3.12.0a0
+  - python >=3.11,<3.12.0a0 *_cpython
+  - python_abi 3.11.* *_cp311
+  license: MIT
+  license_family: MIT
+  purls:
+  - pkg:pypi/duckdb?source=hash-mapping
+  size: 19817859
+  timestamp: 1744973420942
 - conda: https://conda.anaconda.org/conda-forge/noarch/python-fastjsonschema-2.21.1-pyhd8ed1ab_0.conda
   sha256: 1b09a28093071c1874862422696429d0d35bd0b8420698003ac004746c5e82a2
   md5: 38e34d2d1d9dca4fb2b9a0a04f604e2c
