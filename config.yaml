@@ -14,6 +14,7 @@ paths:
     # Raw awards data
     awards_data: "awards.json"
     all_winners_data: "all_winners.json"
+    nominee_biographical_data: "nominee_biographical.json"
 
     # Helpful Lookups
     identifiers_data: "identifiers.parquet"

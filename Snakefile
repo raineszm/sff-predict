@@ -43,16 +43,17 @@ rule download_data:
 rule download_raw_awards_data:
     input:
         raw_data_path("awards_data"),
-        raw_data_path("all_winners_data")
+        raw_data_path("all_winners_data"),
+        raw_data_path("nominee_biographical_data")
 # ----
 
 rule download_raw_goodreads_data:
     output:
-        "data/raw/{basename}"
+        "data/raw/{basename}.json.gz"
     params:
-        url=lambda wildcards: remote_data_url(wildcards.basename)
+        url=lambda wildcards: remote_data_url(wildcards.basename + ".json.gz")
     message:
-        "Fetching raw goodreads data: {wildcards.basename}"
+        "Fetching raw goodreads data: {wildcards.basename}.json.gz"
     script:
         "scripts/download_data.py"
 
@@ -90,7 +91,8 @@ rule combine_data:
 
 for sparql_query, data_name in [
     ('wikidata_awards.sparql', "awards_data"),
-    ('wikidata_winners.sparql', "all_winners_data")
+    ('wikidata_winners.sparql', "all_winners_data"),
+    ('wikidata_authors.sparql', "nominee_biographical_data")
 ]:
     rule:
         name: f'download_{data_name}'

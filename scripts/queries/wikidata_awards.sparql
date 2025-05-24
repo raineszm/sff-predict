@@ -34,8 +34,6 @@ WHERE {
         wd:Q1666525 # International Fantasy Award
     }
 
-    FILTER(?date < "2017-01-01"^^xsd:dateTime)
-
     ?item wdt:P7937 wd:Q8261;
         wdt:P50 ?author.
 
