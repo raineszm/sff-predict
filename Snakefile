@@ -20,6 +20,9 @@ def local_data_path(key):
     basename = config["paths"]["basenames"][key]
     return os.path.join(config["paths"]["roots"]["data"], basename)
 
+# Phony rules
+# ------------
+
 rule all:
     input:
         local_data_path("augmented_works_data")
@@ -37,6 +40,11 @@ rule download_data:
         raw_data_path("works_data"),
         raw_data_path("awards_data")
 
+rule download_raw_awards_data:
+    input:
+        raw_data_path("awards_data"),
+        raw_data_path("all_winners_data")
+# ----
 
 rule download_raw_goodreads_data:
     output:
@@ -76,26 +84,25 @@ rule combine_data:
         export OUTPUT_AUGMENTED_WORKS="{output.augmented_works}"
         export OUTPUT_IDENTIFIERS="{output.identifiers}"
 
-        envsubst < scripts/combine_data.sql | duckdb
+        envsubst < scripts/queries/combine_data.sql | duckdb
         """
 
-rule download_raw_awards_data:
-    input:
-        sparql='scripts/wikidata_awards.sparql'
-    output:
-        awards=raw_data_path("awards_data")
-    message:
-        "Downloading awards data from Wikidata"
-    script:
-        "scripts/download_wikidata_awards.py"
 
-rule pivot_awards_data:
-    input:
-        awards=raw_data_path("awards_data")
-    output:
-        local_data_path("award_counts_data")
-    script:
-        "scripts/pivot_awards.py"
+for sparql_query, data_name in [
+    ('wikidata_awards.sparql', "awards_data"),
+    ('wikidata_winners.sparql', "all_winners_data")
+]:
+    rule:
+        name: f'download_{data_name}'
+        input:
+            sparql=f'scripts/queries/{sparql_query}'
+        output:
+            json=raw_data_path(data_name)
+        message:
+            f"Downloading {data_name} from Wikidata"
+        script:
+            "scripts/download_sparql_query.py"
+
 
 rule clean_awards_data:
     input:

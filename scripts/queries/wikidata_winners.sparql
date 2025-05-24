@@ -1,0 +1,54 @@
+# Query to fetch award winners and their authors from Wikidata
+# This fetches every nominee of any of the major literary awards
+# at https://www.sfadb.com/Awards_Directory
+SELECT DISTINCT 
+    ?author 
+    ?authorLabel
+    ?itemLabel
+    ?awardLabel 
+    (YEAR(?date) AS ?year) 
+WHERE {
+    # Get items that have received awards
+    ?item p:P1411 [
+        ps:P1411 ?award;
+        pq:P585 ?date
+    ].
+
+    {
+        # Awards with multiple categories
+        VALUES ?awardParent {
+            wd:Q188914  # Hugo Award
+            wd:Q194285  # Nebula Award
+            wd:Q594886a # World Fantasy Award
+            wd:Q754655  # Locus award
+            wd:Q787680  # British Science Fiction Awards
+            wd:Q908485  # British Fantasy Awards
+            wd:Q708830  # Arthur C. Clarke Award
+            wd:Q108782497  # Ignite Awards
+            wd:Q7498780 # Shirley Jackson awards
+            wd:Q848963  # Bram Stoker Awards
+        }
+        ?awardParent wdt:P527 ?award.
+    }
+    UNION
+    {
+        # Awards with a single category
+        VALUES ?award {
+            wd:Q1341487  # Philip K. Dick Award
+            wd:Q285568   # Andre Norton Award for YA SF/F
+            wd:Q29915531 # Eugie Awards
+            wd:Q1666525  # International Fantasy Award'
+            wd:Q60761276 # Lodestar award
+            wd:Q1681198  # Otherwise award
+            wd:Q582610   # Theodore Sturgeon Memorial Award
+        }
+    }
+
+    # Get the author of each award-winning work
+    ?item wdt:P50 ?author.
+
+    # Get labels in preferred language
+    SERVICE wikibase:label { 
+        bd:serviceParam wikibase:language "[AUTO_LANGUAGE],mul,en". 
+    }
+}
