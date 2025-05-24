@@ -1,79 +1,98 @@
 import os.path
 
-# Load configuration
-configfile: "config.yaml"
+# Configuration
+# ------------
 
-def remote_data_url(basename):
-    """Get the full URL for a remote data file.
-    
-NOTE: this function takes the BASENAME not the key because
-it is called with a matched wildcard"""
-    return os.path.join(config["remote"]["goodreads_data_root"], basename)
+GOODREADS_DATA_ROOT = "https://mcauleylab.ucsd.edu/public_datasets/gdrive/goodreads"
 
-def raw_data_path(key):
-    """Get the full path for a raw data file."""
-    basename = config["paths"]["basenames"][key]
-    return os.path.join(config["paths"]["roots"]["raw_data"], basename)
+DATA_ROOT = "data"
+RAW_DATA_ROOT = os.path.join(DATA_ROOT, "raw")
 
-def local_data_path(key):
-    """Get the full path for a processed data file."""
-    basename = config["paths"]["basenames"][key]
-    return os.path.join(config["paths"]["roots"]["data"], basename)
+GOODREADS_DATA = {
+    k: os.path.join(RAW_DATA_ROOT, v) for k, v in
+    {
+        'books': 'goodreads_books.json.gz',
+        'authors': 'goodreads_book_authors.json.gz',
+        'works': 'goodreads_book_works.json.gz',
+    }.items()
+}
+
+WIKIDATA_DATA = {
+    k: os.path.join(RAW_DATA_ROOT, v) for k, v in
+    {
+        'award_novels': 'award_novels.json',
+        'awards_all': 'awards_all.json',
+        'nominee_biographical': 'nominee_biographical.json',
+    }.items()
+}
+
+RAW_DATA = {
+    **GOODREADS_DATA,
+    **WIKIDATA_DATA,
+}
+
+PROCESSED_DATA = {
+    k: os.path.join(DATA_ROOT, v) for k, v in
+    {
+        'selected_works': 'sff_works.parquet',
+        'augmented_works': 'sff_works_augmented.parquet',
+        'identifiers': 'identifiers.parquet',
+        'cleaned_awards': 'awards.csv',
+    }.items()
+}
 
 # Phony rules
 # ------------
 
 rule all:
     input:
-        local_data_path("augmented_works_data")
+        expand(PROCESSED_DATA.values())
 
-rule clean_all:
+rule download_all_data:
     input:
-        local_data_path("selected_works_data"),
-        local_data_path("augmented_works_data"),
-        local_data_path("cleaned_awards_data")
+        expand(RAW_DATA.values())
 
-rule download_data:
+rule download_goodreads_data:
     input:
-        raw_data_path("book_data"),
-        raw_data_path("author_data"),
-        raw_data_path("works_data"),
-        raw_data_path("awards_data")
+        expand(GOODREADS_DATA.values())
 
 rule download_raw_awards_data:
     input:
-        raw_data_path("awards_data"),
-        raw_data_path("all_winners_data"),
-        raw_data_path("nominee_biographical_data")
-# ----
+        expand(WIKIDATA_DATA.values())
+
+# Data download rules
+# ------------------
 
 rule download_raw_goodreads_data:
     output:
-        "data/raw/{basename}.json.gz"
+        RAW_DATA_ROOT + "/{basename}"
+    wildcard_constraints:
+        basename=r"goodreads_\w+\.json\.gz"
     params:
-        url=lambda wildcards: remote_data_url(wildcards.basename + ".json.gz")
+        url=lambda wildcards: os.path.join(GOODREADS_DATA_ROOT, wildcards.basename)
     message:
-        "Fetching raw goodreads data: {wildcards.basename}.json.gz"
+        "Fetching raw goodreads data: {wildcards.basename}"
     script:
         "scripts/download_data.py"
 
+# Data processing rules
+# --------------------
+
 rule combine_data:
     input:
-        books=raw_data_path("book_data"),
-        works=raw_data_path("works_data"),
-        authors=raw_data_path("author_data")
+        **RAW_DATA,
     output:
-        selected_works=local_data_path("selected_works_data"),
-        augmented_works=local_data_path("augmented_works_data"),
-        identifiers=local_data_path("identifiers_data")
+        selected_works=PROCESSED_DATA['selected_works'],
+        augmented_works=PROCESSED_DATA['augmented_works'],
+        identifiers=PROCESSED_DATA['identifiers']
     message:
         "Filtering and combining input datasets"
     params:
         # Minimum number of ratings for a work to be included
-        ratings_threshold=config["filter"]["ratings_threshold"],
+        ratings_threshold=100,
         # Minimum number of times a work must be tagged as scifi/fantasy
         # to be included
-        tag_threshold=config["filter"]["tag_threshold"]
+        tag_threshold=2
     shell:
         """
         export RATINGS_THRESHOLD={params.ratings_threshold}
@@ -88,29 +107,33 @@ rule combine_data:
         envsubst < scripts/queries/combine_data.sql | duckdb
         """
 
+# Wikidata data download rules
+# ---------------------------
 
 for sparql_query, data_name in [
-    ('wikidata_awards.sparql', "awards_data"),
-    ('wikidata_winners.sparql', "all_winners_data"),
-    ('wikidata_authors.sparql', "nominee_biographical_data")
+    ('wikidata_awards.sparql', "award_novels"),
+    ('wikidata_winners.sparql', "awards_all"),
+    ('wikidata_authors.sparql', "nominee_biographical")
 ]:
     rule:
         name: f'download_{data_name}'
         input:
             sparql=f'scripts/queries/{sparql_query}'
         output:
-            json=raw_data_path(data_name)
+            json=WIKIDATA_DATA[data_name]
         message:
             f"Downloading {data_name} from Wikidata"
         script:
             "scripts/download_sparql_query.py"
 
+# Awards processing rules
+# ----------------------
 
 rule clean_awards_data:
     input:
-        awards=raw_data_path("awards_data"),
-        identifiers=local_data_path("identifiers_data")
+        awards=WIKIDATA_DATA['award_novels'],
+        identifiers=PROCESSED_DATA['identifiers']
     output:
-        local_data_path("cleaned_awards_data")
+        PROCESSED_DATA['cleaned_awards']
     script:
         "scripts/clean_awards.py"
