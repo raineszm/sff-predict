@@ -78,11 +78,11 @@ The pipeline produces several key datasets:
 
 ## Project Brainstorming
 
-The basic idea is to try break data into years and train a ranking model on each year independently.
+The basic idea is to try break data into years and train a ranking model on each year's shortlist of nominated or candidate books.
 
 Schematically the idea can be depicted like the following
 
-![Data flow diagram showing how books are grouped into yearly cohorts and scored for award worthiness](DataFlow.png)
+![Data flow diagram showing how shortlisted books are grouped into yearly cohorts and scored for award worthiness](DataFlow.png)
 
 ### Potential Features
 - Bibliographic data
@@ -105,31 +105,25 @@ Multiple sources contribute data:
 All inputs are passed through a **Combine, Clean, & Fill Missing** step to create a unified and complete **Book Data Set**. This step resolves inconsistencies, integrates fields, and imputes missing values where necessary.
 
 ### 3. **Cohort Definition**
-Books are grouped into **Yearly Cohorts**, representing the set of eligible works for each award year. This framing allows the model to compare books within a constrained competition set.
+Books are grouped into **Yearly Shortlist Cohorts**, representing the set of nominated or candidate works for each award and year. This framing allows the model to compare books within each shortlist for winner selection.
 
 ### 4. **Modeling Process**
-- Each book in a cohort is assigned an **"Award Worthiness" Score** by the model.
-- These scores are used to compute separate probabilities for winning and nomination:
-  - **Win Probability** $p_i$ for each book being selected as a winner
-  - **Nomination Probability** $q_i$ for each book being nominated
-- Both probabilities are modeled using a multinomial distribution, reflecting the fixed number of winners and nominees each year.
-  - **Fixed Number of Wins**: Typically, there is exactly 1 winner per award per year.
-  - **Fixed Number of Nominations**: The number of nominees is predetermined, often 5-6 for major awards.
+- Each book in a shortlist cohort is assigned an **"Award Worthiness" Score** by the model.
+- These scores are used to compute probabilities for winning the award within the shortlist.
+- The model assumes a fixed number of winners per award per year.
 
 ### 5. **Loss Computation**
-Separate **Multinomial Cross-Entropy Loss Functions** are computed for win and nomination probabilities:
+A **Multinomial Cross-Entropy Loss Function** is computed for winner selection:
 
-- **Win Loss**: $$L_{win} = -\sum_i \frac{N_i}{N_\text{win}} \log(\hat{p}_i)$$
-- **Nomination Loss**: $$L_{nom} = -\sum_i \frac{M_i}{N_\text{nom}} \log(\hat{q}_i)$$
+$$L_{win} = -\sum_i \frac{N_i}{N_\text{win}} \log(\hat{p}_i)$$
+where $N_i$ is the observed win count for book $i$, $N_\text{win}$ is the total number of winners for that cohort, and $\hat{p}_i$ is the predicted probability of winning.
+This loss measures the divergence between the observed winner distribution and the model's predicted probabilities, respecting the fixed number of winners per shortlist.
 
-where $N_i$ and $M_i$ are the observed counts (how many wins or nominations for that book respectively), $N_\text{win}$ and $N_\text{nom}$ are the total number of wins and nominations for that cohort, and $\hat{p}_i$ and $\hat{q}_i$ are the predicted probabilities. These measure the divergence between the observed outcomes and predicted probabilities while respecting the fixed number of winners and nominees each year.
+#### Derivation of Scaled Cross-Entropy Loss for Winner Selection
 
-
-#### Derivation of Scaled Cross-Entropy Loss for Award Predictions
-
-Consider a cohort of $k$ books with:
-- Total winners $N_{\mathrm{win}}>1$ and total nominees $N_{\mathrm{nom}}>1$.  
-- For each book $i$: observed win count $N_i$, nomination count $M_i$; predicted probabilities $\hat p_i$ (win) and $\hat q_i$ (nomination).
+Consider a shortlist cohort of $k$ books with:
+- Total winners $N_{\mathrm{win}}$.  
+- For each book $i$: observed win count $N_i$; predicted probability $\hat p_i$.
 
 i. **Multinomial PMF for wins**  
    Model the allocation of exactly $N_{\mathrm{win}}$ win slots among the $k$ books:
@@ -154,21 +148,14 @@ iii. **Normalize by total winners**
      = -\frac{1}{N_{\mathrm{win}}}\sum_{i=1}^k N_i\,\ln(\hat p_i)
      = -\sum_{i=1}^k \frac{N_i}{N_{\mathrm{win}}}\,\ln(\hat p_i).
    $$
-   Here $\frac{N_i}{N_{\mathrm{win}}}$ is the empirical win distribution over the cohort.
+   Here $\frac{N_i}{N_{\mathrm{win}}}$ is the empirical win distribution over the shortlist cohort.
 
-iv. **Nomination loss**  
-   Analogously, with $N_{\mathrm{nom}}$ fixed nominations:
-   $$
-     L_{\mathrm{nom}}
-     = -\sum_{i=1}^k \frac{M_i}{N_{\mathrm{nom}}}\,\ln(\hat q_i).
-   $$
-
-v. **Interpretation**  
-   - **Normalization** by $N_{\mathrm{win}}$ or $N_{\mathrm{nom}}$ ensures comparability across years.  
-   - **Minimizing** these losses aligns the model's predicted distributions $\{\hat p_i\}$, $\{\hat q_i\}$ with the empirical distributions $\{N_i/N_{\mathrm{win}}\}$, $\{M_i/N_{\mathrm{nom}}\}$, giving more weight to books with more wins or nominations.
+iv. **Interpretation**  
+   - **Normalization** by $N_{\mathrm{win}}$ ensures comparability across years.  
+   - **Minimizing** this loss aligns the model's predicted distribution $\{\hat p_i\}$ with the empirical distribution $\{N_i/N_{\mathrm{win}}\}$, giving more weight to books with more wins.
 
 ### 6. **Total Loss Aggregation**
-Losses are aggregated **across all cohorts**, potentially with weighted contributions based on the significance of awards or nominations, to compute the **Total Loss**.
+Losses are aggregated **across all shortlist cohorts**, potentially with weighted contributions based on the significance of awards, to compute the **Total Loss**.
 
 ### 7. **Model Training**
 The **Total Loss** guides gradient-based optimization to train the model parameters.
