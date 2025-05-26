@@ -35,6 +35,7 @@ PROCESSED_DATA = {
     k: os.path.join(DATA_ROOT, v) for k, v in
     {
         'selected_works': 'sff_works.parquet',
+        'selected_books': 'sff_books.parquet',
         'augmented_works': 'sff_works_augmented.parquet',
         'identifiers': 'identifiers.parquet',
         'cleaned_awards': 'awards.csv',
@@ -84,7 +85,8 @@ rule combine_data:
     output:
         selected_works=PROCESSED_DATA['selected_works'],
         augmented_works=PROCESSED_DATA['augmented_works'],
-        identifiers=PROCESSED_DATA['identifiers']
+        identifiers=PROCESSED_DATA['identifiers'],
+        selected_books=PROCESSED_DATA['selected_books']
     message:
         "Filtering and combining input datasets"
     params:
@@ -103,6 +105,7 @@ rule combine_data:
         export OUTPUT_SELECTED_WORKS="{output.selected_works}"
         export OUTPUT_AUGMENTED_WORKS="{output.augmented_works}"
         export OUTPUT_IDENTIFIERS="{output.identifiers}"
+        export OUTPUT_SELECTED_BOOKS="{output.selected_books}"
 
         envsubst < scripts/queries/combine_data.sql | duckdb
         """

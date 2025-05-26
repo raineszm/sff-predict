@@ -10,7 +10,6 @@ SELECT DISTINCT
     ?awardLabel 
     (GROUP_CONCAT(DISTINCT ?work_id; SEPARATOR = ";") AS ?work_ids) 
     (GROUP_CONCAT(DISTINCT ?ol_id; SEPARATOR = ";") AS ?ol_ids) 
-    (GROUP_CONCAT(DISTINCT ?isfdb_id; SEPARATOR = ";") AS ?isdfb_ids) 
     (GROUP_CONCAT(DISTINCT ?isbn; SEPARATOR = ";") AS ?isbns) 
     ?status 
 WHERE {

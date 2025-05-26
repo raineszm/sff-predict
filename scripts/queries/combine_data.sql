@@ -66,40 +66,30 @@ WHERE
     AND work_id != '' -- Drop entries with no work ID since we don't know what work they belong to
 ;
 
--- Create a view of all tags for each work
--- and filter for only those works which are tagged as scifi/fantasy
--- enough times
-CREATE VIEW tags_by_work_id AS
+-- Create table of tagged works by combining work data with their tags,
+-- filtering for works that are tagged as scifi/fantasy enough times
+CREATE TABLE tagged_works AS
 SELECT
-    work_id,
-    LIST (tags) as tags -- combine the tags into a list
+    works.*,
+    LIST(tags) as tags -- combine the tags into a list
 FROM
-    (
-        -- this subsquery explodes each book into multiple rows,
-        -- one for each popular shelf it is on
-        SELECT
-            work_id,
-            UNNEST (popular_shelves) as tags
-        FROM
-            books
-    )
+    works
+INNER JOIN (
+    -- this subquery explodes each book into multiple rows,
+    -- one for each popular shelf it is on
+    SELECT
+        work_id,
+        UNNEST(popular_shelves) as tags
+    FROM
+        books
+) tags_exploded USING (work_id)
 GROUP BY
-    work_id -- we then group by work_id to get the list of tags for each work
+    works.*
 HAVING
     SUM(tags.count) FILTER ( -- filter for works with at least ${TAG_THRESHOLD} tags
         WHERE
             tags.name ~ '(?i).*(?:fantasy|sci(ence)?-fi).*'
     ) >= ${TAG_THRESHOLD};
--- and finally, see the SELECT clause above where we collapse the multiple rows,
--- back down to one row, with a list of tags
-
--- Add the tags to the works table
-CREATE TABLE tagged_works AS
-SELECT
-    *
-FROM
-    works
-INNER JOIN tags_by_work_id USING (work_id);
 
 -- Save the filtered works to a parquet file
 COPY (
@@ -108,6 +98,54 @@ COPY (
     FROM
         tagged_works
 ) TO '${OUTPUT_SELECTED_WORKS}' (FORMAT PARQUET, COMPRESSION ZSTD);
+
+-- Create a filtered books table with only books from tagged works
+CREATE TABLE selected_books AS
+SELECT
+    *
+FROM
+    books
+SEMI JOIN tagged_works USING (work_id);
+
+-- Create a table of authors names by work_id
+-- Each work will then have a list of authors names sorted and separated by commas
+CREATE TABLE authors_by_work_id AS
+WITH all_authors AS (
+    SELECT 
+        author_id,
+        name as author_name
+    FROM '${INPUT_AUTHORS}'
+),
+used_author_ids AS (
+    SELECT
+        work_id,
+        UNNEST(author_ids) as author_id
+    FROM selected_books
+)
+SELECT
+    work_id,
+    ARRAY_TO_STRING(LIST_SORT(LIST(author_name)), ', ') as authors
+FROM
+    used_author_ids
+    INNER JOIN all_authors USING (author_id)
+GROUP BY
+    work_id;
+
+-- Create a table of all the selected books with their authors filled in
+-- to use for matching
+CREATE TABLE selected_books_with_authors AS
+SELECT
+    *
+FROM
+    selected_books
+INNER JOIN authors_by_work_id USING (work_id);
+
+COPY (
+    SELECT
+        *
+    FROM
+        selected_books_with_authors
+) TO '${OUTPUT_SELECTED_BOOKS}' (FORMAT PARQUET, COMPRESSION ZSTD);
 
 -- Write a lookup table of all included work_ids from the selected works
 -- based on any available identifiers
@@ -120,8 +158,7 @@ CREATE TABLE identifiers AS UNPIVOT (
         isbn13,
         asin
     FROM
-        books SEMI
-        JOIN tagged_works USING (work_id)
+        selected_books_with_authors
 ) ON COLUMNS (* EXCLUDE (work_id)) INTO NAME kind VALUE value;
 
 COPY (
@@ -137,38 +174,17 @@ COPY (
 -- of the work
 CREATE TABLE combined_works AS
 SELECT
-    *
+    * EXCLUDE(selected_books.work_id, authors_by_work_id.work_id)
 FROM
     tagged_works
-INNER JOIN books ON tagged_works.best_book_id = books.book_id;
+INNER JOIN selected_books ON tagged_works.best_book_id = selected_books.book_id
+INNER JOIN authors_by_work_id ON tagged_works.work_id = authors_by_work_id.work_id;
 
-CREATE TABLE authors_by_work_id AS
-WITH all_authors AS (
-    SELECT 
-        author_id,
-        name as author_name
-    FROM '${INPUT_AUTHORS}'
-),
-used_author_ids AS (
-    SELECT
-        work_id,
-        UNNEST(author_ids) as author_id
-    FROM combined_works
-)
-SELECT
-    work_id, array_to_string(
-        list_sort(LIST(author_name))
-        , ', ') as authors
-FROM
-    used_author_ids
-INNER JOIN all_authors USING (author_id)
-GROUP BY work_id;
 
 -- And save the augmented works to a parquet file
 COPY (
     SELECT
-        * EXCLUDE(author_ids)
+        *
     FROM
         combined_works
-    INNER JOIN authors_by_work_id USING (work_id)
 ) TO '${OUTPUT_AUGMENTED_WORKS}' (FORMAT PARQUET, COMPRESSION ZSTD);
