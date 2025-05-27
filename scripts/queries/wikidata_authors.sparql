@@ -19,15 +19,15 @@ WHERE {
         wd:Q1666525 # International Fantasy Award
     }
   
-    ?item wdt:P1411 ?award.
+    ?item (wdt:P1411|wdt:P166) ?award.
           
     ?item wdt:P7937 wd:Q8261;
           wdt:P50 ?author.
   
-    ?author wdt:P21 ?gender;
-            wdt:P569 ?dob;
-            wdt:P19/wdt:P17 ?birthCountry;
-              p:P27 ?residenceStmt.
+    OPTIONAL { ?author wdt:P21 ?gender. }
+    OPTIONAL { ?author wdt:P569 ?dob. }
+    OPTIONAL { ?author wdt:P19/wdt:P17 ?birthCountry. }
+    OPTIONAL { ?author wdt:P27 ?residenceStmt. }
  
 
 

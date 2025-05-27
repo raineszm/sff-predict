@@ -22,7 +22,10 @@ awards = (
     .df()
     .rename(columns={"nominated": "n_nom", "winner": "n_win"})
 )
+
+# Some clean up of the awards data
 awards["year"] = awards["year"].astype(int)
+awards.isbns = awards.isbns.str.replace("-", "").fillna("").str.split(";")
 
 # Read cumulative awards
 cumulative_awards = pd.read_csv(snakemake.input["wins_as_of"])
@@ -49,6 +52,27 @@ previous_awards = (
 # Join with awards DataFrame
 awards = awards.merge(previous_awards, on="work_qid", how="left")
 awards.awards_as_of_year = awards.awards_as_of_year.fillna(0).astype(int)
+
+# Add author biography information
+authors = pd.read_json(snakemake.input["authors"], lines=True)
+authors.dob = pd.to_datetime(authors.dob, format="%Y-%m-%dT%H:%M:%SZ")
+
+author_info = (
+    work_author_join.merge(authors, on="author_qid")
+    .assign(age=lambda x: x.year_of_award - x.dob.dt.year)
+    .groupby("work_qid")
+    .agg({"genderLabel": list, "birthCountryLabel": list, "age": list})
+    .reset_index()
+    .rename(
+        columns={
+            "age": "ages",
+            "birthCountryLabel": "nationalities",
+            "genderLabel": "genders",
+        }
+    )
+)
+
+awards = awards.merge(author_info, on="work_qid", how="left")
 
 # Count works missing an openlibrary ID
 n_missing = (
