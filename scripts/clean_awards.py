@@ -8,37 +8,56 @@ import pandas as pd
 #
 # This could be done with pandas too, but duckdb is faster
 # and the expression is easier to write this way for me
-awards = duckdb.execute(
-    f"""
-        PIVOT 
-        '{snakemake.input["novels"]}'
+#
+# Since we aren't grouping by the nominated and winner columns,
+# they are counted by the pivot operation
+awards = (
+    duckdb.execute(
+        f"""
+        PIVOT '{snakemake.input["novels"]}'
         ON status
-        GROUP BY
-            work_qid,
-            title,
-            author_qids,
-            authors,
-            year,
-            pubDate,
-            openlibrary_ids,
-            isbns
+        GROUP BY work_qid, title, author_qids, authors, year, pubDate, openlibrary_ids, isbns
         """
-).df()
+    )
+    .df()
+    .rename(columns={"nominated": "n_nom", "winner": "n_win"})
+)
+awards["year"] = awards["year"].astype(int)
 
-# clean up the column names
-awards.rename(
-    columns={
-        "nominated": "n_nom",
-        "winner": "n_win",
-    },
-    inplace=True,
+# Read cumulative awards
+cumulative_awards = pd.read_csv(snakemake.input["wins_as_of"])
+
+# Explode author QIDs and join with cumulative awards
+work_author_join = (
+    awards.assign(author_qid=awards.author_qids.str.split(";"))
+    .explode("author_qid")[["work_qid", "author_qid", "year"]]
+    .rename(columns={"year": "year_of_award"})
 )
 
-# see how many works are missing an openlibrary id
+merged = work_author_join.merge(cumulative_awards, on="author_qid")
+
+# Find, for each work and author, the latest cumulative award year before this award
+previous_awards = (
+    merged[merged.year_of_award > merged.year]
+    .sort_values("year")
+    .groupby(["work_qid", "author_qid"], as_index=False)
+    .last()
+    .groupby("work_qid", as_index=False)["awards_as_of_year"]
+    .sum()
+)
+
+# Join with awards DataFrame
+awards = awards.merge(previous_awards, on="work_qid", how="left")
+awards.awards_as_of_year = awards.awards_as_of_year.fillna(0).astype(int)
+
+# Count works missing an openlibrary ID
 n_missing = (
-    awards.groupby("work_qid").openlibrary_ids.first().replace("", pd.NA).isna().sum()
+    awards.groupby("work_qid")["openlibrary_ids"]
+    .first()
+    .replace("", pd.NA)
+    .isna()
+    .sum()
 )
-
 print(f"{n_missing} works are missing an openlibrary id")
 
 awards.to_csv(snakemake.output[0], index=False)

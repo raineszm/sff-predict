@@ -67,7 +67,9 @@ for sparql_query, data_name in [
 
 rule clean_nominated_novels:
     input:
-        novels=WIKIDATA_DATA['award_novels']
+        novels=WIKIDATA_DATA['award_novels'],
+        wins_as_of=PROCESSED_DATA['cumulative_awards'],
+        authors=WIKIDATA_DATA['nominee_biographical']
     output:
         PROCESSED_DATA['nominated_novels']
     script:
