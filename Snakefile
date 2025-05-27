@@ -22,7 +22,7 @@ RAW_DATA = {
 PROCESSED_DATA = {
     k: os.path.join(DATA_ROOT, v) for k, v in
     {
-        'nominated_novels': 'nominated_novels.csv',
+        'nominated_novels': 'nominated_novels.json',
         'cumulative_awards': 'cumulative_awards.csv',
     }.items()
 }

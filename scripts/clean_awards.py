@@ -84,4 +84,4 @@ n_missing = (
 )
 print(f"{n_missing} works are missing an openlibrary id")
 
-awards.to_csv(snakemake.output[0], index=False)
+awards.to_json(snakemake.output[0], orient="records", lines=True)
