@@ -2,7 +2,7 @@
 # This fetches every nominee of any of the major literary awards
 # at https://www.sfadb.com/Awards_Directory
 SELECT DISTINCT 
-    ?author 
+    (STRAFTER(STR(?author), "http://www.wikidata.org/entity/") AS ?author_qid)
     ?authorLabel
     ?itemLabel
     ?awardLabel 

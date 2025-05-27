@@ -1,16 +1,18 @@
 # This is sort of impenetrible without some reference to what
 # the various entities and relations mean
-# I reccomend pasting it into the online editor
+# I recommend pasting it into the online editor
 # https://query.wikidata.org/
 # which gives hover information for each entity and relation
 SELECT DISTINCT 
     ?title 
+    (STRAFTER(STR(?item), "http://www.wikidata.org/entity/") AS ?work_qid) 
     (GROUP_CONCAT(DISTINCT ?authorLabel; SEPARATOR = ", ") AS ?authors) 
     (MIN(YEAR(?date)) AS ?year) 
     ?awardLabel 
-    (GROUP_CONCAT(DISTINCT ?work_id; SEPARATOR = ";") AS ?work_ids) 
-    (GROUP_CONCAT(DISTINCT ?ol_id; SEPARATOR = ";") AS ?ol_ids) 
+    (GROUP_CONCAT(DISTINCT ?goodreads_id; SEPARATOR = ";") AS ?goodreads_ids) 
+    (GROUP_CONCAT(DISTINCT ?openlibrary_id; SEPARATOR = ";") AS ?openlibrary_ids) 
     (GROUP_CONCAT(DISTINCT ?isbn; SEPARATOR = ";") AS ?isbns) 
+    (MIN(?_pubDate) AS ?pubDate) 
     ?status 
 WHERE {
     VALUES (?prop ?ps ?status) {
@@ -34,11 +36,21 @@ WHERE {
     }
 
     ?item wdt:P7937 wd:Q8261;
-        wdt:P50 ?author.
+        wdt:P50 ?author;
+        wdt:P577 ?workPubDate.
 
-    OPTIONAL { ?item wdt:P8383 ?work_id. }    # goodreads
-    OPTIONAL { ?item wdt:P648 ?ol_id. }       # openlibrary
-    OPTIONAL { ?item (wdt:P747/(wdt:P957|wdt:P212)) ?isbn. } # isbn-10 or 13
+    OPTIONAL { ?item wdt:P8383 ?goodreads_id. }    # goodreads
+    OPTIONAL { ?item wdt:P648 ?openlibrary_id. }       # openlibrary
+    OPTIONAL {
+        ?item wdt:P747 ?edition.
+        ?edition (wdt:P957|wdt:P212) ?isbn.
+        OPTIONAL {
+            ?edition wdt:P407 wd:Q1860;
+                wdt:P577 ?engPubDate.
+        }
+    }
+
+    BIND(COALESCE(?engPubDate, ?workPubDate) AS ?_pubDate)
 
     SERVICE wikibase:label {
         bd:serviceParam wikibase:language "[AUTO_LANGUAGE],mul,en".
