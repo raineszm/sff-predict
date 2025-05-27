@@ -72,3 +72,16 @@ rule clean_nominated_novels:
         PROCESSED_DATA['nominated_novels']
     script:
         "scripts/clean_awards.py"
+
+rule tally_cumulative_awards:
+    input:
+        all_awards=WIKIDATA_DATA['awards_all'],
+        sparql=f'scripts/queries/awards_as_of.sql'
+    output:
+        cumulative_awards=PROCESSED_DATA['cumulative_awards']
+    shell:
+        """
+        export INPUT_AWARDS={input.all_awards}
+        export OUTPUT_CUMULATIVE={output.cumulative_awards}
+        envsubst < {input.sparql} | duckdb
+        """
