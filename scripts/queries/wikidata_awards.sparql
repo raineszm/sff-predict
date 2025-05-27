@@ -37,7 +37,8 @@ WHERE {
 
     ?item wdt:P7937 wd:Q8261;
         wdt:P50 ?author;
-        wdt:P577 ?workPubDate.
+        wdt:P577 ?workPubDate;
+        wdt:P407 ?workLang. 
 
     OPTIONAL { ?item wdt:P8383 ?goodreads_id. }    # goodreads
     OPTIONAL { ?item wdt:P648 ?openlibrary_id. }       # openlibrary
@@ -45,12 +46,12 @@ WHERE {
         ?item wdt:P747 ?edition.
         ?edition (wdt:P957|wdt:P212) ?isbn.
         OPTIONAL {
-            ?edition wdt:P407 wd:Q1860;
+            ?edition wdt:P407 wd:Q1860; # English
                 wdt:P577 ?engPubDate.
         }
     }
 
-    BIND(COALESCE(?engPubDate, ?workPubDate) AS ?_pubDate)
+    BIND(IF(?workLang = wd:Q1860, ?workPubDate, ?engPubDate) AS ?_pubDate)
 
     SERVICE wikibase:label {
         bd:serviceParam wikibase:language "[AUTO_LANGUAGE],mul,en".
