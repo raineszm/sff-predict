@@ -15,8 +15,16 @@ WIKIDATA_DATA = {
     }.items()
 }
 
+KAGGLE_DATA = {
+    k: os.path.join(RAW_DATA_ROOT, v) for k, v in
+    {
+        'openlibrary_works': 'ol_works.parquet',
+    }.items()
+}
+
 RAW_DATA = {
     **WIKIDATA_DATA,
+    **KAGGLE_DATA,
 }
 
 PROCESSED_DATA = {
@@ -63,6 +71,17 @@ for sparql_query, data_name in [
             f"Downloading {data_name} from Wikidata"
         script:
             "scripts/download_sparql_query.py"
+
+
+# Kaggle data download rules
+# -------------------------
+
+rule download_openlibrary_works:
+    output:
+        KAGGLE_DATA['openlibrary_works']
+    script:
+        "scripts/download_openlibrary.py"
+
 
 # Awards processing rules
 # ----------------------
