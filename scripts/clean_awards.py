@@ -1,26 +1,23 @@
 from snakemake.script import snakemake
-import duckdb
 import pandas as pd
 
 # Reshape the awards data so we have a single row per novel
 # and keep track of a count of how many awards each novel has
 # been nominated for and won in the year
 #
-# This could be done with pandas too, but duckdb is faster
-# and the expression is easier to write this way for me
-#
-# Since we aren't grouping by the nominated and winner columns,
-# they are counted by the pivot operation
+awards = pd.read_json(snakemake.input["novels"], lines=True)
+group_keys = awards.columns.drop(["status", "year", "awardLabel"]).tolist()
+
 awards = (
-    duckdb.execute(
-        f"""
-        PIVOT '{snakemake.input["novels"]}'
-        ON status
-        GROUP BY work_qid, title, author_qids, authors, year, pubDate, openlibrary_ids, isbns
-        """
+    awards.groupby(group_keys)
+    .agg(
+        # handle the edge cases where a novel's award year is not
+        # the calendar year
+        year=("year", lambda x: x.mode().iat[0]),
+        n_nom=("status", lambda s: (s == "nominated").sum()),
+        n_win=("status", lambda s: (s == "winner").sum()),
     )
-    .df()
-    .rename(columns={"nominated": "n_nom", "winner": "n_win"})
+    .reset_index()
 )
 
 # Some clean up of the awards data
