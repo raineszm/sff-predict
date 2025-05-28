@@ -204,27 +204,27 @@ Consider a shortlist cohort of $k$ books with:
 
 i. **Multinomial PMF for wins**\
 Model the allocation of exactly $N_{\mathrm{win}}$ win slots among the $k$
-books: $$
-     P(\{N_i\})
-     = \frac{N_{\mathrm{win}}!}{\prod_{i=1}^k N_i!}\;\prod_{i=1}^k \hat p_i^{\,N_i}.
-   $$
+books: 
+
+$$P(\{N_i\})
+     = \frac{N_{\mathrm{win}}!}{\prod_{i=1}^k N_i!}\;\prod_{i=1}^k \hat p_i^{\,N_i}.$$
 
 This gives the likelihood of observing each book's win count.
 
 ii. **Negative log-likelihood**\
-Transform products into sums: $$
-     -\ln P
-     = -\ln(N_{\mathrm{win}}!) \;+\; \sum_{i=1}^k \ln(N_i!) \;-\; \sum_{i=1}^k N_i\,\ln(\hat p_i).
-   $$
+Transform products into sums: 
+
+$$ -\ln P
+     = -\ln(N_{\mathrm{win}}!) \;+\; \sum_{i=1}^k \ln(N_i!) \;-\; \sum_{i=1}^k N_i\,\ln(\hat p_i).$$
 
 The first two terms are constant w.r.t.\ the model.
 
 iii. **Normalize by total winners**\
-Divide by $N_{\mathrm{win}}$ to put different years on the same scale: $$
-     L_{\mathrm{win}}
+Divide by $N_{\mathrm{win}}$ to put different years on the same scale: 
+
+$$  L_{\mathrm{win}}
      = -\frac{1}{N_{\mathrm{win}}}\sum_{i=1}^k N_i\,\ln(\hat p_i)
-     = -\sum_{i=1}^k \frac{N_i}{N_{\mathrm{win}}}\,\ln(\hat p_i).
-   $$
+     = -\sum_{i=1}^k \frac{N_i}{N_{\mathrm{win}}}\,\ln(\hat p_i).$$
 
 Here $\frac{N_i}{N_{\mathrm{win}}}$ is the empirical win distribution over the
 shortlist cohort.
