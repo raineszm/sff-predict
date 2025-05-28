@@ -33,6 +33,7 @@ sparqlwrapper = ">=2.0.0,<3"
 httpx = ">=0.28.1,<0.29"
 duckdb = ">=1.2.2,<2"
 hishel = ">=0.1.2,<0.2"
+wikipedia-api = ">=0.8.1,<0.9"
 
 [pypi-dependencies]
 httpx-retries = ">=0.4.0, <0.5"
