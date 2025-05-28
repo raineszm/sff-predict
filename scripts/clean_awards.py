@@ -25,7 +25,8 @@ awards = (
 
 # Some clean up of the awards data
 awards["year"] = awards["year"].astype(int)
-awards.isbns = awards.isbns.str.replace("-", "").fillna("").str.split(";")
+awards.isbns = awards.isbns.str.replace("-", "").replace("", pd.NA).str.split(";")
+awards.openlibrary_ids = awards.openlibrary_ids.replace("", pd.NA).str.split(";")
 
 # Read cumulative awards
 cumulative_awards = pd.read_csv(snakemake.input["wins_as_of"])
@@ -61,7 +62,13 @@ author_info = (
     work_author_join.merge(authors, on="author_qid")
     .assign(age=lambda x: x.year_of_award - x.dob.dt.year)
     .groupby("work_qid")
-    .agg({"genderLabel": list, "birthCountryLabel": list, "age": list})
+    .agg(
+        {
+            "genderLabel": list,
+            "birthCountryLabel": lambda x: x.dropna().tolist(),
+            "age": list,
+        }
+    )
     .reset_index()
     .rename(
         columns={
