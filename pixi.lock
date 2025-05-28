@@ -360,6 +360,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/websocket-client-1.8.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/whatthepatch-1.0.7-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/widgetsnbextension-4.0.14-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/wikipedia-api-0.8.1-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/wrapt-1.17.2-py311h917b07b_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/xorg-libxau-1.0.12-h5505292_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/xorg-libxdmcp-1.1.5-hd74edd7_0.conda
@@ -374,6 +375,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zstandard-0.23.0-py311h917b07b_2.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/zstd-1.5.7-h6491c7d_2.conda
       - pypi: https://files.pythonhosted.org/packages/3a/42/8a70123107b3cf70b8c058c190682eeb5267c5c284b8d5bc8a080bb881aa/httpx_retries-0.4.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/49/bf/c2a24567bb6bd80c1fe7cb2ed1a332666476f69c313256aff96094bef93e/kagglehub-0.3.12-py3-none-any.whl
 packages:
 - conda: https://conda.anaconda.org/conda-forge/noarch/amply-0.1.6-pyhd8ed1ab_1.conda
   sha256: e8d87cb66bcc62bc8d8168037b776de962ebf659e45acb1a813debde558f7339
@@ -2240,6 +2242,23 @@ packages:
   - pkg:pypi/jupyterlab-widgets?source=hash-mapping
   size: 189133
   timestamp: 1746450926999
+- pypi: https://files.pythonhosted.org/packages/49/bf/c2a24567bb6bd80c1fe7cb2ed1a332666476f69c313256aff96094bef93e/kagglehub-0.3.12-py3-none-any.whl
+  name: kagglehub
+  version: 0.3.12
+  sha256: 6eeb7c5c8e1f25a28e9b26d3d8ed0c24a4a32f763ea5de6e1b3aabba442f2a26
+  requires_dist:
+  - packaging
+  - pyyaml
+  - requests
+  - tqdm
+  - datasets ; extra == 'hf-datasets'
+  - pandas ; extra == 'hf-datasets'
+  - pandas ; extra == 'pandas-datasets'
+  - polars ; extra == 'polars-datasets'
+  - betterproto>=2.0.0b6 ; extra == 'signing'
+  - model-signing ; extra == 'signing'
+  - sigstore>=3.6.1 ; extra == 'signing'
+  requires_python: '>=3.9'
 - conda: https://conda.anaconda.org/conda-forge/osx-arm64/kiwisolver-1.4.7-py311h2c37856_0.conda
   sha256: 8ffc46f6e99c95c48426cf34c033d16cde3bcf100cd74d1d74a33943a85a6ec8
   md5: ee572d19da1346db8e78cb8e7d5d2330
@@ -5204,6 +5223,18 @@ packages:
   - pkg:pypi/widgetsnbextension?source=compressed-mapping
   size: 889285
   timestamp: 1744291155057
+- conda: https://conda.anaconda.org/conda-forge/noarch/wikipedia-api-0.8.1-pyhd8ed1ab_1.conda
+  sha256: a6eef6154cc5d163cd8c730f24f0cd26856a4c46b61751ec3de4f580dce60f55
+  md5: ea2c617611f2d930f0b17895e19d5b00
+  depends:
+  - python >=3.9
+  - requests
+  license: MIT
+  license_family: MIT
+  purls:
+  - pkg:pypi/wikipedia-api?source=hash-mapping
+  size: 20607
+  timestamp: 1737390494692
 - conda: https://conda.anaconda.org/conda-forge/osx-arm64/wrapt-1.17.2-py311h917b07b_0.conda
   sha256: 121396c6f75ffcbf4d2296ad0ad9190a62aff0ae22ed4080a39827a6275cdf1b
   md5: 40fa235e40013f4e5400f1d01add07dc
