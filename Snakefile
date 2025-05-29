@@ -22,7 +22,9 @@ RAW_DATA = {
 PROCESSED_DATA = {
     k: os.path.join(DATA_ROOT, v) for k, v in
     {
-        'nominated_novels': 'nominated_novels.json',
+        'nominated_novels': 'nominated_novels.csv',
+        'openlibrary_ids': 'openlibrary_ids.csv',
+        'isbns': 'isbns.csv',
         'cumulative_awards': 'cumulative_awards.csv',
     }.items()
 }
@@ -71,7 +73,9 @@ rule clean_nominated_novels:
         wins_as_of=PROCESSED_DATA['cumulative_awards'],
         authors=WIKIDATA_DATA['nominee_biographical']
     output:
-        PROCESSED_DATA['nominated_novels']
+        cleaned_novels=PROCESSED_DATA['nominated_novels'],
+        openlibrary_ids=PROCESSED_DATA['openlibrary_ids'],
+        isbns=PROCESSED_DATA['isbns']
     script:
         "scripts/clean_awards.py"
 
