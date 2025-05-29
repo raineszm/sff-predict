@@ -1,4 +1,4 @@
-import shutil
+import os
 import kagglehub
 from kagglehub.exceptions import UnauthenticatedError
 from snakemake.script import snakemake
@@ -14,10 +14,15 @@ except UnauthenticatedError:
     kagglehub.login()
     print(kagglehub.whoami())
 
+# Set the cache directory to be in the raw data directory
+os.environ["KAGGLEHUB_CACHE"] = os.path.join(
+    os.path.dirname(snakemake.output[0]), "kaggle_cache"
+)
+
 # Download latest version
 path = kagglehub.dataset_download(
     "zacharymraines/open-library-works-dump-2025-01-08", path="ol_works.parquet"
 )
 
-# Move it to the data directory
-shutil.move(path, snakemake.output[0])
+# Link it to the data directory
+os.symlink(os.path.abspath(path), os.path.abspath(snakemake.output[0]))
