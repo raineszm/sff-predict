@@ -1,15 +1,11 @@
-"""
-Metadata providers for looking up work identifiers from various sources.
-
-This module provides classes for resolving book/work identifiers across different
-databases and services, including local lookups and external API calls to
-OpenLibrary.
-"""
-
 from typing import Optional
+
+import wikipediaapi
 import httpx
 from httpx_retries import RetryTransport, Retry
 from hishel import CacheTransport, Controller, FileStorage
+
+USER_AGENT = "scifi-fantasy/0.1 (dev@zmraines.com)"
 
 
 def create_caching_client(api_root: str) -> httpx.Client:
@@ -39,45 +35,35 @@ def create_caching_client(api_root: str) -> httpx.Client:
 
     return httpx.Client(
         http2=True,  # Enable HTTP/2 for better performance
-        headers={
-            "User-Agent": "scifi-fantasy/0.1 (dev@zmraines.com)",
-        },
+        headers={"User-Agent": USER_AGENT},
         transport=cache_transport,
         base_url=api_root,
     )
 
 
-class OpenLibraryClient:
+class WikipediaDescriptionProvider:
     """
-    Provides lookup functionality using the OpenLibrary API.
+    Attempt to extract a short summary of the plot of a work from Wikipedia.
     """
 
     def __init__(self):
-        self.client = create_caching_client("https://openlibrary.org/")
+        self.client = wikipediaapi.Wikipedia(user_agent=USER_AGENT)
 
-    def __search(self, query: str) -> Optional[dict]:
-        """Search OpenLibrary for a single result matching the query."""
-        response = self.client.get(
-            "search.json",
-            params={
-                "q": query,
-                "fields": "key,description",  # only get the fields we need
-                "limit": 1,
-            },
+    def _article_name(self, wikipedia_url: str) -> str:
+        """
+        Extract the name of the article from the Wikipedia URL.
+        """
+        return wikipedia_url.removeprefix("https://en.wikipedia.org/wiki/")
+
+    def get_description(self, wikipedia_url: str) -> Optional[str]:
+        page = self.client.page(self._article_name(wikipedia_url))
+        if not page.exists():
+            return None
+
+        return next(
+            map(
+                lambda s: s.text,
+                filter(lambda s: s.title.startswith("Plot"), page.sections),
+            ),
+            None,
         )
-        response.raise_for_status()
-        json = response.json()
-        if json["numFound"] != 0:
-            return json["docs"][0]
-
-    def lookup_by_id(self, id: str) -> Optional[dict]:
-        """Look up a work by its OpenLibrary identifier."""
-        return self.__search(f"key:/works/{id}")
-
-    def lookup_by_isbn(self, isbn: str) -> Optional[dict]:
-        """Look up a work by its ISBN."""
-        return self.__search(f"isbn:{isbn}")
-
-    def lookup_by_title_authors(self, title: str, authors: list[str]) -> Optional[dict]:
-        """Look up a work by its title and authors."""
-        return self.__search(f"intitle:{title} inauthors:{','.join(authors)}")

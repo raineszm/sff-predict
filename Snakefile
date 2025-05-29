@@ -118,7 +118,8 @@ rule collect_descriptions:
     input:
         openlibrary_ids=PROCESSED_DATA['openlibrary_ids'],
         ol_works=KAGGLE_DATA['openlibrary_works'],
-        nominated_novels=PROCESSED_DATA['nominated_novels']
+        nominated_novels=PROCESSED_DATA['nominated_novels'],
+        wikipedia=PROCESSED_DATA['wikipedia']
     output:
         descriptions=PROCESSED_DATA['descriptions']
     script:
