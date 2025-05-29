@@ -6,3 +6,4 @@ data/*.parquet filter=lfs diff=lfs merge=lfs -text
 *.ipynb	diff=jupyternotebook
 
 *.ipynb	merge=jupyternotebook
+bin/*.sh eol=lf
