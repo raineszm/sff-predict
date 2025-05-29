@@ -22,6 +22,7 @@ def explode_id_column(df, id_column, single_id_col=None):
         .assign(**{single_id_col: lambda x: x[id_column].str.split(";")})
         .explode(single_id_col)
         .drop(columns=[id_column])
+        .drop_duplicates()
         .set_index(single_id_col)
     )
 
@@ -30,8 +31,10 @@ def explode_id_column(df, id_column, single_id_col=None):
 # and keep track of a count of how many awards each novel has
 # been nominated for and won in the year
 #
-awards = pd.read_json(snakemake.input["novels"], lines=True)
-group_keys = awards.columns.drop(["status", "year", "awardLabel"]).tolist()
+awards = pd.read_json(snakemake.input["novels"], lines=True).drop(
+    columns=["awardLabel"]
+)
+group_keys = awards.columns.drop(["status", "year"]).tolist()
 
 awards = (
     awards.groupby(group_keys)
@@ -73,7 +76,8 @@ work_author_join = awards[["work_qid", "author_qid", "year"]].rename(
     columns={"year": "year_of_award"}
 )
 
-merged = work_author_join.merge(cumulative_awards, on="author_qid")
+merged = work_author_join.merge(cumulative_awards, on="author_qid", how="left")
+
 
 # Find, for each work and author, the latest cumulative award year before this award
 previous_awards = (
@@ -81,12 +85,11 @@ previous_awards = (
     .sort_values("year")
     .groupby(["work_qid", "author_qid"], as_index=False)
     .last()
-    .groupby("work_qid", as_index=False)["awards_as_of_year"]
-    .sum()
-)
+    .reset_index()
+)[["work_qid", "author_qid", "awards_as_of_year"]]
 
 # Join with awards DataFrame
-awards = awards.merge(previous_awards, on="work_qid", how="left")
+awards = awards.merge(previous_awards, on=["work_qid", "author_qid"], how="left")
 awards.awards_as_of_year = awards.awards_as_of_year.fillna(0).astype(int)
 
 # Add author biography information
@@ -102,9 +105,9 @@ author_info = (
             "genderLabel": "gender",
         }
     )
-)
+)[["work_qid", "author_qid", "age", "birth_country", "gender"]]
 
-awards = awards.merge(author_info, on="work_qid", how="left")
+awards = awards.merge(author_info, on=["work_qid", "author_qid"], how="left")
 
 # Count number of works which have no identifying information
 # i.e., no openlibrary id or isbn
