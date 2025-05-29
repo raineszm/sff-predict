@@ -37,7 +37,7 @@ awards = pd.read_json(snakemake.input["novels"], lines=True).drop(
 group_keys = awards.columns.drop(["status", "year"]).tolist()
 
 awards = (
-    awards.groupby(group_keys)
+    awards.groupby(group_keys, dropna=False)
     .agg(
         # handle the edge cases where a novel's award year is not
         # the calendar year
@@ -55,16 +55,23 @@ awards.isbns = awards.isbns.str.replace("-", "")
 # Split off openlibrary and isbn ids into separate dataframes
 openlibrary_ids = explode_id_column(awards, "openlibrary_ids")
 isbns = explode_id_column(awards, "isbns")
+wikipedia = (
+    awards[["work_qid", "article"]]
+    .set_index("work_qid")
+    .rename(columns={"article": "wikipedia_url"})
+    .dropna()
+)
 
 openlibrary_ids.to_csv(snakemake.output["openlibrary_ids"])
 isbns.to_csv(snakemake.output["isbns"])
+wikipedia.to_csv(snakemake.output["wikipedia"])
 
 # Drop the original openlibrary and isbn columns
 # and explode the author qids
 awards = (
-    awards.drop(columns=["openlibrary_ids", "isbns"])
+    awards.drop(columns=["openlibrary_ids", "isbns", "article"])
     .explode("author_qids")
-    .rename(columns={"author_qids": "author_qid"})
+    .rename(columns={"author_qids": "author_qid", "authors": "author"})
 )
 
 

@@ -15,6 +15,7 @@ SELECT DISTINCT
     (GROUP_CONCAT(DISTINCT ?isbn; SEPARATOR = ";") AS ?isbns) 
     (MIN(?_pubDate) AS ?pubDate) 
     ?status 
+    ?article
 WHERE {
     VALUES (?prop ?ps ?status) {
         (p:P166 ps:P166 "winner")
@@ -55,6 +56,13 @@ WHERE {
     BIND(IF(?workLang = wd:Q1860, COALESCE(?workPubDate, ?engPubDate), ?engPubDate) AS ?_pubDate)
     BIND(STRAFTER(STR(?author), "http://www.wikidata.org/entity/") AS ?author_qid)
 
+      
+    # Get wikipedia page
+    OPTIONAL {
+        ?article schema:about ?item ;
+                 schema:isPartOf <https://en.wikipedia.org/> .
+    }
+
     SERVICE wikibase:label {
         bd:serviceParam wikibase:language "[AUTO_LANGUAGE],mul,en".
         ?item rdfs:label ?title.
@@ -62,4 +70,4 @@ WHERE {
         ?award rdfs:label ?awardLabel.
     }
 }
-GROUP BY ?item ?title ?awardLabel ?status
+GROUP BY ?item ?title ?awardLabel ?status ?article
