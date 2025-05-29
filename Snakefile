@@ -33,6 +33,7 @@ PROCESSED_DATA = {
         'nominated_novels': 'nominated_novels.csv',
         'openlibrary_ids': 'openlibrary_ids.csv',
         'isbns': 'isbns.csv',
+        'wikipedia': 'wikipedia.csv',
         'cumulative_awards': 'cumulative_awards.csv',
         'descriptions': 'descriptions.csv',
     }.items()
@@ -95,7 +96,8 @@ rule clean_nominated_novels:
     output:
         cleaned_novels=PROCESSED_DATA['nominated_novels'],
         openlibrary_ids=PROCESSED_DATA['openlibrary_ids'],
-        isbns=PROCESSED_DATA['isbns']
+        isbns=PROCESSED_DATA['isbns'],
+        wikipedia=PROCESSED_DATA['wikipedia']
     script:
         "scripts/clean_awards.py"
 

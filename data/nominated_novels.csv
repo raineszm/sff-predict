@@ -1,4 +1,4 @@
-title,work_qid,authors,author_qid,pubDate,year,n_nom,n_win,awards_as_of_year,age,birth_country,gender
+title,work_qid,author,author_qid,pubDate,year,n_nom,n_win,awards_as_of_year,age,birth_country,gender
 /,Q5670736,Greg Bear,Q317491,1997-06-01T00:00:00Z,1998,2,0,30,47.0,United States,male
 11/22/63,Q723020,Stephen King,Q39829,2011-11-08T00:00:00Z,2012,2,0,38,65.0,United States,male
 2061: Odyssey Three,Q212718,Arthur C. Clarke,Q47087,1987-12-01T00:00:00Z,1988,1,0,10,71.0,United Kingdom,male
@@ -45,6 +45,7 @@ A Planet Called Treason,Q780585,Orson Scott Card,Q217110,1979-07-01T00:00:00Z,19
 A Princess of Roumania,Q131417536,Paul Park,Q3371960,2005-08-01T00:00:00Z,2006,1,0,9,52.0,United States,male
 A Red Heart of Memories,Q131417480,Nina Kiriki Hoffman,Q1803115,1999-10-01T00:00:00Z,2000,1,0,5,45.0,United States,female
 A Rose for Armageddon,Q96371325,Hilbert Schenck,Q3785610,1982-10-01T00:00:00Z,1983,1,0,9,57.0,United States,male
+A Scanner Darkly,Q1198489,Philip K. Dick,Q171091,,1978,2,0,9,50.0,United States,male
 A Secret History,Q125817686,Mary Gentle,Q387693,1999-10-01T00:00:00Z,2001,1,0,8,45.0,United Kingdom,female
 A Song for a New Day,Q95996827,Sarah Pinsker,Q28870552,2019-09-10T00:00:00Z,2019,1,1,14,42.0,United States,female
 A Sorceress Comes to Call,Q133842905,Ursula Vernon,Q7901282,2024-08-06T00:00:00Z,2025,1,0,15,48.0,Japan,female
@@ -55,7 +56,7 @@ A Talent for War,Q4659971,Jack McDevitt,Q715241,1989-02-01T00:00:00Z,1990,1,0,10
 A Time of Changes,Q2491758,Robert Silverberg,Q314553,1971-03-01T00:00:00Z,1972,1,1,17,37.0,United States,male
 A Woman of the Iron People,Q4660767,Eleanor Arnason,Q5354218,1991-04-01T00:00:00Z,1992,2,0,0,50.0,United States,female
 A World Between,Q3997040,Norman Spinrad,Q455951,1979-10-01T00:00:00Z,1980,1,0,7,40.0,United States,male
-Abaddon's Gate,Q17000766,"Ty Franck, James S. A. Corey, Daniel Abraham",Q18608460;Q6142591;Q1159871,2013-06-04T00:00:00Z,2014,1,1,0,,,
+Abaddon's Gate,Q17000766,"Daniel Abraham, James S. A. Corey, Ty Franck",Q1159871;Q6142591;Q18608460,2013-06-04T00:00:00Z,2014,1,1,0,,,
 Absolution Gap,Q3090152,Alastair Reynolds,Q380869,2003-11-01T00:00:00Z,2004,1,0,12,38.0,United Kingdom,male
 Accelerando,Q2300209,Charles Stross,Q345249,2005-07-05T00:00:00Z,2006,2,1,27,42.0,United Kingdom,male
 Acceptance,Q16824659,Jeff VanderMeer,Q1038440,2014-08-29T00:00:00Z,2015,1,0,11,47.0,United States,male
@@ -82,7 +83,7 @@ All My Sins Remembered,Q122581064,Joe Haldeman,Q347461,1977-10-01T00:00:00Z,1978
 All Those Vanished Engines,Q131382299,Paul Park,Q3371960,2014-07-01T00:00:00Z,2015,1,0,19,61.0,United States,male
 All Tomorrow's Parties,Q900595,William Gibson,Q188987,1999-10-07T00:00:00Z,2000,1,0,30,52.0,United States,male
 All the Bells on Earth,Q131466632,James Blaylock,Q979465,1995-11-01T00:00:00Z,1996,1,0,11,46.0,United States,male
-All the Birds in the Sky,Q29469803,Charlie Jane Anders,Q5084448,2016-01-26T00:00:00Z,2016,2,1,6,47.0,United States,trans woman
+All the Birds in the Sky,Q29469803,Charlie Jane Anders,Q5084448,2016-01-26T00:00:00Z,2017,2,1,7,48.0,United States,trans woman
 All the Lives He Led,Q131382165,Frederik Pohl,Q312641,2011-04-01T00:00:00Z,2012,1,0,54,93.0,United States,male
 All the Weyrs of Pern,Q3535595,Anne McCaffrey,Q233046,1991-09-19T00:00:00Z,1992,2,0,19,66.0,United States,female
 Altered Carbon,Q1170644,Richard K. Morgan,Q254635,2002-02-28T00:00:00Z,2003,0,1,0,38.0,United Kingdom,male
@@ -123,7 +124,7 @@ Artemis Awakening,Q131382290,Jane Lindskold,Q121899,2014-05-27T00:00:00Z,2015,1,
 Artifact,Q75551719,Gregory Benford,Q358312,1985-01-01T00:00:00Z,1986,1,0,29,45.0,United States,male
 Ashes of Candesce,Q131382196,Karl Schroeder,Q3193467,2012-02-01T00:00:00Z,2013,1,0,8,51.0,Canada,male
 Ashes of Victory,Q3231336,David Weber,Q588653,2000-03-01T00:00:00Z,2001,1,0,0,49.0,United States,male
-Assemblers of Infinity,Q4808643,"Doug Beason, Kevin J. Anderson",Q5300286;Q339577,1993-02-01T00:00:00Z,1993,2,0,0,,,
+Assemblers of Infinity,Q4808643,"Kevin J. Anderson, Doug Beason",Q339577;Q5300286,1993-02-01T00:00:00Z,1993,2,0,0,,,
 At Winter's End,Q99030036,Robert Silverberg,Q314553,1988-04-01T00:00:00Z,1989,1,0,87,54.0,United States,male
 At the Eye of the Ocean,Q131375083,Hilbert Schenck,Q3785610,1981-08-01T00:00:00Z,1982,1,0,7,56.0,United States,male
 Atlas Alone,Q100710210,Emma Newman,Q42754694,2019-04-16T00:00:00Z,2020,1,0,5,44.0,United Kingdom,female
@@ -136,10 +137,10 @@ Autonomous,Q69527499,Annalee Newitz,Q4767817,2017-09-19T00:00:00Z,2017,2,0,0,48.
 Autumn Angels,Q122452568,Arthur Byron Cover,Q2865022,1975-01-01T00:00:00Z,1975,1,0,0,25.0,United States,male
 Axis,Q1078499,Robert Charles Wilson,Q240786,2007-09-01T00:00:00Z,2008,2,0,20,55.0,United States,male
 Azanian Bridges,Q131445271,Nick Wood,Q64682148,2016-04-01T00:00:00Z,2017,1,0,1,56.0,Zambia,male
-Babel,Q114310172,R.F. Kuang,Q53411010,2022-08-23T00:00:00Z,2022,1,1,3,26.0,People's Republic of China,female
-Babel-17,Q2722309,Samuel R. Delany,Q438164,1966-05-01T00:00:00Z,1966,1,1,0,24.0,United States,male
+Babel,Q114310172,R.F. Kuang,Q53411010,2022-08-23T00:00:00Z,2023,1,1,3,27.0,People's Republic of China,female
+Babel-17,Q2722309,Samuel R. Delany,Q438164,1966-05-01T00:00:00Z,1967,1,1,0,25.0,United States,male
 Babylon,Q131381648,Richard Calder,Q5971711,2006-03-01T00:00:00Z,2007,1,0,2,51.0,United Kingdom,male
-Babylon's Ashes,Q22074947,"Ty Franck, James S. A. Corey, Daniel Abraham",Q18608460;Q6142591;Q1159871,2016-12-06T00:00:00Z,2017,1,0,0,,,
+Babylon's Ashes,Q22074947,"Daniel Abraham, James S. A. Corey, Ty Franck",Q1159871;Q6142591;Q18608460,2016-12-06T00:00:00Z,2017,1,0,0,,,
 Bad Monkeys,Q798732,Matt Ruff,Q558138,2007-07-24T00:00:00Z,2008,2,0,1,43.0,United States,male
 Banner of Souls,Q131381585,Liz Williams,Q4352306,2004-10-01T00:00:00Z,2005,1,0,2,40.0,United Kingdom,female
 Bannerless,Q117148972,Carrie Vaughn,Q541088,2017-07-11T00:00:00Z,2018,1,0,6,45.0,United States,female
@@ -158,9 +159,11 @@ Beyond the Blue Event Horizon,Q538742,Frederik Pohl,Q312641,1980-02-01T00:00:00Z
 Beyond the Hallowed Sky,Q110088422,Ken MacLeod,Q372505,2021-11-23T00:00:00Z,2022,1,0,29,68.0,United Kingdom,male
 Biography of X,Q117443239,Catherine Lacey,Q22957871,2023-03-21T00:00:00Z,2024,1,0,0,39.0,United States,female
 Bios,Q803910,Robert Charles Wilson,Q240786,1999-11-01T00:00:00Z,2000,1,0,9,47.0,United States,male
+Birdbrain,Q3349959,Johanna Sinisalo,Q2746094,,2011,1,0,0,53.0,Finland,female
 Birthright: The Book of Man,Q4917091,Mike Resnick,Q913403,1982-02-02T00:00:00Z,1983,1,0,0,41.0,United States,male
 Black Brillion,Q131381588,Matt Hughes,Q3852012,2004-11-01T00:00:00Z,2005,1,0,0,56.0,United Kingdom,male
 Black Easter,Q4920715,James Blish,Q248867,1968-01-01T00:00:00Z,1968,1,0,1,47.0,United States,male
+Black Genesis,Q3209152,L. Ron Hubbard,Q216896,,1987,1,0,0,76.0,United States,male
 Black Man,Q2905406,Richard K. Morgan,Q254635,2007-05-17T00:00:00Z,2008,1,0,2,43.0,United Kingdom,male
 Black Milk,Q131376385,Robert Reed,Q1857523,1989-03-01T00:00:00Z,1990,1,0,1,34.0,United States,male
 Black Sun,Q130612923,Rebecca Roanhorse,Q56192533,2020-10-13T00:00:00Z,2020,2,0,6,49.0,United States,female
@@ -182,7 +185,7 @@ Bones of the Earth,Q3886715,Michael Swanwick,Q455510,2002-01-01T00:00:00Z,2003,3
 Boneshaker,Q2910027,Cherie Priest,Q843837,2009-10-01T00:00:00Z,2010,2,1,1,35.0,United States,female
 Borderline,Q122452562,Mishell Baker,Q28075806,2016-03-01T00:00:00Z,2016,2,0,0,40.0,,female
 Borne,Q30608684,Jeff VanderMeer,Q1038440,2017-04-25T00:00:00Z,2018,2,0,14,50.0,United States,male
-Bowl of Heaven,Q131382212,"Gregory Benford, Larry Niven",Q358312;Q316610,2012-10-01T00:00:00Z,2013,1,0,0,,,
+Bowl of Heaven,Q131382212,"Larry Niven, Gregory Benford",Q316610;Q358312,2012-10-01T00:00:00Z,2013,1,0,0,,,
 Boy's Life,Q4180242,Robert R. McCammon,Q2598859,1991-08-01T00:00:00Z,1992,0,1,3,40.0,United States,male
 Brain Child,Q131376575,George Turner,Q1363986,1991-05-01T00:00:00Z,1992,1,0,1,76.0,Australia,male
 Brain Thief,Q131382136,Alexander Jablokov,Q4719217,2010-01-05T00:00:00Z,2011,1,0,11,55.0,United States,male
@@ -196,6 +199,8 @@ Brightness Reef,Q3088925,David Brin,Q315069,1995-09-01T00:00:00Z,1996,2,0,24,46.
 Brittle Innings,Q21588124,Michael Bishop,Q953288,1994-05-01T00:00:00Z,1995,3,0,63,50.0,United States,male
 Broken Symmetries,Q97656902,Paul Preuss,Q708198,1983-10-01T00:00:00Z,1984,1,0,1,42.0,United States,male
 Brother Termite,Q48998756,Patricia Anthony,Q448545,1993-10-01T00:00:00Z,1994,1,0,0,47.0,United States,female
+Brother to Dragons,Q3222992,Charles Sheffield,Q943997,,1993,0,1,15,58.0,Kingdom of England,male
+Brother to Dragons,Q3222992,Charles Sheffield,Q943997,,1993,0,1,15,58.0,United Kingdom,male
 Brothers in Arms,Q2421826,Lois McMaster Bujold,Q229369,1989-01-01T00:00:00Z,1989,1,0,3,40.0,United States,female
 Buddy Holly Is Alive and Well on Ganymede,Q4984887,Bradley Denton,Q897008,1991-09-01T00:00:00Z,1992,1,1,6,34.0,United States,male
 Bug Jack Barron,Q3157123,Norman Spinrad,Q455951,1969-01-01T00:00:00Z,1969,2,0,0,29.0,United States,male
@@ -207,7 +212,7 @@ Bête,Q131382309,Adam Roberts,Q350734,2014-09-25T00:00:00Z,2015,2,0,4,50.0,Unite
 Cahokia Jazz,Q127514388,Francis Spufford,Q5482492,2023-10-03T00:00:00Z,2024,1,0,0,60.0,,male
 Calculating God,Q2933712,Robert J. Sawyer,Q362742,2000-01-01T00:00:00Z,2001,1,0,10,41.0,Canada,male
 Caldé of the Long Sun,Q122452540,Gene Wolfe,Q361149,1994-08-01T00:00:00Z,1995,2,0,46,64.0,United States,male
-Caliban's War,Q5019811,"Ty Franck, James S. A. Corey, Daniel Abraham",Q18608460;Q6142591;Q1159871,2012-06-07T00:00:00Z,2013,1,0,0,,,
+Caliban's War,Q5019811,"Daniel Abraham, James S. A. Corey, Ty Franck",Q1159871;Q6142591;Q18608460,2012-06-07T00:00:00Z,2013,1,0,0,,,
 Camouflage,Q2240456,Joe Haldeman,Q347461,2004-08-01T00:00:00Z,2005,1,1,29,62.0,United States,male
 Candle,Q5031940,John Barnes,Q682767,2000-02-01T00:00:00Z,2001,1,0,12,44.0,United States,male
 Captain Vorpatril's Alliance,Q5036850,Lois McMaster Bujold,Q229369,2012-11-06T00:00:00Z,2013,2,0,29,64.0,United States,female
@@ -242,11 +247,11 @@ Chosen Spirits,Q131382875,Samit Basu,Q7409572,2020-04-24T00:00:00Z,2021,1,0,0,42
 Chronic City,Q5113944,Jonathan Lethem,Q440100,2009-10-13T00:00:00Z,2010,1,0,9,46.0,United States,male
 Chronosequence,Q131376342,Hilbert Schenck,Q3785610,1988-06-01T00:00:00Z,1989,1,0,19,63.0,United States,male
 Chthon,Q4501974,Piers Anthony,Q559409,1967-07-01T00:00:00Z,1967,2,0,0,33.0,United Kingdom,male
-Cibola Burn,Q19610145,"Ty Franck, James S. A. Corey, Daniel Abraham",Q18608460;Q6142591;Q1159871,2014-06-05T00:00:00Z,2015,1,0,0,,,
+Cibola Burn,Q19610145,"Daniel Abraham, James S. A. Corey, Ty Franck",Q1159871;Q6142591;Q18608460,2014-06-05T00:00:00Z,2015,1,0,0,,,
 Circumpolar!,Q56353084,Richard A. Lupoff,Q3430446,1984-09-01T00:00:00Z,1985,1,0,10,50.0,United States,male
 Cirque,Q122452524,Terry Carr,Q1292432,1977-04-01T00:00:00Z,1977,2,0,3,40.0,United States,male
 City Come A-Walkin',Q20084641,John Shirley,Q1346126,1980-07-01T00:00:00Z,1981,1,0,0,28.0,United States,male
-City Under the Stars,Q131382866,"Gardner Dozois, Michael Swanwick",Q720562;Q455510,2020-08-25T00:00:00Z,2021,1,0,0,,,
+City Under the Stars,Q131382866,"Michael Swanwick, Gardner Dozois",Q455510;Q720562,2020-08-25T00:00:00Z,2021,1,0,0,,,
 City at the End of Time,Q5123535,Greg Bear,Q317491,2008-07-01T00:00:00Z,2009,2,0,37,58.0,United States,male
 City of Golden Shadow,Q444451,Tad Williams,Q368224,1996-12-05T00:00:00Z,1997,1,0,3,40.0,United States,male
 City of Pearl,Q5123861,Karen Traviss,Q298417,2004-03-01T00:00:00Z,2005,2,0,0,5.0,United Kingdom,female
@@ -262,7 +267,7 @@ Coalescent,Q5137866,Stephen Baxter,Q314416,2003-10-01T00:00:00Z,2004,1,0,47,47.0
 Code Blue – Emergency,Q5140010,James White,Q586756,1987-07-01T00:00:00Z,1988,1,0,6,60.0,United Kingdom,male
 Code of the Lifemaker,Q5140094,James P. Hogan,Q1061225,1983-06-01T00:00:00Z,1984,1,0,5,43.0,United Kingdom,male
 Coelestis,Q122452541,Paul Park,Q3371960,1993-01-01T00:00:00Z,1995,1,0,2,41.0,United States,male
-Coils,Q56358274,"Fred Saberhagen, Roger Zelazny",Q497454;Q295406,1982-05-01T00:00:00Z,1983,1,0,0,,,
+Coils,Q56358274,"Roger Zelazny, Fred Saberhagen",Q295406;Q497454,1982-05-01T00:00:00Z,1983,1,0,0,,,
 Colony Fleet,Q131381200,Susan R. Matthews,Q7648306,2000-10-01T00:00:00Z,2001,1,0,2,49.0,,female
 Coming Home,Q18816070,Jack McDevitt,Q715241,2014-01-01T00:00:00Z,2014,1,0,37,79.0,United States,male
 Company Town,Q54833637,Madeline Ashby,Q28606000,2016-05-17T00:00:00Z,2017,1,0,2,34.0,United States,female
@@ -328,6 +333,7 @@ Dissidence,Q43569582,Ken MacLeod,Q372505,2016-05-10T00:00:00Z,2017,1,0,27,63.0,U
 Distance Haze,Q131380959,Jamil Nasir,Q6147750,2000-03-01T00:00:00Z,2001,1,0,2,46.0,United States,male
 Distraction,Q21189972,Bruce Sterling,Q312995,1998-10-01T00:00:00Z,1999,3,0,48,45.0,United States,male
 Distress,Q3205332,Greg Egan,Q316785,1995-12-01T00:00:00Z,1997,1,0,24,36.0,Australia,male
+Do Androids Dream of Electric Sheep?,Q605249,Philip K. Dick,Q171091,,1968,1,0,2,40.0,United States,male
 Doomsday Book,Q2603313,Connie Willis,Q234700,1992-07-01T00:00:00Z,1993,0,3,35,48.0,United States,female
 Doors of Sleep,Q131382880,Tim Pratt,Q6055713,2021-01-12T00:00:00Z,2022,1,0,11,46.0,United States,male
 Doorways in the Sand,Q664034,Roger Zelazny,Q295406,1976-03-01T00:00:00Z,1975,2,0,18,38.0,United States,male
@@ -336,6 +342,7 @@ Dover Beach,Q5302472,Richard Bowker,Q7324283,1987-09-01T00:00:00Z,1988,1,0,0,38.
 Down and Out in the Magic Kingdom,Q3015406,Cory Doctorow,Q110436,2003-01-01T00:00:00Z,2004,1,0,2,33.0,Canada,male
 Downbelow Station,Q1751584,C. J. Cherryh,Q234030,1981-02-01T00:00:00Z,1982,1,1,11,40.0,United States,female
 Dr. Adder,Q2113191,K. W. Jeter,Q1090406,1984-03-01T00:00:00Z,1985,1,0,0,35.0,United States,male
+"Dr. Bloodmoney, or How We Got Along After the Bomb",Q1317915,Philip K. Dick,Q171091,,1965,1,0,0,37.0,United States,male
 Dragon's Egg,Q3205839,Robert L. Forward,Q2000229,1980-05-01T00:00:00Z,1981,1,0,0,49.0,United States,male
 Dragondrums,Q3235696,Anne McCaffrey,Q233046,1979-02-01T00:00:00Z,1980,1,0,10,54.0,United States,female
 Dragonquest,Q2976056,Anne McCaffrey,Q233046,1971-05-01T00:00:00Z,1972,1,0,4,46.0,United States,female
@@ -343,11 +350,11 @@ Dragonsdawn,Q2737699,Anne McCaffrey,Q233046,1988-10-01T00:00:00Z,1989,2,0,15,63.
 Dragonsinger,Q3207217,Anne McCaffrey,Q233046,1977-02-01T00:00:00Z,1978,1,0,7,52.0,United States,female
 Drawing Blood,Q4394822,Poppy Z. Brite,Q450868,1993-11-01T00:00:00Z,1994,1,0,2,27.0,United States,trans man
 Dream Dancer,Q5306348,Janet Morris,Q6153517,1980-03-27T00:00:00Z,1982,1,0,1,36.0,United States,female
-Dream Park,Q5306426,"Steven Barnes, Larry Niven",Q2594458;Q316610,1981-03-01T00:00:00Z,1982,1,0,0,,,
+Dream Park,Q5306426,"Larry Niven, Steven Barnes",Q316610;Q2594458,1981-03-01T00:00:00Z,1982,1,0,0,,,
 Dreaming Metal,Q5306607,Melissa Scott,Q1919410,1997-07-01T00:00:00Z,1998,1,0,4,38.0,United States,female
 Dreamsnake,Q598315,Vonda N. McIntyre,Q242162,1978-03-01T00:00:00Z,1979,0,2,12,31.0,United States,female
 Driving the Deep,Q131382855,Suzanne Palmer,Q56216426,2020-05-05T00:00:00Z,2021,1,0,4,,United States,female
-Dune,Q190192,Frank Herbert,Q7934,2021-09-01T00:00:00Z,1964,1,2,0,44.0,United States,male
+Dune,Q190192,Frank Herbert,Q7934,2021-09-01T00:00:00Z,1966,1,2,1,46.0,United States,male
 Dying Inside,Q2916242,Robert Silverberg,Q314553,1972-10-01T00:00:00Z,1972,2,0,17,37.0,United States,male
 Dying of the Light,Q135165,George R. R. Martin,Q181677,1977-04-01T00:00:00Z,1978,2,0,15,30.0,United States,male
 Earth,Q3518604,David Brin,Q315069,1990-06-01T00:00:00Z,1991,2,0,17,41.0,United States,male
@@ -358,15 +365,16 @@ Eater,Q5331267,Gregory Benford,Q358312,2000-05-01T00:00:00Z,2001,1,0,60,60.0,Uni
 Ecce and Old Earth,Q2910240,Jack Vance,Q312632,1991-02-01T00:00:00Z,1992,1,0,20,76.0,United States,male
 Echo,Q15221014,Jack McDevitt,Q715241,2010-01-01T00:00:00Z,2010,1,0,34,75.0,United States,male
 Echopraxia,Q24255737,Peter Watts,Q983672,2014-08-01T00:00:00Z,2015,2,0,8,57.0,Canada,male
+Eden,Q1283523,Stanisław Lem,Q6530,,1990,1,0,0,69.0,Ukraine,male
 Eifelheim,Q5348867,Michael F. Flynn,Q2577687,2006-10-17T00:00:00Z,2007,2,0,16,60.0,United States,male
 Einstein's Bridge,Q5349776,John G. Cramer,Q2841857,1997-06-01T00:00:00Z,1998,1,0,1,64.0,United States,male
 Elvissey,Q5368262,Jack Womack,Q950414,1993-01-01T00:00:00Z,1994,1,0,2,38.0,United States,male
 Elysium Fire,Q55231789,Alastair Reynolds,Q380869,2018-01-01T00:00:00Z,2019,1,0,47,53.0,United Kingdom,male
 Embassytown,Q3052025,China Miéville,Q319196,2011-04-28T00:00:00Z,2012,3,1,14,40.0,United Kingdom,male
 Embers of War,Q131382758,Gareth L. Powell,Q5522892,2018-02-01T00:00:00Z,2019,1,0,0,49.0,United Kingdom,male
+Emergence,Q5370535,David R. Palmer,Q5238842,1984-11-01T00:00:00Z,1985,2,0,4,44.0,United States,male
 Emergence,Q47005478,Ken MacLeod,Q372505,2017-09-26T00:00:00Z,2018,1,0,28,64.0,United Kingdom,male
 Emergence,Q50331931,C. J. Cherryh,Q234030,2018-01-01T00:00:00Z,2019,1,0,55,77.0,United States,female
-Emergence,Q5370535,David R. Palmer,Q5238842,1984-11-01T00:00:00Z,1985,2,0,4,44.0,United States,male
 Emperor,Q5373863,Stephen Baxter,Q314416,2006-07-01T00:00:00Z,2007,1,0,56,50.0,United Kingdom,male
 Empire Games,Q46856743,Charles Stross,Q345249,2017-01-17T00:00:00Z,2018,1,0,49,54.0,United Kingdom,male
 Empress of Forever,Q131382814,Max Gladstone,Q16203004,2019-06-18T00:00:00Z,2020,1,0,6,36.0,,male
@@ -416,7 +424,7 @@ False Hearts,Q131382367,Laura Lam,Q19561138,2016-06-14T00:00:00Z,2017,1,0,0,29.0
 Far from the Light of Heaven,Q111604570,Tade Thompson,Q58045802,2021-10-26T00:00:00Z,2022,1,0,9,72.0,United Kingdom,male
 Farewell Horizontal,Q129321723,K. W. Jeter,Q1090406,1989-02-01T00:00:00Z,1990,2,0,2,40.0,United States,male
 Farthing,Q5436486,Jo Walton,Q438330,2006-08-08T00:00:00Z,2007,3,0,2,43.0,United Kingdom,female
-Fate of Worlds,Q20926301,"Edward M. Lerner, Larry Niven",Q5344277;Q316610,2012-08-01T00:00:00Z,2013,1,0,0,,,
+Fate of Worlds,Q20926301,"Larry Niven, Edward M. Lerner",Q316610;Q5344277,2012-08-01T00:00:00Z,2013,1,0,0,,,
 Feed,Q5441171,Seanan McGuire,Q3476794,2010-04-10T00:00:00Z,2011,2,0,1,33.0,United States,female
 Feersum Endjinn,Q5441458,Iain Banks,Q312579,1994-01-01T00:00:00Z,1995,1,0,3,41.0,United Kingdom,male
 Fevre Dream,Q2915854,George R. R. Martin,Q181677,1982-10-01T00:00:00Z,1983,1,0,28,35.0,United States,male
@@ -433,17 +441,17 @@ Firebird,Q15221218,Jack McDevitt,Q715241,2011-11-01T00:00:00Z,2011,2,0,35,76.0,U
 Firebreak,Q131382887,Nicole Kornher-Stace,Q66422437,2021-05-04T00:00:00Z,2022,1,0,2,39.0,United States,female
 Firelord,Q5451887,Parke Godwin,Q3365451,1980-10-01T00:00:00Z,1981,1,0,1,52.0,United States,male
 Firestarter,Q828031,Stephen King,Q39829,1980-09-29T00:00:00Z,1981,1,0,6,34.0,United States,male
-First Channel,Q131374931,"Jacqueline Lichtenberg, Jean Lorrah",Q3157753;Q537473,1980-01-01T00:00:00Z,1981,1,0,0,,,
+First Channel,Q131374931,"Jean Lorrah, Jacqueline Lichtenberg",Q537473;Q3157753,1980-01-01T00:00:00Z,1981,1,0,0,,,
 Five-Twelfths of Heaven,Q131376024,Melissa Scott,Q1919410,1985-04-01T00:00:00Z,1986,1,0,1,26.0,United States,female
 Fleet Elements,Q131382874,Walter Jon Williams,Q714485,2020-12-08T00:00:00Z,2021,1,0,43,68.0,United States,male
 Fleet of Knives,Q131382793,Gareth L. Powell,Q5522892,2019-02-19T00:00:00Z,2020,1,0,2,50.0,United Kingdom,male
 Flesh and Fire,Q5458712,Laura Anne Gilman,Q433956,2009-10-01T00:00:00Z,2009,1,0,0,42.0,United States,female
 Flood,Q5460012,Stephen Baxter,Q314416,2008-07-01T00:00:00Z,2009,1,0,64,52.0,United Kingdom,male
 "Flow My Tears, the Policeman Said",Q874492,Philip K. Dick,Q171091,1974-02-01T00:00:00Z,1975,2,1,5,47.0,United States,male
-Flowers for Algernon,Q122463813,Daniel Keyes,Q185714,1966-01-01T00:00:00Z,1966,1,1,0,39.0,United States,male
+Flowers for Algernon,Q122463813,Daniel Keyes,Q185714,1966-01-01T00:00:00Z,1967,1,1,0,40.0,United States,male
 Fool's Run,Q4015958,Patricia A. McKillip,Q268755,1987-04-01T00:00:00Z,1988,1,0,4,40.0,United States,female
 Fool's War,Q131376799,Sarah Zettel,Q448241,1997-01-01T00:00:00Z,1998,1,0,1,32.0,United States,female
-Footfall,Q2652159,"Jerry Pournelle, Larry Niven",Q578031;Q316610,1985-05-12T00:00:00Z,1986,2,0,0,,,
+Footfall,Q2652159,"Larry Niven, Jerry Pournelle",Q316610;Q578031,1985-05-12T00:00:00Z,1986,2,0,0,,,
 "For Us, the Living",Q2678988,Robert A. Heinlein,Q123078,2003-11-28T00:00:00Z,2005,1,0,17,98.0,United States,male
 Foreigner,Q27763467,C. J. Cherryh,Q234030,1994-02-01T00:00:00Z,1995,1,0,40,53.0,United States,female
 Forests of the Heart,Q122452546,Charles de Lint,Q1066587,2000-06-01T00:00:00Z,2000,1,0,14,49.0,Netherlands,male
@@ -485,6 +493,7 @@ Glasshouse,Q2027568,Charles Stross,Q345249,2006-06-01T00:00:00Z,2007,3,0,30,43.0
 Glimmering,Q131376802,Elizabeth Hand,Q601304,1997-03-01T00:00:00Z,1998,1,0,6,41.0,United States,female
 Gloriana,Q3109139,Michael Moorcock,Q316138,1978-04-01T00:00:00Z,1979,0,2,2,40.0,United Kingdom,male
 Glorious Angels,Q131382316,Justina Robson,Q442626,2015-03-19T00:00:00Z,2016,1,0,9,48.0,United Kingdom,female
+Glory Road,Q2538455,Robert A. Heinlein,Q123078,,1964,1,0,1,57.0,United States,male
 Glory Season,Q3209843,David Brin,Q315069,1993-05-01T00:00:00Z,1994,2,0,22,44.0,United States,male
 Gnomon,Q96379623,Nick Harkaway,Q1985398,2017-01-01T00:00:00Z,2018,1,0,4,46.0,United Kingdom,male
 God Emperor of Dune,Q401619,Frank Herbert,Q7934,1981-05-01T00:00:00Z,1982,1,0,4,62.0,United States,male
@@ -504,7 +513,7 @@ Golden Witchbreed,Q97355160,Mary Gentle,Q387693,1983-09-01T00:00:00Z,1984,1,0,1,
 Golem100,Q5580438,Alfred Bester,Q286116,1980-04-01T00:00:00Z,1981,1,0,8,68.0,United States,male
 Goliath,Q111442660,Tochi Onyebuchi,Q56209299,2022-01-25T00:00:00Z,2023,1,0,5,36.0,United States,male
 Good News From Outer Space,Q65074348,John Kessel,Q3066599,1989-08-01T00:00:00Z,1990,3,0,7,40.0,United States,male
-Good Omens,Q1052459,"Neil Gaiman, Terry Pratchett",Q210059;Q46248,1990-05-01T00:00:00Z,1991,1,0,0,,,
+Good Omens,Q1052459,"Terry Pratchett, Neil Gaiman",Q46248;Q210059,1990-05-01T00:00:00Z,1991,1,0,0,,,
 Grail,Q131382162,Elizabeth Bear,Q1029497,2011-02-22T00:00:00Z,2012,1,0,15,41.0,United States,female
 Grass,Q3433346,Sheri S. Tepper,Q450737,1989-09-01T00:00:00Z,1990,2,0,7,61.0,United States,female
 Gravity's Rainbow,Q1212160,Thomas Pynchon,Q35155,1973-02-28T00:00:00Z,1973,1,0,0,36.0,United States,male
@@ -532,7 +541,7 @@ Harvest of Stars,Q131376633,Poul Anderson,Q220883,1993-08-01T00:00:00Z,1994,1,0,
 Have Space Suit—Will Travel,Q1213656,Robert A. Heinlein,Q123078,1958-08-01T00:00:00Z,1959,1,0,0,52.0,United States,male
 Hawkmistress!,Q1760824,Marion Zimmer Bradley,Q465179,1982-09-01T00:00:00Z,1983,1,0,9,53.0,United States,female
 Heart of Iron,Q131382178,Ekaterina Sedia,Q5350343,2011-07-01T00:00:00Z,2012,1,0,4,42.0,Russia,female
-Heart of the Comet,Q5692425,"Gregory Benford, David Brin",Q358312;Q315069,1986-03-01T00:00:00Z,1987,1,0,0,,,
+Heart of the Comet,Q5692425,"David Brin, Gregory Benford",Q315069;Q358312,1986-03-01T00:00:00Z,1987,1,0,0,,,
 "Hearts, Hands and Voices",Q131376613,Ian McDonald,Q455228,1992-03-01T00:00:00Z,1993,1,0,7,33.0,United Kingdom,male
 Heathern,Q11330401,Jack Womack,Q950414,1990-08-01T00:00:00Z,1991,1,0,1,35.0,United States,male
 Heavy Time,Q125817635,C. J. Cherryh,Q234030,1991-06-01T00:00:00Z,1992,1,0,36,50.0,United States,female
@@ -565,7 +574,7 @@ Hyperion,Q1798059,Dan Simmons,Q297538,1989-06-01T00:00:00Z,1990,1,2,3,42.0,Unite
 Icehenge,Q3233818,Kim Stanley Robinson,Q130779,1984-10-01T00:00:00Z,1985,1,0,11,33.0,United States,male
 Icon,Q131382365,Genevieve Valentine,Q16221657,2016-06-28T00:00:00Z,2017,1,0,9,36.0,,female
 If Tomorrow Comes,Q131382759,Nancy Kress,Q238438,2018-03-01T00:00:00Z,2019,1,0,80,71.0,United States,female
-If the Stars Are Gods,Q60839408,"Gordon Eklund, Gregory Benford",Q3110895;Q358312,1977-03-01T00:00:00Z,1978,1,0,0,,,
+If the Stars Are Gods,Q60839408,"Gregory Benford, Gordon Eklund",Q358312;Q3110895,1977-03-01T00:00:00Z,1978,1,0,0,,,
 Ilium,Q2725656,Dan Simmons,Q297538,2003-07-01T00:00:00Z,2004,1,1,16,56.0,United States,male
 Imago,Q11864746,Octavia E. Butler,Q239739,1989-05-01T00:00:00Z,1990,1,0,9,43.0,United States,female
 "Immortality, Inc.",Q519935,Robert Sheckley,Q333246,1959-01-01T00:00:00Z,1959,1,0,1,31.0,United States,male
@@ -582,7 +591,7 @@ In the Mouth of the Whale,Q15035526,Paul J. McAuley,Q187085,2012-01-01T00:00:00Z
 In the Night Wood,Q131466614,Dale Bailey,Q28101798,2018-10-09T00:00:00Z,2019,1,0,5,51.0,United States,male
 In the Ocean of Night,Q3015377,Gregory Benford,Q358312,1977-10-01T00:00:00Z,1977,2,0,10,36.0,United States,male
 Incandescence,Q6014063,Greg Egan,Q316785,2008-05-15T00:00:00Z,2009,1,0,42,48.0,Australia,male
-Inferno,Q4040445,"Jerry Pournelle, Larry Niven",Q578031;Q316610,1976-05-01T00:00:00Z,1976,2,0,0,,,
+Inferno,Q4040445,"Larry Niven, Jerry Pournelle",Q316610;Q578031,1976-05-01T00:00:00Z,1976,2,0,0,,,
 Infinity Beach,Q16386338,Jack McDevitt,Q715241,2000-02-01T00:00:00Z,2001,3,0,21,66.0,United States,male
 Infinity Gate,Q131382906,Mike Carey,Q610567,2023-03-28T00:00:00Z,2024,1,0,3,65.0,United Kingdom,male
 Infinity's Shore,Q4863413,David Brin,Q315069,1996-12-01T00:00:00Z,1997,1,0,26,47.0,United States,male
@@ -595,6 +604,7 @@ Into Everywhere,Q131382360,Paul J. McAuley,Q187085,2016-04-21T00:00:00Z,2017,2,0
 Intruder,Q27887635,C. J. Cherryh,Q234030,2012-03-01T00:00:00Z,2013,1,0,51,71.0,United States,female
 Intrusion,Q15035527,Ken MacLeod,Q372505,2012-03-01T00:00:00Z,2013,2,0,26,59.0,United Kingdom,male
 Invader,Q27765618,C. J. Cherryh,Q234030,1995-05-01T00:00:00Z,1996,1,0,42,54.0,United States,female
+Invisible Cities,Q1219705,Italo Calvino,Q154756,,1975,1,0,0,52.0,Cuba,male
 Invisible Sun,Q108907333,Charles Stross,Q345249,2021-09-28T00:00:00Z,2022,1,0,52,58.0,United Kingdom,male
 Iron Council,Q1748402,China Miéville,Q319196,2004-07-01T00:00:00Z,2005,2,0,9,33.0,United Kingdom,male
 Iron Sunrise,Q2870553,Charles Stross,Q345249,2004-07-01T00:00:00Z,2005,2,0,19,41.0,United Kingdom,male
@@ -641,8 +651,8 @@ Last Year,Q131382377,Robert Charles Wilson,Q240786,2016-12-06T00:00:00Z,2017,1,0
 Learning the World,Q6510209,Ken MacLeod,Q372505,2005-08-01T00:00:00Z,2006,3,0,15,52.0,United Kingdom,male
 Legacy,Q13581036,Greg Bear,Q317491,1995-06-01T00:00:00Z,1996,1,0,28,45.0,United States,male
 Legends & Lattes,Q114291824,Travis Baldree,Q114292132,2022-02-18T00:00:00Z,2022,2,0,0,,,male
-Leviathan Falls,Q107316509,"Ty Franck, James S. A. Corey, Daniel Abraham",Q18608460;Q6142591;Q1159871,2021-11-30T00:00:00Z,2022,1,1,0,,,
-Leviathan Wakes,Q6535598,"Ty Franck, James S. A. Corey, Daniel Abraham",Q18608460;Q6142591;Q1159871,2011-06-02T00:00:00Z,2012,2,0,0,,,
+Leviathan Falls,Q107316509,"Daniel Abraham, James S. A. Corey, Ty Franck",Q1159871;Q6142591;Q18608460,2021-11-30T00:00:00Z,2022,1,1,0,,,
+Leviathan Wakes,Q6535598,"Daniel Abraham, James S. A. Corey, Ty Franck",Q1159871;Q6142591;Q18608460,2011-06-02T00:00:00Z,2012,2,0,0,,,
 Lexicon,Q102076464,Max Barry,Q1912232,2013-06-18T00:00:00Z,2014,2,0,0,41.0,Australia,male
 Liege-Killer,Q6544117,Christopher Hinz,Q5112544,1987-02-01T00:00:00Z,1988,1,0,0,37.0,United States,male
 Life,Q131381581,Gwyneth Jones,Q288721,2004-10-01T00:00:00Z,2005,1,0,8,53.0,United Kingdom,female
@@ -674,7 +684,7 @@ Lost Everything,Q17102722,Brian Francis Slattery,Q4963785,2012-04-10T00:00:00Z,2
 Lost in Transmission,Q44414884,Wil McCarthy,Q3568081,2004-03-01T00:00:00Z,2005,1,0,6,39.0,United States,male
 Love & Sleep,Q6690221,John Crowley,Q736447,1994-09-01T00:00:00Z,1995,1,0,13,53.0,United States,male
 Lovecraft Country,Q30608520,Matt Ruff,Q558138,2016-02-16T00:00:00Z,2017,1,0,3,52.0,United States,male
-Lucifer's Hammer,Q471741,"Jerry Pournelle, Larry Niven",Q578031;Q316610,1977-01-01T00:00:00Z,1978,2,0,0,,,
+Lucifer's Hammer,Q471741,"Larry Niven, Jerry Pournelle",Q316610;Q578031,1977-01-01T00:00:00Z,1978,2,0,0,,,
 Luna: Moon Rising,Q62113776,Ian McDonald,Q455228,2019-02-28T00:00:00Z,2020,1,0,57,60.0,United Kingdom,male
 Luna: New Moon,Q21065522,Ian McDonald,Q455228,2015-09-17T00:00:00Z,2016,2,0,49,56.0,United Kingdom,male
 Luna: Wolf Moon,Q24255710,Ian McDonald,Q455228,2017-03-23T00:00:00Z,2018,1,0,53,58.0,United Kingdom,male
@@ -686,6 +696,7 @@ Madouc,Q2513907,Jack Vance,Q312632,1989-11-01T00:00:00Z,1990,0,1,19,74.0,United 
 Maelstrom,Q44286620,Peter Watts,Q983672,2001-10-01T00:00:00Z,2002,1,0,1,44.0,Canada,male
 Mainspring,Q6736735,Jay Lake,Q720669,2007-06-12T00:00:00Z,2008,2,0,5,44.0,Taiwan,male
 Making Money,Q2469019,Terry Pratchett,Q46248,2007-09-20T00:00:00Z,2008,1,0,18,60.0,United Kingdom,male
+Malevil,Q929165,Robert Merle,Q315949,,1974,0,1,0,66.0,Algeria,male
 Man Plus,Q2377008,Frederik Pohl,Q312641,1976-04-01T00:00:00Z,1977,2,1,11,58.0,United States,male
 Margaret and I,Q122452515,Kate Wilhelm,Q260560,1971-01-01T00:00:00Z,1971,1,0,1,43.0,United States,female
 Marooned in Realtime,Q3207044,Vernor Vinge,Q312405,1986-09-01T00:00:00Z,1987,2,0,5,43.0,United States,male
@@ -702,8 +713,8 @@ Maximum Light,Q131380867,Nancy Kress,Q238438,1998-01-01T00:00:00Z,1999,1,0,41,51
 Mayflies,Q96392366,"Kevin O'Donnell, Jr.",Q3195779,1979-12-01T00:00:00Z,1980,1,0,0,30.0,United States,male
 Mechanique: a Tale of the Circus Tresaulti,Q122452553,Genevieve Valentine,Q16221657,2011-04-25T00:00:00Z,2011,1,0,0,30.0,,female
 Memories,Q131376241,Mike McQuay,Q6847964,1987-06-01T00:00:00Z,1988,1,0,0,39.0,United States,male
-Memory,Q131381527,Linda Nagata,Q4389768,2003-04-01T00:00:00Z,2004,2,0,5,44.0,United States,female
 Memory,Q3305528,Lois McMaster Bujold,Q229369,1996-01-01T00:00:00Z,1997,3,0,13,48.0,United States,female
+Memory,Q131381527,Linda Nagata,Q4389768,2003-04-01T00:00:00Z,2004,2,0,5,44.0,United States,female
 Merchanter's Luck,Q16386980,C. J. Cherryh,Q234030,1982-07-01T00:00:00Z,1983,1,0,17,41.0,United States,female
 Metaplanetary: A Novel of Interplanetary Civil War,Q131381209,Tony Daniel,Q768866,2001-04-01T00:00:00Z,2002,1,0,9,39.0,United States,male
 Metropolitan,Q3391713,Walter Jon Williams,Q714485,1995-04-01T00:00:00Z,1995,2,0,17,42.0,United States,male
@@ -722,8 +733,8 @@ Mirror Dance,Q2884527,Lois McMaster Bujold,Q229369,1994-03-01T00:00:00Z,1995,0,2
 Missing Man,Q122452521,Katherine MacLean,Q1443787,1975-05-01T00:00:00Z,1975,1,0,1,50.0,United States,female
 Mission Child,Q65202611,Maureen F. McHugh,Q299933,1998-01-01T00:00:00Z,1999,2,0,20,40.0,United States,female
 Mississippi Blues,Q131376812,Kathleen Ann Goonan,Q3194058,1997-12-01T00:00:00Z,1998,1,0,1,46.0,United States,female
-Mockingbird,Q11881501,Sean Stewart,Q367102,1998-08-01T00:00:00Z,1999,2,0,5,34.0,United States,male
 Mockingbird,Q3204463,Walter Tevis,Q740928,1980-01-01T00:00:00Z,1980,2,0,0,52.0,United States,male
+Mockingbird,Q11881501,Sean Stewart,Q367102,1998-08-01T00:00:00Z,1999,2,0,5,34.0,United States,male
 Molly Zero,Q104854337,Keith Roberts,Q1379856,1980-07-01T00:00:00Z,1981,1,0,2,46.0,United Kingdom,male
 Mona Lisa Overdrive,Q663215,William Gibson,Q188987,1988-01-01T00:00:00Z,1989,3,0,21,41.0,United States,male
 Moonfall,Q85786245,Jack McDevitt,Q715241,1998-04-01T00:00:00Z,1998,2,0,17,63.0,United States,male
@@ -738,10 +749,10 @@ Mysterium,Q19947586,Robert Charles Wilson,Q240786,1994-04-01T00:00:00Z,1995,1,0,
 Mythago Wood,Q1770433,Robert Holdstock,Q890980,1984-09-01T00:00:00Z,1985,0,1,2,37.0,United Kingdom,male
 Native Tongue,Q6980071,Suzette Haden Elgin,Q2741191,1984-08-01T00:00:00Z,1985,1,0,2,49.0,United States,female
 Natural History,Q45321315,Justina Robson,Q442626,2003-04-01T00:00:00Z,2004,2,0,3,36.0,United Kingdom,female
-Necessity's Child,Q131382238,"Steve Miller, Sharon Lee",Q4293514;Q4260664,2013-02-05T00:00:00Z,2014,1,0,0,,,
+Necessity's Child,Q131382238,"Sharon Lee, Steve Miller",Q4260664;Q4293514,2013-02-05T00:00:00Z,2014,1,0,0,,,
 Necroville,Q75454649,Ian McDonald,Q455228,1994-07-01T00:00:00Z,1995,1,0,11,35.0,United Kingdom,male
 Nekropolis,Q131381203,Maureen F. McHugh,Q299933,2001-01-01T00:00:00Z,2002,2,0,22,43.0,United States,female
-Nemesis Games,Q19894682,"Ty Franck, James S. A. Corey, Daniel Abraham",Q18608460;Q6142591;Q1159871,2015-06-02T00:00:00Z,2016,1,0,0,,,
+Nemesis Games,Q19894682,"Daniel Abraham, James S. A. Corey, Ty Franck",Q1159871;Q6142591;Q18608460,2015-06-02T00:00:00Z,2016,1,0,0,,,
 Neom,Q131382900,Lavie Tidhar,Q666468,2022-11-09T00:00:00Z,2023,1,0,29,47.0,Israel,male
 Neon Lotus,Q131376305,Marc Laidlaw,Q2521946,1988-01-01T00:00:00Z,1989,1,0,1,29.0,United States,male
 Neptune's Brood,Q18391798,Charles Stross,Q345249,2013-07-01T00:00:00Z,2014,3,0,45,50.0,United Kingdom,male
@@ -768,7 +779,7 @@ Nova,Q3345309,Samuel R. Delany,Q438164,1968-01-01T00:00:00Z,1969,1,0,4,27.0,Unit
 Nova Express,Q3878987,William S. Burroughs,Q188176,1964-01-01T00:00:00Z,1965,1,0,0,51.0,United States,male
 Nova Swing,Q7064327,M. John Harrison,Q963799,2006-01-01T00:00:00Z,2007,2,0,9,62.0,United Kingdom,male
 Null States,Q131382748,Malka Older,Q28055399,2017-09-19T00:00:00Z,2018,1,0,1,41.0,,female
-Oath of Fealty,Q7074477,"Jerry Pournelle, Larry Niven",Q578031;Q316610,1981-08-01T00:00:00Z,1982,1,0,0,,,
+Oath of Fealty,Q7074477,"Larry Niven, Jerry Pournelle",Q316610;Q578031,1981-08-01T00:00:00Z,1982,1,0,0,,,
 Oaths and Miracles,Q131376751,Nancy Kress,Q238438,1996-01-01T00:00:00Z,1997,1,0,37,49.0,United States,female
 Occupy Me,Q131382359,Tricia Sullivan,Q534376,2016-01-21T00:00:00Z,2017,2,0,2,49.0,United States,female
 Od Magic,Q7077188,Patricia A. McKillip,Q268755,2005-06-07T00:00:00Z,2006,1,0,19,58.0,United States,female
@@ -813,11 +824,12 @@ Pattern Recognition,Q2295976,William Gibson,Q188987,2003-01-01T00:00:00Z,2004,1,
 Pegasus in Flight,Q7160597,Anne McCaffrey,Q233046,1990-12-01T00:00:00Z,1991,1,0,17,65.0,United States,female
 Perdido Street Station,Q1143215,China Miéville,Q319196,2000-03-01T00:00:00Z,2002,3,0,4,30.0,United Kingdom,male
 Perfect Circle,Q7167954,Sean Stewart,Q367102,2004-07-01T00:00:00Z,2004,2,0,8,39.0,United States,male
+Perfume,Q459303,Patrick Süskind,Q105994,,1987,0,1,0,38.0,Germany,male
 Perhaps the Stars,Q105476518,Ada Palmer,Q29649607,2021-10-19T00:00:00Z,2022,1,0,5,41.0,United States,female
 Perihelion Summer,Q130284308,Greg Egan,Q316785,2019-04-16T00:00:00Z,2020,1,0,59,59.0,Australia,male
 Permanence,Q3375455,Karl Schroeder,Q3193467,2002-05-01T00:00:00Z,2003,1,0,1,41.0,Canada,male
 Permutation City,Q2364488,Greg Egan,Q316785,1994-04-01T00:00:00Z,1995,1,1,13,34.0,Australia,male
-Persepolis Rising,Q48772056,"Ty Franck, James S. A. Corey, Daniel Abraham",Q18608460;Q6142591;Q1159871,2017-12-05T00:00:00Z,2018,1,0,0,,,
+Persepolis Rising,Q48772056,"Daniel Abraham, James S. A. Corey, Ty Franck",Q1159871;Q6142591;Q18608460,2017-12-05T00:00:00Z,2018,1,0,0,,,
 Persona,Q131382314,Genevieve Valentine,Q16221657,2015-03-10T00:00:00Z,2016,1,0,8,35.0,,female
 Pet Sematary,Q742226,Stephen King,Q39829,1983-11-14T00:00:00Z,1984,1,0,13,37.0,United States,male
 Phases of Gravity,Q3233491,Dan Simmons,Q297538,1989-05-01T00:00:00Z,1990,1,0,3,42.0,United States,male
@@ -833,7 +845,7 @@ Polar City Blues,Q131376420,Katharine Kerr,Q443830,1990-09-01T00:00:00Z,1991,1,0
 Polaris,Q7209119,Jack McDevitt,Q715241,2004-06-01T00:00:00Z,2005,2,0,27,70.0,United States,male
 Poseidon's Wake,Q19263901,Alastair Reynolds,Q380869,2015-04-30T00:00:00Z,2016,1,0,38,50.0,United Kingdom,male
 Powers,Q3400801,Ursula K. Le Guin,Q181659,2007-01-01T00:00:00Z,2009,0,1,73,80.0,United States,female
-Powers That Be,Q131376643,"Elizabeth Ann Scarborough, Anne McCaffrey",Q469370;Q233046,1993-07-01T00:00:00Z,1994,1,0,0,,,
+Powers That Be,Q131376643,"Anne McCaffrey, Elizabeth Ann Scarborough",Q233046;Q469370,1993-07-01T00:00:00Z,1994,1,0,0,,,
 Precursor,Q27796013,C. J. Cherryh,Q234030,1999-11-01T00:00:00Z,2000,1,0,47,58.0,United States,female
 Prelude to Foundation,Q783533,Isaac Asimov,Q34981,1988-05-01T00:00:00Z,1989,1,0,12,69.0,Russia,male
 Prentice Alvin,Q3089022,Orson Scott Card,Q217110,1989-02-01T00:00:00Z,1989,2,0,29,38.0,United States,male
@@ -862,8 +874,8 @@ Ragtime,Q737910,E. L. Doctorow,Q335232,1975-01-01T00:00:00Z,1975,1,0,0,44.0,Unit
 Rainbows End,Q471679,Vernor Vinge,Q312405,2006-05-16T00:00:00Z,2007,1,2,18,63.0,United States,male
 Raising Caine,Q122452560,Charles E. Gannon,Q18207018,2015-01-01T00:00:00Z,2015,1,0,2,55.0,United States,male
 Raising the Stones,Q131376416,Sheri S. Tepper,Q450737,1990-09-01T00:00:00Z,1991,1,0,10,62.0,United States,female
-Rama II,Q2415562,"Gentry Lee, Arthur C. Clarke",Q741508;Q47087,1989-11-01T00:00:00Z,1990,1,0,0,,,
-Rama Revealed,Q2283166,"Gentry Lee, Arthur C. Clarke",Q741508;Q47087,1993-10-14T00:00:00Z,1995,1,0,0,,,
+Rama II,Q2415562,"Arthur C. Clarke, Gentry Lee",Q47087;Q741508,1989-11-01T00:00:00Z,1990,1,0,0,,,
+Rama Revealed,Q2283166,"Arthur C. Clarke, Gentry Lee",Q47087;Q741508,1993-10-14T00:00:00Z,1995,1,0,0,,,
 Random Acts of Senseless Violence,Q7291925,Jack Womack,Q950414,1994-09-01T00:00:00Z,1995,1,0,3,39.0,United States,male
 Rapture,Q43480748,Kameron Hurley,Q6357011,2012-10-23T00:00:00Z,2013,1,0,3,33.0,United States,female
 Raven Stratagem,Q62625624,Yoon Ha Lee,Q16204372,2017-06-13T00:00:00Z,2018,2,0,15,39.0,United States,trans man
@@ -911,10 +923,11 @@ Rule 34,Q7378920,Charles Stross,Q345249,2011-07-01T00:00:00Z,2012,1,0,43,48.0,Un
 Rule of Capture,Q131382823,Christopher Brown,Q5107557,2019-08-13T00:00:00Z,2020,1,0,1,,,male
 Ruled Britannia,Q4048595,Harry Turtledove,Q455780,2002-11-01T00:00:00Z,2003,1,0,19,54.0,United States,male
 Rumors of Spring,Q131376297,Richard Grant,Q7326020,1987-03-01T00:00:00Z,1988,1,0,1,36.0,,male
+Russian Spring,Q3225930,Norman Spinrad,Q455951,,1992,1,0,21,52.0,United States,male
 SS-GB,Q4354234,Len Deighton,Q505274,1978-08-24T00:00:00Z,1980,1,0,0,51.0,United Kingdom,male
 Sailing Bright Eternity,Q64337559,Gregory Benford,Q358312,1995-08-01T00:00:00Z,1996,1,0,49,55.0,United States,male
 Sailing to Sarantium,Q28946151,Guy Gavriel Kay,Q95099,1998-09-01T00:00:00Z,1999,1,0,6,45.0,Canada,male
-Saint Leibowitz and the Wild Horse Woman,Q3203920,"Terry Bisson, Walter M. Miller",Q1444345;Q357839,1997-09-01T00:00:00Z,1998,1,0,0,,,
+Saint Leibowitz and the Wild Horse Woman,Q3203920,"Walter M. Miller, Terry Bisson",Q357839;Q1444345,1997-09-01T00:00:00Z,1998,1,0,0,,,
 Saltation,Q131382137,"Sharon Lee, Steve Miller",Q4260664;Q4293514,2010-04-20T00:00:00Z,2011,1,0,0,,,
 Santiago: a Myth of the Far Future,Q764902,Mike Resnick,Q913403,1986-03-01T00:00:00Z,1987,1,0,1,45.0,United States,male
 Sarah Canary,Q45321274,Karen Joy Fowler,Q4383379,1991-10-16T00:00:00Z,1992,1,0,14,42.0,United States,female
@@ -1005,16 +1018,20 @@ Star Rebel,Q131375520,F. M. Busby,Q5423959,1984-02-01T00:00:00Z,1985,1,0,1,64.0,
 Star of Gypsies,Q6574423,Robert Silverberg,Q314553,1986-09-01T00:00:00Z,1987,1,0,77,52.0,United States,male
 Starbound,Q131382135,Joe Haldeman,Q347461,2010-01-01T00:00:00Z,2011,1,0,37,68.0,United States,male
 Starburst,Q97173155,Frederik Pohl,Q312641,1982-06-01T00:00:00Z,1983,1,0,24,64.0,United States,male
-Stardance,Q7601555,"Jeanne Robinson, Spider Robinson",Q4975117;Q1443070,1979-02-01T00:00:00Z,1980,1,0,0,,,
+Stardance,Q7601555,"Spider Robinson, Jeanne Robinson",Q1443070;Q4975117,1979-02-01T00:00:00Z,1980,1,0,0,,,
 Starfarers,Q7601814,Poul Anderson,Q220883,1998-11-01T00:00:00Z,1999,1,0,41,73.0,United States,male
 Starfire,Q28452520,Paul Preuss,Q708198,1988-02-01T00:00:00Z,1989,1,0,2,47.0,United States,male
 Starling House,Q126893369,Alix E. Harrow,Q69802945,2023-10-03T00:00:00Z,2024,1,0,20,35.0,United States,female
+Starplex,Q3497210,Robert J. Sawyer,Q362742,,1996,2,0,2,36.0,Canada,male
 Starquake,Q3968388,Robert L. Forward,Q2000229,1985-10-01T00:00:00Z,1986,1,0,1,54.0,United States,male
 Stars in My Pocket Like Grains of Sand,Q7602353,Samuel R. Delany,Q438164,1984-12-01T00:00:00Z,1985,1,0,18,43.0,United States,male
 Starship Troopers,Q492207,Robert A. Heinlein,Q123078,1959-11-05T00:00:00Z,1960,0,1,1,53.0,United States,male
 Starter Villain,Q123112174,John Scalzi,Q277308,2023-09-19T00:00:00Z,2024,2,0,20,55.0,United States,male
 Startide Rising,Q2363504,David Brin,Q315069,1983-09-01T00:00:00Z,1984,0,3,5,34.0,United States,male
-Station Eleven,Q20645702,Emily St. John Mandel,Q3052385,2014-09-09T00:00:00Z,2015,2,0,0,36.0,Canada,female
+Station Eleven,Q20645702,Emily St. John Mandel,Q3052385,2014-09-09T00:00:00Z,2015,1,0,0,36.0,Canada,female
+Station Eleven,Q20645702,Emily St. John Mandel,Q3052385,2014-09-09T00:00:00Z,2015,1,0,0,36.0,Canada,female
+Station Eleven,Q20645702,Emily St. John Mandel,Q3052385,2014-09-09T00:00:00Z,2015,1,0,0,36.0,Canada,female
+Station Eleven,Q20645702,Emily St. John Mandel,Q3052385,2014-09-09T00:00:00Z,2015,1,0,0,36.0,Canada,female
 Stations of the Tide,Q3497490,Michael Swanwick,Q455510,1991-02-01T00:00:00Z,1992,3,1,28,42.0,United States,male
 Steal Across the Sky,Q131382108,Nancy Kress,Q238438,2009-02-01T00:00:00Z,2010,2,0,69,62.0,United States,female
 Stealing Worlds,Q131382813,Karl Schroeder,Q3193467,2019-06-18T00:00:00Z,2020,1,0,10,58.0,Canada,male
@@ -1035,6 +1052,7 @@ Surface Detail,Q302026,Iain Banks,Q312579,2010-10-07T00:00:00Z,2011,1,0,11,57.0,
 Swan Song,Q4359794,Robert R. McCammon,Q2598859,1987-06-01T00:00:00Z,1988,1,0,0,36.0,United States,male
 Sweep of Stars,Q131382896,Maurice Broaddus,Q16727672,2022-03-29T00:00:00Z,2023,1,0,1,48.0,United Kingdom,male
 Sword of the Demon,Q122452525,Richard A. Lupoff,Q3430446,1977-02-01T00:00:00Z,1977,1,0,8,42.0,United States,male
+Sylva,Q1292989,Jean Bruller,Q462634,,1963,1,0,0,61.0,France,male
 Synners,Q41077597,Pat Cadigan,Q266947,1991-02-01T00:00:00Z,1991,2,0,14,38.0,United States,female
 System Collapse,Q123521600,Martha Wells,Q6774606,2023-11-13T00:00:00Z,2024,0,1,9,60.0,United States,female
 Systemic Shock,Q18208339,Dean Ing,Q1181085,1981-06-01T00:00:00Z,1982,1,0,5,51.0,United States,male
@@ -1043,8 +1061,9 @@ Talking Man,Q7679827,Terry Bisson,Q1444345,1986-10-01T00:00:00Z,1987,1,0,0,45.0,
 Tamsin,Q860034,Peter S. Beagle,Q285007,1999-10-01T00:00:00Z,2000,1,0,4,61.0,United States,male
 Tau Zero,Q1968531,Poul Anderson,Q220883,1970-01-01T00:00:00Z,1971,1,0,6,45.0,United States,male
 Tea with the Black Dragon,Q7691141,R. A. MacAvoy,Q274941,1983-05-01T00:00:00Z,1984,3,0,1,35.0,United States,female
-Tehanu,Q2261855,Ursula K. Le Guin,Q181659,1990-03-01T00:00:00Z,1990,0,1,28,61.0,United States,female
+Tehanu,Q2261855,Ursula K. Le Guin,Q181659,1990-03-01T00:00:00Z,1991,0,1,29,62.0,United States,female
 Temporary Agency,Q122452539,Rachel Pollack,Q434138,1994-04-01T00:00:00Z,1994,1,0,0,49.0,United States,trans woman
+Tender Is the Flesh,Q106610620,Agustina Bazterrica,Q93736537,,2021,1,0,0,47.0,Argentina,female
 Teranesia,Q7701574,Greg Egan,Q316785,1999-08-01T00:00:00Z,2000,1,0,30,39.0,Australia,male
 Terminal World,Q7702704,Alastair Reynolds,Q380869,2010-03-15T00:00:00Z,2011,1,0,26,45.0,United Kingdom,male
 Termination Shock,Q109284514,Neal Stephenson,Q312853,2021-11-11T00:00:00Z,2022,1,0,10,63.0,United States,male
@@ -1082,6 +1101,7 @@ The Big Time,Q3209683,Fritz Leiber,Q313185,1958-03-01T00:00:00Z,1958,0,1,0,48.0,
 The Birth of the People's Republic of Antarctica,Q131375507,John Batchelor,Q6221049,1983-01-01T00:00:00Z,1984,2,0,0,36.0,United States,male
 The Birthgrave,Q13725678,Tanith Lee,Q261962,1975-06-01T00:00:00Z,1975,1,0,0,28.0,United Kingdom,female
 The Black Sun,Q131376795,Jack Williamson,Q316788,1997-03-01T00:00:00Z,1998,1,0,1,90.0,United States,male
+The Blood of Angels,Q11857948,Johanna Sinisalo,Q2746094,,2015,1,0,1,57.0,Finland,female
 "The Blue, Beautiful World",Q131382921,Karen Lord,Q14949582,2023-08-29T00:00:00Z,2024,1,0,3,56.0,Barbados,female
 The Boat of a Million Years,Q7718935,Poul Anderson,Q220883,1989-11-01T00:00:00Z,1990,3,0,33,64.0,United States,male
 The Bone Clocks,Q17512402,David Mitchell,Q40479,2014-09-02T00:00:00Z,2015,1,1,3,46.0,United Kingdom,male
@@ -1099,6 +1119,7 @@ The Byworlder,Q122452516,Poul Anderson,Q220883,1971-09-01T00:00:00Z,1971,1,0,6,4
 The Calculating Stars,Q63965925,Mary Robinette Kowal,Q4225496,2018-07-03T00:00:00Z,2019,3,3,15,50.0,United States,female
 The Calcutta Chromosome,Q3221351,Amitav Ghosh,Q336125,1995-01-01T00:00:00Z,1998,1,0,0,42.0,India,male
 The Call of Earth,Q3234516,Orson Scott Card,Q217110,1993-01-01T00:00:00Z,1994,1,0,42,43.0,United States,male
+The Carpet Makers,Q615035,Andreas Eschbach,Q19015,,2006,1,0,0,47.0,Germany,male
 The Cassandra Complex,Q131381229,Brian Stableford,Q2631376,2001-03-01T00:00:00Z,2002,1,0,31,54.0,United Kingdom,male
 The Cassini Division,Q3822080,Ken MacLeod,Q372505,1998-05-01T00:00:00Z,1999,2,0,1,45.0,United Kingdom,male
 The Cat Who Walks Through Walls,Q3221113,Robert A. Heinlein,Q123078,1985-11-01T00:00:00Z,1986,1,0,14,79.0,United States,male
@@ -1119,7 +1140,7 @@ The City of Brass,Q60787839,Shannon A. Chakraborty,Q55756656,2017-11-14T00:00:00
 The Clan Corporate,Q3066138,Charles Stross,Q345249,2006-05-16T00:00:00Z,2007,1,0,30,43.0,United Kingdom,male
 The Claw of the Conciliator,Q3209610,Gene Wolfe,Q361149,1981-03-01T00:00:00Z,1982,2,1,19,51.0,United States,male
 The Clockwork Rocket,Q44391460,Greg Egan,Q316785,2011-07-01T00:00:00Z,2012,1,0,47,51.0,Australia,male
-The Clone,Q3701169,"Theodore L. Thomas, Kate Wilhelm",Q3990238;Q260560,1965-01-01T00:00:00Z,1965,1,0,0,,,
+The Clone,Q3701169,"Kate Wilhelm, Theodore L. Thomas",Q260560;Q3990238,1965-01-01T00:00:00Z,1965,1,0,0,,,
 The Collapsing Empire,Q29344605,John Scalzi,Q277308,2017-03-21T00:00:00Z,2018,2,1,15,49.0,United States,male
 The Collapsium,Q7726654,Wil McCarthy,Q3568081,2000-08-01T00:00:00Z,2001,2,0,4,35.0,United States,male
 The Coming,Q131381177,Joe Haldeman,Q347461,2000-12-01T00:00:00Z,2001,1,0,25,58.0,United States,male
@@ -1130,9 +1151,11 @@ The Computer Connection,Q3231611,Alfred Bester,Q286116,1975-01-01T00:00:00Z,1975
 The Confusion,Q4424499,Neal Stephenson,Q312853,2004-04-01T00:00:00Z,2005,0,1,4,46.0,United States,male
 The Conqueror's Child,Q43687807,Suzy McKee Charnas,Q441603,1999-06-01T00:00:00Z,2000,1,0,13,61.0,United States,female
 The Cool War,Q7727556,Frederik Pohl,Q312641,1981-04-01T00:00:00Z,1982,1,0,23,63.0,United States,male
+The Core of the Sun,Q55635138,Johanna Sinisalo,Q2746094,,2017,1,0,3,59.0,Finland,female
 The Courier's New Bicycle,Q21160953,Kim Westwood,Q6409561,2011-08-01T00:00:00Z,2012,1,0,1,,Australia,female
 The Crucible of Time,Q7728249,John Brunner,Q378807,1983-09-01T00:00:00Z,1984,1,0,11,50.0,United Kingdom,male
 The Curse of Chalion,Q2665745,Lois McMaster Bujold,Q229369,2001-08-01T00:00:00Z,2002,2,0,21,53.0,United States,female
+The Cusanus Game,Q1167479,Wolfgang Jeschke,Q76134,,2014,1,0,0,78.0,Czech Republic,male
 The Damnation Game,Q7728783,Clive Barker,Q298761,1985-01-01T00:00:00Z,1986,1,0,0,34.0,United Kingdom,male
 The Dancers of Arun,Q9355464,Elizabeth A. Lynn,Q443462,1979-07-01T00:00:00Z,1980,1,0,1,34.0,United States,female
 The Dark Between the Stars,Q130612865,Kevin J. Anderson,Q339577,2014-06-03T00:00:00Z,2015,1,0,5,53.0,United States,male
@@ -1146,11 +1169,11 @@ The Dazzle of Day,Q131376807,Molly Gloss,Q6896580,1997-06-01T00:00:00Z,1998,1,0,
 The Dead Zone,Q466790,Stephen King,Q39829,1979-08-16T00:00:00Z,1980,1,0,3,33.0,United States,male
 The Demolished Man,Q2350387,Alfred Bester,Q286116,1953-01-01T00:00:00Z,1953,0,1,0,40.0,United States,male
 The Dervish House,Q1706316,Ian McDonald,Q455228,2010-07-27T00:00:00Z,2011,2,1,42,51.0,United Kingdom,male
-The Descent of Anansi,Q7729791,"Steven Barnes, Larry Niven",Q2594458;Q316610,1982-09-01T00:00:00Z,1983,1,0,0,,,
+The Descent of Anansi,Q7729791,"Larry Niven, Steven Barnes",Q316610;Q2594458,1982-09-01T00:00:00Z,1983,1,0,0,,,
 The Devil is Dead,Q122452517,R. A. Lafferty,Q982489,1971-05-01T00:00:00Z,1971,1,0,5,57.0,United States,male
 The Devil's Alphabet,Q44900825,Daryl Gregory,Q3702879,2009-11-06T00:00:00Z,2010,1,0,3,45.0,United States,male
 The Diamond Age,Q543562,Neal Stephenson,Q312853,1995-02-01T00:00:00Z,1996,2,2,1,37.0,United States,male
-The Difference Engine,Q466103,"Bruce Sterling, William Gibson",Q312995;Q188987,1990-09-01T00:00:00Z,1991,3,0,0,,,
+The Difference Engine,Q466103,"William Gibson, Bruce Sterling",Q188987;Q312995,1990-09-01T00:00:00Z,1991,3,0,0,,,
 The Dispossessed,Q467720,Ursula K. Le Guin,Q181659,1974-05-01T00:00:00Z,1975,1,2,10,46.0,United States,female
 The Divide,Q131376451,Robert Charles Wilson,Q240786,1990-01-01T00:00:00Z,1991,1,0,3,38.0,United States,male
 The Divine Invasion,Q1189364,Philip K. Dick,Q171091,1981-01-01T00:00:00Z,1982,1,0,13,54.0,United States,male
@@ -1164,9 +1187,11 @@ The Dreaming Stars,Q131382776,Tim Pratt,Q6055713,2018-09-04T00:00:00Z,2019,1,0,9
 The Drive-In,Q3823380,Joe R. Lansdale,Q665768,1988-08-01T00:00:00Z,1989,1,0,0,38.0,United States,male
 The Drowning Girl,Q16954516,Caitlín R. Kiernan,Q4221522,2012-03-06T00:00:00Z,2012,2,0,8,48.0,Ireland,trans woman
 The Echo Wife,Q116257350,Sarah Gailey,Q64748209,2021-02-16T00:00:00Z,2022,1,0,10,32.0,United States,non-binary gender
-The Einstein Intersection,Q2441281,Samuel R. Delany,Q438164,1967-01-01T00:00:00Z,1967,1,1,0,25.0,United States,male
+The Einstein Intersection,Q2441281,Samuel R. Delany,Q438164,1967-01-01T00:00:00Z,1968,1,1,1,26.0,United States,male
 The Eleventh Gate,Q131382856,Nancy Kress,Q238438,2020-05-05T00:00:00Z,2021,1,0,81,73.0,United States,female
+The Embedding,Q3202927,Ian Watson,Q1371639,,1975,1,0,0,32.0,United Kingdom,male
 The Empress of Mars,Q130745483,Kage Baker,Q259888,2008-12-01T00:00:00Z,2010,1,0,27,58.0,United States,female
+The End of All Things,Q20058615,John Scalzi,Q277308,,2016,1,0,13,47.0,United States,male
 The End of Eternity,Q466196,Isaac Asimov,Q34981,1955-01-01T00:00:00Z,1956,1,0,0,36.0,Russia,male
 The Enemy Stars,Q18208798,Poul Anderson,Q220883,1958-08-01T00:00:00Z,1959,1,0,0,33.0,United States,male
 The Engines of God,Q7732219,Jack McDevitt,Q715241,1994-10-01T00:00:00Z,1995,1,0,12,60.0,United States,male
@@ -1195,7 +1220,7 @@ The Fleet of Stars,Q131376801,Poul Anderson,Q220883,1997-03-01T00:00:00Z,1998,1,
 The Forbidden Stars,Q131382847,Tim Pratt,Q6055713,2019-10-08T00:00:00Z,2020,1,0,10,44.0,United States,male
 The Forbidden Tower,Q3213211,Marion Zimmer Bradley,Q465179,1977-09-01T00:00:00Z,1978,2,0,4,48.0,United States,female
 The Forever Man,Q104871743,Gordon R. Dickson,Q446941,1986-09-01T00:00:00Z,1987,1,0,20,64.0,Canada,male
-The Forever War,Q5406934,Joe Haldeman,Q347461,1974-12-19T00:00:00Z,1975,0,2,2,32.0,United States,male
+The Forever War,Q5406934,Joe Haldeman,Q347461,1974-12-19T00:00:00Z,1976,0,2,3,33.0,United States,male
 The Forge of God,Q7734817,Greg Bear,Q317491,1987-09-01T00:00:00Z,1988,3,0,15,37.0,United States,male
 The Forgotten Beasts of Eld,Q7734828,Patricia A. McKillip,Q268755,1974-08-01T00:00:00Z,1975,0,1,0,27.0,United States,female
 The Fountains of Paradise,Q786025,Arthur C. Clarke,Q47087,1979-01-01T00:00:00Z,1980,1,2,6,63.0,United Kingdom,male
@@ -1208,22 +1233,23 @@ The Future of Another Timeline,Q100330025,Annalee Newitz,Q4767817,2019-09-24T00:
 "The Galaxy, and the Ground Within",Q106259289,Becky Chambers,Q25298820,2021-02-18T00:00:00Z,2022,2,0,10,37.0,United States,female
 The Ganymede Club,Q7735778,Charles Sheffield,Q943997,1995-12-01T00:00:00Z,1996,1,0,18,61.0,Kingdom of England,male
 The Ganymede Club,Q7735778,Charles Sheffield,Q943997,1995-12-01T00:00:00Z,1996,1,0,18,61.0,United Kingdom,male
-The Garden of Rama,Q1219119,"Gentry Lee, Arthur C. Clarke",Q741508;Q47087,1991-09-26T00:00:00Z,1992,1,0,0,,,
+The Garden of Rama,Q1219119,"Arthur C. Clarke, Gentry Lee",Q47087;Q741508,1991-09-26T00:00:00Z,1992,1,0,0,,,
 The Gardens of Delight,Q131374930,Ian Watson,Q1371639,1980-01-01T00:00:00Z,1981,1,0,5,38.0,United Kingdom,male
 The Gate to Women's Country,Q11888750,Sheri S. Tepper,Q450737,1988-09-01T00:00:00Z,1989,1,0,6,60.0,United States,female
 The Genocides,Q3773220,Thomas M. Disch,Q708581,1965-01-01T00:00:00Z,1965,1,0,0,25.0,United States,male
 The Ghost Brigades,Q7736268,John Scalzi,Q277308,2006-03-01T00:00:00Z,2007,1,0,3,38.0,United States,male
 The Ghost from the Grand Banks,Q3222682,Arthur C. Clarke,Q47087,1990-10-01T00:00:00Z,1991,1,0,12,74.0,United Kingdom,male
 The Gift,Q9201842,Patrick O'Leary,Q1986320,1997-01-01T00:00:00Z,1998,1,0,1,46.0,United States,male
+The Girl in the Glass,Q3208861,Jeffrey Ford,Q2495863,,2006,1,0,18,51.0,United States,male
 The Glamour,Q3223113,Christopher Priest,Q707796,2005-06-09T00:00:00Z,1985,1,0,10,42.0,United Kingdom,male
 The Goblin Emperor,Q19364463,Sarah Monette,Q465851,2014-04-01T00:00:00Z,2015,3,0,9,41.0,United States,female
 The Goblin Reservation,Q2492513,Clifford D. Simak,Q294625,1968-06-01T00:00:00Z,1969,1,0,2,65.0,United States,male
-The Gods Themselves,Q389750,Isaac Asimov,Q34981,1972-01-01T00:00:00Z,1972,0,2,1,52.0,Russia,male
+The Gods Themselves,Q389750,Isaac Asimov,Q34981,1972-01-01T00:00:00Z,1973,0,2,1,53.0,Russia,male
 The Godwhale,Q7736949,T. J. Bass,Q5968748,1974-01-01T00:00:00Z,1974,1,0,1,42.0,United States,male
 The Gold Coast,Q80565519,Kim Stanley Robinson,Q130779,1988-02-01T00:00:00Z,1989,2,0,32,37.0,United States,male
 The Golden Age,Q1154138,John C. Wright,Q202122,2002-04-01T00:00:00Z,2003,1,0,0,42.0,United States,male
 The Golden Globe,Q3227494,John Varley,Q504805,1998-10-01T00:00:00Z,1999,1,0,40,52.0,United States,male
-The Golden Key,Q7737067,"Jennifer Roberson, Melanie Rawn, Kate Elliott",Q1396763;Q537898;Q274296,1996-09-01T00:00:00Z,1997,1,0,0,,,
+The Golden Key,Q7737067,"Kate Elliott, Melanie Rawn, Jennifer Roberson",Q274296;Q537898;Q1396763,1996-09-01T00:00:00Z,1997,1,0,0,,,
 The Golden Nineties,Q131376716,Lisa Mason,Q6558240,1995-11-01T00:00:00Z,1996,1,0,2,43.0,,female
 The Golden Torc,Q131375459,Julian May,Q443306,1982-01-01T00:00:00Z,1983,1,0,2,52.0,United States,female
 The Golden Transcendence,Q19356859,John C. Wright,Q202122,2003-11-01T00:00:00Z,2004,1,0,1,43.0,United States,male
@@ -1231,10 +1257,10 @@ The Golem and the Jinni,Q16994283,Helene Wecker,Q18608450,2013-04-01T00:00:00Z,2
 The Grace of Kings,Q30030695,Ken Liu,Q151720,2015-04-07T00:00:00Z,2015,1,0,16,39.0,People's Republic of China,male
 The Grand Ellipse,Q131417542,Paula Volsky,Q1684007,2000-01-01T00:00:00Z,2001,1,0,1,1.0,,female
 The Graveyard Book,Q1168659,Neil Gaiman,Q210059,2008-09-30T00:00:00Z,2009,1,1,8,49.0,United Kingdom,male
-The Gripping Hand,Q7738320,"Jerry Pournelle, Larry Niven",Q578031;Q316610,1993-02-01T00:00:00Z,1994,1,0,0,,,
+The Gripping Hand,Q7738320,"Larry Niven, Jerry Pournelle",Q316610;Q578031,1993-02-01T00:00:00Z,1994,1,0,0,,,
 The Hammer of God,Q3140584,Arthur C. Clarke,Q47087,1993-06-01T00:00:00Z,1994,1,0,15,77.0,United Kingdom,male
 The Handmaid's Tale,Q1541914,Margaret Atwood,Q183492,1985-08-01T00:00:00Z,1986,2,0,0,47.0,Canada,female
-The Healer's War,Q3521228,Elizabeth Ann Scarborough,Q469370,1988-11-01T00:00:00Z,1989,0,1,0,42.0,United States,female
+The Healer's War,Q3521228,Elizabeth Ann Scarborough,Q469370,1988-11-01T00:00:00Z,1990,0,1,1,43.0,United States,female
 The Hemingway Hoax,Q130717863,Joe Haldeman,Q347461,1990-04-01T00:00:00Z,1991,1,0,15,48.0,United States,male
 The Hercules Text,Q7739431,Jack McDevitt,Q715241,1986-11-01T00:00:00Z,1987,1,0,1,52.0,United States,male
 The Heritage of Hastur,Q3203913,Marion Zimmer Bradley,Q465179,1975-08-01T00:00:00Z,1975,1,0,1,45.0,United States,female
@@ -1263,7 +1289,7 @@ The Journal of Nicholas the American,Q122452530,Leigh Kennedy,Q1815038,1986-01-0
 The Kaiju Preservation Society,Q111948867,John Scalzi,Q277308,2022-03-15T00:00:00Z,2023,1,1,19,54.0,United States,male
 The Kif Strike Back,Q131376008,C. J. Cherryh,Q234030,1985-05-01T00:00:00Z,1986,1,0,26,44.0,United States,female
 The Killing Moon,Q7744372,N. K. Jemisin,Q2427544,2012-05-01T00:00:00Z,2012,2,0,6,40.0,United States,female
-The Killing Star,Q7744376,"Charles R. Pellegrino, George Zebrowski",Q5081877;Q3102027,1995-04-01T00:00:00Z,1996,1,0,0,,,
+The Killing Star,Q7744376,"George Zebrowski, Charles R. Pellegrino",Q3102027;Q5081877,1995-04-01T00:00:00Z,1996,1,0,0,,,
 The Killing of Worlds,Q7744389,Scott Westerfeld,Q181716,2003-10-01T00:00:00Z,2004,1,0,1,41.0,United States,male
 The Kingdom of Gods,Q21953042,N. K. Jemisin,Q2427544,2011-10-06T00:00:00Z,2011,1,0,4,39.0,United States,female
 The Knight,Q16954703,Gene Wolfe,Q361149,2004-01-03T00:00:00Z,2004,2,0,66,73.0,United States,male
@@ -1279,7 +1305,7 @@ The Last President,Q28453182,John Barnes,Q682767,2013-09-03T00:00:00Z,2014,1,0,2
 The Last Witchfinder,Q16932120,James Morrow,Q725065,2006-03-01T00:00:00Z,2007,1,0,23,60.0,United States,male
 The Lathe of Heaven,Q132062,Ursula K. Le Guin,Q181659,1971-03-01T00:00:00Z,1971,2,0,1,42.0,United States,female
 The Left Hand of Darkness,Q2008211,Ursula K. Le Guin,Q181659,1969-03-01T00:00:00Z,1970,0,2,0,41.0,United States,female
-The Legacy of Heorot,Q589959,"Steven Barnes, Jerry Pournelle, Larry Niven",Q2594458;Q578031;Q316610,1987-05-01T00:00:00Z,1988,1,0,0,,,
+The Legacy of Heorot,Q589959,"Larry Niven, Jerry Pournelle, Steven Barnes",Q316610;Q578031;Q2594458,1987-05-01T00:00:00Z,1988,1,0,0,,,
 The Lies of Locke Lamora,Q1608505,Scott Lynch,Q2092466,2006-06-27T00:00:00Z,2007,1,0,0,29.0,United States,male
 The Life of the World to Come,Q7747225,Kage Baker,Q259888,2004-12-01T00:00:00Z,2005,1,0,16,53.0,United States,female
 The Light Ages,Q12057749,Ian R. MacLeod,Q659017,2003-05-01T00:00:00Z,2004,1,0,22,48.0,United Kingdom,male
@@ -1300,7 +1326,8 @@ The Martian Inca,Q122581069,Ian Watson,Q1371639,1977-01-01T00:00:00Z,1978,1,0,1,
 The Martian Race,Q131380944,Gregory Benford,Q358312,1999-12-01T00:00:00Z,2000,1,0,58,59.0,United States,male
 The Masks of Time,Q7750537,Robert Silverberg,Q314553,1968-05-01T00:00:00Z,1968,1,0,1,33.0,United States,male
 The Massacre of Mankind,Q29830993,Stephen Baxter,Q314416,2017-01-01T00:00:00Z,2018,1,0,76,61.0,United Kingdom,male
-The Medusa Chronicles,Q54488359,"Alastair Reynolds, Stephen Baxter",Q380869;Q314416,2016-05-01T00:00:00Z,2017,2,0,0,,,
+The Medusa Chronicles,Q54488359,"Stephen Baxter, Alastair Reynolds",Q314416;Q380869,2016-05-01T00:00:00Z,2017,2,0,0,,,
+The Memory Police,Q85721227,Yoko Ogawa,Q449473,,2020,2,0,0,58.0,Japan,female
 The Memory of Earth,Q3234544,Orson Scott Card,Q217110,1992-03-01T00:00:00Z,1993,1,0,40,42.0,United States,male
 The Memory of Whiteness,Q7750979,Kim Stanley Robinson,Q130779,1985-09-01T00:00:00Z,1986,1,0,18,34.0,United States,male
 The Merchants of Souls,Q7751049,John Barnes,Q682767,2001-11-01T00:00:00Z,2002,1,0,13,45.0,United States,male
@@ -1313,8 +1340,8 @@ The Mist,Q2344912,Stephen King,Q39829,1980-08-01T00:00:00Z,1981,1,0,6,34.0,Unite
 The Moon Goddess and the Son,Q7752150,Donald Kingsbury,Q3036044,1986-12-01T00:00:00Z,1987,1,0,5,58.0,United States,male
 The Moon Is a Harsh Mistress,Q1410482,Robert A. Heinlein,Q123078,1966-01-01T00:00:00Z,1966,2,1,2,59.0,United States,male
 The Moon and the Other,Q39049663,John Kessel,Q3066599,2017-04-04T00:00:00Z,2018,2,0,34,68.0,United States,male
-The Moon and the Sun,Q3210153,Vonda N. McIntyre,Q242162,1997-09-01T00:00:00Z,1997,0,1,17,49.0,United States,female
-The Mote in God's Eye,Q1190888,"Jerry Pournelle, Larry Niven",Q578031;Q316610,1974-11-01T00:00:00Z,1975,2,0,0,,,
+The Moon and the Sun,Q3210153,Vonda N. McIntyre,Q242162,1997-09-01T00:00:00Z,1998,0,1,18,50.0,United States,female
+The Mote in God's Eye,Q1190888,"Larry Niven, Jerry Pournelle",Q316610;Q578031,1974-11-01T00:00:00Z,1975,2,0,0,,,
 The Mount,Q7752464,Carol Emshwiller,Q2939834,2002-07-01T00:00:00Z,2003,2,0,2,82.0,United States,female
 The Mountain in the Sea,Q122452567,Ray Nayler,Q98960258,2022-10-04T00:00:00Z,2022,1,0,0,46.0,Canada,male
 The Mountain in the Sea,Q122452567,Ray Nayler,Q98960258,2022-10-04T00:00:00Z,2022,1,0,0,46.0,Canada,male
@@ -1365,7 +1392,7 @@ The Race,Q105044098,Nina Allan,Q18683960,2014-08-01T00:00:00Z,2015,1,0,2,49.0,Un
 The Ragged Astronauts,Q23712215,Bob Shaw,Q649014,1986-07-01T00:00:00Z,1987,2,0,3,56.0,United Kingdom,male
 The Ragged World,Q131376568,Judith Moffett,Q6303580,1991-01-01T00:00:00Z,1992,1,0,10,50.0,United States,female
 The Rainy Season,Q131414069,James Blaylock,Q979465,1999-08-01T00:00:00Z,2000,1,0,13,50.0,United States,male
-The Rapture of the Nerds,Q7759446,"Charles Stross, Cory Doctorow",Q345249;Q110436,2012-09-01T00:00:00Z,2013,2,0,0,,,
+The Rapture of the Nerds,Q7759446,"Cory Doctorow, Charles Stross",Q110436;Q345249,2012-09-01T00:00:00Z,2013,2,0,0,,,
 The Raven Tower,Q69566723,Ann Leckie,Q16204354,2019-02-26T00:00:00Z,2020,1,0,11,54.0,United States,female
 The Real-Town Murders,Q131382747,Adam Roberts,Q350734,2017-08-24T00:00:00Z,2018,1,0,6,53.0,United Kingdom,male
 The Reality Dysfunction,Q3453308,Peter F. Hamilton,Q455495,1996-01-26T00:00:00Z,1998,1,0,0,38.0,United Kingdom,male
@@ -1390,7 +1417,8 @@ The Rosetta Codex,Q131381622,Richard Paul Russo,Q350094,2005-12-01T00:00:00Z,200
 The Rosewater Insurrection,Q119774478,Tade Thompson,Q58045802,2019-03-12T00:00:00Z,2020,1,0,5,70.0,United Kingdom,male
 The Rosewater Redemption,Q120569227,Tade Thompson,Q58045802,2019-10-15T00:00:00Z,2020,1,0,5,70.0,United Kingdom,male
 The Rowan,Q7761643,Anne McCaffrey,Q233046,1990-08-01T00:00:00Z,1991,1,0,17,65.0,United States,female
-The Saint of Bright Doors,Q125198708,Vajra Chandrasekera,Q126285210,2023-07-11T00:00:00Z,2023,1,1,2,44.0,Sri Lanka,male
+The Sailor on the Seas of Fate,Q3224982,Michael Moorcock,Q316138,,1977,1,0,1,38.0,United Kingdom,male
+The Saint of Bright Doors,Q125198708,Vajra Chandrasekera,Q126285210,2023-07-11T00:00:00Z,2024,1,1,2,45.0,Sri Lanka,male
 The Salt Roads,Q7762126,Nalo Hopkinson,Q270204,2003-11-01T00:00:00Z,2003,1,0,6,43.0,Jamaica,female
 The Sardonyx Net,Q131375009,Elizabeth A. Lynn,Q443462,1981-01-01T00:00:00Z,1982,1,0,4,36.0,United States,female
 The Scar,Q602216,China Miéville,Q319196,2002-04-01T00:00:00Z,2003,2,0,7,31.0,United Kingdom,male
@@ -1418,7 +1446,7 @@ The Songs of Distant Earth,Q472368,Arthur C. Clarke,Q47087,1986-05-01T00:00:00Z,
 The Sons of Heaven,Q7765299,Kage Baker,Q259888,2007-07-01T00:00:00Z,2008,1,0,23,56.0,United States,female
 The Spare Man,Q122166736,Mary Robinette Kowal,Q4225496,2022-10-11T00:00:00Z,2023,2,0,20,54.0,United States,female
 The Sparrow,Q3224638,Mary Doria Russell,Q469737,1996-10-01T00:00:00Z,1997,1,0,0,47.0,United States,female
-The Speed of Dark,Q3120527,Elizabeth Moon,Q243027,2002-11-01T00:00:00Z,2003,1,1,5,58.0,United States,female
+The Speed of Dark,Q3120527,Elizabeth Moon,Q243027,2002-11-01T00:00:00Z,2004,1,1,5,59.0,United States,female
 The Squares of the City,Q3214259,John Brunner,Q378807,1965-01-01T00:00:00Z,1966,1,0,1,32.0,United Kingdom,male
 The Stand,Q149552,Stephen King,Q39829,1978-09-01T00:00:00Z,1979,1,0,1,32.0,United States,male
 The Star Fox,Q4189821,Poul Anderson,Q220883,1965-01-01T00:00:00Z,1965,1,0,2,39.0,United States,male
@@ -1427,7 +1455,7 @@ The Stars are Legion,Q55653446,Kameron Hurley,Q6357011,2017-02-02T00:00:00Z,2018
 The Steel Crocodile,Q122452514,David G. Compton,Q1174491,1970-01-01T00:00:00Z,1970,1,0,0,40.0,United Kingdom,male
 The Stochastic Man,Q3203783,Robert Silverberg,Q314553,1975-09-01T00:00:00Z,1976,3,0,44,41.0,United States,male
 The Stone Garden,Q131376744,Mary Rosenblum,Q3296239,1995-01-01T00:00:00Z,1996,1,0,6,44.0,United States,female
-The Stone Sky,Q39058554,N. K. Jemisin,Q2427544,2017-08-15T00:00:00Z,2017,1,2,14,45.0,United States,female
+The Stone Sky,Q39058554,N. K. Jemisin,Q2427544,2017-08-15T00:00:00Z,2018,1,2,19,46.0,United States,female
 The Strange Case of the Alchemist's Daughter,Q100324066,Theodora Goss,Q7781648,2017-06-20T00:00:00Z,2018,2,0,15,50.0,Hungary,female
 The Stress of Her Regard,Q151550,Tim Powers,Q363810,1989-08-01T00:00:00Z,1990,1,0,6,38.0,United States,male
 The Summer Queen,Q3212198,Joan D. Vinge,Q268371,1991-11-01T00:00:00Z,1992,2,0,16,44.0,United States,female
@@ -1436,7 +1464,7 @@ The Sword of Aldones,Q3522940,Marion Zimmer Bradley,Q465179,1962-01-01T00:00:00Z
 The Sword of the Lictor,Q3205411,Gene Wolfe,Q361149,1982-01-01T00:00:00Z,1983,3,0,24,52.0,United States,male
 The System of the World,Q7767840,Neal Stephenson,Q312853,2004-09-21T00:00:00Z,2005,0,1,4,46.0,United States,male
 The Tainted Cup,Q133842917,Robert Jackson Bennett,Q16198845,2024-02-06T00:00:00Z,2025,1,0,11,41.0,United States,male
-The Talisman,Q462454,"Peter Straub, Stephen King",Q364189;Q39829,1984-11-08T00:00:00Z,1985,1,0,0,,,
+The Talisman,Q462454,"Stephen King, Peter Straub",Q39829;Q364189,1984-11-08T00:00:00Z,1985,1,0,0,,,
 The Telling,Q2623688,Ursula K. Le Guin,Q181659,2000-09-01T00:00:00Z,2001,0,1,58,72.0,United States,female
 The Ten Thousand Doors of January,Q93552114,Alix E. Harrow,Q69802945,2019-09-10T00:00:00Z,2020,3,0,4,31.0,United States,female
 The Terminal Experiment,Q3062494,Robert J. Sawyer,Q362742,1995-05-01T00:00:00Z,1996,2,1,2,36.0,Canada,male
@@ -1444,6 +1472,7 @@ The Terraformers,Q116814638,Annalee Newitz,Q4767817,2023-01-31T00:00:00Z,2023,2,
 The Testaments,Q60786692,Margaret Atwood,Q183492,2019-09-10T00:00:00Z,2020,1,0,3,81.0,Canada,female
 The Thing Itself,Q59537236,Adam Roberts,Q350734,2015-12-17T00:00:00Z,2016,2,0,5,51.0,United Kingdom,male
 The Third Eagle,Q131376356,R. A. MacAvoy,Q274941,1989-02-01T00:00:00Z,1990,1,0,9,41.0,United States,female
+The Three Stigmata of Palmer Eldritch,Q1193211,Philip K. Dick,Q171091,,1965,1,0,0,37.0,United States,male
 The Three-Body Problem,Q607112,Liu Cixin,Q607588,2014-01-01T00:00:00Z,2015,3,1,1,52.0,People's Republic of China,male
 The Time Ships,Q2531100,Stephen Baxter,Q314416,1995-01-01T00:00:00Z,1996,2,1,6,39.0,United Kingdom,male
 The Time Traveler's Wife,Q1212645,Audrey Niffenegger,Q113233,2003-09-01T00:00:00Z,2005,1,0,1,42.0,United States,female
@@ -1451,7 +1480,7 @@ The Tommyknockers,Q471142,Stephen King,Q39829,1987-11-10T00:00:00Z,1988,1,0,18,4
 The Tower at Stony Wood,Q277911,Patricia A. McKillip,Q268755,2000-05-01T00:00:00Z,2001,1,0,12,53.0,United States,female
 The Tranquillity Alternative,Q124022063,Allen Steele,Q1193871,1996-03-01T00:00:00Z,1997,1,0,11,39.0,United States,male
 The Transmigration of Timothy Archer,Q1138582,Philip K. Dick,Q171091,1982-03-01T00:00:00Z,1982,1,0,13,54.0,United States,male
-The Trinity Paradox,Q7770233,"Doug Beason, Kevin J. Anderson",Q5300286;Q339577,1991-11-01T00:00:00Z,1992,1,0,0,,,
+The Trinity Paradox,Q7770233,"Kevin J. Anderson, Doug Beason",Q339577;Q5300286,1991-11-01T00:00:00Z,1992,1,0,0,,,
 The Two Faces of Tomorrow,Q11519513,James P. Hogan,Q1061225,1979-06-01T00:00:00Z,1980,1,0,1,39.0,United Kingdom,male
 The Unbroken,Q110892568,C. L. Clark,Q110164319,2021-03-23T00:00:00Z,2021,1,0,0,,,non-binary gender
 The Unconquered Country: A Life History,Q104861807,Geoff Ryman,Q940958,1986-08-01T00:00:00Z,1988,1,0,6,37.0,Canada,male
@@ -1498,14 +1527,15 @@ The Zenith Angle,Q7776864,Bruce Sterling,Q312995,2004-05-01T00:00:00Z,2005,1,0,5
 Them Bones,Q15034311,Howard Waldrop,Q787382,1984-11-01T00:00:00Z,1985,1,0,13,39.0,United States,male
 Thendara House,Q1760447,Marion Zimmer Bradley,Q465179,1983-09-01T00:00:00Z,1984,1,0,10,54.0,United States,female
 Theory of Bastards,Q107681820,Audrey Schulman,Q63869638,2018-04-24T00:00:00Z,2019,2,1,0,56.0,Canada,female
-There Is No Darkness,Q131375511,"Jack C. Haldeman II, Joe Haldeman",Q4357621;Q347461,1983-02-01T00:00:00Z,1984,1,0,0,,,
+There Is No Darkness,Q131375511,"Joe Haldeman, Jack C. Haldeman II",Q347461;Q4357621,1983-02-01T00:00:00Z,1984,1,0,0,,,
 There Will Be Time,Q4313991,Poul Anderson,Q220883,1972-09-01T00:00:00Z,1973,1,0,11,47.0,United States,male
-They'd Rather Be Right,Q3523959,"Mark Clifton, Frank Riley",Q1760899;Q715256,1954-08-01T00:00:00Z,1955,0,1,0,,,
+They'd Rather Be Right,Q3523959,"Frank Riley, Mark Clifton",Q715256;Q1760899,1954-08-01T00:00:00Z,1955,0,1,0,,,
 This Immortal,Q2567510,Roger Zelazny,Q295406,1965-10-01T00:00:00Z,1966,0,1,1,29.0,United States,male
 This Is Not a Game,Q7785919,Walter Jon Williams,Q714485,2009-03-05T00:00:00Z,2010,1,0,37,57.0,United States,male
 This Is the Way the World Ends,Q104841827,James Morrow,Q725065,1986-06-01T00:00:00Z,1987,3,0,1,40.0,United States,male
 This Shared Dream,Q131382170,Kathleen Ann Goonan,Q3194058,2011-07-01T00:00:00Z,2012,2,0,11,60.0,United States,female
 Thomas the Rhymer,Q3525731,Ellen Kushner,Q433291,1990-01-01T00:00:00Z,1991,0,1,1,36.0,United States,female
+Thorns,Q3548730,Robert Silverberg,Q314553,,1967,2,0,0,32.0,United States,male
 Thrice Upon a Time,Q7798123,James P. Hogan,Q1061225,1980-03-01T00:00:00Z,1981,1,0,3,40.0,United Kingdom,male
 Throne of the Crescent Moon,Q15033305,Saladin Ahmed,Q7403395,2012-02-07T00:00:00Z,2012,2,0,0,37.0,United States,male
 Tides of Light,Q64048281,Gregory Benford,Q358312,1989-02-01T00:00:00Z,1990,1,0,41,49.0,United States,male
@@ -1519,8 +1549,8 @@ Time Storm,Q108305801,Gordon R. Dickson,Q446941,1977-10-01T00:00:00Z,1978,2,0,12
 Time is the Simplest Thing,Q1032182,Clifford D. Simak,Q294625,1961-01-01T00:00:00Z,1962,1,0,0,58.0,United States,male
 Timelike Infinity,Q7805574,Stephen Baxter,Q314416,1992-12-07T00:00:00Z,1994,1,0,3,37.0,United Kingdom,male
 Timescape,Q2894715,Gregory Benford,Q358312,1980-07-01T00:00:00Z,1981,1,2,21,40.0,United States,male
-Titan,Q4354440,John Varley,Q504805,1979-01-01T00:00:00Z,1980,2,1,22,33.0,United States,male
 Titan,Q779016,Stephen Baxter,Q314416,1997-07-18T00:00:00Z,1998,1,0,15,41.0,United Kingdom,male
+Titan,Q4354440,John Varley,Q504805,1979-01-01T00:00:00Z,1980,2,1,22,33.0,United States,male
 Titanium Noir,Q131382912,Nick Harkaway,Q1985398,2023-05-16T00:00:00Z,2024,1,0,5,52.0,United Kingdom,male
 To Crush the Moon,Q7810889,Wil McCarthy,Q3568081,2005-05-31T00:00:00Z,2006,2,0,7,40.0,United States,male
 To Sail Beyond the Sunset,Q2870228,Robert A. Heinlein,Q123078,1987-07-01T00:00:00Z,1988,1,0,15,81.0,United States,male
@@ -1536,7 +1566,7 @@ Tower of Dreams,Q131380923,Jamil Nasir,Q6147750,1999-01-01T00:00:00Z,2000,1,0,1,
 Tower of Glass,Q1645333,Robert Silverberg,Q314553,1970-04-01T00:00:00Z,1970,2,0,7,35.0,United States,male
 Towing Jehovah,Q20875896,James Morrow,Q725065,1994-05-01T00:00:00Z,1995,2,1,9,48.0,United States,male
 Tracker,Q27892869,C. J. Cherryh,Q234030,2015-04-01T00:00:00Z,2016,1,0,53,74.0,United States,female
-Trade Secret,Q131382269,"Steve Miller, Sharon Lee",Q4293514;Q4260664,2013-10-15T00:00:00Z,2014,1,0,0,,,
+Trade Secret,Q131382269,"Sharon Lee, Steve Miller",Q4260664;Q4293514,2013-10-15T00:00:00Z,2014,1,0,0,,,
 Trader,Q131413614,Charles de Lint,Q1066587,1997-02-01T00:00:00Z,1998,1,0,12,47.0,Netherlands,male
 Trail of Lightning,Q83431075,Rebecca Roanhorse,Q56192533,2018-06-26T00:00:00Z,2019,3,0,5,48.0,United States,female
 Transcendent,Q7833847,Stephen Baxter,Q314416,2005-10-01T00:00:00Z,2006,2,0,53,49.0,United Kingdom,male
@@ -1571,6 +1601,7 @@ Vast,Q7916983,Linda Nagata,Q4389768,1998-08-01T00:00:00Z,1999,1,0,2,39.0,United 
 Vellum,Q7919226,Hal Duncan,Q1367996,2005-08-01T00:00:00Z,2006,1,0,0,35.0,United Kingdom,male
 Veniss Underground,Q7920028,Jeff VanderMeer,Q1038440,2003-03-01T00:00:00Z,2004,1,0,1,36.0,United States,male
 Ventus,Q7920454,Karl Schroeder,Q3193467,2001-11-01T00:00:00Z,2001,1,0,0,39.0,Canada,male
+Venus Plus X,Q429159,Theodore Sturgeon,Q240253,,1961,1,0,3,43.0,United States,male
 Venus of Dreams,Q131376058,Pamela Sargent,Q453835,1986-02-01T00:00:00Z,1987,1,0,6,39.0,United States,female
 Venus of Shadows,Q131376299,Pamela Sargent,Q453835,1988-12-01T00:00:00Z,1989,1,0,7,41.0,United States,female
 Vergil in Averno,Q122452531,Avram Davidson,Q782991,1987-01-01T00:00:00Z,1987,1,0,15,64.0,United States,male
@@ -1587,7 +1618,7 @@ Wake,Q7960897,Robert J. Sawyer,Q362742,2008-11-01T00:00:00Z,2010,1,0,16,50.0,Can
 Wake Up and Dream,Q7960989,Ian R. MacLeod,Q659017,2011-09-01T00:00:00Z,2012,1,0,30,56.0,United Kingdom,male
 Waking the Moon,Q7961182,Elizabeth Hand,Q601304,1994-09-01T00:00:00Z,1995,1,0,4,38.0,United States,female
 Walkaway,Q30068660,Cory Doctorow,Q110436,2017-04-25T00:00:00Z,2018,1,0,23,47.0,Canada,male
-Wall Around a Star,Q7962593,"Jack Williamson, Frederik Pohl",Q316788;Q312641,1983-01-12T00:00:00Z,1984,1,0,0,,,
+Wall Around a Star,Q7962593,"Frederik Pohl, Jack Williamson",Q312641;Q316788,1983-01-12T00:00:00Z,1984,1,0,0,,,
 Wanderers,Q96650197,Chuck Wendig,Q21512147,2019-07-02T00:00:00Z,2020,1,0,1,44.0,United States,male
 War Dogs,Q41663473,Greg Bear,Q317491,2014-10-14T00:00:00Z,2015,1,0,39,64.0,United States,male
 War of the Maps,Q131382852,Paul J. McAuley,Q187085,2020-03-19T00:00:00Z,2021,1,0,52,66.0,United Kingdom,male
@@ -1619,9 +1650,9 @@ Whole Wide World,Q131381239,Paul J. McAuley,Q187085,2001-09-01T00:00:00Z,2002,1,
 Wild Seed,Q8000801,Octavia E. Butler,Q239739,1980-07-01T00:00:00Z,1981,1,0,1,34.0,United States,female
 Wildlife,Q131376684,James Patrick Kelly,Q373836,1994-02-01T00:00:00Z,1995,1,0,21,44.0,United States,male
 Win,Q131382750,Vera Nazarian,Q7920810,2017-07-11T00:00:00Z,2018,1,0,1,52.0,Russia,female
-Windhaven,Q3235534,"Lisa Tuttle, George R. R. Martin",Q440744;Q181677,1981-04-01T00:00:00Z,1982,1,0,0,,,
+Windhaven,Q3235534,"George R. R. Martin, Lisa Tuttle",Q181677;Q440744,1981-04-01T00:00:00Z,1982,1,0,0,,,
 Winter Rose,Q4020470,Patricia A. McKillip,Q268755,1996-07-01T00:00:00Z,1996,1,0,8,48.0,United States,female
-Wintermind,Q8026488,"Marvin Kaye, Parke Godwin",Q6778397;Q3365451,1982-11-01T00:00:00Z,1983,1,0,0,,,
+Wintermind,Q8026488,"Parke Godwin, Marvin Kaye",Q3365451;Q6778397,1982-11-01T00:00:00Z,1983,1,0,0,,,
 Witch King,Q124435017,Martha Wells,Q6774606,2023-05-30T00:00:00Z,2024,3,0,9,60.0,United States,female
 Witch World,Q3202276,Andre Norton,Q235899,1963-01-01T00:00:00Z,1964,1,0,0,52.0,United States,female
 Witchmark,Q73550637,C. L. Polk,Q64140580,2018-06-19T00:00:00Z,2018,1,1,0,49.0,Canada,non-binary gender
