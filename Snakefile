@@ -34,6 +34,7 @@ PROCESSED_DATA = {
         'openlibrary_ids': 'openlibrary_ids.csv',
         'isbns': 'isbns.csv',
         'cumulative_awards': 'cumulative_awards.csv',
+        'descriptions': 'descriptions.csv',
     }.items()
 }
 
@@ -110,3 +111,13 @@ rule tally_cumulative_awards:
         export OUTPUT_CUMULATIVE={output.cumulative_awards}
         envsubst < {input.sql} | duckdb
         """
+
+rule collect_descriptions:
+    input:
+        openlibrary_ids=PROCESSED_DATA['openlibrary_ids'],
+        ol_works=KAGGLE_DATA['openlibrary_works'],
+        nominated_novels=PROCESSED_DATA['nominated_novels']
+    output:
+        descriptions=PROCESSED_DATA['descriptions']
+    script:
+        "scripts/collect_descriptions.py"
