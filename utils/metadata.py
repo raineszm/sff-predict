@@ -208,8 +208,22 @@ class GoogleBooksDescriptionProvider(AbstractContextManager):
             },
         )
 
-    def get_description(self, isbn: str) -> Optional[str]:
-        data = self._query(f"isbn:{isbn}")
+    def get_description_from_isbn(self, isbn: str) -> Optional[str]:
+        return self.get_description_from_query(f"isbn:{isbn}")
+
+    def get_description_from_query(self, query: str) -> Optional[str]:
+        data = self._query(query)
         if data.get("totalItems", 0) == 0:
             return None
         return data.get("items", [{}])[0].get("volumeInfo", {}).get("description")
+
+    def get_description_from_title_author_string(
+        self, title_author: str
+    ) -> Optional[str]:
+        title, author = title_author.split(";")
+        return self.get_description_from_title_and_author(title, author)
+
+    def get_description_from_title_and_author(
+        self, title: str, author: str
+    ) -> Optional[str]:
+        return self.get_description_from_query(f"intitle:{title} inauthor:{author}")
