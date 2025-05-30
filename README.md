@@ -68,14 +68,30 @@ Located in `data/`:
    ```
    but other ways of installing are given on the [pixi website](pixi.sh).
 
-2. **Clone and Setup**
+2. **Setup the environment**
    ```sh
-   git clone <repository-url>
-   cd scifi-fantasy
    pixi install
    ```
 
-3. **Run the Pipeline**
+3. **Set up API Keys**
+
+   The project uses the Google Books API to fetch book descriptions. You'll need
+   to:
+
+   1. Get an API key from the
+      [Google Cloud Console](https://console.cloud.google.com/apis/credentials)
+   2. Enable the Books API for your project
+   3. Set the API key in one of two ways:
+      - Create a `.env` file in the project root with:
+        ```
+        GOOGLE_BOOKS_API_KEY=your_api_key_here
+        ```
+      - Or set it as an environment variable:
+        ```sh
+        export GOOGLE_BOOKS_API_KEY=your_api_key_here
+        ```
+
+4. **Run the Pipeline**
    ```sh
    # Run with a single core
    pixi run snakemake --cores 1
@@ -83,6 +99,12 @@ Located in `data/`:
    # Or use multiple cores for faster processing
    pixi run snakemake --cores 4
    ```
+
+   There's a script to make this slightly simpler
+   ```sh
+   bin/snakemake.sh
+   ```
+   that simply wraps the above.
 
 ### Development Workflow
 
@@ -204,7 +226,7 @@ Consider a shortlist cohort of $k$ books with:
 
 i. **Multinomial PMF for wins**\
 Model the allocation of exactly $N_{\mathrm{win}}$ win slots among the $k$
-books: 
+books:
 
 $$P(\{N_i\})
      = \frac{N_{\mathrm{win}}!}{\prod_{i=1}^k N_i!}\;\prod_{i=1}^k \hat p_i^{\,N_i}.$$
@@ -212,7 +234,7 @@ $$P(\{N_i\})
 This gives the likelihood of observing each book's win count.
 
 ii. **Negative log-likelihood**\
-Transform products into sums: 
+Transform products into sums:
 
 $$ -\ln P
      = -\ln(N_{\mathrm{win}}!) \;+\; \sum_{i=1}^k \ln(N_i!) \;-\; \sum_{i=1}^k N_i\,\ln(\hat p_i).$$
@@ -220,7 +242,7 @@ $$ -\ln P
 The first two terms are constant w.r.t.\ the model.
 
 iii. **Normalize by total winners**\
-Divide by $N_{\mathrm{win}}$ to put different years on the same scale: 
+Divide by $N_{\mathrm{win}}$ to put different years on the same scale:
 
 $$  L_{\mathrm{win}}
      = -\frac{1}{N_{\mathrm{win}}}\sum_{i=1}^k N_i\,\ln(\hat p_i)
