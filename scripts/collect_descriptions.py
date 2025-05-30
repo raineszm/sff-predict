@@ -7,6 +7,29 @@ import pandas as pd
 import dotenv
 import os
 
+
+def descriptions_from_ids(ids, key_col, provider):
+    work_qids = ids.work_qid.unique()
+    work_descriptions = pd.DataFrame(
+        {
+            "work_qid": work_qids,
+            "description": np.empty_like(work_qids, dtype="object"),
+        }
+    ).set_index("work_qid")
+    work_groups = ids.groupby("work_qid")
+    for work_qid, group in tqdm(
+        work_groups,
+        desc="Getting descriptions from wikipedia",
+        total=len(work_groups),
+    ):
+        for key in group[key_col]:
+            if description := provider.get_description(key):
+                work_descriptions.loc[work_qid, "description"] = description
+                break
+
+    return work_descriptions.dropna().reset_index()
+
+
 dotenv.load_dotenv()
 
 duckdb.sql(
@@ -14,12 +37,17 @@ duckdb.sql(
 )
 
 openlibrary_descriptions = duckdb.sql(
+    # The second part of the where clause
+    #  is a hack to remove a duplicate work
+    # For some reason there is a seperate work for the Italian translation of
+    # 'The Stone Sky' by N.K. Jemisin
     """
 SELECT DISTINCT openlibrary_ids.work_qid, openlibrary_works.description
 FROM openlibrary_ids
-LEFT JOIN '{ol_works}' as openlibrary_works
+INNER JOIN '{ol_works}' as openlibrary_works
 ON '/works/' || openlibrary_ids.openlibrary_id = openlibrary_works.key
 WHERE openlibrary_works.description IS NOT NULL
+AND openlibrary_ids.openlibrary_id != 'OL28171187W'
 """.format(
         ol_works=snakemake.input["ol_works"],
     )
@@ -32,6 +60,7 @@ print(
     )
 )
 
+
 wikipedia_ids = duckdb.sql(
     """
     SELECT DISTINCT work_qid, wikipedia_url
@@ -40,17 +69,9 @@ wikipedia_ids = duckdb.sql(
 """.format(wikipedia=snakemake.input["wikipedia"])
 ).df()
 
-wikipedia_ids["description"] = np.empty_like(wikipedia_ids.wikipedia_url)
 
 with WikipediaDescriptionProvider() as wiki:
-    for i, row in tqdm(
-        wikipedia_ids.iterrows(),
-        desc="Getting descriptions from wikipedia",
-        total=len(wikipedia_ids),
-    ):
-        wikipedia_ids.loc[i, "description"] = wiki.get_description(row["wikipedia_url"])
-
-wikipedia_descriptions = wikipedia_ids.dropna().drop(columns=["wikipedia_url"])
+    wikipedia_descriptions = descriptions_from_ids(wikipedia_ids, "wikipedia_url", wiki)
 duckdb.register("wikipedia_descriptions", wikipedia_descriptions)
 
 print("Fetched {} descriptions from wikipedia".format(wikipedia_descriptions.shape[0]))
@@ -65,26 +86,7 @@ isbns = duckdb.sql(
 ).df()
 
 with GoogleBooksDescriptionProvider(os.getenv("GOOGLE_BOOKS_API_KEY")) as google_books:
-    work_qids = isbns.work_qid.unique()
-    isbn_descriptions = pd.DataFrame(
-        {
-            "work_qid": work_qids,
-            "description": np.empty_like(work_qids, dtype="object"),
-        }
-    ).set_index("work_qid")
-    isbn_groups = isbns.groupby("work_qid")
-    for work_qid, group in tqdm(
-        isbn_groups,
-        desc="Getting descriptions from google books",
-        total=len(isbn_groups),
-    ):
-        for isbn in group["isbn"]:
-            if description := google_books.get_description(isbn):
-                isbn_descriptions.loc[work_qid, "description"] = description
-                break
-
-
-isbn_descriptions = isbn_descriptions.dropna().reset_index()
+    isbn_descriptions = descriptions_from_ids(isbns, "isbn", google_books)
 
 print("Fetched {} descriptions from google books".format(isbn_descriptions.shape[0]))
 
@@ -96,7 +98,7 @@ descriptions = (
 ).set_index("work_qid")
 
 n_works = duckdb.sql(
-    "SELECT COUNT(DISTINCT work_qid) FROM '{nominated_novels}';".format(
+    "SELECT COUNT(DISTINCT work_qid) FROM read_csv('{nominated_novels}', header := true);".format(
         nominated_novels=snakemake.input["nominated_novels"]
     )
 ).fetchone()[0]
