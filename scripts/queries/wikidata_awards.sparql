@@ -46,11 +46,9 @@ WHERE {
     OPTIONAL { ?item wdt:P648 ?openlibrary_id. }       # openlibrary
     OPTIONAL {
         ?item wdt:P747 ?edition.
-        ?edition (wdt:P957|wdt:P212) ?isbn.
-        OPTIONAL {
-            ?edition wdt:P407 wd:Q1860; # English
-                wdt:P577 ?engPubDate.
-        }
+        ?edition wdt:P407 wd:Q1860; # English
+            (wdt:P957|wdt:P212) ?isbn;
+            wdt:P577 ?engPubDate.
     }
 
     BIND(IF(?workLang = wd:Q1860, COALESCE(?workPubDate, ?engPubDate), ?engPubDate) AS ?_pubDate)

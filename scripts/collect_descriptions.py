@@ -1,10 +1,14 @@
 from snakemake.script import snakemake
 import duckdb
-from utils.metadata import WikipediaDescriptionProvider
+from utils.metadata import WikipediaDescriptionProvider, GoogleBooksDescriptionProvider
 import numpy as np
 from tqdm.auto import tqdm
 import pandas as pd
 import requests_cache
+import dotenv
+import os
+
+dotenv.load_dotenv()
 
 duckdb.sql(
     f"CREATE OR REPLACE TABLE openlibrary_ids AS FROM '{snakemake.input['openlibrary_ids']}'"
@@ -52,13 +56,44 @@ with requests_cache.enabled(
     ):
         wikipedia_ids.loc[i, "description"] = wiki.get_description(row["wikipedia_url"])
 
-wikipedia_ids = wikipedia_ids.drop(columns=["wikipedia_url"])
+wikipedia_ids = wikipedia_ids.dropna().drop(columns=["wikipedia_url"])
 
 print("Fetched {} descriptions from wikipedia".format(wikipedia_ids.shape[0]))
 
+isbns = duckdb.sql(
+    """
+    SELECT DISTINCT work_qid, isbn
+    FROM '{isbns}'
+    ANTI JOIN openlibrary_ids USING (work_qid)
+    ANTI JOIN wikipedia_ids USING (work_qid)
+""".format(isbns=snakemake.input["isbns"])
+).df()
+
+with GoogleBooksDescriptionProvider(os.getenv("GOOGLE_BOOKS_API_KEY")) as google_books:
+    work_qids = isbns.work_qid.unique()
+    isbn_descriptions = pd.DataFrame(
+        index=work_qids, columns=["description"], dtype="object"
+    )
+    isbn_groups = isbns.groupby("work_qid")
+    for work_qid, group in tqdm(
+        isbn_groups,
+        desc="Getting descriptions from google books",
+        total=len(isbn_groups),
+    ):
+        for isbn in group["isbn"]:
+            if description := google_books.get_description(isbn):
+                isbn_descriptions.loc[work_qid, "description"] = description
+                break
+
+
+isbn_descriptions = isbn_descriptions.dropna()
+
+print("Fetched {} descriptions from google books".format(isbn_descriptions.shape[0]))
 
 descriptions = (
-    pd.concat([openlibrary_descriptions, wikipedia_ids])
+    pd.concat(
+        [openlibrary_descriptions, wikipedia_ids, isbn_descriptions.reset_index()]
+    )
     .dropna(subset=["description"])
     .drop_duplicates(subset=["work_qid"])
 ).set_index("work_qid")

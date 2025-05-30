@@ -228,3 +228,5 @@ data/raw/*
 
 .snakemake/
 *.drawio.bkp
+
+.env*

@@ -3,6 +3,7 @@ from typing import Optional
 import wikipediaapi
 import httpx
 from httpx_retries import RetryTransport, Retry
+from httpx_ratelimiter import LimiterTransport
 from hishel import CacheTransport, Controller, FileStorage
 
 USER_AGENT = "scifi-fantasy/0.1 (dev@zmraines.com)"
@@ -12,6 +13,12 @@ def create_caching_client(api_root: str) -> httpx.Client:
     """
     Create an HTTP client with caching and retry capabilities.
     """
+    # Enforce google api rate limits
+    limiter = LimiterTransport(
+        per_minute=100,
+        per_day=1000,
+    )
+
     retry = Retry(
         total=3,
         backoff_factor=0.5,
@@ -20,6 +27,7 @@ def create_caching_client(api_root: str) -> httpx.Client:
 
     # Add retry capability to transport layer
     retry_transport = RetryTransport(
+        transport=limiter,
         retry=retry,
     )
 
@@ -67,3 +75,37 @@ class WikipediaDescriptionProvider:
             ),
             None,
         )
+
+
+class GoogleBooksDescriptionProvider:
+    BASE_URL = "https://www.googleapis.com/books/v1"
+
+    def __init__(self, api_key: str):
+        self.api_key = api_key
+        self.client = create_caching_client(self.BASE_URL)
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        self.client.__exit__(exc_type, exc_value, traceback)
+
+    def _query(self, query: str) -> dict:
+        resp = self.client.get(
+            "/volumes",
+            params={
+                "q": query,
+                "key": self.api_key,
+                "projection": "LITE",
+                "printType": "BOOKS",
+                "fields": "totalItems,items(volumeInfo/description)",
+            },
+        )
+        resp.raise_for_status()
+        return resp.json()
+
+    def get_description(self, isbn: str) -> Optional[str]:
+        data = self._query(f"isbn:{isbn}")
+        if data.get("totalItems", 0) == 0:
+            return None
+        return data.get("items", [{}])[0].get("volumeInfo", {}).get("description")
