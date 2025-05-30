@@ -118,6 +118,44 @@ class WikipediaDescriptionProvider(AbstractContextManager):
         )
         return resp.get("parse", {}).get("text", {}).get("*", None)
 
+    @staticmethod
+    def is_synopsis(section: str) -> bool:
+        """
+        Heuristic to determine if a section is a story synopsis.
+        """
+        return any(
+            map(
+                section.casefold().startswith,
+                [
+                    "plot",
+                    "synopsis",
+                    "premise",
+                    "summary",
+                    "overview",
+                    "setting",
+                    "back story",
+                    "backstory",
+                ],
+            )
+        )
+
+    def get_summary(self, article_title: str) -> Optional[str]:
+        """
+        Get summary of the article.
+        """
+        resp = self.client.call_endpoint(
+            params={
+                "action": "query",
+                "titles": article_title,
+                "prop": "extracts",
+                "exsectionformat": "plain",
+                "explaintext": True,
+                "exintro": True,
+                "format": "json",
+            },
+        )
+        return list(resp.get("query", {}).get("pages", {}).values())[0].get("extract")
+
     def get_description(self, wikipedia_url: str) -> Optional[str]:
         """
         Fetch the first 'Plot' section from the page and return its plain-text.
@@ -127,8 +165,10 @@ class WikipediaDescriptionProvider(AbstractContextManager):
         sections = self.get_sections(article_title)
 
         if not (
-            plot_idx := next((s[0] for s in sections if s[1].startswith("Plot")), None)
+            plot_idx := next((s[0] for s in sections if self.is_synopsis(s[1])), None)
         ):
+            if summary := self.get_summary(article_title):
+                return summary
             return None
 
         if not (html := self.get_section_html(article_title, plot_idx)):
