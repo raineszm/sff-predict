@@ -36,7 +36,7 @@ wikipedia_ids = duckdb.sql(
     """
     SELECT DISTINCT work_qid, wikipedia_url
     FROM '{wikipedia}'
-    ANTI JOIN openlibrary_ids USING (work_qid)
+    ANTI JOIN openlibrary_descriptions USING (work_qid)
 """.format(wikipedia=snakemake.input["wikipedia"])
 ).df()
 
@@ -53,7 +53,7 @@ with WikipediaDescriptionProvider() as wiki:
 wikipedia_descriptions = wikipedia_ids.dropna().drop(columns=["wikipedia_url"])
 duckdb.register("wikipedia_descriptions", wikipedia_descriptions)
 
-print("Fetched {} descriptions from wikipedia".format(wikipedia_ids.shape[0]))
+print("Fetched {} descriptions from wikipedia".format(wikipedia_descriptions.shape[0]))
 
 isbns = duckdb.sql(
     """
@@ -96,10 +96,10 @@ descriptions = (
 ).set_index("work_qid")
 
 n_works = duckdb.sql(
-    "SELECT DISTINCT COUNT(work_qid) FROM '{nominated_novels}';".format(
+    "SELECT COUNT(DISTINCT work_qid) FROM '{nominated_novels}';".format(
         nominated_novels=snakemake.input["nominated_novels"]
     )
 ).fetchone()[0]
-print("Descriptions found for {}/{} works".format(len(descriptions), n_works))
+print("Descriptions found for {}/{} works".format(descriptions.index.size, n_works))
 
 descriptions.to_csv(snakemake.output["descriptions"])

@@ -2,39 +2,34 @@ from snakemake.script import snakemake
 import pandas as pd
 
 
-def explode_id_column(df, id_column, single_id_col=None):
-    """
-    Takes a dataframe with an ID column containing semicolon-separated values and explodes it into separate rows.
-
-    Args:
-        df: DataFrame containing the ID column
-        id_column: Name of column containing semicolon-separated IDs (should end in 's')
-
-    Returns:
-        DataFrame with exploded ID column set as index
-    """
-    if not id_column.endswith("s"):
-        raise ValueError(f"ID column {id_column} should end in 's'")
-    if single_id_col is None:
-        single_id_col = id_column[:-1]  # Trim trailing 's'
-    return (
-        df.loc[df[id_column] != "", ["work_qid", id_column]]
-        .assign(**{single_id_col: lambda x: x[id_column].str.split(";")})
-        .explode(single_id_col)
-        .drop(columns=[id_column])
-        .drop_duplicates()
-        .set_index(single_id_col)
-    )
+def get_identifier_table(df, id_col, index_col=None):
+    table = df[["work_qid", id_col]].dropna().drop_duplicates(subset=[id_col])
+    if index_col is not None:
+        table = table.set_index(index_col)
+    return table
 
 
-# Reshape the awards data so we have a single row per novel
-# and keep track of a count of how many awards each novel has
-# been nominated for and won in the year
-#
-awards = pd.read_json(snakemake.input["novels"], lines=True).drop(
-    columns=["awardLabel"]
+awards = pd.read_json(snakemake.input["novels"], lines=True).rename(
+    columns={"itemLabel": "title", "article": "wikipedia_url"}
 )
-group_keys = awards.columns.drop(["status", "year"]).tolist()
+
+# Split off identifying information into separate dataframes
+openlibrary_ids = get_identifier_table(
+    awards, "openlibrary_id", index_col="openlibrary_id"
+)
+isbns = get_identifier_table(awards, "isbn")
+wikipedia = get_identifier_table(awards, "wikipedia_url", index_col="wikipedia_url")
+
+openlibrary_ids.to_csv(snakemake.output["openlibrary_ids"])
+isbns.to_csv(snakemake.output["isbns"], index=False)
+wikipedia.to_csv(snakemake.output["wikipedia"])
+
+# Drop identifying information from awards dataframe
+awards = awards.drop(
+    columns=["openlibrary_id", "isbn", "wikipedia_url"]
+).drop_duplicates()
+
+group_keys = awards.columns.drop(["awardLabel", "status", "year"]).tolist()
 
 awards = (
     awards.groupby(group_keys, dropna=False)
@@ -48,37 +43,9 @@ awards = (
     .reset_index()
 )
 
-# Some clean up of the awards data
-awards["year"] = awards["year"].astype(int)
-awards.isbns = awards.isbns.str.replace("-", "")
-
-# Split off openlibrary and isbn ids into separate dataframes
-openlibrary_ids = explode_id_column(awards, "openlibrary_ids")
-isbns = explode_id_column(awards, "isbns")
-wikipedia = (
-    awards[["work_qid", "article"]]
-    .set_index("work_qid")
-    .rename(columns={"article": "wikipedia_url"})
-    .dropna()
-)
-
-openlibrary_ids.to_csv(snakemake.output["openlibrary_ids"])
-isbns.to_csv(snakemake.output["isbns"])
-wikipedia.to_csv(snakemake.output["wikipedia"])
-
-# Drop the original openlibrary and isbn columns
-# and explode the author qids
-awards = (
-    awards.drop(columns=["openlibrary_ids", "isbns", "article"])
-    .explode("author_qids")
-    .rename(columns={"author_qids": "author_qid", "authors": "author"})
-)
-
-
 # Read cumulative awards
 cumulative_awards = pd.read_csv(snakemake.input["wins_as_of"])
 
-# Explode author QIDs and join with cumulative awards
 work_author_join = awards[["work_qid", "author_qid", "year"]].rename(
     columns={"year": "year_of_award"}
 )
@@ -120,7 +87,9 @@ awards = awards.merge(author_info, on=["work_qid", "author_qid"], how="left")
 # i.e., no openlibrary id or isbn
 n_missing = (
     awards.work_qid.nunique()
-    - pd.concat([openlibrary_ids.work_qid, isbns.work_qid]).nunique()
+    - pd.concat(
+        [openlibrary_ids.work_qid, isbns.work_qid, wikipedia.work_qid]
+    ).nunique()
 )
 print(
     f"{n_missing}/{awards.work_qid.nunique()} works lack identifying information (openlibrary/isbn/etc.)"

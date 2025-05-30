@@ -4,16 +4,16 @@
 # https://query.wikidata.org/
 # which gives hover information for each entity and relation
 SELECT DISTINCT 
-    ?title 
+    ?itemLabel
     (STRAFTER(STR(?item), "http://www.wikidata.org/entity/") AS ?work_qid) 
-    (GROUP_CONCAT(DISTINCT ?authorLabel; SEPARATOR = ", ") AS ?authors) 
-    (GROUP_CONCAT(DISTINCT ?author_qid; SEPARATOR = ";") AS ?author_qids)
-    (MIN(YEAR(?date)) AS ?year) 
+    ?authorLabel
+    ?author_qid
+    (YEAR(?date) AS ?year) 
     ?awardLabel 
-    # (GROUP_CONCAT(DISTINCT ?goodreads_id; SEPARATOR = ";") AS ?goodreads_ids) 
-    (GROUP_CONCAT(DISTINCT ?openlibrary_id; SEPARATOR = ";") AS ?openlibrary_ids) 
-    (GROUP_CONCAT(DISTINCT ?isbn; SEPARATOR = ";") AS ?isbns) 
-    (MIN(?_pubDate) AS ?pubDate) 
+    ?goodreads_id
+    ?openlibrary_id
+    ?isbn
+    ?pubDate
     ?status 
     ?article
 WHERE {
@@ -51,7 +51,7 @@ WHERE {
             wdt:P577 ?engPubDate.
     }
 
-    BIND(IF(?workLang = wd:Q1860, COALESCE(?workPubDate, ?engPubDate), ?engPubDate) AS ?_pubDate)
+    BIND(IF(?workLang = wd:Q1860, COALESCE(?workPubDate, ?engPubDate), ?engPubDate) AS ?pubDate)
     BIND(STRAFTER(STR(?author), "http://www.wikidata.org/entity/") AS ?author_qid)
 
       
@@ -63,9 +63,5 @@ WHERE {
 
     SERVICE wikibase:label {
         bd:serviceParam wikibase:language "[AUTO_LANGUAGE],mul,en".
-        ?item rdfs:label ?title.
-        ?author rdfs:label ?authorLabel.
-        ?award rdfs:label ?awardLabel.
     }
 }
-GROUP BY ?item ?title ?awardLabel ?status ?article
