@@ -64,7 +64,7 @@ print(
 wikipedia_ids = duckdb.sql(
     """
     SELECT DISTINCT work_qid, wikipedia_url
-    FROM '{wikipedia}'
+    FROM read_csv('{wikipedia}', header := true)
     ANTI JOIN openlibrary_descriptions USING (work_qid)
 """.format(wikipedia=snakemake.input["wikipedia"])
 ).df()
@@ -72,6 +72,7 @@ wikipedia_ids = duckdb.sql(
 
 with WikipediaDescriptionProvider() as wiki:
     wikipedia_descriptions = descriptions_from_ids(wikipedia_ids, "wikipedia_url", wiki)
+
 duckdb.register("wikipedia_descriptions", wikipedia_descriptions)
 
 print("Fetched {} descriptions from wikipedia".format(wikipedia_descriptions.shape[0]))

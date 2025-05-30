@@ -1,3 +1,4 @@
+import urllib.parse
 from typing import Optional, Iterable, Tuple
 from contextlib import AbstractContextManager
 from bs4 import BeautifulSoup
@@ -85,7 +86,9 @@ class WikipediaDescriptionProvider(AbstractContextManager):
         """
         Extract the article title from the Wikipedia URL.
         """
-        return wikipedia_url.removeprefix("https://en.wikipedia.org/wiki/")
+        return urllib.parse.unquote(
+            wikipedia_url.removeprefix("https://en.wikipedia.org/wiki/")
+        )
 
     def get_sections(self, title: str) -> Iterable[Tuple[int, str]]:
         """
