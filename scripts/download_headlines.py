@@ -4,6 +4,12 @@ from utils.world_state import NYTimesArchiveAPI
 import itertools
 from tqdm.auto import tqdm
 import json
+from httpx import HTTPStatusError
+
+from loguru import logger
+
+logger.remove()
+logger.add("logs/headlines.log", level="DEBUG")
 
 load_dotenv()
 
@@ -19,6 +25,15 @@ with open(snakemake.output.headlines, "w") as f:
         total=len(range(1959, 2025)) * len(range(1, 13)),
         desc="Downloading headlines",
     ):
-        for headline in nyt.get_headlines(year, month):
-            json.dump(headline, f)
-            f.write("\n")
+        try:
+            for headline in nyt.get_headlines(year, month):
+                json.dump(headline, f)
+                f.write("\n")
+        except HTTPStatusError as e:
+            if e.response.status_code == 429:
+                msg = e.response.json()["fault"]["faultstring"]
+                logger.error(
+                    f"Hit rate limit downloading headlines for {year}/{month}: {msg}"
+                )
+                print("Hit rate limit, try again tomorrow.")
+            break

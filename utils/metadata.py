@@ -4,7 +4,7 @@ from contextlib import AbstractContextManager
 from bs4 import BeautifulSoup
 from httpx_ratelimiter import LimiterTransport
 
-from utils.api import CachedApi
+from utils.api import CachedApi, default_retry_transport
 
 
 class WikipediaDescriptionProvider(AbstractContextManager):
@@ -17,7 +17,9 @@ class WikipediaDescriptionProvider(AbstractContextManager):
 
     def __init__(self):
         # HTTP client preconfigured with caching and retries
-        self.client = CachedApi("wikipedia", self.WIKI_API_URL)
+        self.client = CachedApi(
+            "wikipedia", self.WIKI_API_URL, transport=default_retry_transport()
+        )
 
     def __exit__(self, *args):
         self.client.__exit__(*args)
@@ -131,6 +133,7 @@ class GoogleBooksDescriptionProvider(AbstractContextManager):
                 per_minute=100,
                 per_day=1000,
                 max_delay=60_000,
+                transport=default_retry_transport(),
             ),
         )
 

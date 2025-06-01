@@ -1,7 +1,10 @@
 from .api import CachedApi, path_to_cache_key
 import os
 from typing import Iterator, TypedDict
-from httpx_ratelimiter import LimiterTransport
+from httpx import HTTPTransport, Response, Request
+from time import sleep
+from loguru import logger
+from httpx import HTTPStatusError
 
 
 class NYTArticle(TypedDict):
@@ -10,6 +13,26 @@ class NYTArticle(TypedDict):
     abstract: str
     year: int
     month: int
+
+
+class NYTLimiterTransport(HTTPTransport):
+    """
+    A transport that limits the number of requests to the NYT API.
+
+    The NYT API has a rate limit of 5 requests per second, and they're very strict about it.
+    This transport will sleep for 12 seconds between requests in order to avoid being rate limited.
+    """
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+    def handle_request(self, request: Request, **kwargs) -> Response:
+        logger.debug("Okay, calling the API.")
+        response = super().handle_request(request, **kwargs)
+        logger.debug("Sleeping for 12 seconds to avoid being rate limited")
+        sleep(12)  # Sleep for 12 seconds to avoid being rate limited
+        logger.debug("Done sleeping.")
+        return response
 
 
 class NYTimesArchiveAPI:
@@ -21,11 +44,7 @@ class NYTimesArchiveAPI:
             "nytimes",
             self.API_BASE,
             key_fn=path_to_cache_key,
-            base_transport=LimiterTransport(
-                per_minute=5,
-                per_day=500,
-                max_delay=60_000,
-            ),
+            transport=NYTLimiterTransport(http2=True),
         )
 
     def get_articles(self, year: int, month: int) -> dict:
