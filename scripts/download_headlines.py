@@ -1,0 +1,24 @@
+from snakemake.script import snakemake
+from dotenv import load_dotenv
+from utils.world_state import NYTimesArchiveAPI
+import itertools
+from tqdm.auto import tqdm
+import json
+
+load_dotenv()
+
+
+nyt = NYTimesArchiveAPI.from_envfile()
+
+with open(snakemake.output.headlines, "w") as f:
+    for year, month in tqdm(
+        itertools.product(
+            range(1959, 2025),
+            range(1, 13),
+        ),
+        total=len(range(1959, 2025)) * len(range(1, 13)),
+        desc="Downloading headlines",
+    ):
+        for headline in nyt.get_headlines(year, month):
+            json.dump(headline, f)
+            f.write("\n")

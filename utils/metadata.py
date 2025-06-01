@@ -2,69 +2,9 @@ import urllib.parse
 from typing import Optional, Iterable, Tuple
 from contextlib import AbstractContextManager
 from bs4 import BeautifulSoup
-import httpx
-from httpx_retries import RetryTransport, Retry
 from httpx_ratelimiter import LimiterTransport
-import os
-from diskcache import Cache
-import hashlib
 
-USER_AGENT = "scifi-fantasy/0.1 (dev@zmraines.com)"
-
-
-class CachedApi:
-    def __init__(
-        self, cache_name: str, api_root: str, base_transport: httpx.BaseTransport = None
-    ):
-        self.api_root = api_root
-        self.cache = Cache(directory=os.path.join(".cache", cache_name))
-        self.client = self.create_caching_client(base_transport)
-
-    def __exit__(self, *args):
-        self.client.__exit__(*args)
-
-    @staticmethod
-    def create_caching_client(
-        base_transport: httpx.BaseTransport = None,
-    ) -> httpx.Client:
-        """
-        Create an HTTP client with caching and retry capabilities.
-        """
-        # Add retry capability to transport layer
-        retry_transport = RetryTransport(
-            transport=base_transport or httpx.HTTPTransport(http2=True),
-            retry=Retry(
-                total=3,
-                backoff_factor=0.5,
-                status_forcelist=[429],  # Retry on rate limit errors
-            ),
-        )
-
-        return httpx.Client(
-            http2=True,  # Enable HTTP/2 for better performance
-            headers={"User-Agent": USER_AGENT},
-            transport=retry_transport,
-        )
-
-    def _cache_key(self, request: httpx.Request) -> str:
-        return hashlib.sha256(request.url.query).hexdigest()
-
-    def _check_cache(self, request: httpx.Request) -> Optional[dict]:
-        return self.cache.get(self._cache_key(request), default=None)
-
-    def call_endpoint(self, params: dict) -> dict:
-        request = httpx.Request(
-            "GET",
-            self.api_root,
-            params=params,
-        )
-        if cached_response := self._check_cache(request):
-            return cached_response
-        resp = self.client.send(request)
-        resp.raise_for_status()
-        data = resp.json()
-        self.cache.set(self._cache_key(request), data, expire=None)
-        return data
+from utils.api import CachedApi
 
 
 class WikipediaDescriptionProvider(AbstractContextManager):

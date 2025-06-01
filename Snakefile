@@ -22,9 +22,17 @@ KAGGLE_DATA = {
     }.items()
 }
 
+NYT_DATA = {
+    k: os.path.join(RAW_DATA_ROOT, v) for k, v in
+    {
+        'headlines': 'headlines.json',
+    }.items()
+}
+
 RAW_DATA = {
     **WIKIDATA_DATA,
     **KAGGLE_DATA,
+    **NYT_DATA,
 }
 
 PROCESSED_DATA = {
@@ -125,3 +133,13 @@ rule collect_descriptions:
         descriptions=PROCESSED_DATA['descriptions']
     script:
         "scripts/collect_descriptions.py"
+
+
+# World State download rules
+# --------------------------
+
+rule download_headlines:
+    output:
+        headlines=NYT_DATA['headlines']
+    script:
+        "scripts/download_headlines.py"
