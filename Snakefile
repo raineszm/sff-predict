@@ -44,6 +44,8 @@ PROCESSED_DATA = {
         'wikipedia': 'wikipedia.csv',
         'cumulative_awards': 'cumulative_awards.csv',
         'descriptions': 'descriptions.csv',
+        'headline_embeddings': 'headline_embeddings.parquet',
+        'description_embeddings': 'description_embeddings.parquet',
     }.items()
 }
 
@@ -134,6 +136,14 @@ rule collect_descriptions:
     script:
         "scripts/collect_descriptions.py"
 
+rule embed_descriptions:
+    input:
+        descriptions=PROCESSED_DATA['descriptions']
+    output:
+        description_embeddings=PROCESSED_DATA['description_embeddings']
+    script:
+        "scripts/embed_descriptions.py"
+
 
 # World State download rules
 # --------------------------
@@ -143,3 +153,11 @@ rule download_headlines:
         headlines=NYT_DATA['headlines']
     script:
         "scripts/download_headlines.py"
+
+rule embed_headlines:
+    input:
+        headlines=NYT_DATA['headlines']
+    output:
+        headline_embeddings=PROCESSED_DATA['headline_embeddings']
+    script:
+        "scripts/embed_headlines.py"

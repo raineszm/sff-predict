@@ -129,11 +129,11 @@ class GoogleBooksDescriptionProvider(AbstractContextManager):
         self.client = CachedApi(
             "googlebooks",
             self.BASE_URL,
-            base_transport=LimiterTransport(
+            transport=LimiterTransport(
                 per_minute=100,
                 per_day=1000,
                 max_delay=60_000,
-                transport=default_retry_transport(),
+                base_transport=default_retry_transport(),
             ),
         )
 

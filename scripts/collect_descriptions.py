@@ -7,6 +7,10 @@ import pandas as pd
 import dotenv
 import os
 from typing import Callable, Optional
+from loguru import logger
+
+logger.remove()
+logger.add("logs/collect_descriptions.log", level="INFO")
 
 
 def descriptions_from_ids(
@@ -147,4 +151,4 @@ n_works = duckdb.sql(
 ).fetchone()[0]
 print("Descriptions found for {}/{} works".format(descriptions.index.size, n_works))
 
-descriptions.to_csv(snakemake.output["descriptions"])
+descriptions.sort_values(by="work_qid").to_csv(snakemake.output["descriptions"])
