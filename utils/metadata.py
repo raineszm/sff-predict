@@ -101,6 +101,13 @@ class WikipediaDescriptionProvider(AbstractContextManager):
         )
         return list(resp.get("query", {}).get("pages", {}).values())[0].get("extract")
 
+    def _html_to_plaintext(self, html: str) -> str:
+        bs = BeautifulSoup(html, "html.parser")
+        # Remove error messages
+        for s in bs.find_all("span", class_="error"):
+            s.decompose()
+        return "\n".join(p.get_text() for p in bs.find_all("p"))
+
     def get_description(self, wikipedia_url: str) -> Optional[str]:
         """
         Fetch the first 'Plot' section from the page and return its plain-text.
@@ -118,7 +125,7 @@ class WikipediaDescriptionProvider(AbstractContextManager):
 
         if not (html := self.get_section_html(article_title, plot_idx)):
             return None
-        return BeautifulSoup(html, "html.parser").get_text(separator="\n").strip()
+        return self._html_to_plaintext(html)
 
 
 class GoogleBooksDescriptionProvider(AbstractContextManager):
