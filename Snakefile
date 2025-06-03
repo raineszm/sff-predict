@@ -98,7 +98,7 @@ for sparql_query, data_name in [
 
 rule download_openlibrary_works:
     output:
-        KAGGLE_DATA['openlibrary_works']
+        protected(KAGGLE_DATA['openlibrary_works'])
     script:
         "scripts/download_openlibrary.py"
 
@@ -174,6 +174,6 @@ rule embed_headlines:
     input:
         headlines=NYT_DATA['headlines']
     output:
-        headline_embeddings=PROCESSED_DATA['headline_embeddings']
+        headline_embeddings=protected(PROCESSED_DATA['headline_embeddings'])
     script:
         "scripts/embed_headlines.py"
