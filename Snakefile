@@ -35,6 +35,13 @@ RAW_DATA = {
     **NYT_DATA,
 }
 
+TRAIN_DATA = {
+    k: os.path.join(DATA_ROOT, v) for k, v in
+    {
+        'train_desc': 'train_desc_labeled.csv',
+    }.items()
+}
+
 PROCESSED_DATA = {
     k: os.path.join(DATA_ROOT, v) for k, v in
     {
@@ -46,6 +53,7 @@ PROCESSED_DATA = {
         'descriptions': 'descriptions.csv',
         'headline_embeddings': 'headline_embeddings.parquet',
         'description_embeddings': 'description_embeddings.parquet',
+        'descriptions_debiased': 'descriptions_debiased.parquet',
     }.items()
 }
 
@@ -144,6 +152,14 @@ rule embed_descriptions:
     script:
         "scripts/embed_descriptions.py"
 
+rule debias_descriptions:
+    input:
+        description_embeddings=PROCESSED_DATA['description_embeddings'],
+        train_desc=TRAIN_DATA['train_desc']
+    output:
+        descriptions_debiased=PROCESSED_DATA['descriptions_debiased']
+    script:
+        "scripts/debias_descriptions.py"
 
 # World State download rules
 # --------------------------
