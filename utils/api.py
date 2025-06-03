@@ -29,9 +29,12 @@ class CachedApi:
         api_root: str,
         transport: httpx.BaseTransport = None,
         key_fn: Callable[[httpx.Request], str] = None,
+        diskcache_settings: dict = None,
     ):
         self.api_root = api_root
-        self.cache = Cache(directory=os.path.join(".cache", cache_name))
+        self.cache = Cache(
+            directory=os.path.join(".cache", cache_name), **diskcache_settings
+        )
         self.client = self.create_client(transport=transport)
         self.key_fn = key_fn or query_to_cache_key
         self.logger = logger.bind(cache_name=cache_name)

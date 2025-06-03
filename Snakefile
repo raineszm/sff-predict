@@ -167,6 +167,9 @@ rule debias_descriptions:
 rule download_headlines:
     output:
         headlines=NYT_DATA['headlines']
+    params:
+        start_year=config.get("start_year", 1959),
+        end_year=config.get("end_year", 2024)
     script:
         "scripts/download_headlines.py"
 

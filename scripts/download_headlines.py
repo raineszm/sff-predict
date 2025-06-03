@@ -19,10 +19,10 @@ nyt = NYTimesArchiveAPI.from_envfile()
 with open(snakemake.output.headlines, "w") as f:
     for year, month in tqdm(
         itertools.product(
-            range(1959, 2025),
+            range(snakemake.params.start_year, snakemake.params.end_year + 1),
             range(1, 13),
         ),
-        total=len(range(1959, 2025)) * len(range(1, 13)),
+        total=(snakemake.params.end_year - snakemake.params.start_year + 1) * 12,
         desc="Downloading headlines",
     ):
         try:

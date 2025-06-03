@@ -45,6 +45,7 @@ class NYTimesArchiveAPI:
             self.API_BASE,
             key_fn=path_to_cache_key,
             transport=NYTLimiterTransport(http2=True),
+            diskcache_settings={"eviction_policy": "none"},
         )
 
     def get_articles(self, year: int, month: int) -> dict:
