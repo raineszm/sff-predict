@@ -1,5 +1,8 @@
 import os.path
 
+resources:
+    nyt_api=1
+
 # Configuration
 # ------------
 
@@ -28,6 +31,8 @@ NYT_DATA = {
         'headlines': 'headlines.json',
     }.items()
 }
+
+HEADLINE_DIR = os.path.join(RAW_DATA_ROOT, "headlines")
 
 RAW_DATA = {
     **WIKIDATA_DATA,
@@ -164,14 +169,29 @@ rule debias_descriptions:
 # World State download rules
 # --------------------------
 
-rule download_headlines:
+rule fetch_month_headlines:
     output:
-        headlines=NYT_DATA['headlines']
+        month_headlines=os.path.join(HEADLINE_DIR, "{year}-{month}.json")
+    resources:
+        nyt_api=1
     params:
-        start_year=config.get("start_year", 1959),
-        end_year=config.get("end_year", 2024)
+        year="{year}",
+        month="{month}"
     script:
-        "scripts/download_headlines.py"
+        "scripts/fetch_month_headlines.py"
+
+rule download_headlines:
+    input:
+        months=[
+            os.path.join(HEADLINE_DIR, f"{year}-{month}.json")
+            for year in range(1959, 2025)
+            for month in range(1, 13)
+        ]
+    output:
+        protected(headlines=NYT_DATA['headlines'])
+    script:
+        "scripts/combine_headlines.py"
+
 
 rule embed_headlines:
     input:
