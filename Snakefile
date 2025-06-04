@@ -6,6 +6,16 @@ import os.path
 DATA_ROOT = "data"
 RAW_DATA_ROOT = os.path.join(DATA_ROOT, "raw")
 
+# Model configurations
+# ------------
+EMBEDDING_MODEL = "all-MiniLM-L6-v2"
+SENTIMENT_MODEL = {
+    "model": "distilbert-base-uncased-finetuned-sst-2-english",
+    "revision": "714eb0f",
+    "truncation": True,
+    "max_length": 512
+}
+
 WIKIDATA_DATA = {
     k: os.path.join(RAW_DATA_ROOT, v) for k, v in
     {
@@ -151,6 +161,8 @@ rule embed_descriptions:
         descriptions=PROCESSED_DATA['descriptions']
     output:
         description_embeddings=PROCESSED_DATA['description_embeddings']
+    params:
+        embedding_model=EMBEDDING_MODEL
     script:
         "scripts/embed_descriptions.py"
 
@@ -182,7 +194,7 @@ rule download_headlines:
         months=expand(
             "{HEADLINE_DIR}/{year}-{month}.json",
             HEADLINE_DIR=HEADLINE_DIR,
-            year=range(1959, 2025),
+            year=range(1954, 2025),
             month=range(1, 13)
         )
     log:
@@ -202,5 +214,8 @@ rule embed_headlines:
         headlines=NYT_DATA['headlines']
     output:
         headline_embeddings=protected(PROCESSED_DATA['headline_embeddings'])
+    params:
+        embedding_model=EMBEDDING_MODEL,
+        sentiment_model=SENTIMENT_MODEL
     script:
         "scripts/embed_headlines.py"

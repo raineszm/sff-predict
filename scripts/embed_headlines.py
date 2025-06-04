@@ -1,45 +1,42 @@
-import duckdb
-import sys
+import pandas as pd
+from sentence_transformers import SentenceTransformer
+from snakemake.script import snakemake
 
-sys.path.append(".")
-
-from utils.embedding import register_embedding_function
-from utils.sentiment import register_sentiment_function
-from tqdm.auto import tqdm
+# Initialize the models
+embedding_model = SentenceTransformer(snakemake.params.embedding_model)
 
 
 def embed_headlines(input_headlines, output_headline_embeddings):
     print("Embedding headlines (This may take a while)")
 
-    n_headlines = duckdb.sql(f"SELECT COUNT(*) FROM '{input_headlines}'").fetchone()[0]
+    # Read the input headlines
+    df = pd.read_parquet(input_headlines)
 
-    with tqdm(total=n_headlines, desc="Embedding headlines") as total_pbar:
-        register_sentiment_function()
-        register_embedding_function(total_pbar=total_pbar)
+    # Combine headline and abstract
+    df["headline_abstract"] = (
+        df["headline"].str.removeprefix("LEAD:").str.lower() + " " + df["abstract"]
+    )
 
-        # Strip the nyt://article/ prefix from the id
-        # and combine the headline and abstract for embedding
-        duckdb.sql(f"""
-        CREATE VIEW concat_headline_abstract AS (
-            SELECT id.substr(strlen('nyt://article/') + 1) as id, headline || ' ' || abstract AS headline_abstract
-            FROM '{input_headlines}'
-        );
-        """)
+    # Get embeddings
+    embeddings = embedding_model.encode(
+        df["headline_abstract"].tolist(), convert_to_numpy=True, show_progress_bar=True
+    ).astype("float32")
 
-        # Do vectorized semanticembedding and sentiment analysis
-        # of the headlines
-        duckdb.sql(f"""
-        COPY (
-        SELECT id, embed_text(headline_abstract) AS embedding, sentiment(headline_abstract) AS sentiment
-        FROM concat_headline_abstract
-        )
-        TO '{output_headline_embeddings}' (FORMAT PARQUET, COMPRESSION ZSTD)
-        """)
+    # Create output dataframe
+    result_df = pd.DataFrame(
+        {
+            "id": df["id"],
+            "embedding": list(embeddings),
+        }
+    )
+
+    # Save to parquet
+    result_df.to_parquet(
+        output_headline_embeddings, compression="zstd", compression_level=12
+    )
 
 
 if __name__ == "__main__":
-    from snakemake.script import snakemake
-
     embed_headlines(
         snakemake.input["headlines"], snakemake.output["headline_embeddings"]
     )
