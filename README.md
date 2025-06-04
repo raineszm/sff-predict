@@ -74,16 +74,27 @@ awards predicted by our model based on subsequent media franchises.
         export GOOGLE_BOOKS_API_KEY=your_api_key_here
         ```
 
-4. **Run the Pipeline**
-   ```sh
-   # Run with a single core
-   pixi run snakemake --cores 1
+4. **Fetch Cached Data** (Optional)
 
-   # Or use multiple cores for faster processing
-   pixi run snakemake --cores 4
-   ```
+   Some intermediate data files are cached to speed up pipeline runs. To fetch
+   them:
 
-   There's a script to make this slightly simpler:
+   1. First, log in to Kaggle:
+      ```sh
+      pixi run kaggle authenticate
+      ```
+      You'll need a Kaggle account and API credentials from your
+      [Kaggle account settings](https://www.kaggle.com/settings)
+
+   2. Then download the cached data:
+      ```sh
+      bin/fetch_cache.sh
+      ```
+
+   This will save you from having to reprocess the full headlines dataset, which
+   requires NYT API credentials and takes significant time.
+
+5. **Run the Pipeline**
    ```sh
    bin/snakemake.sh
    ```
