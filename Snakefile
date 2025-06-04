@@ -1,8 +1,5 @@
 import os.path
 
-resources:
-    nyt_api=1
-
 # Configuration
 # ------------
 
@@ -62,7 +59,7 @@ PROCESSED_DATA = {
     }.items()
 }
 
-# Phony rules
+# General targets
 # ------------
 
 rule all:
@@ -182,15 +179,22 @@ rule fetch_month_headlines:
 
 rule download_headlines:
     input:
-        months=[
-            os.path.join(HEADLINE_DIR, f"{year}-{month}.json")
-            for year in range(1959, 2025)
-            for month in range(1, 13)
-        ]
+        months=expand(
+            "{HEADLINE_DIR}/{year}-{month}.json",
+            HEADLINE_DIR=HEADLINE_DIR,
+            year=range(1959, 2025),
+            month=range(1, 13)
+        )
+    log:
+        "logs/download_headlines.log"
     output:
-        protected(headlines=NYT_DATA['headlines'])
-    script:
-        "scripts/combine_headlines.py"
+        headlines=NYT_DATA['headlines']
+    run:
+        with open(output.headlines, "w") as outfile:
+            for month_headlines in input.months:
+                with open(month_headlines, "r") as infile:
+                    for line in infile:
+                        outfile.write(line)
 
 
 rule embed_headlines:

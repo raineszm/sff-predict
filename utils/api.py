@@ -32,6 +32,7 @@ class CachedApi:
         diskcache_settings: dict = None,
     ):
         self.api_root = api_root
+        diskcache_settings = diskcache_settings or {}
         self.cache = Cache(
             directory=os.path.join(".cache", cache_name), **diskcache_settings
         )

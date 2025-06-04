@@ -1,15 +1,17 @@
 author_qid,authorLabel,year,awards_as_of_year
-Q278510,A. A. Attanasio,1981,1
 Q278510,A. A. Attanasio,1982,3
 Q278510,A. A. Attanasio,1986,4
 Q278510,A. A. Attanasio,1989,5
 Q278510,A. A. Attanasio,1995,7
 Q278510,A. A. Attanasio,1997,8
 Q278510,A. A. Attanasio,2005,9
-Q87658659,A. C. Wise,2021,1
-Q87658659,A. C. Wise,2022,2
-Q87658659,A. C. Wise,2024,3
-Q315059,A. E. van Vogt,1972,1
+Q87658659,A. C. Wise,2020,1
+Q87658659,A. C. Wise,2021,2
+Q87658659,A. C. Wise,2022,3
+Q87658659,A. C. Wise,2024,4
+Q134694432,A. D. Sui,2025,1
+Q315059,A. E. van Vogt,1966,1
+Q315059,A. E. van Vogt,1972,2
 Q4647753,A. F. Kidd,1996,1
 Q80491065,A. K. Larkwood,2021,1
 Q4648116,A. M. Dellamonica,2007,1
@@ -48,6 +50,7 @@ Q4678594,Adam-Troy Castro,1999,6
 Q4678594,Adam-Troy Castro,2000,9
 Q4678594,Adam-Troy Castro,2002,11
 Q4678594,Adam-Troy Castro,2003,12
+Q4678594,Adam-Troy Castro,2012,13
 Q4685389,Adrian Tchaikovsky,2022,3
 Q4685389,Adrian Tchaikovsky,2023,6
 Q4685389,Adrian Tchaikovsky,2024,9
@@ -59,6 +62,7 @@ Q117662820,Ai Jiang,2023,3
 Q117662820,Ai Jiang,2024,6
 Q108600209,Aiden Thomas,2021,2
 Q66666948,Aimee Ogden,2021,1
+Q66666948,Aimee Ogden,2022,2
 Q3136498,Alan Brennert,1976,1
 Q3136498,Alan Brennert,1990,2
 Q3136498,Alan Brennert,1991,3
@@ -96,9 +100,9 @@ Q380869,Alastair Reynolds,2021,50
 Q380869,Alastair Reynolds,2022,51
 Q380869,Alastair Reynolds,2023,52
 Q13563168,Alaya Dawn Johnson,2011,1
-Q13563168,Alaya Dawn Johnson,2015,2
-Q13563168,Alaya Dawn Johnson,2021,3
-Q13563168,Alaya Dawn Johnson,2024,4
+Q13563168,Alaya Dawn Johnson,2015,3
+Q13563168,Alaya Dawn Johnson,2021,4
+Q13563168,Alaya Dawn Johnson,2024,5
 Q4710063,Albert E. Cowdrey,2001,1
 Q4710063,Albert E. Cowdrey,2003,2
 Q4710063,Albert E. Cowdrey,2004,3
@@ -144,20 +148,19 @@ Q4721398,Alexis A. Gilliland,1982,1
 Q98781221,Alexis Henderson,2021,1
 Q286116,Alfred Bester,1959,1
 Q286116,Alfred Bester,1960,2
-Q286116,Alfred Bester,1975,5
+Q286116,Alfred Bester,1975,4
 Q286116,Alfred Bester,1976,7
 Q286116,Alfred Bester,1980,8
 Q286116,Alfred Bester,1981,9
 Q547414,Algis Budrys,1956,2
 Q547414,Algis Budrys,1959,4
 Q547414,Algis Budrys,1961,5
-Q547414,Algis Budrys,1976,7
-Q547414,Algis Budrys,1977,8
-Q547414,Algis Budrys,1978,9
-Q547414,Algis Budrys,1979,10
-Q547414,Algis Budrys,1990,11
-Q547414,Algis Budrys,1993,12
-Q547414,Algis Budrys,1994,13
+Q547414,Algis Budrys,1976,8
+Q547414,Algis Budrys,1977,9
+Q547414,Algis Budrys,1978,10
+Q547414,Algis Budrys,1979,11
+Q547414,Algis Budrys,1990,12
+Q547414,Algis Budrys,1994,14
 Q234928,Alice Bradley Sheldon,1972,1
 Q234928,Alice Bradley Sheldon,1973,7
 Q234928,Alice Bradley Sheldon,1974,12
@@ -180,23 +183,23 @@ Q53568206,Alice Sola Kim,2020,3
 Q131438546,Alida Van Gores,1990,1
 Q4726543,Aliette de Bodard,2010,1
 Q4726543,Aliette de Bodard,2011,2
-Q4726543,Aliette de Bodard,2012,5
-Q4726543,Aliette de Bodard,2013,13
-Q4726543,Aliette de Bodard,2014,15
-Q4726543,Aliette de Bodard,2015,19
-Q4726543,Aliette de Bodard,2016,23
-Q4726543,Aliette de Bodard,2017,25
-Q4726543,Aliette de Bodard,2018,28
-Q4726543,Aliette de Bodard,2019,31
-Q4726543,Aliette de Bodard,2020,33
-Q4726543,Aliette de Bodard,2021,39
-Q4726543,Aliette de Bodard,2022,45
-Q4726543,Aliette de Bodard,2023,47
-Q4726543,Aliette de Bodard,2024,51
-Q4726543,Aliette de Bodard,2025,52
+Q4726543,Aliette de Bodard,2012,6
+Q4726543,Aliette de Bodard,2013,14
+Q4726543,Aliette de Bodard,2014,16
+Q4726543,Aliette de Bodard,2015,20
+Q4726543,Aliette de Bodard,2016,24
+Q4726543,Aliette de Bodard,2017,26
+Q4726543,Aliette de Bodard,2018,29
+Q4726543,Aliette de Bodard,2019,32
+Q4726543,Aliette de Bodard,2020,34
+Q4726543,Aliette de Bodard,2021,40
+Q4726543,Aliette de Bodard,2022,46
+Q4726543,Aliette de Bodard,2023,48
+Q4726543,Aliette de Bodard,2024,52
+Q4726543,Aliette de Bodard,2025,53
 Q55238255,Alison Sinclair,1996,1
 Q69802945,Alix E. Harrow,2018,1
-Q69802945,Alix E. Harrow,2019,4
+Q69802945,Alix E. Harrow,2019,3
 Q69802945,Alix E. Harrow,2020,9
 Q69802945,Alix E. Harrow,2021,13
 Q69802945,Alix E. Harrow,2022,17
@@ -225,8 +228,9 @@ Q18683986,Alma Katsu,2021,4
 Q18683986,Alma Katsu,2022,5
 Q18683986,Alma Katsu,2023,6
 Q112787249,Alyc Helms,2022,1
-Q24702422,Alyssa Wong,2016,3
-Q24702422,Alyssa Wong,2017,6
+Q24702422,Alyssa Wong,2015,2
+Q24702422,Alyssa Wong,2016,5
+Q24702422,Alyssa Wong,2017,8
 Q20631001,Amal El-Mohtar,2010,1
 Q20631001,Amal El-Mohtar,2011,2
 Q20631001,Amal El-Mohtar,2014,3
@@ -258,20 +262,20 @@ Q2846765,Andrew Weiner,1988,3
 Q4760631,Andy Duncan,1998,1
 Q4760631,Andy Duncan,1999,2
 Q4760631,Andy Duncan,2000,3
-Q4760631,Andy Duncan,2001,7
-Q4760631,Andy Duncan,2002,11
-Q4760631,Andy Duncan,2003,13
-Q4760631,Andy Duncan,2004,15
-Q4760631,Andy Duncan,2005,16
-Q4760631,Andy Duncan,2007,17
-Q4760631,Andy Duncan,2008,19
-Q4760631,Andy Duncan,2010,20
-Q4760631,Andy Duncan,2012,21
-Q4760631,Andy Duncan,2013,23
-Q4760631,Andy Duncan,2014,26
-Q4760631,Andy Duncan,2018,28
-Q4760631,Andy Duncan,2019,30
-Q4760631,Andy Duncan,2020,31
+Q4760631,Andy Duncan,2001,8
+Q4760631,Andy Duncan,2002,12
+Q4760631,Andy Duncan,2003,14
+Q4760631,Andy Duncan,2004,16
+Q4760631,Andy Duncan,2005,17
+Q4760631,Andy Duncan,2007,18
+Q4760631,Andy Duncan,2008,20
+Q4760631,Andy Duncan,2010,21
+Q4760631,Andy Duncan,2012,22
+Q4760631,Andy Duncan,2013,24
+Q4760631,Andy Duncan,2014,27
+Q4760631,Andy Duncan,2018,29
+Q4760631,Andy Duncan,2019,31
+Q4760631,Andy Duncan,2020,32
 Q18590295,Andy Weir,2022,2
 Q234519,Angela Carter,1984,1
 Q234519,Angela Carter,1985,2
@@ -280,24 +284,22 @@ Q4762556,Angela Slatter,2017,1
 Q4762556,Angela Slatter,2018,3
 Q4762556,Angela Slatter,2022,4
 Q16204354,Ann Leckie,2013,1
-Q16204354,Ann Leckie,2014,3
-Q16204354,Ann Leckie,2015,5
+Q16204354,Ann Leckie,2014,2
+Q16204354,Ann Leckie,2015,4
 Q16204354,Ann Leckie,2016,8
 Q16204354,Ann Leckie,2017,9
 Q16204354,Ann Leckie,2018,11
 Q16204354,Ann Leckie,2020,13
-Q16204354,Ann Leckie,2023,14
 Q16204354,Ann Leckie,2024,16
 Q16204354,Ann Leckie,2025,17
 Q4767530,Anna Tambour,2006,1
 Q4767530,Anna Tambour,2013,2
 Q4767530,Anna Tambour,2015,3
-Q4767817,Annalee Newitz,2017,2
+Q4767817,Annalee Newitz,2017,1
 Q4767817,Annalee Newitz,2018,3
 Q4767817,Annalee Newitz,2019,4
 Q4767817,Annalee Newitz,2020,5
 Q4767817,Annalee Newitz,2022,6
-Q4767817,Annalee Newitz,2023,7
 Q4767817,Annalee Newitz,2024,8
 Q460303,Anne Bishop,1999,1
 Q56850002,Anne Charnock,2021,1
@@ -340,9 +342,10 @@ Q64748745,April Daniels,2017,1
 Q64748745,April Daniels,2018,2
 Q131438550,Ari Honarvar,2022,1
 Q131411964,Ariel Kaplan,2024,1
-Q58640138,Arkady Martine,2019,2
+Q58640138,Arkady Martine,2019,1
 Q58640138,Arkady Martine,2020,5
-Q58640138,Arkady Martine,2021,7
+Q58640138,Arkady Martine,2021,6
+Q58640138,Arkady Martine,2022,7
 Q58640138,Arkady Martine,2024,9
 Q58640138,Arkady Martine,2025,10
 Q61699,Arkady Strugatsky,1980,1
@@ -350,7 +353,7 @@ Q153796,Arkady and Boris Strugatsky,1980,1
 Q104626375,Arlan Keith Andrews,2015,1
 Q18378095,Arsen Darnay,1975,1
 Q18378095,Arsen Darnay,1977,2
-Q2865022,Arthur Byron Cover,1975,1
+Q2865022,Arthur Byron Cover,1976,1
 Q47087,Arthur C. Clarke,1963,1
 Q47087,Arthur C. Clarke,1972,3
 Q47087,Arthur C. Clarke,1976,4
@@ -374,22 +377,24 @@ Q131438519,Ashley Blooms,2021,1
 Q113233,Audrey Niffenegger,2004,1
 Q63869638,Audrey Schulman,2019,1
 Q131460601,Avi Silver,2024,1
-Q782991,Avram Davidson,1965,1
-Q782991,Avram Davidson,1975,2
-Q782991,Avram Davidson,1976,3
-Q782991,Avram Davidson,1979,4
-Q782991,Avram Davidson,1980,5
-Q782991,Avram Davidson,1981,6
-Q782991,Avram Davidson,1982,7
-Q782991,Avram Davidson,1983,9
-Q782991,Avram Davidson,1984,12
-Q782991,Avram Davidson,1985,13
-Q782991,Avram Davidson,1986,15
-Q782991,Avram Davidson,1987,17
-Q782991,Avram Davidson,1991,18
-Q782991,Avram Davidson,1994,21
-Q782991,Avram Davidson,1998,22
-Q782991,Avram Davidson,1999,23
+Q782991,Avram Davidson,1966,2
+Q782991,Avram Davidson,1967,3
+Q782991,Avram Davidson,1975,4
+Q782991,Avram Davidson,1976,5
+Q782991,Avram Davidson,1979,6
+Q782991,Avram Davidson,1980,7
+Q782991,Avram Davidson,1981,8
+Q782991,Avram Davidson,1982,9
+Q782991,Avram Davidson,1983,11
+Q782991,Avram Davidson,1984,14
+Q782991,Avram Davidson,1985,15
+Q782991,Avram Davidson,1986,17
+Q782991,Avram Davidson,1987,18
+Q782991,Avram Davidson,1988,19
+Q782991,Avram Davidson,1991,20
+Q782991,Avram Davidson,1994,23
+Q782991,Avram Davidson,1998,24
+Q782991,Avram Davidson,1999,25
 Q24884299,Ayize Jama-Everett,2016,1
 Q131438525,B. Pladek,2024,1
 Q21027193,Baoshu,2024,1
@@ -416,13 +421,12 @@ Q809050,Barry Hughart,1989,1
 Q809050,Barry Hughart,1992,2
 Q113554,Barry N. Malzberg,1973,1
 Q113554,Barry N. Malzberg,1974,2
-Q113554,Barry N. Malzberg,1975,5
+Q113554,Barry N. Malzberg,1975,4
 Q113554,Barry N. Malzberg,1976,6
 Q113554,Barry N. Malzberg,1980,7
 Q113554,Barry N. Malzberg,1981,8
 Q113554,Barry N. Malzberg,1982,9
 Q113554,Barry N. Malzberg,1983,11
-Q113554,Barry N. Malzberg,1985,12
 Q113554,Barry N. Malzberg,1986,13
 Q113554,Barry N. Malzberg,1993,16
 Q113554,Barry N. Malzberg,1994,17
@@ -478,7 +482,8 @@ Q3638334,Bentley Little,2012,1
 Q131502433,Beston Barnett,2024,2
 Q4897449,Beth Bernobich,2007,1
 Q55433909,Beth Cato,2015,1
-Q55433909,Beth Cato,2017,2
+Q55433909,Beth Cato,2016,2
+Q55433909,Beth Cato,2017,3
 Q96219211,Bethany C. Morrow,2019,1
 Q123916493,Bethany Jacobs,2024,1
 Q56849881,Betsy Curtis,1969,1
@@ -530,10 +535,9 @@ Q238702,Brian Aldiss,1967,2
 Q238702,Brian Aldiss,1977,3
 Q238702,Brian Aldiss,1979,5
 Q238702,Brian Aldiss,1980,6
-Q238702,Brian Aldiss,1982,7
 Q238702,Brian Aldiss,1983,10
 Q238702,Brian Aldiss,1984,11
-Q238702,Brian Aldiss,1985,13
+Q238702,Brian Aldiss,1985,12
 Q238702,Brian Aldiss,1986,14
 Q238702,Brian Aldiss,1993,15
 Q238702,Brian Aldiss,1994,16
@@ -577,6 +581,9 @@ Q28935061,Brooke Bolander,2020,12
 Q28935061,Brooke Bolander,2021,13
 Q4095047,Bruce Boston,2007,1
 Q131438526,Bruce Fergusson,1988,1
+Q4977667,Bruce Holland Rogers,1997,1
+Q4977667,Bruce Holland Rogers,2000,2
+Q4977667,Bruce Holland Rogers,2001,3
 Q4977970,Bruce McAllister,1987,1
 Q4977970,Bruce McAllister,1988,3
 Q4977970,Bruce McAllister,1989,4
@@ -587,13 +594,13 @@ Q4977970,Bruce McAllister,2014,9
 Q312995,Bruce Sterling,1982,1
 Q312995,Bruce Sterling,1983,6
 Q312995,Bruce Sterling,1984,10
-Q312995,Bruce Sterling,1985,13
+Q312995,Bruce Sterling,1985,12
 Q312995,Bruce Sterling,1986,20
 Q312995,Bruce Sterling,1987,22
 Q312995,Bruce Sterling,1988,25
 Q312995,Bruce Sterling,1989,30
 Q312995,Bruce Sterling,1990,34
-Q312995,Bruce Sterling,1991,38
+Q312995,Bruce Sterling,1991,37
 Q312995,Bruce Sterling,1992,39
 Q312995,Bruce Sterling,1994,42
 Q312995,Bruce Sterling,1995,43
@@ -613,10 +620,13 @@ Q312995,Bruce Sterling,2013,73
 Q312995,Bruce Sterling,2017,74
 Q66443239,Bruce T. Holmes,1984,1
 Q4983950,Bud Sparhawk,1997,2
+Q4983950,Bud Sparhawk,2003,3
+Q4983950,Bud Sparhawk,2006,4
 Q4983972,Bud Webster,1997,1
+Q5006331,C. C. MacApp,1966,1
 Q131412004,C. Chancy,2016,1
 Q234030,C. J. Cherryh,1977,1
-Q234030,C. J. Cherryh,1978,4
+Q234030,C. J. Cherryh,1978,3
 Q234030,C. J. Cherryh,1979,8
 Q234030,C. J. Cherryh,1980,10
 Q234030,C. J. Cherryh,1981,11
@@ -644,15 +654,13 @@ Q234030,C. J. Cherryh,2014,53
 Q234030,C. J. Cherryh,2016,54
 Q234030,C. J. Cherryh,2017,55
 Q234030,C. J. Cherryh,2019,56
-Q110164319,C. L. Clark,2021,2
+Q110164319,C. L. Clark,2021,1
 Q110164319,C. L. Clark,2022,6
-Q64140580,C. L. Polk,2018,1
 Q64140580,C. L. Polk,2019,2
-Q64140580,C. L. Polk,2020,3
-Q64140580,C. L. Polk,2021,7
-Q64140580,C. L. Polk,2022,11
-Q64140580,C. L. Polk,2023,14
-Q64140580,C. L. Polk,2024,17
+Q64140580,C. L. Polk,2021,6
+Q64140580,C. L. Polk,2022,10
+Q64140580,C. L. Polk,2023,13
+Q64140580,C. L. Polk,2024,16
 Q43375746,C. S. E. Cooney,2015,1
 Q43375746,C. S. E. Cooney,2016,3
 Q43375746,C. S. E. Cooney,2018,4
@@ -671,7 +679,7 @@ Q4221522,Caitlín R. Kiernan,2005,4
 Q4221522,Caitlín R. Kiernan,2008,5
 Q4221522,Caitlín R. Kiernan,2009,6
 Q4221522,Caitlín R. Kiernan,2010,8
-Q4221522,Caitlín R. Kiernan,2012,11
+Q4221522,Caitlín R. Kiernan,2012,10
 Q4221522,Caitlín R. Kiernan,2013,14
 Q4221522,Caitlín R. Kiernan,2014,17
 Q4221522,Caitlín R. Kiernan,2015,20
@@ -689,7 +697,7 @@ Q29559684,Carmen Maria Machado,2018,2
 Q29559684,Carmen Maria Machado,2020,3
 Q2939834,Carol Emshwiller,1988,1
 Q2939834,Carol Emshwiller,2002,2
-Q2939834,Carol Emshwiller,2003,5
+Q2939834,Carol Emshwiller,2003,4
 Q2939834,Carol Emshwiller,2004,7
 Q2939834,Carol Emshwiller,2005,9
 Q2939834,Carol Emshwiller,2006,10
@@ -742,7 +750,7 @@ Q5051056,Cat Rambo,2011,3
 Q5051056,Cat Rambo,2017,4
 Q5051056,Cat Rambo,2022,6
 Q260054,Catherine Asaro,1996,1
-Q260054,Catherine Asaro,1998,3
+Q260054,Catherine Asaro,1998,2
 Q260054,Catherine Asaro,1999,6
 Q260054,Catherine Asaro,2001,7
 Q260054,Catherine Asaro,2002,9
@@ -787,20 +795,23 @@ Q5076375,Charles Coleman Finlay,2005,7
 Q5076375,Charles Coleman Finlay,2006,9
 Q5076375,Charles Coleman Finlay,2008,10
 Q5076375,Charles Coleman Finlay,2009,14
-Q18207018,Charles E. Gannon,2013,1
-Q18207018,Charles E. Gannon,2014,2
-Q18207018,Charles E. Gannon,2015,3
-Q18207018,Charles E. Gannon,2019,4
-Q3666432,Charles L. Grant,1977,2
-Q3666432,Charles L. Grant,1980,3
-Q3666432,Charles L. Grant,1981,4
-Q3666432,Charles L. Grant,1983,6
+Q18207018,Charles E. Gannon,2014,1
+Q18207018,Charles E. Gannon,2015,2
+Q18207018,Charles E. Gannon,2016,3
+Q18207018,Charles E. Gannon,2020,4
+Q3666432,Charles L. Grant,1975,1
+Q3666432,Charles L. Grant,1976,2
+Q3666432,Charles L. Grant,1977,4
+Q3666432,Charles L. Grant,1980,5
+Q3666432,Charles L. Grant,1981,6
+Q3666432,Charles L. Grant,1983,8
 Q4496029,Charles L. Harness,1967,4
-Q4496029,Charles L. Harness,1975,5
-Q4496029,Charles L. Harness,1982,7
-Q4496029,Charles L. Harness,1985,9
-Q4496029,Charles L. Harness,1986,10
-Q4496029,Charles L. Harness,1999,11
+Q4496029,Charles L. Harness,1970,5
+Q4496029,Charles L. Harness,1975,6
+Q4496029,Charles L. Harness,1982,8
+Q4496029,Charles L. Harness,1985,10
+Q4496029,Charles L. Harness,1986,11
+Q4496029,Charles L. Harness,1999,12
 Q123050932,Charles Oberndorf,1993,1
 Q123050932,Charles Oberndorf,1994,2
 Q5081877,Charles R. Pellegrino,1994,1
@@ -855,7 +866,6 @@ Q1066587,Charles de Lint,1994,11
 Q1066587,Charles de Lint,1995,12
 Q1066587,Charles de Lint,1998,13
 Q1066587,Charles de Lint,1999,14
-Q1066587,Charles de Lint,2000,15
 Q1066587,Charles de Lint,2001,16
 Q1066587,Charles de Lint,2002,17
 Q1066587,Charles de Lint,2003,18
@@ -864,12 +874,11 @@ Q5084448,Charlie Jane Anders,2011,2
 Q5084448,Charlie Jane Anders,2012,4
 Q5084448,Charlie Jane Anders,2014,5
 Q5084448,Charlie Jane Anders,2015,6
-Q5084448,Charlie Jane Anders,2016,7
-Q5084448,Charlie Jane Anders,2017,11
-Q5084448,Charlie Jane Anders,2018,13
-Q5084448,Charlie Jane Anders,2020,15
-Q5084448,Charlie Jane Anders,2021,17
-Q5084448,Charlie Jane Anders,2024,18
+Q5084448,Charlie Jane Anders,2017,10
+Q5084448,Charlie Jane Anders,2018,12
+Q5084448,Charlie Jane Anders,2020,14
+Q5084448,Charlie Jane Anders,2021,16
+Q5084448,Charlie Jane Anders,2024,17
 Q131502435,Charlie Rosenkrantz,2007,1
 Q5088655,Chaz Brenchley,2010,1
 Q5088655,Chaz Brenchley,2011,2
@@ -882,7 +891,6 @@ Q275172,Chelsea Quinn Yarbro,1982,5
 Q275172,Chelsea Quinn Yarbro,1983,6
 Q8941041,Chen Qiufan,2020,2
 Q42308137,Cherie Dimaline,2021,1
-Q843837,Cherie Priest,2009,1
 Q843837,Cherie Priest,2010,2
 Q843837,Cherie Priest,2017,3
 Q843837,Cherie Priest,2020,4
@@ -895,11 +903,11 @@ Q104661382,Chikodili Emelumadu,2024,1
 Q131468045,Chimedum Ohaegbu,2022,1
 Q319196,China Miéville,2000,3
 Q319196,China Miéville,2001,4
-Q319196,China Miéville,2002,7
+Q319196,China Miéville,2002,6
 Q319196,China Miéville,2003,9
 Q319196,China Miéville,2005,11
-Q319196,China Miéville,2009,12
-Q319196,China Miéville,2011,14
+Q319196,China Miéville,2010,12
+Q319196,China Miéville,2011,13
 Q319196,China Miéville,2012,15
 Q319196,China Miéville,2016,16
 Q319196,China Miéville,2017,19
@@ -915,7 +923,7 @@ Q5107884,Chris Roberson,2010,5
 Q77006507,Chris Willrich,2014,1
 Q678778,Christopher Barzak,2006,2
 Q678778,Christopher Barzak,2008,4
-Q678778,Christopher Barzak,2009,6
+Q678778,Christopher Barzak,2009,5
 Q678778,Christopher Barzak,2010,7
 Q678778,Christopher Barzak,2011,8
 Q678778,Christopher Barzak,2012,9
@@ -969,7 +977,7 @@ Q21512147,Chuck Wendig,2024,6
 Q2975527,Clare Bell,1984,1
 Q62520510,Claudia O'Keefe,1991,1
 Q294625,Clifford D. Simak,1962,1
-Q294625,Clifford D. Simak,1965,2
+Q294625,Clifford D. Simak,1966,2
 Q294625,Clifford D. Simak,1969,3
 Q294625,Clifford D. Simak,1971,5
 Q294625,Clifford D. Simak,1972,7
@@ -1007,10 +1015,10 @@ Q234700,Connie Willis,1993,36
 Q234700,Connie Willis,1994,38
 Q234700,Connie Willis,1995,39
 Q234700,Connie Willis,1996,40
-Q234700,Connie Willis,1997,43
-Q234700,Connie Willis,1998,44
+Q234700,Connie Willis,1997,42
+Q234700,Connie Willis,1998,43
+Q234700,Connie Willis,1999,44
 Q234700,Connie Willis,2000,45
-Q234700,Connie Willis,2001,46
 Q234700,Connie Willis,2002,48
 Q234700,Connie Willis,2004,51
 Q234700,Connie Willis,2005,52
@@ -1019,16 +1027,16 @@ Q234700,Connie Willis,2008,55
 Q234700,Connie Willis,2024,56
 Q937000,Cordwainer Smith,1956,1
 Q937000,Cordwainer Smith,1965,2
-Q937000,Cordwainer Smith,1976,4
+Q937000,Cordwainer Smith,1966,3
+Q937000,Cordwainer Smith,1976,5
 Q97130839,Corinne Duyvis,2015,1
 Q272610,Cormac McCarthy,2007,1
 Q110436,Cory Doctorow,2001,1
 Q110436,Cory Doctorow,2003,2
-Q110436,Cory Doctorow,2004,6
+Q110436,Cory Doctorow,2004,5
 Q110436,Cory Doctorow,2005,8
 Q110436,Cory Doctorow,2006,11
 Q110436,Cory Doctorow,2007,12
-Q110436,Cory Doctorow,2008,13
 Q110436,Cory Doctorow,2009,18
 Q110436,Cory Doctorow,2011,20
 Q110436,Cory Doctorow,2012,21
@@ -1042,6 +1050,7 @@ Q112404574,Craig DiLouie,2014,1
 Q3696469,Craig Spector,1989,1
 Q473289,Craig Strete,1981,1
 Q473289,Craig Strete,1989,2
+Q61716266,Cristian Consonni,1966,1
 Q55394845,Curtis C. Chen,2017,1
 Q131438551,Curtis Craddock,2018,1
 Q131468046,Cynthia Morgan,1975,1
@@ -1077,7 +1086,7 @@ Q3013030,Dan Chaon,2018,1
 Q297538,Dan Simmons,1983,1
 Q297538,Dan Simmons,1984,2
 Q297538,Dan Simmons,1986,3
-Q297538,Dan Simmons,1990,7
+Q297538,Dan Simmons,1990,6
 Q297538,Dan Simmons,1991,8
 Q297538,Dan Simmons,1993,9
 Q297538,Dan Simmons,1994,10
@@ -1129,7 +1138,7 @@ Q3702879,Daryl Gregory,2010,4
 Q3702879,Daryl Gregory,2012,5
 Q3702879,Daryl Gregory,2014,6
 Q3702879,Daryl Gregory,2015,9
-Q3702879,Daryl Gregory,2017,11
+Q3702879,Daryl Gregory,2017,10
 Q3702879,Daryl Gregory,2018,12
 Q3702879,Daryl Gregory,2019,15
 Q3702879,Daryl Gregory,2022,18
@@ -1154,9 +1163,10 @@ Q55783411,David Alexander Smith,1989,1
 Q315069,David Brin,1981,1
 Q315069,David Brin,1982,2
 Q315069,David Brin,1983,5
-Q315069,David Brin,1985,10
+Q315069,David Brin,1985,9
 Q315069,David Brin,1986,11
-Q315069,David Brin,1987,14
+Q315069,David Brin,1987,13
+Q315069,David Brin,1988,14
 Q315069,David Brin,1989,16
 Q315069,David Brin,1990,17
 Q315069,David Brin,1991,21
@@ -1183,25 +1193,22 @@ Q354888,David Eddings,1989,6
 Q354888,David Eddings,1990,7
 Q354888,David Eddings,1993,8
 Q326176,David Feintuch,1995,1
-Q1174491,David G. Compton,1970,1
 Q1174491,David G. Compton,1971,3
 Q1174491,David G. Compton,1975,4
-Q1174539,David Gerrold,1972,1
 Q1174539,David Gerrold,1973,5
-Q1174539,David Gerrold,1974,7
-Q1174539,David Gerrold,1977,8
-Q1174539,David Gerrold,1978,9
-Q1174539,David Gerrold,1984,10
-Q1174539,David Gerrold,1985,11
-Q1174539,David Gerrold,1993,12
-Q1174539,David Gerrold,1995,13
-Q1174539,David Gerrold,1998,14
-Q1174539,David Gerrold,1999,15
-Q1174539,David Gerrold,2014,16
+Q1174539,David Gerrold,1974,8
+Q1174539,David Gerrold,1978,10
+Q1174539,David Gerrold,1984,11
+Q1174539,David Gerrold,1985,12
+Q1174539,David Gerrold,1993,13
+Q1174539,David Gerrold,1995,14
+Q1174539,David Gerrold,1998,15
+Q1174539,David Gerrold,1999,16
+Q1174539,David Gerrold,2014,17
 Q1174717,David Henry Wilson,1990,1
 Q5234955,David Herter,2001,1
 Q5239553,David J. Schow,1989,1
-Q5235496,David J. Schwartz,2008,1
+Q5235496,David J. Schwartz,2009,1
 Q2891712,David J. Skal,1981,1
 Q2891712,David J. Skal,1989,2
 Q131460603,David Jeffrey,2024,1
@@ -1215,7 +1222,6 @@ Q5237187,David Marusek,1999,4
 Q5237187,David Marusek,2000,6
 Q5237187,David Marusek,2006,7
 Q5237187,David Marusek,2008,8
-Q40479,David Mitchell,2004,1
 Q40479,David Mitchell,2005,2
 Q40479,David Mitchell,2011,3
 Q40479,David Mitchell,2015,4
@@ -1294,7 +1300,6 @@ Q524695,Doris Egan,1990,1
 Q5297974,Doris Piserchia,1975,1
 Q5298469,Dorothy J. Heydt,1991,1
 Q5300286,Doug Beason,1992,1
-Q5300286,Doug Beason,1993,2
 Q5300286,Doug Beason,1994,3
 Q5300426,Doug Dorst,2009,1
 Q42,Douglas Adams,1983,1
@@ -1305,7 +1310,7 @@ Q131468049,E. A. Petricone,2022,1
 Q64875927,E. Catherine Tobler,2021,1
 Q64875927,E. Catherine Tobler,2022,3
 Q64875927,E. Catherine Tobler,2024,4
-Q335232,E. L. Doctorow,1975,1
+Q335232,E. L. Doctorow,1976,1
 Q5322024,E. Lily Yu,2011,1
 Q5322024,E. Lily Yu,2012,3
 Q5322024,E. Lily Yu,2014,4
@@ -1455,7 +1460,8 @@ Q5364904,Ellen Klages,2020,19
 Q433291,Ellen Kushner,1988,1
 Q433291,Ellen Kushner,1991,2
 Q433291,Ellen Kushner,2003,3
-Q433291,Ellen Kushner,2006,5
+Q433291,Ellen Kushner,2006,4
+Q433291,Ellen Kushner,2007,5
 Q433291,Ellen Kushner,2010,7
 Q433291,Ellen Kushner,2011,9
 Q433291,Ellen Kushner,2022,10
@@ -1471,13 +1477,13 @@ Q123701317,Emily Tesh,2021,1
 Q123701317,Emily Tesh,2024,3
 Q3052446,Emma Bull,1988,1
 Q3052446,Emma Bull,1990,2
-Q3052446,Emma Bull,1991,3
 Q3052446,Emma Bull,1992,5
-Q3052446,Emma Bull,1995,6
-Q3052446,Emma Bull,1998,7
-Q3052446,Emma Bull,2007,8
-Q3052446,Emma Bull,2008,9
-Q3052446,Emma Bull,2010,10
+Q3052446,Emma Bull,1993,6
+Q3052446,Emma Bull,1995,7
+Q3052446,Emma Bull,1998,8
+Q3052446,Emma Bull,2007,9
+Q3052446,Emma Bull,2008,10
+Q3052446,Emma Bull,2010,11
 Q42754694,Emma Newman,2014,2
 Q42754694,Emma Newman,2016,3
 Q42754694,Emma Newman,2017,4
@@ -1535,13 +1541,12 @@ Q3068157,Felix Gilman,2011,3
 Q1987300,Fiona McIntosh,2014,1
 Q1418536,Fiona Patton,1998,1
 Q131438558,Flynn Connolly,1994,1
-Q50379894,Fonda Lee,2017,1
 Q50379894,Fonda Lee,2018,2
 Q50379894,Fonda Lee,2020,5
 Q50379894,Fonda Lee,2022,6
+Q50379894,Fonda Lee,2024,7
 Q29797712,Foz Meadows,2017,1
 Q29797712,Foz Meadows,2018,2
-Q23663952,Fran Wilde,2015,1
 Q23663952,Fran Wilde,2016,3
 Q23663952,Fran Wilde,2017,8
 Q23663952,Fran Wilde,2018,10
@@ -1569,57 +1574,60 @@ Q131468052,Fred Bals,1989,1
 Q5494816,Fred Chappell,2008,1
 Q5494816,Fred Chappell,2013,2
 Q5494816,Fred Chappell,2017,3
-Q497454,Fred Saberhagen,1967,1
-Q497454,Fred Saberhagen,1977,2
-Q497454,Fred Saberhagen,1980,3
-Q497454,Fred Saberhagen,1981,4
-Q497454,Fred Saberhagen,1983,5
-Q497454,Fred Saberhagen,1985,6
+Q497454,Fred Saberhagen,1966,1
+Q497454,Fred Saberhagen,1967,2
+Q497454,Fred Saberhagen,1977,3
+Q497454,Fred Saberhagen,1980,4
+Q497454,Fred Saberhagen,1981,5
+Q497454,Fred Saberhagen,1983,6
+Q497454,Fred Saberhagen,1985,7
 Q5497127,Frederic S. Durbin,2008,1
-Q312641,Frederik Pohl,1972,1
-Q312641,Frederik Pohl,1973,5
-Q312641,Frederik Pohl,1974,6
-Q312641,Frederik Pohl,1975,10
-Q312641,Frederik Pohl,1976,11
-Q312641,Frederik Pohl,1977,13
+Q312641,Frederik Pohl,1966,1
+Q312641,Frederik Pohl,1972,2
+Q312641,Frederik Pohl,1973,6
+Q312641,Frederik Pohl,1974,7
+Q312641,Frederik Pohl,1975,11
+Q312641,Frederik Pohl,1976,12
+Q312641,Frederik Pohl,1977,14
 Q312641,Frederik Pohl,1979,16
 Q312641,Frederik Pohl,1980,21
-Q312641,Frederik Pohl,1981,23
-Q312641,Frederik Pohl,1982,24
-Q312641,Frederik Pohl,1983,26
-Q312641,Frederik Pohl,1984,32
-Q312641,Frederik Pohl,1985,38
-Q312641,Frederik Pohl,1986,40
-Q312641,Frederik Pohl,1987,41
-Q312641,Frederik Pohl,1988,44
-Q312641,Frederik Pohl,1989,45
-Q312641,Frederik Pohl,1990,46
-Q312641,Frederik Pohl,1991,47
-Q312641,Frederik Pohl,1992,48
-Q312641,Frederik Pohl,1993,50
-Q312641,Frederik Pohl,1995,51
-Q312641,Frederik Pohl,1997,52
-Q312641,Frederik Pohl,2000,54
-Q312641,Frederik Pohl,2012,55
+Q312641,Frederik Pohl,1981,24
+Q312641,Frederik Pohl,1982,25
+Q312641,Frederik Pohl,1983,27
+Q312641,Frederik Pohl,1984,33
+Q312641,Frederik Pohl,1985,39
+Q312641,Frederik Pohl,1986,41
+Q312641,Frederik Pohl,1987,42
+Q312641,Frederik Pohl,1988,45
+Q312641,Frederik Pohl,1989,46
+Q312641,Frederik Pohl,1990,47
+Q312641,Frederik Pohl,1991,48
+Q312641,Frederik Pohl,1992,49
+Q312641,Frederik Pohl,1993,51
+Q312641,Frederik Pohl,1995,52
+Q312641,Frederik Pohl,1997,53
+Q312641,Frederik Pohl,2000,55
+Q312641,Frederik Pohl,2012,56
 Q98077009,Freya Marske,2022,1
 Q98077009,Freya Marske,2024,2
 Q313185,Fritz Leiber,1959,2
 Q313185,Fritz Leiber,1962,3
 Q313185,Fritz Leiber,1963,4
-Q313185,Fritz Leiber,1966,5
-Q313185,Fritz Leiber,1970,6
-Q313185,Fritz Leiber,1971,8
-Q313185,Fritz Leiber,1975,12
-Q313185,Fritz Leiber,1976,13
-Q313185,Fritz Leiber,1977,15
-Q313185,Fritz Leiber,1978,17
-Q313185,Fritz Leiber,1979,18
-Q313185,Fritz Leiber,1980,19
-Q313185,Fritz Leiber,1982,20
-Q313185,Fritz Leiber,1983,21
-Q313185,Fritz Leiber,1984,22
-Q313185,Fritz Leiber,1998,23
-Q1006918,G. C. Edmondson,1965,1
+Q313185,Fritz Leiber,1966,7
+Q313185,Fritz Leiber,1968,8
+Q313185,Fritz Leiber,1970,9
+Q313185,Fritz Leiber,1971,11
+Q313185,Fritz Leiber,1975,15
+Q313185,Fritz Leiber,1976,16
+Q313185,Fritz Leiber,1977,18
+Q313185,Fritz Leiber,1978,20
+Q313185,Fritz Leiber,1979,21
+Q313185,Fritz Leiber,1980,22
+Q313185,Fritz Leiber,1982,23
+Q313185,Fritz Leiber,1983,24
+Q313185,Fritz Leiber,1984,25
+Q313185,Fritz Leiber,1998,26
+Q1006918,G. C. Edmondson,1966,1
 Q5512195,G. David Nordley,1993,1
 Q5512195,G. David Nordley,1994,4
 Q5512195,G. David Nordley,1995,5
@@ -1649,7 +1657,6 @@ Q720562,Gardner Dozois,1972,5
 Q720562,Gardner Dozois,1973,8
 Q720562,Gardner Dozois,1974,11
 Q720562,Gardner Dozois,1975,13
-Q720562,Gardner Dozois,1978,14
 Q720562,Gardner Dozois,1979,15
 Q720562,Gardner Dozois,1981,16
 Q720562,Gardner Dozois,1982,18
@@ -1706,21 +1713,19 @@ Q361149,Gene Wolfe,1976,9
 Q361149,Gene Wolfe,1977,10
 Q361149,Gene Wolfe,1978,11
 Q361149,Gene Wolfe,1979,14
-Q361149,Gene Wolfe,1980,17
+Q361149,Gene Wolfe,1980,16
 Q361149,Gene Wolfe,1981,20
-Q361149,Gene Wolfe,1982,25
-Q361149,Gene Wolfe,1983,29
+Q361149,Gene Wolfe,1982,24
+Q361149,Gene Wolfe,1983,28
 Q361149,Gene Wolfe,1984,31
 Q361149,Gene Wolfe,1985,35
-Q361149,Gene Wolfe,1986,36
-Q361149,Gene Wolfe,1987,37
-Q361149,Gene Wolfe,1988,40
+Q361149,Gene Wolfe,1987,36
+Q361149,Gene Wolfe,1988,39
 Q361149,Gene Wolfe,1989,41
 Q361149,Gene Wolfe,1990,42
 Q361149,Gene Wolfe,1991,44
-Q361149,Gene Wolfe,1993,45
 Q361149,Gene Wolfe,1994,47
-Q361149,Gene Wolfe,1995,49
+Q361149,Gene Wolfe,1995,48
 Q361149,Gene Wolfe,1996,50
 Q361149,Gene Wolfe,1997,54
 Q361149,Gene Wolfe,1998,57
@@ -1729,7 +1734,7 @@ Q361149,Gene Wolfe,2000,59
 Q361149,Gene Wolfe,2001,60
 Q361149,Gene Wolfe,2002,64
 Q361149,Gene Wolfe,2003,67
-Q361149,Gene Wolfe,2004,70
+Q361149,Gene Wolfe,2004,69
 Q361149,Gene Wolfe,2005,76
 Q361149,Gene Wolfe,2006,77
 Q361149,Gene Wolfe,2007,80
@@ -1742,7 +1747,6 @@ Q361149,Gene Wolfe,2014,92
 Q361149,Gene Wolfe,2016,93
 Q361149,Gene Wolfe,2021,94
 Q111153534,Genevieve Linebarger,1976,1
-Q16221657,Genevieve Valentine,2011,1
 Q16221657,Genevieve Valentine,2012,3
 Q16221657,Genevieve Valentine,2013,4
 Q16221657,Genevieve Valentine,2015,8
@@ -1765,7 +1769,7 @@ Q940958,Geoff Ryman,2000,16
 Q940958,Geoff Ryman,2002,18
 Q940958,Geoff Ryman,2003,20
 Q940958,Geoff Ryman,2004,21
-Q940958,Geoff Ryman,2005,23
+Q940958,Geoff Ryman,2005,22
 Q940958,Geoff Ryman,2006,24
 Q940958,Geoff Ryman,2007,27
 Q940958,Geoff Ryman,2009,29
@@ -1785,18 +1789,18 @@ Q918443,Geoffrey A. Landis,1995,8
 Q918443,Geoffrey A. Landis,1998,13
 Q918443,Geoffrey A. Landis,1999,14
 Q918443,Geoffrey A. Landis,2000,15
-Q918443,Geoffrey A. Landis,2001,17
+Q918443,Geoffrey A. Landis,2001,16
+Q918443,Geoffrey A. Landis,2002,17
 Q918443,Geoffrey A. Landis,2003,19
 Q918443,Geoffrey A. Landis,2010,20
 Q918443,Geoffrey A. Landis,2011,24
 Q918443,Geoffrey A. Landis,2015,26
-Q550614,George Alec Effinger,1972,3
+Q550614,George Alec Effinger,1972,2
 Q550614,George Alec Effinger,1973,4
 Q550614,George Alec Effinger,1974,6
 Q550614,George Alec Effinger,1984,8
 Q550614,George Alec Effinger,1985,10
 Q550614,George Alec Effinger,1986,11
-Q550614,George Alec Effinger,1987,12
 Q550614,George Alec Effinger,1988,15
 Q550614,George Alec Effinger,1989,18
 Q550614,George Alec Effinger,1990,23
@@ -1819,9 +1823,12 @@ Q181677,George R. R. Martin,1987,41
 Q181677,George R. R. Martin,1988,42
 Q181677,George R. R. Martin,1989,43
 Q181677,George R. R. Martin,1996,44
-Q181677,George R. R. Martin,1997,47
-Q181677,George R. R. Martin,1999,49
-Q181677,George R. R. Martin,2001,52
+Q181677,George R. R. Martin,1997,46
+Q181677,George R. R. Martin,1998,47
+Q181677,George R. R. Martin,1999,48
+Q181677,George R. R. Martin,2000,49
+Q181677,George R. R. Martin,2001,51
+Q181677,George R. R. Martin,2002,52
 Q181677,George R. R. Martin,2004,53
 Q181677,George R. R. Martin,2005,54
 Q181677,George R. R. Martin,2006,56
@@ -1829,7 +1836,7 @@ Q181677,George R. R. Martin,2011,57
 Q181677,George R. R. Martin,2012,59
 Q181677,George R. R. Martin,2014,60
 Q1251926,George Saunders,2018,1
-Q1363986,George Turner,1988,1
+Q1363986,George Turner,1989,1
 Q1363986,George Turner,1992,2
 Q1363986,George Turner,1994,3
 Q1363986,George Turner,1995,4
@@ -1874,7 +1881,6 @@ Q446941,Gordon R. Dickson,1981,19
 Q446941,Gordon R. Dickson,1985,20
 Q446941,Gordon R. Dickson,1987,21
 Q446941,Gordon R. Dickson,1988,22
-Q167821,Gore Vidal,1978,1
 Q167821,Gore Vidal,1979,2
 Q24231989,Grady Hendrix,2019,1
 Q24231989,Grady Hendrix,2021,3
@@ -1889,8 +1895,9 @@ Q721345,Graham Joyce,2002,5
 Q721345,Graham Joyce,2003,7
 Q721345,Graham Joyce,2006,8
 Q721345,Graham Joyce,2009,9
-Q721345,Graham Joyce,2013,10
-Q721345,Graham Joyce,2014,11
+Q721345,Graham Joyce,2011,10
+Q721345,Graham Joyce,2013,11
+Q721345,Graham Joyce,2014,12
 Q5595763,Grania Davis,1984,1
 Q5595763,Grania Davis,1998,2
 Q5595763,Grania Davis,1999,3
@@ -1904,9 +1911,9 @@ Q317491,Greg Bear,1976,1
 Q317491,Greg Bear,1982,2
 Q317491,Greg Bear,1983,3
 Q317491,Greg Bear,1984,6
-Q317491,Greg Bear,1985,8
+Q317491,Greg Bear,1985,7
 Q317491,Greg Bear,1986,12
-Q317491,Greg Bear,1987,15
+Q317491,Greg Bear,1987,14
 Q317491,Greg Bear,1988,17
 Q317491,Greg Bear,1989,19
 Q317491,Greg Bear,1990,22
@@ -1965,18 +1972,18 @@ Q358312,Gregory Benford,1970,2
 Q358312,Gregory Benford,1973,3
 Q358312,Gregory Benford,1975,6
 Q358312,Gregory Benford,1976,10
-Q358312,Gregory Benford,1977,12
+Q358312,Gregory Benford,1977,11
 Q358312,Gregory Benford,1978,16
 Q358312,Gregory Benford,1979,20
 Q358312,Gregory Benford,1980,21
 Q358312,Gregory Benford,1981,23
 Q358312,Gregory Benford,1982,25
-Q358312,Gregory Benford,1983,27
+Q358312,Gregory Benford,1983,26
 Q358312,Gregory Benford,1984,28
 Q358312,Gregory Benford,1985,29
 Q358312,Gregory Benford,1986,33
 Q358312,Gregory Benford,1987,37
-Q358312,Gregory Benford,1988,40
+Q358312,Gregory Benford,1988,39
 Q358312,Gregory Benford,1989,41
 Q358312,Gregory Benford,1990,44
 Q358312,Gregory Benford,1992,46
@@ -1994,9 +2001,10 @@ Q358312,Gregory Benford,2007,65
 Q358312,Gregory Benford,2013,66
 Q358312,Gregory Benford,2015,67
 Q358312,Gregory Benford,2018,68
-Q55807569,Gregory Feeley,1998,1
-Q55807569,Gregory Feeley,2005,4
-Q55807569,Gregory Feeley,2024,6
+Q55807569,Gregory Feeley,1997,1
+Q55807569,Gregory Feeley,1998,2
+Q55807569,Gregory Feeley,2005,5
+Q55807569,Gregory Feeley,2024,7
 Q3116368,Gregory Frost,1984,1
 Q3116368,Gregory Frost,2002,3
 Q3116368,Gregory Frost,2003,6
@@ -2042,9 +2050,11 @@ Q288721,Gwyneth Jones,2002,4
 Q288721,Gwyneth Jones,2003,6
 Q288721,Gwyneth Jones,2004,8
 Q288721,Gwyneth Jones,2005,9
-Q288721,Gwyneth Jones,2012,11
-Q288721,Gwyneth Jones,2013,12
-Q288721,Gwyneth Jones,2018,13
+Q288721,Gwyneth Jones,2008,10
+Q288721,Gwyneth Jones,2009,11
+Q288721,Gwyneth Jones,2012,13
+Q288721,Gwyneth Jones,2013,14
+Q288721,Gwyneth Jones,2018,15
 Q1364100,H. Beam Piper,1963,1
 Q131438561,H. E. Edgmon,2022,1
 Q23682453,H. F. Saint,1988,1
@@ -2095,13 +2105,14 @@ Q455780,Harry Turtledove,1991,9
 Q455780,Harry Turtledove,1994,10
 Q455780,Harry Turtledove,1995,11
 Q455780,Harry Turtledove,1996,15
-Q455780,Harry Turtledove,1998,16
+Q455780,Harry Turtledove,1999,16
 Q455780,Harry Turtledove,2000,19
 Q455780,Harry Turtledove,2003,20
 Q455780,Harry Turtledove,2004,21
 Q455780,Harry Turtledove,2006,22
 Q66371340,Hayden Howard,1966,1
-Q66371340,Hayden Howard,1967,3
+Q66371340,Hayden Howard,1967,2
+Q66371340,Hayden Howard,1968,3
 Q5686730,Hayford Peirce,1988,1
 Q9387084,He Xi,2024,1
 Q5693839,Heather Gladney,1988,1
@@ -2114,7 +2125,7 @@ Q460857,Helen Oyeyemi,2011,1
 Q460857,Helen Oyeyemi,2012,2
 Q460857,Helen Oyeyemi,2020,3
 Q460857,Helen Oyeyemi,2022,4
-Q18608450,Helene Wecker,2013,2
+Q18608450,Helene Wecker,2013,1
 Q18608450,Helene Wecker,2014,3
 Q18608450,Helene Wecker,2022,4
 Q551710,Henry Kuttner,1956,1
@@ -2191,7 +2202,7 @@ Q455228,Ian McDonald,2003,21
 Q455228,Ian McDonald,2005,23
 Q455228,Ian McDonald,2006,26
 Q455228,Ian McDonald,2007,29
-Q455228,Ian McDonald,2008,34
+Q455228,Ian McDonald,2008,33
 Q455228,Ian McDonald,2009,40
 Q455228,Ian McDonald,2010,42
 Q455228,Ian McDonald,2011,45
@@ -2206,32 +2217,33 @@ Q131438563,Ian McDowell,1997,1
 Q131438563,Ian McDowell,2005,2
 Q107376678,Ian Muneshwar,2022,1
 Q107376678,Ian Muneshwar,2023,2
-Q659017,Ian R. MacLeod,1992,1
-Q659017,Ian R. MacLeod,1993,2
-Q659017,Ian R. MacLeod,1994,3
-Q659017,Ian R. MacLeod,1996,4
-Q659017,Ian R. MacLeod,1997,5
-Q659017,Ian R. MacLeod,1998,6
-Q659017,Ian R. MacLeod,1999,10
-Q659017,Ian R. MacLeod,2000,13
-Q659017,Ian R. MacLeod,2001,14
-Q659017,Ian R. MacLeod,2002,18
-Q659017,Ian R. MacLeod,2003,22
-Q659017,Ian R. MacLeod,2004,24
-Q659017,Ian R. MacLeod,2006,25
-Q659017,Ian R. MacLeod,2007,26
-Q659017,Ian R. MacLeod,2008,28
-Q659017,Ian R. MacLeod,2009,30
-Q659017,Ian R. MacLeod,2012,32
-Q659017,Ian R. MacLeod,2014,34
-Q659017,Ian R. MacLeod,2016,35
-Q659017,Ian R. MacLeod,2017,37
-Q659017,Ian R. MacLeod,2018,38
+Q659017,Ian R. MacLeod,1991,1
+Q659017,Ian R. MacLeod,1992,2
+Q659017,Ian R. MacLeod,1993,3
+Q659017,Ian R. MacLeod,1994,4
+Q659017,Ian R. MacLeod,1996,5
+Q659017,Ian R. MacLeod,1997,6
+Q659017,Ian R. MacLeod,1998,7
+Q659017,Ian R. MacLeod,1999,11
+Q659017,Ian R. MacLeod,2000,14
+Q659017,Ian R. MacLeod,2001,15
+Q659017,Ian R. MacLeod,2002,19
+Q659017,Ian R. MacLeod,2003,23
+Q659017,Ian R. MacLeod,2004,25
+Q659017,Ian R. MacLeod,2006,26
+Q659017,Ian R. MacLeod,2007,27
+Q659017,Ian R. MacLeod,2008,29
+Q659017,Ian R. MacLeod,2009,31
+Q659017,Ian R. MacLeod,2012,33
+Q659017,Ian R. MacLeod,2014,35
+Q659017,Ian R. MacLeod,2016,36
+Q659017,Ian R. MacLeod,2017,38
+Q659017,Ian R. MacLeod,2018,39
 Q372182,Ian Stewart,1988,1
 Q372182,Ian Stewart,2001,2
 Q16210966,Ian Tregillis,2014,1
 Q16210966,Ian Tregillis,2017,2
-Q1371639,Ian Watson,1975,1
+Q1371639,Ian Watson,1976,1
 Q1371639,Ian Watson,1978,2
 Q1371639,Ian Watson,1979,4
 Q1371639,Ian Watson,1980,5
@@ -2258,7 +2270,7 @@ Q131460606,Iori Kusano,2024,1
 Q34981,Isaac Asimov,1956,1
 Q34981,Isaac Asimov,1975,3
 Q34981,Isaac Asimov,1981,4
-Q34981,Isaac Asimov,1982,5
+Q34981,Isaac Asimov,1983,5
 Q34981,Isaac Asimov,1984,8
 Q34981,Isaac Asimov,1986,10
 Q34981,Isaac Asimov,1987,12
@@ -2276,7 +2288,7 @@ Q123254859,Isabel J. Kim,2025,5
 Q57321670,Isabel Yap,2019,1
 Q57321670,Isabel Yap,2020,2
 Q57321670,Isabel Yap,2022,4
-Q154756,Italo Calvino,1975,1
+Q154756,Italo Calvino,1976,1
 Q28020353,J. A. Lawrence,1985,1
 Q28113052,J. D. Barker,2018,1
 Q140201,J. G. Ballard,1980,1
@@ -2288,7 +2300,8 @@ Q140201,J. G. Ballard,1993,7
 Q34660,J. K. Rowling,1999,2
 Q34660,J. K. Rowling,2000,3
 Q34660,J. K. Rowling,2001,4
-Q87822142,J. Kathleen Cheney,2014,1
+Q87822142,J. Kathleen Cheney,2011,1
+Q87822142,J. Kathleen Cheney,2014,2
 Q18352701,J. M. McDermott,2009,1
 Q66493913,J. M. Sidorova,2014,1
 Q62604603,J. R. Dunn,1995,1
@@ -2316,7 +2329,7 @@ Q6112002,Jack Dann,1980,7
 Q6112002,Jack Dann,1981,9
 Q6112002,Jack Dann,1982,12
 Q6112002,Jack Dann,1983,14
-Q6112002,Jack Dann,1984,17
+Q6112002,Jack Dann,1984,16
 Q6112002,Jack Dann,1985,20
 Q6112002,Jack Dann,1986,21
 Q6112002,Jack Dann,1989,22
@@ -2335,22 +2348,21 @@ Q715241,Jack McDevitt,1989,10
 Q715241,Jack McDevitt,1990,11
 Q715241,Jack McDevitt,1994,12
 Q715241,Jack McDevitt,1995,14
-Q715241,Jack McDevitt,1997,17
-Q715241,Jack McDevitt,1998,19
+Q715241,Jack McDevitt,1997,16
+Q715241,Jack McDevitt,1998,18
 Q715241,Jack McDevitt,1999,20
-Q715241,Jack McDevitt,2000,21
 Q715241,Jack McDevitt,2001,22
 Q715241,Jack McDevitt,2002,23
-Q715241,Jack McDevitt,2003,25
-Q715241,Jack McDevitt,2004,27
-Q715241,Jack McDevitt,2005,30
+Q715241,Jack McDevitt,2003,24
+Q715241,Jack McDevitt,2004,26
+Q715241,Jack McDevitt,2005,29
 Q715241,Jack McDevitt,2006,31
-Q715241,Jack McDevitt,2007,33
-Q715241,Jack McDevitt,2008,34
-Q715241,Jack McDevitt,2010,35
-Q715241,Jack McDevitt,2011,36
+Q715241,Jack McDevitt,2007,32
+Q715241,Jack McDevitt,2008,33
+Q715241,Jack McDevitt,2009,34
+Q715241,Jack McDevitt,2011,35
 Q715241,Jack McDevitt,2012,37
-Q715241,Jack McDevitt,2014,38
+Q715241,Jack McDevitt,2015,38
 Q17402911,Jack Skillingstead,2010,1
 Q312632,Jack Vance,1959,1
 Q312632,Jack Vance,1973,2
@@ -2361,7 +2373,6 @@ Q312632,Jack Vance,1977,10
 Q312632,Jack Vance,1978,11
 Q312632,Jack Vance,1980,12
 Q312632,Jack Vance,1982,13
-Q312632,Jack Vance,1983,14
 Q312632,Jack Vance,1984,16
 Q312632,Jack Vance,1986,17
 Q312632,Jack Vance,1988,18
@@ -2413,9 +2424,10 @@ Q979465,James Blaylock,2014,24
 Q979465,James Blaylock,2015,25
 Q979465,James Blaylock,2016,26
 Q248867,James Blish,1956,1
-Q248867,James Blish,1968,2
+Q248867,James Blish,1969,2
 Q248867,James Blish,1970,3
-Q248867,James Blish,1973,4
+Q248867,James Blish,1971,4
+Q248867,James Blish,1973,5
 Q6130122,James Bradley,2021,1
 Q6130903,James Cambias,2001,1
 Q6130903,James Cambias,2015,2
@@ -2425,13 +2437,12 @@ Q715505,James Gunn,1973,1
 Q715505,James Gunn,1982,2
 Q715505,James Gunn,1996,3
 Q1406489,James H. Schmitz,1962,1
-Q1406489,James H. Schmitz,1967,2
-Q725065,James Morrow,1986,1
+Q1406489,James H. Schmitz,1966,2
+Q1406489,James H. Schmitz,1967,3
 Q725065,James Morrow,1987,2
-Q725065,James Morrow,1990,5
+Q725065,James Morrow,1990,4
 Q725065,James Morrow,1991,6
 Q725065,James Morrow,1992,8
-Q725065,James Morrow,1994,9
 Q725065,James Morrow,1995,12
 Q725065,James Morrow,1997,13
 Q725065,James Morrow,2000,14
@@ -2469,19 +2480,19 @@ Q373836,James Patrick Kelly,1997,28
 Q373836,James Patrick Kelly,1998,31
 Q373836,James Patrick Kelly,1999,33
 Q373836,James Patrick Kelly,2000,34
-Q373836,James Patrick Kelly,2001,36
-Q373836,James Patrick Kelly,2002,40
-Q373836,James Patrick Kelly,2003,41
-Q373836,James Patrick Kelly,2004,45
-Q373836,James Patrick Kelly,2005,50
-Q373836,James Patrick Kelly,2006,53
-Q373836,James Patrick Kelly,2009,54
-Q373836,James Patrick Kelly,2010,56
-Q373836,James Patrick Kelly,2011,58
-Q373836,James Patrick Kelly,2013,60
-Q373836,James Patrick Kelly,2014,62
-Q373836,James Patrick Kelly,2015,63
-Q373836,James Patrick Kelly,2024,65
+Q373836,James Patrick Kelly,2001,37
+Q373836,James Patrick Kelly,2002,41
+Q373836,James Patrick Kelly,2003,42
+Q373836,James Patrick Kelly,2004,46
+Q373836,James Patrick Kelly,2005,51
+Q373836,James Patrick Kelly,2006,54
+Q373836,James Patrick Kelly,2009,55
+Q373836,James Patrick Kelly,2010,57
+Q373836,James Patrick Kelly,2011,59
+Q373836,James Patrick Kelly,2013,61
+Q373836,James Patrick Kelly,2014,63
+Q373836,James Patrick Kelly,2015,64
+Q373836,James Patrick Kelly,2024,66
 Q6141982,James Renner,2013,1
 Q6142591,James S. A. Corey,2012,2
 Q6142591,James S. A. Corey,2013,3
@@ -2499,7 +2510,7 @@ Q6144600,James Van Pelt,2003,2
 Q6144600,James Van Pelt,2006,3
 Q6144600,James Van Pelt,2007,5
 Q586756,James White,1962,1
-Q586756,James White,1965,2
+Q586756,James White,1966,2
 Q586756,James White,1975,3
 Q586756,James White,1977,5
 Q586756,James White,1983,6
@@ -2521,11 +2532,11 @@ Q6152699,Jane Routley,1997,1
 Q2394387,Jane Yolen,1985,1
 Q2394387,Jane Yolen,1989,4
 Q2394387,Jane Yolen,1990,6
-Q2394387,Jane Yolen,1992,7
-Q2394387,Jane Yolen,1993,8
-Q2394387,Jane Yolen,1999,10
-Q2394387,Jane Yolen,2001,12
-Q2394387,Jane Yolen,2006,13
+Q2394387,Jane Yolen,1991,7
+Q2394387,Jane Yolen,1993,9
+Q2394387,Jane Yolen,1999,11
+Q2394387,Jane Yolen,2001,13
+Q2394387,Jane Yolen,2006,14
 Q6153001,Janeen Webb,2019,1
 Q1029714,Janet Kagan,1989,1
 Q1029714,Janet Kagan,1990,2
@@ -2536,7 +2547,8 @@ Q6153517,Janet Morris,1982,2
 Q462138,Janny Wurts,1983,1
 Q462138,Janny Wurts,1988,2
 Q462138,Janny Wurts,1991,3
-Q6163423,Jason Sanford,2021,1
+Q6163423,Jason Sanford,2010,1
+Q6163423,Jason Sanford,2022,2
 Q62735412,Jason Stoddard,2006,1
 Q713778,Jasper Fforde,2002,2
 Q713778,Jasper Fforde,2003,3
@@ -2572,14 +2584,14 @@ Q1038440,Jeff VanderMeer,2005,3
 Q1038440,Jeff VanderMeer,2006,4
 Q1038440,Jeff VanderMeer,2007,6
 Q1038440,Jeff VanderMeer,2008,8
-Q1038440,Jeff VanderMeer,2009,10
+Q1038440,Jeff VanderMeer,2009,9
 Q1038440,Jeff VanderMeer,2010,11
 Q1038440,Jeff VanderMeer,2015,14
 Q1038440,Jeff VanderMeer,2018,15
 Q1038440,Jeff VanderMeer,2020,16
 Q1038440,Jeff VanderMeer,2022,17
 Q1038440,Jeff VanderMeer,2025,18
-Q1633338,Jeffrey Carver,2001,1
+Q1633338,Jeffrey Carver,2002,1
 Q6175960,Jeffrey E. Barlough,2002,1
 Q2495863,Jeffrey Ford,2000,1
 Q2495863,Jeffrey Ford,2001,3
@@ -2587,7 +2599,7 @@ Q2495863,Jeffrey Ford,2002,6
 Q2495863,Jeffrey Ford,2003,11
 Q2495863,Jeffrey Ford,2004,16
 Q2495863,Jeffrey Ford,2005,18
-Q2495863,Jeffrey Ford,2006,25
+Q2495863,Jeffrey Ford,2006,24
 Q2495863,Jeffrey Ford,2007,29
 Q2495863,Jeffrey Ford,2008,35
 Q2495863,Jeffrey Ford,2009,38
@@ -2612,14 +2624,15 @@ Q131468056,Jenny Rae Rappaport,2021,1
 Q6181185,Jeremy C. Shipp,2009,1
 Q55722883,Jerry Earl Brown,1982,1
 Q6184213,Jerry Oltion,1988,1
-Q6184213,Jerry Oltion,1995,2
-Q6184213,Jerry Oltion,1997,4
-Q6184213,Jerry Oltion,1999,5
-Q6184213,Jerry Oltion,2000,8
+Q6184213,Jerry Oltion,1993,2
+Q6184213,Jerry Oltion,1995,3
+Q6184213,Jerry Oltion,1997,5
+Q6184213,Jerry Oltion,1999,6
+Q6184213,Jerry Oltion,2000,9
 Q578031,Jerry Pournelle,1973,2
 Q578031,Jerry Pournelle,1974,3
-Q578031,Jerry Pournelle,1975,7
-Q578031,Jerry Pournelle,1976,11
+Q578031,Jerry Pournelle,1975,6
+Q578031,Jerry Pournelle,1976,10
 Q578031,Jerry Pournelle,1977,12
 Q578031,Jerry Pournelle,1978,14
 Q578031,Jerry Pournelle,1980,16
@@ -2641,7 +2654,6 @@ Q131438564,Jinwoo Chong,2024,1
 Q11551219,Jiāng Bō,2023,1
 Q4151010,Jo Graham,2009,1
 Q438330,Jo Walton,2001,1
-Q438330,Jo Walton,2006,2
 Q438330,Jo Walton,2007,3
 Q438330,Jo Walton,2008,4
 Q438330,Jo Walton,2009,6
@@ -2658,23 +2670,21 @@ Q268371,Joan D. Vinge,1976,2
 Q268371,Joan D. Vinge,1977,4
 Q268371,Joan D. Vinge,1978,5
 Q268371,Joan D. Vinge,1979,11
-Q268371,Joan D. Vinge,1980,14
+Q268371,Joan D. Vinge,1980,13
+Q268371,Joan D. Vinge,1981,14
 Q268371,Joan D. Vinge,1985,15
 Q268371,Joan D. Vinge,1989,16
 Q268371,Joan D. Vinge,1992,18
 Q548156,Joan Slonczewski,1981,1
 Q548156,Joan Slonczewski,1998,2
 Q548156,Joan Slonczewski,1999,3
-Q265270,Joanna Russ,1968,1
-Q265270,Joanna Russ,1970,2
-Q265270,Joanna Russ,1971,3
-Q265270,Joanna Russ,1972,4
-Q265270,Joanna Russ,1973,7
-Q265270,Joanna Russ,1975,8
-Q265270,Joanna Russ,1976,9
-Q265270,Joanna Russ,1979,10
-Q265270,Joanna Russ,1980,11
-Q265270,Joanna Russ,1982,12
+Q265270,Joanna Russ,1969,1
+Q265270,Joanna Russ,1971,4
+Q265270,Joanna Russ,1972,5
+Q265270,Joanna Russ,1973,8
+Q265270,Joanna Russ,1976,10
+Q265270,Joanna Russ,1979,11
+Q265270,Joanna Russ,1980,12
 Q265270,Joanna Russ,1983,14
 Q265270,Joanna Russ,1985,15
 Q265270,Joanna Russ,1997,16
@@ -2714,7 +2724,7 @@ Q347461,Joe Haldeman,2003,28
 Q347461,Joe Haldeman,2004,30
 Q347461,Joe Haldeman,2005,32
 Q347461,Joe Haldeman,2006,34
-Q347461,Joe Haldeman,2007,36
+Q347461,Joe Haldeman,2007,35
 Q347461,Joe Haldeman,2008,37
 Q347461,Joe Haldeman,2009,38
 Q347461,Joe Haldeman,2011,40
@@ -2738,10 +2748,9 @@ Q2746094,Johanna Sinisalo,2015,2
 Q2746094,Johanna Sinisalo,2016,3
 Q2746094,Johanna Sinisalo,2017,4
 Q682767,John Barnes,1989,1
-Q682767,John Barnes,1991,2
-Q682767,John Barnes,1992,4
+Q682767,John Barnes,1992,3
 Q682767,John Barnes,1993,5
-Q682767,John Barnes,1995,8
+Q682767,John Barnes,1995,7
 Q682767,John Barnes,1996,9
 Q682767,John Barnes,1997,10
 Q682767,John Barnes,1999,11
@@ -2762,9 +2771,9 @@ Q3181114,John Boyd,1974,1
 Q65952933,John Brizzolara,1990,1
 Q378807,John Brunner,1965,1
 Q378807,John Brunner,1966,2
-Q378807,John Brunner,1968,3
-Q378807,John Brunner,1969,4
-Q378807,John Brunner,1972,7
+Q378807,John Brunner,1969,3
+Q378807,John Brunner,1970,4
+Q378807,John Brunner,1972,6
 Q378807,John Brunner,1973,8
 Q378807,John Brunner,1975,9
 Q378807,John Brunner,1976,10
@@ -2778,7 +2787,7 @@ Q378807,John Brunner,1997,17
 Q378807,John Brunner,1998,18
 Q202122,John C. Wright,2003,1
 Q202122,John C. Wright,2004,4
-Q202122,John C. Wright,2005,6
+Q202122,John C. Wright,2005,5
 Q202122,John C. Wright,2006,7
 Q202122,John C. Wright,2007,8
 Q202122,John C. Wright,2008,9
@@ -2792,7 +2801,6 @@ Q18022354,John Chu,2020,3
 Q18022354,John Chu,2023,4
 Q3133864,John Clute,2002,2
 Q736447,John Crowley,1980,2
-Q736447,John Crowley,1981,3
 Q736447,John Crowley,1982,6
 Q736447,John Crowley,1985,7
 Q736447,John Crowley,1986,9
@@ -2812,7 +2820,6 @@ Q736447,John Crowley,2019,24
 Q736447,John Crowley,2020,25
 Q6228586,John Darnielle,2018,1
 Q1699781,John DeChancie,1984,1
-Q6230938,John E. Stith,1990,1
 Q6230938,John E. Stith,1991,3
 Q6232078,John Everson,2012,1
 Q2841857,John G. Cramer,1990,1
@@ -2824,7 +2831,7 @@ Q3066599,John Kessel,1983,2
 Q3066599,John Kessel,1985,3
 Q3066599,John Kessel,1987,4
 Q3066599,John Kessel,1988,5
-Q3066599,John Kessel,1989,7
+Q3066599,John Kessel,1989,6
 Q3066599,John Kessel,1990,8
 Q3066599,John Kessel,1991,10
 Q3066599,John Kessel,1992,11
@@ -2832,19 +2839,19 @@ Q3066599,John Kessel,1993,12
 Q3066599,John Kessel,1994,14
 Q3066599,John Kessel,1998,16
 Q3066599,John Kessel,1999,17
-Q3066599,John Kessel,2001,19
-Q3066599,John Kessel,2003,23
-Q3066599,John Kessel,2004,24
-Q3066599,John Kessel,2005,26
-Q3066599,John Kessel,2007,27
-Q3066599,John Kessel,2008,28
-Q3066599,John Kessel,2009,30
-Q3066599,John Kessel,2010,32
-Q3066599,John Kessel,2012,33
-Q3066599,John Kessel,2016,34
-Q3066599,John Kessel,2018,35
-Q3066599,John Kessel,2019,36
-Q3066599,John Kessel,2022,38
+Q3066599,John Kessel,2001,20
+Q3066599,John Kessel,2003,24
+Q3066599,John Kessel,2004,25
+Q3066599,John Kessel,2005,27
+Q3066599,John Kessel,2007,28
+Q3066599,John Kessel,2008,29
+Q3066599,John Kessel,2009,31
+Q3066599,John Kessel,2010,33
+Q3066599,John Kessel,2012,34
+Q3066599,John Kessel,2016,35
+Q3066599,John Kessel,2018,36
+Q3066599,John Kessel,2019,37
+Q3066599,John Kessel,2022,39
 Q18044535,John Langan,2010,2
 Q18044535,John Langan,2015,3
 Q18044535,John Langan,2016,4
@@ -2861,7 +2868,7 @@ Q131465236,John Michael Curlovich,1990,1
 Q1701097,"John Middleton Murry, Jr.",1975,2
 Q1701097,"John Middleton Murry, Jr.",1976,6
 Q1701097,"John Middleton Murry, Jr.",1977,11
-Q1701097,"John Middleton Murry, Jr.",1979,13
+Q1701097,"John Middleton Murry, Jr.",1979,12
 Q1701097,"John Middleton Murry, Jr.",1980,15
 Q1701097,"John Middleton Murry, Jr.",1981,16
 Q1701097,"John Middleton Murry, Jr.",1984,17
@@ -2891,7 +2898,7 @@ Q504805,John Varley,1975,1
 Q504805,John Varley,1976,5
 Q504805,John Varley,1977,12
 Q504805,John Varley,1978,19
-Q504805,John Varley,1979,22
+Q504805,John Varley,1979,21
 Q504805,John Varley,1980,26
 Q504805,John Varley,1981,31
 Q504805,John Varley,1982,32
@@ -2909,7 +2916,7 @@ Q504805,John Varley,2019,48
 Q107719145,John Wiswell,2021,4
 Q107719145,John Wiswell,2022,8
 Q107719145,John Wiswell,2023,11
-Q107719145,John Wiswell,2025,12
+Q107719145,John Wiswell,2025,13
 Q131437170,Jon Armstrong,2008,1
 Q131437170,Jon Armstrong,2011,2
 Q751831,Jon Courtenay Grimwood,2004,1
@@ -2938,12 +2945,15 @@ Q16239973,Jonathan L. Howard,2018,1
 Q440100,Jonathan Lethem,1991,1
 Q440100,Jonathan Lethem,1992,3
 Q440100,Jonathan Lethem,1993,4
-Q440100,Jonathan Lethem,1994,6
-Q440100,Jonathan Lethem,1996,7
-Q440100,Jonathan Lethem,1999,8
-Q440100,Jonathan Lethem,2002,9
-Q440100,Jonathan Lethem,2010,10
-Q440100,Jonathan Lethem,2021,11
+Q440100,Jonathan Lethem,1994,5
+Q440100,Jonathan Lethem,1995,6
+Q440100,Jonathan Lethem,1996,8
+Q440100,Jonathan Lethem,1997,9
+Q440100,Jonathan Lethem,1999,10
+Q440100,Jonathan Lethem,2001,11
+Q440100,Jonathan Lethem,2002,12
+Q440100,Jonathan Lethem,2010,13
+Q440100,Jonathan Lethem,2021,14
 Q314969,Jonathan Littell,1990,1
 Q3183416,Jonathan Maberry,2006,1
 Q3183416,Jonathan Maberry,2009,2
@@ -2951,6 +2961,8 @@ Q3183416,Jonathan Maberry,2010,3
 Q3183416,Jonathan Maberry,2018,4
 Q131468057,Jonathan Moeller,2016,1
 Q98942577,Jonathan P. Brazee,2017,1
+Q98942577,Jonathan P. Brazee,2019,2
+Q134694413,Jordan Kurella,2023,1
 Q100243974,Jordy Rosenberg,2019,1
 Q131502452,Joseph F. Pumilia,1975,1
 Q6283663,Joseph H. Delaney,1983,2
@@ -3059,7 +3071,7 @@ Q64745001,Kai Ashante Wilson,2017,8
 Q64745001,Kai Ashante Wilson,2018,9
 Q131199023,Kai Wai Cheah,2016,2
 Q126477506,Kaliane Bradley,2025,1
-Q6357011,Kameron Hurley,2011,2
+Q6357011,Kameron Hurley,2011,1
 Q6357011,Kameron Hurley,2012,3
 Q6357011,Kameron Hurley,2013,5
 Q6357011,Kameron Hurley,2015,6
@@ -3077,7 +3089,8 @@ Q4383379,Karen Joy Fowler,1988,7
 Q4383379,Karen Joy Fowler,1989,8
 Q4383379,Karen Joy Fowler,1990,10
 Q4383379,Karen Joy Fowler,1991,14
-Q4383379,Karen Joy Fowler,1992,18
+Q4383379,Karen Joy Fowler,1992,17
+Q4383379,Karen Joy Fowler,1993,18
 Q4383379,Karen Joy Fowler,1997,19
 Q4383379,Karen Joy Fowler,1998,23
 Q4383379,Karen Joy Fowler,2002,24
@@ -3086,7 +3099,6 @@ Q4383379,Karen Joy Fowler,2008,27
 Q4383379,Karen Joy Fowler,2010,28
 Q4383379,Karen Joy Fowler,2011,29
 Q4383379,Karen Joy Fowler,2012,30
-Q4383379,Karen Joy Fowler,2013,31
 Q4383379,Karen Joy Fowler,2014,32
 Q4383379,Karen Joy Fowler,2015,33
 Q4383379,Karen Joy Fowler,2018,34
@@ -3133,7 +3145,7 @@ Q23816398,Kat Howard,2018,3
 Q272622,Kate Atkinson,2014,1
 Q272622,Kate Atkinson,2016,2
 Q274296,Kate Elliott,1993,1
-Q274296,Kate Elliott,1997,3
+Q274296,Kate Elliott,1997,2
 Q274296,Kate Elliott,1998,4
 Q274296,Kate Elliott,1999,5
 Q274296,Kate Elliott,2014,6
@@ -3143,33 +3155,32 @@ Q274296,Kate Elliott,2023,9
 Q274296,Kate Elliott,2024,11
 Q602978,Kate Forsyth,1999,1
 Q131502456,Kate Francia,2022,1
-Q56847796,Kate Heartfield,2019,1
-Q56847796,Kate Heartfield,2020,2
-Q260560,Kate Wilhelm,1965,1
+Q56847796,Kate Heartfield,2019,2
+Q56847796,Kate Heartfield,2020,3
+Q260560,Kate Wilhelm,1966,1
 Q260560,Kate Wilhelm,1971,2
-Q260560,Kate Wilhelm,1973,4
-Q260560,Kate Wilhelm,1975,7
-Q260560,Kate Wilhelm,1976,8
-Q260560,Kate Wilhelm,1977,9
-Q260560,Kate Wilhelm,1979,10
-Q260560,Kate Wilhelm,1980,11
-Q260560,Kate Wilhelm,1981,12
-Q260560,Kate Wilhelm,1982,17
-Q260560,Kate Wilhelm,1983,18
-Q260560,Kate Wilhelm,1984,20
-Q260560,Kate Wilhelm,1985,22
-Q260560,Kate Wilhelm,1986,23
-Q260560,Kate Wilhelm,1987,24
-Q260560,Kate Wilhelm,1988,26
-Q260560,Kate Wilhelm,1989,27
-Q260560,Kate Wilhelm,1990,28
-Q260560,Kate Wilhelm,1991,29
-Q260560,Kate Wilhelm,1992,30
-Q260560,Kate Wilhelm,1993,32
-Q260560,Kate Wilhelm,1994,33
-Q260560,Kate Wilhelm,1995,36
-Q260560,Kate Wilhelm,1997,37
-Q260560,Kate Wilhelm,2002,38
+Q260560,Kate Wilhelm,1972,5
+Q260560,Kate Wilhelm,1973,7
+Q260560,Kate Wilhelm,1975,10
+Q260560,Kate Wilhelm,1977,12
+Q260560,Kate Wilhelm,1980,14
+Q260560,Kate Wilhelm,1981,15
+Q260560,Kate Wilhelm,1982,20
+Q260560,Kate Wilhelm,1983,21
+Q260560,Kate Wilhelm,1984,23
+Q260560,Kate Wilhelm,1985,25
+Q260560,Kate Wilhelm,1986,26
+Q260560,Kate Wilhelm,1987,27
+Q260560,Kate Wilhelm,1988,29
+Q260560,Kate Wilhelm,1989,30
+Q260560,Kate Wilhelm,1990,31
+Q260560,Kate Wilhelm,1991,32
+Q260560,Kate Wilhelm,1992,33
+Q260560,Kate Wilhelm,1993,35
+Q260560,Kate Wilhelm,1994,36
+Q260560,Kate Wilhelm,1995,39
+Q260560,Kate Wilhelm,1997,40
+Q260560,Kate Wilhelm,2002,41
 Q131460610,Katharine Duckett,2020,1
 Q55282757,Katharine Eliska Kimbriel,1987,1
 Q443830,Katharine Kerr,1987,1
@@ -3195,13 +3206,12 @@ Q443109,Katherine Kurtz,1986,6
 Q443109,Katherine Kurtz,1987,7
 Q443109,Katherine Kurtz,2001,8
 Q1443787,Katherine MacLean,1959,1
-Q1443787,Katherine MacLean,1975,2
 Q1443787,Katherine MacLean,1976,3
 Q3194058,Kathleen Ann Goonan,1995,1
 Q3194058,Kathleen Ann Goonan,1998,3
-Q3194058,Kathleen Ann Goonan,2000,4
 Q3194058,Kathleen Ann Goonan,2001,5
-Q3194058,Kathleen Ann Goonan,2003,7
+Q3194058,Kathleen Ann Goonan,2003,6
+Q3194058,Kathleen Ann Goonan,2004,7
 Q3194058,Kathleen Ann Goonan,2005,8
 Q3194058,Kathleen Ann Goonan,2008,9
 Q3194058,Kathleen Ann Goonan,2009,11
@@ -3220,22 +3230,25 @@ Q272855,Kazuo Ishiguro,2022,3
 Q6384114,Keith Brooke,1991,1
 Q6384274,Keith Donohue,2007,1
 Q6384274,Keith Donohue,2015,2
-Q724395,Keith Laumer,1965,1
-Q724395,Keith Laumer,1970,2
-Q724395,Keith Laumer,1971,4
-Q724395,Keith Laumer,1978,6
-Q1379856,Keith Roberts,1978,1
-Q1379856,Keith Roberts,1980,2
-Q1379856,Keith Roberts,1981,5
-Q1379856,Keith Roberts,1983,6
-Q1379856,Keith Roberts,1985,8
-Q1379856,Keith Roberts,1986,10
-Q1379856,Keith Roberts,1991,11
-Q1379856,Keith Roberts,1992,12
+Q724395,Keith Laumer,1966,1
+Q724395,Keith Laumer,1969,2
+Q724395,Keith Laumer,1970,3
+Q724395,Keith Laumer,1971,5
+Q724395,Keith Laumer,1978,7
+Q1379856,Keith Roberts,1972,1
+Q1379856,Keith Roberts,1978,2
+Q1379856,Keith Roberts,1980,3
+Q1379856,Keith Roberts,1981,6
+Q1379856,Keith Roberts,1983,7
+Q1379856,Keith Roberts,1985,9
+Q1379856,Keith Roberts,1986,11
+Q1379856,Keith Roberts,1988,12
+Q1379856,Keith Roberts,1991,13
+Q1379856,Keith Roberts,1992,14
 Q131502457,Kel Coleman,2022,3
 Q131412818,Kell Woods,2024,1
-Q6385726,Kelley Eskridge,2002,1
 Q6385726,Kelley Eskridge,2003,2
+Q6385726,Kelley Eskridge,2009,3
 Q30121936,Kelly Barnhill,2018,1
 Q30121936,Kelly Barnhill,2021,2
 Q30121936,Kelly Barnhill,2023,4
@@ -3249,11 +3262,12 @@ Q1190926,Kelly Link,2009,13
 Q1190926,Kelly Link,2010,15
 Q1190926,Kelly Link,2012,17
 Q1190926,Kelly Link,2013,18
-Q1190926,Kelly Link,2015,21
-Q1190926,Kelly Link,2016,22
-Q1190926,Kelly Link,2020,23
-Q1190926,Kelly Link,2022,24
-Q1190926,Kelly Link,2024,25
+Q1190926,Kelly Link,2015,22
+Q1190926,Kelly Link,2016,23
+Q1190926,Kelly Link,2020,24
+Q1190926,Kelly Link,2022,25
+Q1190926,Kelly Link,2024,26
+Q1190926,Kelly Link,2025,27
 Q54803592,Kelly Robson,2015,1
 Q54803592,Kelly Robson,2016,5
 Q54803592,Kelly Robson,2017,6
@@ -3265,18 +3279,18 @@ Q126096099,Kemi Ashing-Giwa,2024,1
 Q1697118,Ken Grimwood,1988,1
 Q151720,Ken Liu,2011,2
 Q151720,Ken Liu,2012,10
-Q151720,Ken Liu,2013,13
-Q151720,Ken Liu,2014,16
+Q151720,Ken Liu,2013,14
+Q151720,Ken Liu,2014,17
 Q151720,Ken Liu,2015,20
-Q151720,Ken Liu,2016,21
-Q151720,Ken Liu,2017,24
-Q151720,Ken Liu,2018,25
-Q151720,Ken Liu,2019,27
-Q151720,Ken Liu,2020,28
-Q151720,Ken Liu,2021,31
-Q151720,Ken Liu,2024,32
+Q151720,Ken Liu,2016,22
+Q151720,Ken Liu,2017,25
+Q151720,Ken Liu,2018,26
+Q151720,Ken Liu,2019,28
+Q151720,Ken Liu,2020,29
+Q151720,Ken Liu,2021,32
+Q151720,Ken Liu,2024,33
 Q372505,Ken MacLeod,1998,1
-Q372505,Ken MacLeod,1999,3
+Q372505,Ken MacLeod,1999,2
 Q372505,Ken MacLeod,2000,4
 Q372505,Ken MacLeod,2001,7
 Q372505,Ken MacLeod,2002,10
@@ -3298,10 +3312,10 @@ Q70775912,Ken Wharton,2002,1
 Q70775912,Ken Wharton,2003,2
 Q6389932,Kenneth C. Flint,1982,1
 Q131438569,Kerstin Hall,2022,1
+Q131438569,Kerstin Hall,2025,3
 Q1740091,Kevin Brockmeier,2007,1
 Q339577,Kevin J. Anderson,1989,1
 Q339577,Kevin J. Anderson,1992,2
-Q339577,Kevin J. Anderson,1993,3
 Q339577,Kevin J. Anderson,1994,4
 Q339577,Kevin J. Anderson,1995,5
 Q339577,Kevin J. Anderson,2015,6
@@ -3332,7 +3346,7 @@ Q717204,Kim Newman,2020,11
 Q130779,Kim Stanley Robinson,1981,2
 Q130779,Kim Stanley Robinson,1982,3
 Q130779,Kim Stanley Robinson,1983,6
-Q130779,Kim Stanley Robinson,1984,11
+Q130779,Kim Stanley Robinson,1984,10
 Q130779,Kim Stanley Robinson,1985,18
 Q130779,Kim Stanley Robinson,1986,24
 Q130779,Kim Stanley Robinson,1987,29
@@ -3342,7 +3356,7 @@ Q130779,Kim Stanley Robinson,1990,40
 Q130779,Kim Stanley Robinson,1991,42
 Q130779,Kim Stanley Robinson,1992,46
 Q130779,Kim Stanley Robinson,1993,49
-Q130779,Kim Stanley Robinson,1994,50
+Q130779,Kim Stanley Robinson,1995,50
 Q130779,Kim Stanley Robinson,1996,51
 Q130779,Kim Stanley Robinson,1998,52
 Q130779,Kim Stanley Robinson,1999,53
@@ -3390,7 +3404,6 @@ Q446973,Kristine Kathryn Rusch,2016,23
 Q52451163,Kristine Smith,2000,1
 Q49074,Kurt Vonnegut,1960,1
 Q49074,Kurt Vonnegut,1964,2
-Q49074,Kurt Vonnegut,1969,3
 Q49074,Kurt Vonnegut,1970,4
 Q49074,Kurt Vonnegut,1973,5
 Q216896,L. Ron Hubbard,1987,1
@@ -3399,9 +3412,10 @@ Q316313,L. Sprague de Camp,1978,2
 Q316313,L. Sprague de Camp,1993,4
 Q6456660,L. Timmel Duchamp,1996,1
 Q6456660,L. Timmel Duchamp,1998,2
-Q6456660,L. Timmel Duchamp,2005,3
-Q6456660,L. Timmel Duchamp,2018,4
-Q6456660,L. Timmel Duchamp,2019,5
+Q6456660,L. Timmel Duchamp,2000,3
+Q6456660,L. Timmel Duchamp,2005,4
+Q6456660,L. Timmel Duchamp,2018,5
+Q6456660,L. Timmel Duchamp,2019,6
 Q98832918,L.L. McKinney,2019,1
 Q131502460,LP Kindred,2021,1
 Q131468059,LaShawn M. Wanak,2019,1
@@ -3416,7 +3430,6 @@ Q6474065,Laird Barron,2013,11
 Q6474065,Laird Barron,2014,12
 Q20638849,Laline Paull,2015,1
 Q106465351,Lane Robins,2008,1
-Q50376731,Lara Elena Donnelly,2017,1
 Q50376731,Lara Elena Donnelly,2018,2
 Q6489491,Larissa Lai,2019,1
 Q16208205,Larry Correia,2014,1
@@ -3427,15 +3440,14 @@ Q316610,Larry Niven,1970,4
 Q316610,Larry Niven,1972,7
 Q316610,Larry Niven,1973,8
 Q316610,Larry Niven,1974,11
-Q316610,Larry Niven,1975,15
-Q316610,Larry Niven,1976,21
+Q316610,Larry Niven,1975,14
+Q316610,Larry Niven,1976,20
 Q316610,Larry Niven,1977,23
 Q316610,Larry Niven,1978,25
 Q316610,Larry Niven,1980,29
 Q316610,Larry Niven,1981,32
 Q316610,Larry Niven,1982,34
 Q316610,Larry Niven,1983,36
-Q316610,Larry Niven,1984,37
 Q316610,Larry Niven,1985,38
 Q316610,Larry Niven,1986,40
 Q316610,Larry Niven,1988,42
@@ -3446,7 +3458,7 @@ Q316610,Larry Niven,1998,46
 Q316610,Larry Niven,2001,47
 Q316610,Larry Niven,2013,49
 Q316610,Larry Niven,2015,50
-Q433956,Laura Anne Gilman,2009,1
+Q433956,Laura Anne Gilman,2010,1
 Q433956,Laura Anne Gilman,2019,2
 Q6499036,Laura J. Mixon,1993,1
 Q19561138,Laura Lam,2017,1
@@ -3475,7 +3487,11 @@ Q666468,Lavie Tidhar,2022,29
 Q666468,Lavie Tidhar,2023,30
 Q666468,Lavie Tidhar,2024,31
 Q6504358,Lawrence M. Schoen,2010,1
-Q6504358,Lawrence M. Schoen,2015,2
+Q6504358,Lawrence M. Schoen,2013,2
+Q6504358,Lawrence M. Schoen,2014,3
+Q6504358,Lawrence M. Schoen,2015,4
+Q6504358,Lawrence M. Schoen,2016,5
+Q6504358,Lawrence M. Schoen,2018,6
 Q2095351,Lawrence Watt-Evans,1987,1
 Q2095351,Lawrence Watt-Evans,1988,2
 Q71481205,Leah Bobet,2010,2
@@ -3492,18 +3508,16 @@ Q298242,Leigh Brackett,1956,1
 Q111647192,Leigh Harlen,2024,1
 Q1815038,Leigh Kennedy,1983,2
 Q1815038,Leigh Kennedy,1984,4
-Q1815038,Leigh Kennedy,1986,5
+Q1815038,Leigh Kennedy,1987,5
 Q505274,Len Deighton,1980,1
 Q6523740,Leo Frankowski,1987,1
 Q6531220,Leslie What,2005,1
 Q2558063,Lev Grossman,2012,1
 Q2558063,Lev Grossman,2015,2
 Q1095977,Lewis Shiner,1982,1
-Q1095977,Lewis Shiner,1984,2
 Q1095977,Lewis Shiner,1985,4
 Q1095977,Lewis Shiner,1986,6
 Q1095977,Lewis Shiner,1987,7
-Q1095977,Lewis Shiner,1988,8
 Q1095977,Lewis Shiner,1989,10
 Q1095977,Lewis Shiner,1990,11
 Q1095977,Lewis Shiner,1991,12
@@ -3519,7 +3533,7 @@ Q4389768,Linda Nagata,1999,3
 Q4389768,Linda Nagata,2000,4
 Q4389768,Linda Nagata,2002,5
 Q4389768,Linda Nagata,2004,6
-Q4389768,Linda Nagata,2013,8
+Q4389768,Linda Nagata,2013,7
 Q4389768,Linda Nagata,2014,9
 Q4389768,Linda Nagata,2016,10
 Q4389768,Linda Nagata,2018,14
@@ -3561,7 +3575,6 @@ Q440744,Lisa Tuttle,1991,14
 Q440744,Lisa Tuttle,1996,15
 Q440744,Lisa Tuttle,1997,16
 Q108894126,Liselle Sambury,2022,1
-Q607588,Liu Cixin,2014,1
 Q607588,Liu Cixin,2015,2
 Q607588,Liu Cixin,2016,3
 Q607588,Liu Cixin,2017,4
@@ -3582,13 +3595,17 @@ Q229369,Lois McMaster Bujold,1987,2
 Q229369,Lois McMaster Bujold,1988,3
 Q229369,Lois McMaster Bujold,1989,6
 Q229369,Lois McMaster Bujold,1990,9
-Q229369,Lois McMaster Bujold,1991,12
+Q229369,Lois McMaster Bujold,1991,11
+Q229369,Lois McMaster Bujold,1992,12
 Q229369,Lois McMaster Bujold,1993,13
-Q229369,Lois McMaster Bujold,1997,17
+Q229369,Lois McMaster Bujold,1997,16
+Q229369,Lois McMaster Bujold,1998,17
 Q229369,Lois McMaster Bujold,1999,18
-Q229369,Lois McMaster Bujold,2000,21
+Q229369,Lois McMaster Bujold,2000,20
+Q229369,Lois McMaster Bujold,2001,21
 Q229369,Lois McMaster Bujold,2002,23
-Q229369,Lois McMaster Bujold,2003,25
+Q229369,Lois McMaster Bujold,2003,24
+Q229369,Lois McMaster Bujold,2004,25
 Q229369,Lois McMaster Bujold,2005,26
 Q229369,Lois McMaster Bujold,2006,27
 Q229369,Lois McMaster Bujold,2011,29
@@ -3655,7 +3672,6 @@ Q963799,M. John Harrison,2012,11
 Q963799,M. John Harrison,2013,13
 Q963799,M. John Harrison,2020,14
 Q963799,M. John Harrison,2021,15
-Q6712746,M. K. Hobson,2010,1
 Q6712746,M. K. Hobson,2011,2
 Q131502461,M. L. Krishnan,2022,1
 Q116732737,M. Lucie Chin,1989,1
@@ -3707,7 +3723,6 @@ Q6755896,Marc Stiegler,1985,4
 Q6755896,Marc Stiegler,1990,5
 Q3845378,Marc W. Miller,2016,2
 Q66132339,Marcia Martin,1985,1
-Q183492,Margaret Atwood,1986,1
 Q183492,Margaret Atwood,1987,2
 Q183492,Margaret Atwood,2014,3
 Q183492,Margaret Atwood,2020,4
@@ -3742,7 +3757,6 @@ Q98859762,Marie Vibbert,2023,2
 Q3293094,Marilyn Hacker,1972,1
 Q131438574,Marina Fitch,1998,1
 Q465179,Marion Zimmer Bradley,1963,1
-Q465179,Marion Zimmer Bradley,1975,2
 Q465179,Marion Zimmer Bradley,1976,3
 Q465179,Marion Zimmer Bradley,1977,4
 Q465179,Marion Zimmer Bradley,1978,6
@@ -3769,7 +3783,7 @@ Q15491772,Mark S. Geston,1999,1
 Q6769970,Mark Teppo,2010,1
 Q131468066,Mark Wheeler,1984,1
 Q963727,Mark Z. Danielewski,2001,1
-Q682325,Marta Randall,1976,1
+Q682325,Marta Randall,1977,1
 Q682325,Marta Randall,1979,2
 Q682325,Marta Randall,1980,4
 Q682325,Marta Randall,1981,6
@@ -3783,10 +3797,9 @@ Q6774567,Martha Soukup,1993,8
 Q6774567,Martha Soukup,1994,11
 Q6774606,Martha Wells,1994,1
 Q6774606,Martha Wells,1996,2
-Q6774606,Martha Wells,1998,3
+Q6774606,Martha Wells,1999,3
 Q6774606,Martha Wells,2018,6
 Q6774606,Martha Wells,2019,8
-Q6774606,Martha Wells,2023,9
 Q6774606,Martha Wells,2024,10
 Q61913879,Martin L. Shoemaker,2015,1
 Q61913879,Martin L. Shoemaker,2016,2
@@ -3807,15 +3820,15 @@ Q387693,Mary Gentle,2001,9
 Q387693,Mary Gentle,2004,10
 Q387693,Mary Gentle,2007,11
 Q4225496,Mary Robinette Kowal,2009,2
-Q4225496,Mary Robinette Kowal,2010,4
+Q4225496,Mary Robinette Kowal,2010,3
 Q4225496,Mary Robinette Kowal,2011,7
-Q4225496,Mary Robinette Kowal,2012,11
+Q4225496,Mary Robinette Kowal,2012,10
 Q4225496,Mary Robinette Kowal,2013,13
-Q4225496,Mary Robinette Kowal,2018,15
-Q4225496,Mary Robinette Kowal,2019,17
-Q4225496,Mary Robinette Kowal,2021,20
-Q4225496,Mary Robinette Kowal,2023,22
-Q4225496,Mary Robinette Kowal,2025,23
+Q4225496,Mary Robinette Kowal,2018,14
+Q4225496,Mary Robinette Kowal,2019,16
+Q4225496,Mary Robinette Kowal,2021,19
+Q4225496,Mary Robinette Kowal,2023,21
+Q4225496,Mary Robinette Kowal,2025,22
 Q3296239,Mary Rosenblum,1992,1
 Q3296239,Mary Rosenblum,1993,3
 Q3296239,Mary Rosenblum,1994,5
@@ -3832,9 +3845,9 @@ Q6788337,Matt Bell,2022,1
 Q3852012,Matt Hughes,2005,1
 Q3852012,Matt Hughes,2006,2
 Q3852012,Matt Hughes,2007,3
-Q3852012,Matt Hughes,2008,4
-Q3852012,Matt Hughes,2011,5
-Q3852012,Matt Hughes,2014,7
+Q3852012,Matt Hughes,2008,5
+Q3852012,Matt Hughes,2011,6
+Q3852012,Matt Hughes,2014,8
 Q558138,Matt Ruff,1989,1
 Q558138,Matt Ruff,2008,2
 Q558138,Matt Ruff,2013,3
@@ -3844,14 +3857,15 @@ Q22278718,Matthew Kressel,2013,1
 Q22278718,Matthew Kressel,2014,2
 Q22278718,Matthew Kressel,2017,3
 Q1909623,Matthew Stover,1998,1
-Q299933,Maureen F. McHugh,1992,2
+Q299933,Maureen F. McHugh,1992,1
 Q299933,Maureen F. McHugh,1993,7
 Q299933,Maureen F. McHugh,1994,9
 Q299933,Maureen F. McHugh,1995,14
 Q299933,Maureen F. McHugh,1996,15
 Q299933,Maureen F. McHugh,1997,19
 Q299933,Maureen F. McHugh,1998,20
-Q299933,Maureen F. McHugh,1999,22
+Q299933,Maureen F. McHugh,1999,21
+Q299933,Maureen F. McHugh,2000,22
 Q299933,Maureen F. McHugh,2002,23
 Q299933,Maureen F. McHugh,2003,25
 Q299933,Maureen F. McHugh,2004,26
@@ -3918,18 +3932,20 @@ Q112291476,Micaiah Johnson,2021,1
 Q6828045,Michael A. Burstein,1996,1
 Q6828045,Michael A. Burstein,1998,2
 Q6828045,Michael A. Burstein,1999,3
-Q6828045,Michael A. Burstein,2001,5
-Q6828045,Michael A. Burstein,2002,6
-Q6828045,Michael A. Burstein,2004,7
-Q6828045,Michael A. Burstein,2005,9
-Q6828045,Michael A. Burstein,2006,11
+Q6828045,Michael A. Burstein,2000,5
+Q6828045,Michael A. Burstein,2001,7
+Q6828045,Michael A. Burstein,2002,8
+Q6828045,Michael A. Burstein,2004,9
+Q6828045,Michael A. Burstein,2005,11
+Q6828045,Michael A. Burstein,2006,13
+Q6828045,Michael A. Burstein,2007,14
 Q131460612,Michael Alexander,2013,1
 Q80553023,Michael Armstrong,1988,1
 Q80553023,Michael Armstrong,1991,2
 Q80553023,Michael Armstrong,1994,3
 Q953288,Michael Bishop,1973,2
 Q953288,Michael Bishop,1974,9
-Q953288,Michael Bishop,1975,14
+Q953288,Michael Bishop,1975,13
 Q953288,Michael Bishop,1976,20
 Q953288,Michael Bishop,1977,22
 Q953288,Michael Bishop,1978,24
@@ -4038,31 +4054,31 @@ Q455510,Michael Swanwick,1991,28
 Q455510,Michael Swanwick,1992,33
 Q455510,Michael Swanwick,1993,35
 Q455510,Michael Swanwick,1994,36
-Q455510,Michael Swanwick,1995,38
-Q455510,Michael Swanwick,1996,41
-Q455510,Michael Swanwick,1997,47
-Q455510,Michael Swanwick,1998,51
-Q455510,Michael Swanwick,1999,62
-Q455510,Michael Swanwick,2000,66
-Q455510,Michael Swanwick,2001,69
+Q455510,Michael Swanwick,1995,39
+Q455510,Michael Swanwick,1996,42
+Q455510,Michael Swanwick,1997,48
+Q455510,Michael Swanwick,1998,52
+Q455510,Michael Swanwick,1999,63
+Q455510,Michael Swanwick,2000,67
+Q455510,Michael Swanwick,2001,70
 Q455510,Michael Swanwick,2002,73
-Q455510,Michael Swanwick,2003,81
-Q455510,Michael Swanwick,2004,85
-Q455510,Michael Swanwick,2005,87
-Q455510,Michael Swanwick,2006,89
-Q455510,Michael Swanwick,2007,93
-Q455510,Michael Swanwick,2008,96
-Q455510,Michael Swanwick,2009,101
-Q455510,Michael Swanwick,2010,102
-Q455510,Michael Swanwick,2011,103
-Q455510,Michael Swanwick,2012,106
-Q455510,Michael Swanwick,2014,107
-Q455510,Michael Swanwick,2015,110
-Q455510,Michael Swanwick,2016,112
-Q455510,Michael Swanwick,2018,113
-Q455510,Michael Swanwick,2020,114
-Q455510,Michael Swanwick,2021,115
-Q455510,Michael Swanwick,2022,116
+Q455510,Michael Swanwick,2003,82
+Q455510,Michael Swanwick,2004,86
+Q455510,Michael Swanwick,2005,88
+Q455510,Michael Swanwick,2006,90
+Q455510,Michael Swanwick,2007,94
+Q455510,Michael Swanwick,2008,97
+Q455510,Michael Swanwick,2009,102
+Q455510,Michael Swanwick,2010,103
+Q455510,Michael Swanwick,2011,104
+Q455510,Michael Swanwick,2012,107
+Q455510,Michael Swanwick,2014,108
+Q455510,Michael Swanwick,2015,111
+Q455510,Michael Swanwick,2016,113
+Q455510,Michael Swanwick,2018,114
+Q455510,Michael Swanwick,2020,115
+Q455510,Michael Swanwick,2021,116
+Q455510,Michael Swanwick,2022,117
 Q2639435,Michael Talbot,1983,2
 Q6835620,Michaela Roessner,1989,2
 Q6835620,Michaela Roessner,1994,3
@@ -4082,7 +4098,7 @@ Q6847964,Mike McQuay,1990,2
 Q913403,Mike Resnick,1983,1
 Q913403,Mike Resnick,1987,2
 Q913403,Mike Resnick,1988,3
-Q913403,Mike Resnick,1989,7
+Q913403,Mike Resnick,1989,6
 Q913403,Mike Resnick,1990,10
 Q913403,Mike Resnick,1991,14
 Q913403,Mike Resnick,1992,20
@@ -4108,7 +4124,7 @@ Q43654540,Mildred Downey Broxon,1982,2
 Q53410362,Mimi Mondal,2019,1
 Q53410362,Mimi Mondal,2020,2
 Q6864025,Mindy L. Klasky,2001,1
-Q28075806,Mishell Baker,2016,2
+Q28075806,Mishell Baker,2016,1
 Q28075806,Mishell Baker,2017,3
 Q3243146,Mohsin Hamid,2017,1
 Q3243146,Mohsin Hamid,2018,2
@@ -4127,30 +4143,27 @@ Q21642356,Monica Byrne,2021,2
 Q21642356,Monica Byrne,2022,3
 Q131413025,Monique Poirier,2024,2
 Q117600686,Moses Ose Utomi,2024,1
-Q13563022,Mur Lafferty,2017,1
 Q13563022,Mur Lafferty,2018,3
 Q550449,Murray Leinster,1960,1
 Q2427544,N. K. Jemisin,2009,1
-Q2427544,N. K. Jemisin,2010,4
-Q2427544,N. K. Jemisin,2011,6
-Q2427544,N. K. Jemisin,2012,8
+Q2427544,N. K. Jemisin,2010,3
+Q2427544,N. K. Jemisin,2011,5
+Q2427544,N. K. Jemisin,2012,7
 Q2427544,N. K. Jemisin,2013,10
-Q2427544,N. K. Jemisin,2015,12
-Q2427544,N. K. Jemisin,2016,14
-Q2427544,N. K. Jemisin,2017,19
-Q2427544,N. K. Jemisin,2019,21
-Q2427544,N. K. Jemisin,2020,23
-Q2427544,N. K. Jemisin,2021,27
-Q2427544,N. K. Jemisin,2023,28
-Q2427544,N. K. Jemisin,2024,29
+Q2427544,N. K. Jemisin,2015,11
+Q2427544,N. K. Jemisin,2016,13
+Q2427544,N. K. Jemisin,2017,18
+Q2427544,N. K. Jemisin,2019,20
+Q2427544,N. K. Jemisin,2020,21
+Q2427544,N. K. Jemisin,2021,25
+Q2427544,N. K. Jemisin,2023,26
+Q2427544,N. K. Jemisin,2024,27
 Q11131506,N. Lee Wood,1997,1
 Q124822664,Nadia Afifi,2021,1
 Q270204,Nalo Hopkinson,1998,1
-Q270204,Nalo Hopkinson,2000,3
+Q270204,Nalo Hopkinson,2000,2
 Q270204,Nalo Hopkinson,2001,6
-Q270204,Nalo Hopkinson,2003,7
 Q270204,Nalo Hopkinson,2004,8
-Q270204,Nalo Hopkinson,2007,9
 Q270204,Nalo Hopkinson,2008,11
 Q270204,Nalo Hopkinson,2013,12
 Q270204,Nalo Hopkinson,2014,13
@@ -4183,7 +4196,7 @@ Q238438,Nancy Kress,1991,15
 Q238438,Nancy Kress,1992,19
 Q238438,Nancy Kress,1993,22
 Q238438,Nancy Kress,1994,29
-Q238438,Nancy Kress,1995,33
+Q238438,Nancy Kress,1995,32
 Q238438,Nancy Kress,1996,37
 Q238438,Nancy Kress,1997,40
 Q238438,Nancy Kress,1998,41
@@ -4199,12 +4212,12 @@ Q238438,Nancy Kress,2008,66
 Q238438,Nancy Kress,2009,69
 Q238438,Nancy Kress,2010,73
 Q238438,Nancy Kress,2013,75
-Q238438,Nancy Kress,2014,76
-Q238438,Nancy Kress,2015,77
-Q238438,Nancy Kress,2016,78
-Q238438,Nancy Kress,2018,80
-Q238438,Nancy Kress,2019,81
-Q238438,Nancy Kress,2021,83
+Q238438,Nancy Kress,2014,77
+Q238438,Nancy Kress,2015,78
+Q238438,Nancy Kress,2016,79
+Q238438,Nancy Kress,2018,81
+Q238438,Nancy Kress,2019,82
+Q238438,Nancy Kress,2021,84
 Q3335610,Nancy Springer,1982,1
 Q3335610,Nancy Springer,1983,2
 Q3335610,Nancy Springer,1986,4
@@ -4227,7 +4240,6 @@ Q242643,Naomi Novik,2007,4
 Q242643,Naomi Novik,2011,5
 Q242643,Naomi Novik,2016,6
 Q242643,Naomi Novik,2017,8
-Q242643,Naomi Novik,2018,9
 Q242643,Naomi Novik,2019,11
 Q242643,Naomi Novik,2021,12
 Q242643,Naomi Novik,2022,13
@@ -4254,7 +4266,7 @@ Q6984054,"Neal Barrett, Jr.",1995,12
 Q6984054,"Neal Barrett, Jr.",2002,13
 Q6984054,"Neal Barrett, Jr.",2009,14
 Q312853,Neal Stephenson,1993,1
-Q312853,Neal Stephenson,1996,2
+Q312853,Neal Stephenson,1997,2
 Q312853,Neal Stephenson,2000,3
 Q312853,Neal Stephenson,2004,4
 Q312853,Neal Stephenson,2008,5
@@ -4273,7 +4285,6 @@ Q210059,Neil Gaiman,2004,7
 Q210059,Neil Gaiman,2007,8
 Q210059,Neil Gaiman,2009,9
 Q210059,Neil Gaiman,2012,10
-Q210059,Neil Gaiman,2013,11
 Q210059,Neil Gaiman,2014,12
 Q49486389,Neon Yang,2017,2
 Q49486389,Neon Yang,2018,8
@@ -4310,11 +4321,10 @@ Q65833974,Nicky Drayden,2019,2
 Q65833974,Nicky Drayden,2020,3
 Q444362,Nicola Griffith,1993,1
 Q444362,Nicola Griffith,1994,2
-Q444362,Nicola Griffith,1996,3
-Q444362,Nicola Griffith,2010,5
-Q444362,Nicola Griffith,2013,6
-Q444362,Nicola Griffith,2022,7
-Q444362,Nicola Griffith,2023,8
+Q444362,Nicola Griffith,1996,4
+Q444362,Nicola Griffith,2010,6
+Q444362,Nicola Griffith,2014,7
+Q444362,Nicola Griffith,2023,9
 Q62663570,Nicolas van Pallandt,1999,1
 Q104773895,Nicole Cushing,2020,1
 Q66422437,Nicole Kornher-Stace,2016,1
@@ -4329,7 +4339,8 @@ Q18683960,Nina Allan,2022,10
 Q18683960,Nina Allan,2024,11
 Q1803115,Nina Kiriki Hoffman,1994,2
 Q1803115,Nina Kiriki Hoffman,1995,3
-Q1803115,Nina Kiriki Hoffman,1996,5
+Q1803115,Nina Kiriki Hoffman,1996,4
+Q1803115,Nina Kiriki Hoffman,1997,5
 Q1803115,Nina Kiriki Hoffman,2000,6
 Q1803115,Nina Kiriki Hoffman,2002,7
 Q1803115,Nina Kiriki Hoffman,2003,9
@@ -4337,12 +4348,12 @@ Q1803115,Nina Kiriki Hoffman,2011,10
 Q57434387,Nino Cipri,2020,1
 Q57434387,Nino Cipri,2021,4
 Q57434387,Nino Cipri,2022,5
-Q7040818,Nisi Shawl,2016,3
+Q7040818,Nisi Shawl,2016,2
 Q7040818,Nisi Shawl,2017,5
 Q7040818,Nisi Shawl,2018,6
 Q7040818,Nisi Shawl,2022,7
 Q3877423,Nnedi Okorafor,2006,1
-Q3877423,Nnedi Okorafor,2010,3
+Q3877423,Nnedi Okorafor,2010,2
 Q3877423,Nnedi Okorafor,2011,4
 Q3877423,Nnedi Okorafor,2012,5
 Q3877423,Nnedi Okorafor,2014,7
@@ -4355,15 +4366,12 @@ Q3877423,Nnedi Okorafor,2020,17
 Q3877423,Nnedi Okorafor,2022,20
 Q3877423,Nnedi Okorafor,2024,21
 Q7052677,Norman Partridge,2014,1
-Q455951,Norman Spinrad,1969,1
 Q455951,Norman Spinrad,1970,2
-Q455951,Norman Spinrad,1972,3
 Q455951,Norman Spinrad,1973,4
 Q455951,Norman Spinrad,1975,6
 Q455951,Norman Spinrad,1976,7
 Q455951,Norman Spinrad,1980,9
 Q455951,Norman Spinrad,1981,11
-Q455951,Norman Spinrad,1983,12
 Q455951,Norman Spinrad,1984,14
 Q455951,Norman Spinrad,1986,16
 Q455951,Norman Spinrad,1988,17
@@ -4383,7 +4391,6 @@ Q239739,Octavia E. Butler,1987,5
 Q239739,Octavia E. Butler,1988,8
 Q239739,Octavia E. Butler,1989,9
 Q239739,Octavia E. Butler,1990,10
-Q239739,Octavia E. Butler,1994,11
 Q239739,Octavia E. Butler,1995,12
 Q239739,Octavia E. Butler,1998,13
 Q239739,Octavia E. Butler,1999,14
@@ -4402,8 +4409,8 @@ Q217110,Orson Scott Card,1984,16
 Q217110,Orson Scott Card,1985,17
 Q217110,Orson Scott Card,1986,21
 Q217110,Orson Scott Card,1987,24
-Q217110,Orson Scott Card,1988,29
-Q217110,Orson Scott Card,1989,33
+Q217110,Orson Scott Card,1988,28
+Q217110,Orson Scott Card,1989,32
 Q217110,Orson Scott Card,1990,38
 Q217110,Orson Scott Card,1992,40
 Q217110,Orson Scott Card,1993,42
@@ -4470,7 +4477,7 @@ Q266947,Pat Cadigan,1987,7
 Q266947,Pat Cadigan,1988,9
 Q266947,Pat Cadigan,1989,11
 Q266947,Pat Cadigan,1990,14
-Q266947,Pat Cadigan,1991,18
+Q266947,Pat Cadigan,1991,17
 Q266947,Pat Cadigan,1992,22
 Q266947,Pat Cadigan,1993,25
 Q266947,Pat Cadigan,1994,26
@@ -4506,10 +4513,11 @@ Q268755,Patricia A. McKillip,1988,5
 Q268755,Patricia A. McKillip,1989,6
 Q268755,Patricia A. McKillip,1992,7
 Q268755,Patricia A. McKillip,1994,8
-Q268755,Patricia A. McKillip,1996,10
+Q268755,Patricia A. McKillip,1996,9
 Q268755,Patricia A. McKillip,1997,11
 Q268755,Patricia A. McKillip,1999,12
-Q268755,Patricia A. McKillip,2001,14
+Q268755,Patricia A. McKillip,2001,13
+Q268755,Patricia A. McKillip,2002,14
 Q268755,Patricia A. McKillip,2003,16
 Q268755,Patricia A. McKillip,2004,17
 Q268755,Patricia A. McKillip,2005,19
@@ -4604,7 +4612,7 @@ Q2061542,Paul Osborne Williams,1982,1
 Q2061542,Paul Osborne Williams,1983,2
 Q3371960,Paul Park,1988,1
 Q3371960,Paul Park,1990,2
-Q3371960,Paul Park,1995,3
+Q3371960,Paul Park,1996,3
 Q3371960,Paul Park,1997,4
 Q3371960,Paul Park,1998,6
 Q3371960,Paul Park,2002,7
@@ -4624,13 +4632,14 @@ Q708198,Paul Preuss,1989,3
 Q708198,Paul Preuss,1998,4
 Q131350995,Paul Witcover,1997,1
 Q131350995,Paul Witcover,1998,2
-Q131350995,Paul Witcover,2006,3
+Q131350995,Paul Witcover,2006,4
 Q1684007,Paula Volsky,1992,1
 Q1684007,Paula Volsky,2001,2
 Q7154976,Pauline Ashwell,1959,1
 Q7154976,Pauline Ashwell,1961,2
 Q7154976,Pauline Ashwell,1983,3
 Q7154976,Pauline Ashwell,1989,4
+Q7154976,Pauline Ashwell,1992,5
 Q131438542,Pauline J. Alama,2003,1
 Q7160510,Peg Kerr,2000,1
 Q69889011,Pemi Aguda,2022,1
@@ -4697,14 +4706,14 @@ Q296256,Philip José Farmer,1981,10
 Q296256,Philip José Farmer,1982,11
 Q296256,Philip José Farmer,1984,12
 Q296256,Philip José Farmer,1986,13
-Q171091,Philip K. Dick,1965,2
-Q171091,Philip K. Dick,1968,4
-Q171091,Philip K. Dick,1974,5
+Q171091,Philip K. Dick,1966,2
+Q171091,Philip K. Dick,1968,3
+Q171091,Philip K. Dick,1969,4
 Q171091,Philip K. Dick,1975,9
 Q171091,Philip K. Dick,1978,10
 Q171091,Philip K. Dick,1980,11
 Q171091,Philip K. Dick,1981,13
-Q171091,Philip K. Dick,1982,17
+Q171091,Philip K. Dick,1982,16
 Q171091,Philip K. Dick,1983,18
 Q190220,Philip Pullman,1997,1
 Q190220,Philip Pullman,1998,2
@@ -4720,7 +4729,6 @@ Q537306,Phyllis Gotlieb,1972,1
 Q537306,Phyllis Gotlieb,1973,2
 Q537306,Phyllis Gotlieb,1982,3
 Q19665989,Pierce Brown,2016,2
-Q559409,Piers Anthony,1967,1
 Q559409,Piers Anthony,1968,2
 Q559409,Piers Anthony,1969,3
 Q559409,Piers Anthony,1970,4
@@ -4738,23 +4746,22 @@ Q450868,Poppy Z. Brite,1993,2
 Q450868,Poppy Z. Brite,1994,3
 Q220883,Poul Anderson,1959,1
 Q220883,Poul Anderson,1961,2
-Q220883,Poul Anderson,1965,3
 Q220883,Poul Anderson,1966,4
 Q220883,Poul Anderson,1968,5
 Q220883,Poul Anderson,1969,6
 Q220883,Poul Anderson,1970,7
-Q220883,Poul Anderson,1971,11
+Q220883,Poul Anderson,1971,10
 Q220883,Poul Anderson,1972,12
-Q220883,Poul Anderson,1973,16
+Q220883,Poul Anderson,1973,15
 Q220883,Poul Anderson,1974,18
-Q220883,Poul Anderson,1975,23
+Q220883,Poul Anderson,1975,22
+Q220883,Poul Anderson,1976,23
 Q220883,Poul Anderson,1978,25
 Q220883,Poul Anderson,1979,28
 Q220883,Poul Anderson,1980,30
 Q220883,Poul Anderson,1982,31
 Q220883,Poul Anderson,1984,32
 Q220883,Poul Anderson,1987,33
-Q220883,Poul Anderson,1989,34
 Q220883,Poul Anderson,1990,36
 Q220883,Poul Anderson,1992,37
 Q220883,Poul Anderson,1993,38
@@ -4772,10 +4779,9 @@ Q106638649,Priya Sharma,2018,2
 Q106638649,Priya Sharma,2019,3
 Q106638649,Priya Sharma,2020,4
 Q131438578,Quinn Connor,2024,1
-Q982489,R. A. Lafferty,1968,1
 Q982489,R. A. Lafferty,1969,2
-Q982489,R. A. Lafferty,1970,5
-Q982489,R. A. Lafferty,1971,10
+Q982489,R. A. Lafferty,1970,4
+Q982489,R. A. Lafferty,1971,9
 Q982489,R. A. Lafferty,1972,14
 Q982489,R. A. Lafferty,1973,15
 Q982489,R. A. Lafferty,1974,17
@@ -4785,7 +4791,6 @@ Q982489,R. A. Lafferty,1983,20
 Q982489,R. A. Lafferty,1984,21
 Q982489,R. A. Lafferty,1985,22
 Q982489,R. A. Lafferty,1994,23
-Q274941,R. A. MacAvoy,1983,1
 Q274941,R. A. MacAvoy,1984,4
 Q274941,R. A. MacAvoy,1985,6
 Q274941,R. A. MacAvoy,1986,7
@@ -4822,7 +4827,6 @@ Q131413305,R. S. Belcher,2017,2
 Q131468071,R. S. Benedict,2018,1
 Q241615,R. Scott Bakker,2004,1
 Q241615,R. Scott Bakker,2007,2
-Q53411010,R.F. Kuang,2018,1
 Q53411010,R.F. Kuang,2019,2
 Q53411010,R.F. Kuang,2021,3
 Q53411010,R.F. Kuang,2023,4
@@ -4830,7 +4834,7 @@ Q127256986,Rachael K. Jones,2023,1
 Q127256986,Rachael K. Jones,2024,3
 Q127256986,Rachael K. Jones,2025,4
 Q25418647,Rachel Hartman,2013,1
-Q434138,Rachel Pollack,1994,2
+Q434138,Rachel Pollack,1994,1
 Q434138,Rachel Pollack,1995,3
 Q434138,Rachel Pollack,2014,4
 Q434138,Rachel Pollack,2016,5
@@ -4867,7 +4871,8 @@ Q12739114,Ray Aldridge,1994,5
 Q40640,Ray Bradbury,1956,1
 Q40640,Ray Bradbury,1979,2
 Q40640,Ray Bradbury,2002,3
-Q98960258,Ray Nayler,2022,5
+Q98960258,Ray Nayler,2022,4
+Q98960258,Ray Nayler,2023,5
 Q98960258,Ray Nayler,2025,6
 Q2324126,Ray Nelson,1976,1
 Q7298241,Ray Vukcevich,2003,1
@@ -4891,9 +4896,9 @@ Q7301854,Rebecca Ore,1995,5
 Q7301854,Rebecca Ore,1996,7
 Q7301854,Rebecca Ore,2001,8
 Q56192533,Rebecca Roanhorse,2017,1
-Q56192533,Rebecca Roanhorse,2018,5
+Q56192533,Rebecca Roanhorse,2018,4
 Q56192533,Rebecca Roanhorse,2019,6
-Q56192533,Rebecca Roanhorse,2020,10
+Q56192533,Rebecca Roanhorse,2020,9
 Q56192533,Rebecca Roanhorse,2021,12
 Q56192533,Rebecca Roanhorse,2023,14
 Q56192533,Rebecca Roanhorse,2025,15
@@ -4912,14 +4917,13 @@ Q3430446,Richard A. Lupoff,1972,1
 Q3430446,Richard A. Lupoff,1973,2
 Q3430446,Richard A. Lupoff,1975,6
 Q3430446,Richard A. Lupoff,1976,8
-Q3430446,Richard A. Lupoff,1977,9
 Q3430446,Richard A. Lupoff,1978,10
 Q3430446,Richard A. Lupoff,1985,11
 Q3430446,Richard A. Lupoff,1986,12
 Q313289,Richard Adams,1985,1
 Q7324278,Richard Bowes,1987,1
 Q7324278,Richard Bowes,2002,3
-Q7324278,Richard Bowes,2006,4
+Q7324278,Richard Bowes,2007,4
 Q7324278,Richard Bowes,2008,5
 Q7324278,Richard Bowes,2009,6
 Q7324278,Richard Bowes,2011,7
@@ -4974,20 +4978,18 @@ Q7340033,Rob Chilson,1985,1
 Q55723235,Rob Ziegler,2012,1
 Q123078,Robert A. Heinlein,1959,1
 Q123078,Robert A. Heinlein,1964,2
-Q123078,Robert A. Heinlein,1966,4
+Q123078,Robert A. Heinlein,1966,3
+Q123078,Robert A. Heinlein,1967,4
 Q123078,Robert A. Heinlein,1971,5
-Q123078,Robert A. Heinlein,1973,6
 Q123078,Robert A. Heinlein,1974,8
 Q123078,Robert A. Heinlein,1981,9
-Q123078,Robert A. Heinlein,1982,10
 Q123078,Robert A. Heinlein,1983,12
-Q123078,Robert A. Heinlein,1984,13
 Q123078,Robert A. Heinlein,1985,14
 Q123078,Robert A. Heinlein,1986,15
 Q123078,Robert A. Heinlein,1988,16
 Q123078,Robert A. Heinlein,1991,17
 Q123078,Robert A. Heinlein,2005,18
-Q7341270,Robert A. Metzger,2002,1
+Q7341270,Robert A. Metzger,2003,1
 Q906193,Robert Aickman,1978,1
 Q906193,Robert Aickman,2016,2
 Q314215,Robert Anton Wilson,1976,1
@@ -4996,19 +4998,20 @@ Q240786,Robert Charles Wilson,1987,2
 Q240786,Robert Charles Wilson,1988,3
 Q240786,Robert Charles Wilson,1991,4
 Q240786,Robert Charles Wilson,1995,5
-Q240786,Robert Charles Wilson,1999,9
-Q240786,Robert Charles Wilson,2000,10
-Q240786,Robert Charles Wilson,2001,11
-Q240786,Robert Charles Wilson,2002,13
-Q240786,Robert Charles Wilson,2004,15
-Q240786,Robert Charles Wilson,2006,16
-Q240786,Robert Charles Wilson,2007,20
-Q240786,Robert Charles Wilson,2008,21
-Q240786,Robert Charles Wilson,2010,25
-Q240786,Robert Charles Wilson,2012,26
-Q240786,Robert Charles Wilson,2013,27
-Q240786,Robert Charles Wilson,2014,28
-Q240786,Robert Charles Wilson,2017,29
+Q240786,Robert Charles Wilson,1997,6
+Q240786,Robert Charles Wilson,1999,10
+Q240786,Robert Charles Wilson,2000,11
+Q240786,Robert Charles Wilson,2001,12
+Q240786,Robert Charles Wilson,2002,14
+Q240786,Robert Charles Wilson,2004,16
+Q240786,Robert Charles Wilson,2006,17
+Q240786,Robert Charles Wilson,2007,21
+Q240786,Robert Charles Wilson,2008,22
+Q240786,Robert Charles Wilson,2010,26
+Q240786,Robert Charles Wilson,2012,27
+Q240786,Robert Charles Wilson,2013,28
+Q240786,Robert Charles Wilson,2014,29
+Q240786,Robert Charles Wilson,2017,30
 Q1282338,Robert Coover,1998,1
 Q131465272,Robert Devereaux,1999,1
 Q1360721,Robert F. Young,1965,1
@@ -5031,7 +5034,7 @@ Q890980,Robert Holdstock,2003,13
 Q890980,Robert Holdstock,2010,14
 Q362742,Robert J. Sawyer,1991,1
 Q362742,Robert J. Sawyer,1995,2
-Q362742,Robert J. Sawyer,1996,5
+Q362742,Robert J. Sawyer,1996,4
 Q362742,Robert J. Sawyer,1997,6
 Q362742,Robert J. Sawyer,1998,9
 Q362742,Robert J. Sawyer,1999,10
@@ -5100,16 +5103,15 @@ Q333246,Robert Sheckley,1959,2
 Q333246,Robert Sheckley,1977,3
 Q333246,Robert Sheckley,1996,4
 Q333246,Robert Sheckley,2002,5
-Q314553,Robert Silverberg,1967,1
-Q314553,Robert Silverberg,1968,5
-Q314553,Robert Silverberg,1969,7
-Q314553,Robert Silverberg,1970,12
+Q314553,Robert Silverberg,1968,4
+Q314553,Robert Silverberg,1969,6
+Q314553,Robert Silverberg,1970,11
 Q314553,Robert Silverberg,1971,17
-Q314553,Robert Silverberg,1972,27
+Q314553,Robert Silverberg,1972,25
 Q314553,Robert Silverberg,1973,35
 Q314553,Robert Silverberg,1974,39
-Q314553,Robert Silverberg,1975,44
-Q314553,Robert Silverberg,1976,47
+Q314553,Robert Silverberg,1975,43
+Q314553,Robert Silverberg,1976,46
 Q314553,Robert Silverberg,1977,49
 Q314553,Robert Silverberg,1981,52
 Q314553,Robert Silverberg,1982,59
@@ -5134,7 +5136,6 @@ Q314553,Robert Silverberg,2000,119
 Q314553,Robert Silverberg,2001,120
 Q314553,Robert Silverberg,2008,122
 Q314553,Robert Silverberg,2010,123
-Q3436347,Robert Stallman,1980,1
 Q3436347,Robert Stallman,1981,3
 Q3436347,Robert Stallman,1982,4
 Q2158989,Robert Thurston,1972,1
@@ -5176,14 +5177,14 @@ Q1346691,Roger MacBride Allen,1989,3
 Q1346691,Roger MacBride Allen,1991,4
 Q295406,Roger Zelazny,1964,1
 Q295406,Roger Zelazny,1966,2
-Q295406,Roger Zelazny,1967,7
+Q295406,Roger Zelazny,1967,6
 Q295406,Roger Zelazny,1968,8
-Q295406,Roger Zelazny,1969,9
+Q295406,Roger Zelazny,1970,9
 Q295406,Roger Zelazny,1971,10
 Q295406,Roger Zelazny,1972,12
 Q295406,Roger Zelazny,1973,13
 Q295406,Roger Zelazny,1974,18
-Q295406,Roger Zelazny,1975,20
+Q295406,Roger Zelazny,1975,19
 Q295406,Roger Zelazny,1976,24
 Q295406,Roger Zelazny,1977,25
 Q295406,Roger Zelazny,1979,26
@@ -5196,7 +5197,7 @@ Q295406,Roger Zelazny,1986,37
 Q295406,Roger Zelazny,1987,39
 Q295406,Roger Zelazny,1988,40
 Q295406,Roger Zelazny,1993,41
-Q295406,Roger Zelazny,1994,42
+Q295406,Roger Zelazny,1995,42
 Q295406,Roger Zelazny,1996,43
 Q1081888,Ron Goulart,1971,1
 Q131468073,Ron Wolfe,2003,1
@@ -5226,7 +5227,6 @@ Q92849,Rudy Rucker,2010,11
 Q92849,Rudy Rucker,2013,12
 Q92849,Rudy Rucker,2020,13
 Q131502470,Ruoxi Chen,2024,1
-Q1353673,Russell Hoban,1981,1
 Q1353673,Russell Hoban,1982,2
 Q158997,Russell Kirk,1984,1
 Q55783249,Russell M. Griffin,1988,1
@@ -5237,16 +5237,16 @@ Q57380073,Ruthanna Emrys,2018,2
 Q57380073,Ruthanna Emrys,2019,3
 Q22087901,Ryka Aoki,2022,3
 Q7387360,S. Andrew Swann,1994,1
-Q99336731,S. B. Divya,2021,1
-Q99336731,S. B. Divya,2022,3
-Q99336731,S. B. Divya,2023,4
+Q99336731,S. B. Divya,2017,1
+Q99336731,S. B. Divya,2022,4
+Q99336731,S. B. Divya,2023,5
 Q1253960,S. C. Sykes,1985,1
 Q1253960,S. C. Sykes,1986,2
 Q131278951,S. Harris,2016,2
 Q120602384,S. Jae-Jones,2018,1
 Q36676832,S. L. Huang,2020,1
 Q36676832,S. L. Huang,2022,2
-Q36676832,S. L. Huang,2023,5
+Q36676832,S. L. Huang,2023,4
 Q36676832,S. L. Huang,2024,7
 Q131502472,S. M. Hallow,2024,1
 Q84505153,S. P. Miskowski,2017,1
@@ -5270,7 +5270,6 @@ Q108562316,S. Qiouyi Lu,2022,2
 Q131278246,S. R. Algernon,2016,2
 Q27577943,Saad Z. Hossain,2020,2
 Q27577943,Saad Z. Hossain,2022,3
-Q7403395,Saladin Ahmed,2012,1
 Q7403395,Saladin Ahmed,2013,2
 Q7404277,Salena Godden,2022,1
 Q112435800,Sally Wiener Grotta,2015,1
@@ -5280,7 +5279,7 @@ Q28911712,Sam J. Miller,2014,1
 Q28911712,Sam J. Miller,2015,2
 Q28911712,Sam J. Miller,2016,5
 Q28911712,Sam J. Miller,2017,7
-Q28911712,Sam J. Miller,2018,10
+Q28911712,Sam J. Miller,2018,9
 Q28911712,Sam J. Miller,2019,11
 Q28911712,Sam J. Miller,2020,12
 Q28911712,Sam J. Miller,2021,14
@@ -5296,8 +5295,7 @@ Q438164,Samuel R. Delany,1967,1
 Q438164,Samuel R. Delany,1968,4
 Q438164,Samuel R. Delany,1969,7
 Q438164,Samuel R. Delany,1972,8
-Q438164,Samuel R. Delany,1975,9
-Q438164,Samuel R. Delany,1976,11
+Q438164,Samuel R. Delany,1976,10
 Q438164,Samuel R. Delany,1977,12
 Q438164,Samuel R. Delany,1978,14
 Q438164,Samuel R. Delany,1979,15
@@ -5326,7 +5324,6 @@ Q465851,Sarah Monette,2009,3
 Q465851,Sarah Monette,2010,5
 Q465851,Sarah Monette,2011,6
 Q465851,Sarah Monette,2013,8
-Q465851,Sarah Monette,2014,9
 Q465851,Sarah Monette,2015,10
 Q465851,Sarah Monette,2021,11
 Q465851,Sarah Monette,2022,12
@@ -5341,12 +5338,12 @@ Q28870552,Sarah Pinsker,2015,2
 Q28870552,Sarah Pinsker,2016,4
 Q28870552,Sarah Pinsker,2017,7
 Q28870552,Sarah Pinsker,2018,14
-Q28870552,Sarah Pinsker,2019,19
-Q28870552,Sarah Pinsker,2020,24
-Q28870552,Sarah Pinsker,2021,25
-Q28870552,Sarah Pinsker,2022,26
-Q28870552,Sarah Pinsker,2024,30
-Q28870552,Sarah Pinsker,2025,31
+Q28870552,Sarah Pinsker,2019,18
+Q28870552,Sarah Pinsker,2020,23
+Q28870552,Sarah Pinsker,2021,24
+Q28870552,Sarah Pinsker,2022,25
+Q28870552,Sarah Pinsker,2024,29
+Q28870552,Sarah Pinsker,2025,30
 Q7422728,Sarah Rees Brennan,2011,1
 Q107337613,Sarah Tolmie,2015,1
 Q448241,Sarah Zettel,1997,1
@@ -5383,9 +5380,9 @@ Q367102,Sean Stewart,1994,1
 Q367102,Sean Stewart,1996,2
 Q367102,Sean Stewart,1997,3
 Q367102,Sean Stewart,1998,5
-Q367102,Sean Stewart,1999,7
+Q367102,Sean Stewart,1999,6
+Q367102,Sean Stewart,2000,7
 Q367102,Sean Stewart,2001,8
-Q367102,Sean Stewart,2004,9
 Q367102,Sean Stewart,2005,10
 Q552911,Sean Williams,2011,1
 Q3476794,Seanan McGuire,2010,1
@@ -5406,7 +5403,8 @@ Q3476794,Seanan McGuire,2025,35
 Q110300415,Sequoia Nagamatsu,2023,1
 Q22096652,Seth Dickinson,2016,2
 Q22096652,Seth Dickinson,2019,3
-Q7457969,Severna Park,1999,1
+Q7457969,Severna Park,1998,1
+Q7457969,Severna Park,1999,2
 Q131195501,Shane Tourtellotte,2002,2
 Q55756656,Shannon A. Chakraborty,2018,1
 Q55756656,Shannon A. Chakraborty,2021,2
@@ -5450,8 +5448,8 @@ Q131438585,Shveta Thakrar,2021,1
 Q17386413,Silvia Moreno-Garcia,2016,2
 Q17386413,Silvia Moreno-Garcia,2017,3
 Q17386413,Silvia Moreno-Garcia,2018,5
-Q17386413,Silvia Moreno-Garcia,2019,6
-Q17386413,Silvia Moreno-Garcia,2020,10
+Q17386413,Silvia Moreno-Garcia,2020,9
+Q17386413,Silvia Moreno-Garcia,2021,10
 Q17386413,Silvia Moreno-Garcia,2022,11
 Q17386413,Silvia Moreno-Garcia,2023,13
 Q17386413,Silvia Moreno-Garcia,2024,14
@@ -5463,7 +5461,7 @@ Q131351002,Sin Blaché,2024,1
 Q100518259,Siobhan Carroll,2017,1
 Q100518259,Siobhan Carroll,2019,3
 Q100518259,Siobhan Carroll,2020,5
-Q18085614,Sofia Samatar,2013,2
+Q18085614,Sofia Samatar,2013,1
 Q18085614,Sofia Samatar,2014,4
 Q18085614,Sofia Samatar,2015,6
 Q18085614,Sofia Samatar,2017,9
@@ -5569,6 +5567,7 @@ Q39829,Stephen King,2022,53
 Q39829,Stephen King,2023,54
 Q7609720,Stephen L. Burns,2000,1
 Q7609720,Stephen L. Burns,2003,2
+Q66665842,Stephen L. Gillett,1993,1
 Q7609779,Stephen Leigh,1978,1
 Q7609779,Stephen Leigh,1982,2
 Q457185,Stephen R. Donaldson,1978,1
@@ -5646,12 +5645,14 @@ Q7648387,Susan Shwartz,1992,2
 Q7648387,Susan Shwartz,1993,4
 Q7648387,Susan Shwartz,1996,7
 Q232772,Susanna Clarke,2004,1
-Q232772,Susanna Clarke,2005,3
-Q232772,Susanna Clarke,2020,5
+Q232772,Susanna Clarke,2005,2
+Q232772,Susanna Clarke,2006,3
+Q232772,Susanna Clarke,2020,4
 Q232772,Susanna Clarke,2021,7
 Q69541321,Suyi Davies Okungbowa,2022,1
 Q127185513,Suzan Palumbo,2021,1
 Q127185513,Suzan Palumbo,2022,2
+Q127185513,Suzan Palumbo,2025,4
 Q55452110,Suzanne Allés Blom,2002,1
 Q56216426,Suzanne Palmer,2018,2
 Q56216426,Suzanne Palmer,2020,4
@@ -5665,7 +5666,8 @@ Q2741191,Suzette Haden Elgin,1985,3
 Q2741191,Suzette Haden Elgin,1987,4
 Q441603,Suzy McKee Charnas,1975,1
 Q441603,Suzy McKee Charnas,1980,2
-Q441603,Suzy McKee Charnas,1981,6
+Q441603,Suzy McKee Charnas,1981,5
+Q441603,Suzy McKee Charnas,1982,6
 Q441603,Suzy McKee Charnas,1986,7
 Q441603,Suzy McKee Charnas,1989,8
 Q441603,Suzy McKee Charnas,1990,9
@@ -5677,8 +5679,7 @@ Q441603,Suzy McKee Charnas,2012,16
 Q7668220,T. E. D. Klein,1985,2
 Q131438538,T. E. Grau,2019,1
 Q453410,T. H. White,1978,1
-Q5968748,T. J. Bass,1971,1
-Q5968748,T. J. Bass,1974,2
+Q5968748,T. J. Bass,1972,1
 Q5968748,T. J. Bass,1975,3
 Q60390071,TJ Klune,2021,1
 Q60390071,TJ Klune,2022,2
@@ -5702,17 +5703,14 @@ Q58045802,Tade Thompson,2024,12
 Q7680831,Tamara Siler Jones,2005,1
 Q65969383,Tamsyn Muir,2015,1
 Q65969383,Tamsyn Muir,2016,2
-Q65969383,Tamsyn Muir,2019,3
 Q65969383,Tamsyn Muir,2020,5
 Q65969383,Tamsyn Muir,2021,7
-Q65969383,Tamsyn Muir,2022,8
 Q65969383,Tamsyn Muir,2023,11
 Q7682284,Tananarive Due,1998,1
 Q7682284,Tananarive Due,2001,2
 Q7682284,Tananarive Due,2022,3
 Q7682284,Tananarive Due,2023,4
 Q7682284,Tananarive Due,2024,6
-Q261962,Tanith Lee,1975,1
 Q261962,Tanith Lee,1976,2
 Q261962,Tanith Lee,1979,3
 Q261962,Tanith Lee,1980,5
@@ -5798,7 +5796,6 @@ Q318845,Terry Brooks,1998,5
 Q1292432,Terry Carr,1968,1
 Q1292432,Terry Carr,1969,2
 Q1292432,Terry Carr,1974,3
-Q1292432,Terry Carr,1977,4
 Q1292432,Terry Carr,1978,5
 Q1292432,Terry Carr,1979,6
 Q7704318,Terry Dowling,2011,1
@@ -5821,9 +5818,9 @@ Q46248,Terry Pratchett,2001,12
 Q46248,Terry Pratchett,2002,13
 Q46248,Terry Pratchett,2003,14
 Q46248,Terry Pratchett,2004,15
-Q46248,Terry Pratchett,2005,17
+Q46248,Terry Pratchett,2005,16
 Q46248,Terry Pratchett,2006,18
-Q46248,Terry Pratchett,2008,19
+Q46248,Terry Pratchett,2009,19
 Q46248,Terry Pratchett,2010,20
 Q46248,Terry Pratchett,2012,21
 Q46248,Terry Pratchett,2014,22
@@ -5841,7 +5838,7 @@ Q7781648,Theodora Goss,2018,17
 Q7781648,Theodora Goss,2019,19
 Q7781648,Theodora Goss,2020,21
 Q7781856,Theodore Judson,2005,1
-Q3990238,Theodore L. Thomas,1965,1
+Q3990238,Theodore L. Thomas,1966,1
 Q240253,Theodore Sturgeon,1956,2
 Q240253,Theodore Sturgeon,1960,3
 Q240253,Theodore Sturgeon,1961,5
@@ -5867,12 +5864,12 @@ Q7790428,Thomas Harlan,2000,1
 Q7790428,Thomas Harlan,2001,2
 Q313377,Thomas Harris,1989,1
 Q1062799,Thomas Ligotti,1991,1
-Q708581,Thomas M. Disch,1965,1
+Q708581,Thomas M. Disch,1966,1
 Q708581,Thomas M. Disch,1970,2
 Q708581,Thomas M. Disch,1971,3
 Q708581,Thomas M. Disch,1973,4
-Q708581,Thomas M. Disch,1974,5
-Q708581,Thomas M. Disch,1979,9
+Q708581,Thomas M. Disch,1975,5
+Q708581,Thomas M. Disch,1979,8
 Q708581,Thomas M. Disch,1980,12
 Q708581,Thomas M. Disch,1981,14
 Q708581,Thomas M. Disch,1982,16
@@ -5891,7 +5888,6 @@ Q1818293,Thomas Olde Heuvelt,2013,1
 Q1818293,Thomas Olde Heuvelt,2014,2
 Q1818293,Thomas Olde Heuvelt,2017,3
 Q1818293,Thomas Olde Heuvelt,2023,4
-Q35155,Thomas Pynchon,1973,1
 Q35155,Thomas Pynchon,1974,2
 Q35155,Thomas Pynchon,2007,3
 Q131468077,Thomas R. Dulski,1984,1
@@ -5904,21 +5900,20 @@ Q7803816,Tim Lebbon,2001,1
 Q118370324,Tim Maughan,2020,1
 Q363810,Tim Powers,1980,1
 Q363810,Tim Powers,1984,2
-Q363810,Tim Powers,1985,4
+Q363810,Tim Powers,1985,3
 Q363810,Tim Powers,1986,5
 Q363810,Tim Powers,1988,6
 Q363810,Tim Powers,1990,7
 Q363810,Tim Powers,1992,8
-Q363810,Tim Powers,1996,9
 Q363810,Tim Powers,1997,10
-Q363810,Tim Powers,2001,12
-Q363810,Tim Powers,2005,13
-Q363810,Tim Powers,2007,15
-Q363810,Tim Powers,2009,16
-Q363810,Tim Powers,2013,17
-Q363810,Tim Powers,2017,18
-Q363810,Tim Powers,2019,19
-Q363810,Tim Powers,2024,21
+Q363810,Tim Powers,2001,11
+Q363810,Tim Powers,2005,12
+Q363810,Tim Powers,2007,14
+Q363810,Tim Powers,2009,15
+Q363810,Tim Powers,2013,16
+Q363810,Tim Powers,2017,17
+Q363810,Tim Powers,2019,18
+Q363810,Tim Powers,2024,20
 Q6055713,Tim Pratt,2006,1
 Q6055713,Tim Pratt,2007,3
 Q6055713,Tim Pratt,2008,5
@@ -5935,12 +5930,13 @@ Q434029,Timothy Zahn,1982,1
 Q434029,Timothy Zahn,1983,3
 Q434029,Timothy Zahn,1984,6
 Q434029,Timothy Zahn,1985,7
-Q18206053,Tina Connolly,2012,1
+Q18206053,Tina Connolly,2013,1
 Q18206053,Tina Connolly,2018,2
 Q18206053,Tina Connolly,2019,4
 Q109768606,Tlotlo Tsamaase,2021,1
 Q109768606,Tlotlo Tsamaase,2022,2
-Q138243,Tobias S. Buckell,2007,2
+Q138243,Tobias S. Buckell,2007,1
+Q138243,Tobias S. Buckell,2008,2
 Q138243,Tobias S. Buckell,2011,3
 Q138243,Tobias S. Buckell,2013,4
 Q138243,Tobias S. Buckell,2018,7
@@ -5984,7 +5980,7 @@ Q3530851,Tom Purdom,1993,1
 Q3530851,Tom Purdom,2000,3
 Q3530851,Tom Purdom,2006,4
 Q328550,Tom Reamy,1976,2
-Q328550,Tom Reamy,1978,4
+Q328550,Tom Reamy,1978,3
 Q328550,Tom Reamy,1979,8
 Q1448930,Tom Tryon,1996,1
 Q7818026,Tom Wheeler,2005,1
@@ -5997,7 +5993,6 @@ Q768866,Tony Daniel,1997,6
 Q768866,Tony Daniel,1999,9
 Q768866,Tony Daniel,2002,10
 Q99519775,Traci Chee,2017,1
-Q114292132,Travis Baldree,2022,1
 Q114292132,Travis Baldree,2023,3
 Q534376,Tricia Sullivan,1996,1
 Q534376,Tricia Sullivan,2016,2
@@ -6013,7 +6008,6 @@ Q18608460,Ty Franck,2018,10
 Q18608460,Ty Franck,2022,11
 Q439226,Téa Obreht,2012,1
 Q181659,Ursula K. Le Guin,1970,1
-Q181659,Ursula K. Le Guin,1971,2
 Q181659,Ursula K. Le Guin,1972,6
 Q181659,Ursula K. Le Guin,1973,8
 Q181659,Ursula K. Le Guin,1974,10
@@ -6038,7 +6032,7 @@ Q181659,Ursula K. Le Guin,1998,55
 Q181659,Ursula K. Le Guin,1999,56
 Q181659,Ursula K. Le Guin,2000,58
 Q181659,Ursula K. Le Guin,2001,61
-Q181659,Ursula K. Le Guin,2002,66
+Q181659,Ursula K. Le Guin,2002,65
 Q181659,Ursula K. Le Guin,2003,72
 Q181659,Ursula K. Le Guin,2008,73
 Q181659,Ursula K. Le Guin,2009,74
@@ -6050,10 +6044,10 @@ Q7901282,Ursula Vernon,2018,2
 Q7901282,Ursula Vernon,2019,4
 Q7901282,Ursula Vernon,2020,6
 Q7901282,Ursula Vernon,2021,7
-Q7901282,Ursula Vernon,2022,10
+Q7901282,Ursula Vernon,2022,9
 Q7901282,Ursula Vernon,2023,13
 Q7901282,Ursula Vernon,2024,15
-Q7901282,Ursula Vernon,2025,17
+Q7901282,Ursula Vernon,2025,18
 Q22082720,Usman T. Malik,2014,1
 Q22082720,Usman T. Malik,2015,4
 Q22082720,Usman T. Malik,2016,6
@@ -6065,10 +6059,10 @@ Q118131694,V. Castro,2021,1
 Q17468111,V. E. Schwab,2021,1
 Q126285210,Vajra Chandrasekera,2021,2
 Q126285210,Vajra Chandrasekera,2024,4
+Q126285210,Vajra Chandrasekera,2025,5
 Q131468078,Val Nolan,2014,2
 Q56557369,Valerie J. Freireich,1995,1
 Q56557369,Valerie J. Freireich,1996,2
-Q4405331,Valerie Martin,1990,1
 Q4405331,Valerie Martin,1991,2
 Q104773021,Valerie Valdes,2024,1
 Q42380965,Vance Aandahl,1987,1
@@ -6079,23 +6073,22 @@ Q7914353,Vandana Singh,2020,5
 Q131468079,Vanessa Fogg,2024,1
 Q131468080,Varsha Dinesh,2022,1
 Q7920810,Vera Nazarian,2006,1
-Q7920810,Vera Nazarian,2018,2
+Q7920810,Vera Nazarian,2009,2
+Q7920810,Vera Nazarian,2018,3
 Q312405,Vernor Vinge,1981,1
 Q312405,Vernor Vinge,1982,3
 Q312405,Vernor Vinge,1985,5
 Q312405,Vernor Vinge,1987,9
 Q312405,Vernor Vinge,1989,10
-Q312405,Vernor Vinge,1992,11
 Q312405,Vernor Vinge,1993,12
-Q312405,Vernor Vinge,1999,13
 Q312405,Vernor Vinge,2000,14
 Q312405,Vernor Vinge,2002,15
 Q312405,Vernor Vinge,2004,16
 Q312405,Vernor Vinge,2005,18
 Q312405,Vernor Vinge,2012,19
 Q131438588,Veronica G. Henry,2022,1
-Q45386362,Veronica Schanoes,2014,1
-Q45386362,Veronica Schanoes,2015,2
+Q45386362,Veronica Schanoes,2014,2
+Q45386362,Veronica Schanoes,2015,3
 Q7926078,Victor LaValle,2016,1
 Q7926078,Victor LaValle,2017,5
 Q7926078,Victor LaValle,2022,6
@@ -6109,17 +6102,17 @@ Q55760788,Vina Jie-Min Prasad,2021,12
 Q63044555,Vivian Shaw,2019,1
 Q242162,Vonda N. McIntyre,1973,1
 Q242162,Vonda N. McIntyre,1974,5
-Q242162,Vonda N. McIntyre,1975,7
+Q242162,Vonda N. McIntyre,1975,6
 Q242162,Vonda N. McIntyre,1976,8
 Q242162,Vonda N. McIntyre,1977,9
 Q242162,Vonda N. McIntyre,1978,12
 Q242162,Vonda N. McIntyre,1980,14
-Q242162,Vonda N. McIntyre,1984,15
-Q242162,Vonda N. McIntyre,1990,16
-Q242162,Vonda N. McIntyre,1993,17
-Q242162,Vonda N. McIntyre,1997,18
-Q242162,Vonda N. McIntyre,1998,19
-Q242162,Vonda N. McIntyre,2016,20
+Q242162,Vonda N. McIntyre,1984,16
+Q242162,Vonda N. McIntyre,1990,17
+Q242162,Vonda N. McIntyre,1993,18
+Q242162,Vonda N. McIntyre,1997,19
+Q242162,Vonda N. McIntyre,1998,20
+Q242162,Vonda N. McIntyre,2016,21
 Q22958933,Vox Day,2014,1
 Q7943942,Vylar Kaftan,2014,2
 Q7943942,Vylar Kaftan,2019,3
@@ -6128,33 +6121,31 @@ Q54808060,W.R. Thompson,1991,2
 Q54808060,W.R. Thompson,1994,3
 Q714485,Walter Jon Williams,1986,1
 Q714485,Walter Jon Williams,1987,3
-Q714485,Walter Jon Williams,1988,7
-Q714485,Walter Jon Williams,1989,10
-Q714485,Walter Jon Williams,1990,11
-Q714485,Walter Jon Williams,1991,12
-Q714485,Walter Jon Williams,1993,14
-Q714485,Walter Jon Williams,1994,17
-Q714485,Walter Jon Williams,1995,18
-Q714485,Walter Jon Williams,1996,19
-Q714485,Walter Jon Williams,1997,20
-Q714485,Walter Jon Williams,1998,25
-Q714485,Walter Jon Williams,1999,26
-Q714485,Walter Jon Williams,2000,30
-Q714485,Walter Jon Williams,2003,31
-Q714485,Walter Jon Williams,2004,33
-Q714485,Walter Jon Williams,2005,34
-Q714485,Walter Jon Williams,2007,35
-Q714485,Walter Jon Williams,2008,36
-Q714485,Walter Jon Williams,2009,37
-Q714485,Walter Jon Williams,2010,38
-Q714485,Walter Jon Williams,2013,40
-Q714485,Walter Jon Williams,2017,41
-Q714485,Walter Jon Williams,2018,42
-Q714485,Walter Jon Williams,2019,43
-Q714485,Walter Jon Williams,2021,44
+Q714485,Walter Jon Williams,1988,8
+Q714485,Walter Jon Williams,1989,11
+Q714485,Walter Jon Williams,1990,12
+Q714485,Walter Jon Williams,1991,13
+Q714485,Walter Jon Williams,1993,15
+Q714485,Walter Jon Williams,1994,18
+Q714485,Walter Jon Williams,1996,20
+Q714485,Walter Jon Williams,1998,26
+Q714485,Walter Jon Williams,1999,27
+Q714485,Walter Jon Williams,2000,31
+Q714485,Walter Jon Williams,2003,32
+Q714485,Walter Jon Williams,2004,34
+Q714485,Walter Jon Williams,2005,35
+Q714485,Walter Jon Williams,2007,36
+Q714485,Walter Jon Williams,2008,37
+Q714485,Walter Jon Williams,2009,38
+Q714485,Walter Jon Williams,2010,39
+Q714485,Walter Jon Williams,2013,41
+Q714485,Walter Jon Williams,2017,42
+Q714485,Walter Jon Williams,2018,43
+Q714485,Walter Jon Williams,2019,44
+Q714485,Walter Jon Williams,2021,45
 Q357839,Walter M. Miller,1998,1
 Q188117,Walter Mosley,2002,1
-Q740928,Walter Tevis,1980,2
+Q740928,Walter Tevis,1980,1
 Q740928,Walter Tevis,1981,4
 Q9059288,Wang Jinkang,2024,1
 Q7970412,Warren Norwood,1983,1
@@ -6168,9 +6159,11 @@ Q21005376,Wesley Chu,2024,1
 Q3568081,Wil McCarthy,1995,1
 Q3568081,Wil McCarthy,1999,2
 Q3568081,Wil McCarthy,2000,4
-Q3568081,Wil McCarthy,2001,6
+Q3568081,Wil McCarthy,2001,5
+Q3568081,Wil McCarthy,2002,6
 Q3568081,Wil McCarthy,2005,7
-Q3568081,Wil McCarthy,2006,9
+Q3568081,Wil McCarthy,2006,8
+Q3568081,Wil McCarthy,2007,9
 Q30961481,Wilhelmina Baird,1994,1
 Q4308835,Will McIntosh,2009,1
 Q4308835,Will McIntosh,2010,2
@@ -6202,12 +6195,11 @@ Q188987,William Gibson,1982,5
 Q188987,William Gibson,1983,6
 Q188987,William Gibson,1984,8
 Q188987,William Gibson,1985,12
-Q188987,William Gibson,1986,16
+Q188987,William Gibson,1986,15
 Q188987,William Gibson,1987,20
-Q188987,William Gibson,1988,21
 Q188987,William Gibson,1989,23
 Q188987,William Gibson,1990,24
-Q188987,William Gibson,1991,26
+Q188987,William Gibson,1991,25
 Q188987,William Gibson,1992,28
 Q188987,William Gibson,1994,30
 Q188987,William Gibson,2000,31
@@ -6219,12 +6211,13 @@ Q188987,William Gibson,2015,36
 Q188987,William Gibson,2021,37
 Q506885,William Goldman,1984,1
 Q2005408,William Horwood,1981,1
+Q56064820,William K. Carlson,1976,1
 Q1097274,William Kenneth Hartmann,1998,1
 Q8015123,William Mark Simmons,1991,1
 Q2404462,William Rotsler,1972,1
 Q2404462,William Rotsler,1973,3
 Q2404462,William Rotsler,1975,4
-Q188176,William S. Burroughs,1965,1
+Q188176,William S. Burroughs,1966,1
 Q188176,William S. Burroughs,1988,2
 Q4470071,William Sanders,1989,1
 Q4470071,William Sanders,1997,2
@@ -6235,21 +6228,21 @@ Q6175304,William Shunn,2007,5
 Q968565,William Tenn,1975,1
 Q8019337,William Thomas Quick,1989,1
 Q18436266,William Walling,1975,2
-Q637455,Wilson Tucker,1970,1
 Q637455,Wilson Tucker,1971,3
 Q108753885,Wole Talabi,2022,2
-Q108753885,Wole Talabi,2023,7
+Q108753885,Wole Talabi,2023,6
 Q108753885,Wole Talabi,2024,11
 Q25089,Woody Allen,1978,1
 Q8462477,Xia Jia,2013,1
 Q8462477,Xia Jia,2017,2
 Q109187122,Xiran Jay Zhao,2022,2
+Q134622207,Yaroslav Barsukov,2021,1
+Q134622207,Yaroslav Barsukov,2025,2
 Q449473,Yoko Ogawa,2020,1
 Q16204372,Yoon Ha Lee,2011,2
 Q16204372,Yoon Ha Lee,2012,4
 Q16204372,Yoon Ha Lee,2014,6
 Q16204372,Yoon Ha Lee,2015,9
-Q16204372,Yoon Ha Lee,2016,10
 Q16204372,Yoon Ha Lee,2017,15
 Q16204372,Yoon Ha Lee,2018,21
 Q16204372,Yoon Ha Lee,2019,26
