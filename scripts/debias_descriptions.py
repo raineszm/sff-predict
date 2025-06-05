@@ -1,17 +1,18 @@
 import pandas as pd
 import numpy as np
 from snakemake.script import snakemake
-from models.debias import DebiasingModel
+from models.debias import NullspaceProjector, learn_nullspace_normal_vector
 
 print("Training Debiasing Model...")
-debiasing_model = DebiasingModel(model_name="all-MiniLM-L6-v2")
 train_desc = pd.read_csv(snakemake.input.train_desc, index_col="work_qid")
-debiasing_model.fit(train_desc)
+X_train = np.vstack(train_desc["embedding"].values)
+w = learn_nullspace_normal_vector(X_train, train_desc["says_award"])
+debiasing_model = NullspaceProjector(w)
 
 print("Debiasing descriptions")
 description_embeddings = pd.read_parquet(snakemake.input.description_embeddings)
 X_data = np.vstack(description_embeddings["embedding"].values)
-X_debiased = debiasing_model.transform(X_data)
+X_debiased = debiasing_model.fit_transform(X_data)
 
 print("Saving debiased descriptions")
 df_debiased = pd.DataFrame(
