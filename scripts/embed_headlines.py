@@ -10,7 +10,7 @@ def embed_headlines(input_headlines, output_headline_embeddings):
     print("Embedding headlines (This may take a while)")
 
     # Read the input headlines
-    df = pd.read_parquet(input_headlines)
+    df = pd.read_json(input_headlines, lines=True)
 
     # Combine headline and abstract
     df["headline_abstract"] = (

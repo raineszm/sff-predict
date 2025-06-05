@@ -170,6 +170,8 @@ rule debias_descriptions:
     input:
         description_embeddings=PROCESSED_DATA['description_embeddings'],
         train_desc=TRAIN_DATA['train_desc']
+    params:
+        model_name=EMBEDDING_MODEL
     output:
         descriptions_debiased=PROCESSED_DATA['descriptions_debiased']
     script:
