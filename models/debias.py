@@ -23,7 +23,7 @@ class NullspaceProjector(BaseEstimator, TransformerMixin):
         self.nullspace_projector = np.eye(self.w.shape[0]) - np.outer(self.w, self.w)
 
     def fit(self, X: np.ndarray, y: Optional[np.ndarray] = None):
-        if self.w.shape[0] != X.shape[1]:
+        if self.w.shape[1] != X.shape[1]:
             raise ValueError(
                 "Feature dimension mismatch: normal vector has {:d} features, but data has {:d} features".format(
                     self.w.shape[0], X.shape[1]
