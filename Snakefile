@@ -66,6 +66,7 @@ PROCESSED_DATA = {
         'headline_embeddings': 'headline_embeddings.parquet',
         'description_embeddings': 'description_embeddings.parquet',
         'descriptions_debiased': 'descriptions_debiased.parquet',
+        'topicality_scores': 'topicality_scores.csv',
     }.items()
 }
 
@@ -221,3 +222,17 @@ rule embed_headlines:
         sentiment_model=SENTIMENT_MODEL
     script:
         "scripts/embed_headlines.py"
+
+
+rule compute_topicality:
+    input:
+        debiased_embeddings=PROCESSED_DATA['descriptions_debiased'],
+        headline_embeddings=PROCESSED_DATA['headline_embeddings'],
+        headlines=NYT_DATA['headlines'],
+        novels=PROCESSED_DATA['nominated_novels']
+    params:
+        model_name=EMBEDDING_MODEL
+    output:
+        topicality_scores=protected(PROCESSED_DATA['topicality_scores'])
+    script:
+        "scripts/compute_topicality.py"

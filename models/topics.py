@@ -2,7 +2,7 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 from bertopic import BERTopic
 from bertopic.representation import KeyBERTInspired
-from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.metrics.pairwise import cosine_similarity, pairwise_kernels
 from scipy.stats import kurtosis
 from statsmodels.tsa.stattools import adfuller
 from abc import ABC, abstractmethod
@@ -106,10 +106,16 @@ class TopicExtractionModel:
         return self
 
     def compute_alignment(
-        self, embeddings: np.ndarray, weighted: bool = False
+        self,
+        embeddings: np.ndarray,
+        weighted: bool = False,
+        metric: str = "cosine",
+        **metric_kwargs,
     ) -> np.array:
-        similarities = cosine_similarity(embeddings, self.centroids)
+        similarities = pairwise_kernels(
+            embeddings, self.centroids, metric=metric, **metric_kwargs
+        )
         if weighted:
-            return (1 + similarities).dot(self.weights)
+            return similarities.dot(self.weights)
         else:
-            return (1 + similarities).sum(axis=1)
+            return similarities.sum(axis=1)
