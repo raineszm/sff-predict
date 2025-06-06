@@ -22,7 +22,7 @@ desc_merged = desc_embeddings.merge(
     how="left",
 )
 
-desc_merged = desc_merged[desc_merged.year >= 1959]
+desc_merged = desc_merged[(desc_merged.year >= 1959) & (desc_merged.year < 2025)]
 
 
 # Load headline embeddings
