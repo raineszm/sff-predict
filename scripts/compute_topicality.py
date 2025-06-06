@@ -52,7 +52,12 @@ def compute_topicality(year: int, df_year: pd.DataFrame) -> np.array:
         yearly_headlines.month.tolist(),
     )
 
-    return pd.DataFrame({"work_qid": df_year.index, "topicality": df_year.topicality})
+    return pd.DataFrame(
+        {
+            "work_qid": df_year.index,
+            "topicality": tm.compute_alignment(np.stack(df_year["embedding"].tolist())),
+        }
+    )
 
 
 for year, df_year in tqdm(desc_merged.groupby("year"), desc="Computing topicality"):
