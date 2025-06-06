@@ -31,8 +31,7 @@ in awareness coming from literary awards.
 
 ### Key Performance Indicators
 
-For historical data we could compute an estimated return on investment for
-awards predicted by our model based on subsequent media franchises.
+For our KPI we compute the balanced accuracy and F1 score of predicted Winners.
 
 ## Getting Started
 
@@ -74,6 +73,21 @@ awards predicted by our model based on subsequent media franchises.
         export GOOGLE_BOOKS_API_KEY=your_api_key_here
         ```
 
+   Similarly you'll need to use the New York Time API to get the headlines
+
+   1. Get an API key from the
+      [New York Times Developer Portal](https://developer.nytimes.com)
+   2. Enable the Article Search API for your project
+   3. Set the API key in one of two ways:
+      - Create (or add to) a `.env` file in the project root with:
+        ```
+        NYTIMES_API_KEY=your_api_key_here
+        ```
+      - Or set it as an environment variable:
+        ```sh
+        export NYTIMES_API_KEY=your_api_key_here
+        ```
+
 4. **Fetch Cached Data** (Optional)
 
    Some intermediate data files are cached to speed up pipeline runs. To fetch
@@ -93,6 +107,9 @@ awards predicted by our model based on subsequent media franchises.
 
    This will save you from having to reprocess the full headlines dataset, which
    requires NYT API credentials and takes significant time.
+
+   If at any point snakemake tries to regenerate the cached files, you can reset
+   their timestamps by running `bin/fetch_cache.sh` again.
 
 5. **Run the Pipeline**
    ```sh
