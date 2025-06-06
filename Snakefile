@@ -1,4 +1,5 @@
 import os.path
+import pandas as pd
 
 # Configuration
 # ------------
@@ -54,21 +55,31 @@ TRAIN_DATA = {
     }.items()
 }
 
+INTERMEDIATE_DATA = {
+    k: os.path.join(DATA_ROOT, v) for k, v in
+    {
+    'nominated_novels': 'nominated_novels.csv',
+    'openlibrary_ids': 'openlibrary_ids.csv',
+    'isbns': 'isbns.csv',
+    'wikipedia': 'wikipedia.csv',
+    'cumulative_awards': 'cumulative_awards.csv',
+    'descriptions': 'descriptions.csv',
+    'headline_embeddings': 'headline_embeddings.parquet',
+    'description_embeddings': 'description_embeddings.parquet',
+    'descriptions_debiased': 'descriptions_debiased.parquet',
+    'topicality_scores': 'topicality_scores.csv',
+    }.items()
+}
+
 PROCESSED_DATA = {
     k: os.path.join(DATA_ROOT, v) for k, v in
     {
-        'nominated_novels': 'nominated_novels.csv',
-        'openlibrary_ids': 'openlibrary_ids.csv',
-        'isbns': 'isbns.csv',
-        'wikipedia': 'wikipedia.csv',
-        'cumulative_awards': 'cumulative_awards.csv',
-        'descriptions': 'descriptions.csv',
-        'headline_embeddings': 'headline_embeddings.parquet',
-        'description_embeddings': 'description_embeddings.parquet',
-        'descriptions_debiased': 'descriptions_debiased.parquet',
-        'topicality_scores': 'topicality_scores.csv',
+        'train_novels': 'train_novels.csv',
+        'test_novels': 'test_novels.csv',
     }.items()
 }
+
+
 
 # General targets
 # ------------
@@ -122,13 +133,13 @@ rule download_openlibrary_works:
 rule clean_nominated_novels:
     input:
         novels=WIKIDATA_DATA['award_novels'],
-        wins_as_of=PROCESSED_DATA['cumulative_awards'],
+        wins_as_of=INTERMEDIATE_DATA['cumulative_awards'],
         authors=WIKIDATA_DATA['nominee_biographical']
     output:
-        cleaned_novels=PROCESSED_DATA['nominated_novels'],
-        openlibrary_ids=PROCESSED_DATA['openlibrary_ids'],
-        isbns=PROCESSED_DATA['isbns'],
-        wikipedia=PROCESSED_DATA['wikipedia']
+        cleaned_novels=INTERMEDIATE_DATA['nominated_novels'],
+        openlibrary_ids=INTERMEDIATE_DATA['openlibrary_ids'],
+        isbns=INTERMEDIATE_DATA['isbns'],
+        wikipedia=INTERMEDIATE_DATA['wikipedia']
     script:
         "scripts/clean_awards.py"
 
@@ -137,7 +148,7 @@ rule tally_cumulative_awards:
         all_awards=WIKIDATA_DATA['awards_all'],
         sql=f'scripts/queries/awards_as_of.sql'
     output:
-        cumulative_awards=PROCESSED_DATA['cumulative_awards']
+        cumulative_awards=INTERMEDIATE_DATA['cumulative_awards']
     shell:
         """
         export INPUT_AWARDS={input.all_awards}
@@ -147,21 +158,21 @@ rule tally_cumulative_awards:
 
 rule collect_descriptions:
     input:
-        openlibrary_ids=PROCESSED_DATA['openlibrary_ids'],
+        openlibrary_ids=INTERMEDIATE_DATA['openlibrary_ids'],
         ol_works=KAGGLE_DATA['openlibrary_works'],
-        nominated_novels=PROCESSED_DATA['nominated_novels'],
-        wikipedia=PROCESSED_DATA['wikipedia'],
-        isbns=PROCESSED_DATA['isbns']
+        nominated_novels=INTERMEDIATE_DATA['nominated_novels'],
+        wikipedia=INTERMEDIATE_DATA['wikipedia'],
+        isbns=INTERMEDIATE_DATA['isbns']
     output:
-        descriptions=PROCESSED_DATA['descriptions']
+        descriptions=INTERMEDIATE_DATA['descriptions']
     script:
         "scripts/collect_descriptions.py"
 
 rule embed_descriptions:
     input:
-        descriptions=PROCESSED_DATA['descriptions']
+        descriptions=INTERMEDIATE_DATA['descriptions']
     output:
-        description_embeddings=PROCESSED_DATA['description_embeddings']
+        description_embeddings=INTERMEDIATE_DATA['description_embeddings']
     params:
         embedding_model=EMBEDDING_MODEL
     script:
@@ -169,12 +180,12 @@ rule embed_descriptions:
 
 rule debias_descriptions:
     input:
-        description_embeddings=PROCESSED_DATA['description_embeddings'],
+        description_embeddings=INTERMEDIATE_DATA['description_embeddings'],
         train_desc=TRAIN_DATA['train_desc']
     params:
         model_name=EMBEDDING_MODEL
     output:
-        descriptions_debiased=PROCESSED_DATA['descriptions_debiased']
+        descriptions_debiased=INTERMEDIATE_DATA['descriptions_debiased']
     script:
         "scripts/debias_descriptions.py"
 
@@ -216,7 +227,7 @@ rule embed_headlines:
     input:
         headlines=NYT_DATA['headlines']
     output:
-        headline_embeddings=protected(PROCESSED_DATA['headline_embeddings'])
+        headline_embeddings=protected(INTERMEDIATE_DATA['headline_embeddings'])
     params:
         embedding_model=EMBEDDING_MODEL,
         sentiment_model=SENTIMENT_MODEL
@@ -226,13 +237,28 @@ rule embed_headlines:
 
 rule compute_topicality:
     input:
-        debiased_embeddings=PROCESSED_DATA['descriptions_debiased'],
-        headline_embeddings=PROCESSED_DATA['headline_embeddings'],
+        debiased_embeddings=INTERMEDIATE_DATA['descriptions_debiased'],
+        headline_embeddings=INTERMEDIATE_DATA['headline_embeddings'],
         headlines=NYT_DATA['headlines'],
-        novels=PROCESSED_DATA['nominated_novels']
+        novels=INTERMEDIATE_DATA['nominated_novels']
     params:
         model_name=EMBEDDING_MODEL
     output:
-        topicality_scores=protected(PROCESSED_DATA['topicality_scores'])
+        topicality_scores=protected(INTERMEDIATE_DATA['topicality_scores'])
     script:
         "scripts/compute_topicality.py"
+
+rule train_test_split:
+    input:
+        nominated_novels=INTERMEDIATE_DATA['nominated_novels']
+    output:
+        train_novels=PROCESSED_DATA['train_novels'],
+        test_novels=PROCESSED_DATA['test_novels']
+    run:
+        df = pd.read_csv(input.nominated_novels)
+        topicality_scores = pd.read_csv(INTERMEDIATE_DATA['topicality_scores'])
+        df = df.merge(topicality_scores, on="work_qid", how="left")
+        df_train = df[(df["year"] < 2019) & (df["year"] >= 1959)]
+        df_test = df[(df["year"] >= 2019) & (df["year"] < 2025)]
+        df_train.to_csv(output.train_novels, index=False)
+        df_test.to_csv(output.test_novels, index=False)
