@@ -110,12 +110,21 @@ class TopicExtractionModel:
         embeddings: np.ndarray,
         weighted: bool = False,
         metric: str = "cosine",
+        p: int = 1,
+        mod_sim: bool = False,
         **metric_kwargs,
     ) -> np.array:
         similarities = pairwise_kernels(
             embeddings, self.centroids, metric=metric, **metric_kwargs
         )
+        if mod_sim:
+            similarities = np.abs(similarities)
+
+        if p == np.inf:
+            return np.max(similarities, axis=1)
+
+        similarities = similarities**p
         if weighted:
-            return similarities.dot(self.weights)
+            return (similarities.dot(self.weights)) ** (1 / p)
         else:
-            return similarities.sum(axis=1)
+            return (similarities.sum(axis=1)) ** (1 / p)
