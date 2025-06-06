@@ -2,7 +2,7 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 from bertopic import BERTopic
 from bertopic.representation import KeyBERTInspired
-from sklearn.metrics.pairwise import cosine_similarity, pairwise_kernels
+from sklearn.metrics.pairwise import pairwise_kernels
 from scipy.stats import kurtosis
 from statsmodels.tsa.stattools import adfuller
 from abc import ABC, abstractmethod
