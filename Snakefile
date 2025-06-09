@@ -30,6 +30,7 @@ KAGGLE_DATA = {
     k: os.path.join(RAW_DATA_ROOT, v) for k, v in
     {
         'openlibrary_works': 'ol_works.parquet',
+        'nyt_bestsellers': 'nyt_full.tsv',
     }.items()
 }
 
@@ -68,6 +69,7 @@ INTERMEDIATE_DATA = {
     'description_embeddings': 'description_embeddings.parquet',
     'descriptions_debiased': 'descriptions_debiased.parquet',
     'topicality_scores': 'topicality_scores.csv',
+    'bestseller_stats': 'bestseller_stats.csv',
     }.items()
 }
 
@@ -125,6 +127,28 @@ rule download_openlibrary_works:
         protected(KAGGLE_DATA['openlibrary_works'])
     script:
         "scripts/download_openlibrary.py"
+
+rule download_nyt_bestsellers:
+    output:
+        nyt_bestsellers=KAGGLE_DATA['nyt_bestsellers']
+    message:
+        "Downloading NYT bestsellers dataset from Kaggle"
+    shell:
+        """
+        pixi run kaggle datasets download -d sujaykapadnis/new-york-times-bestsellers --path {resources.tmpdir} --unzip
+        mv {resources.tmpdir}/nyt_full.tsv {output.nyt_bestsellers}
+        """
+
+rule match_bestsellers:
+    input:
+        bestsellers=KAGGLE_DATA['nyt_bestsellers'],
+        nominated=INTERMEDIATE_DATA['nominated_novels']
+    log:
+        "logs/match_bestsellers.log"
+    output:
+        bestseller_stats=INTERMEDIATE_DATA['bestseller_stats']
+    script:
+        "scripts/match_bestsellers.py"
 
 
 # Awards processing rules
@@ -250,15 +274,13 @@ rule compute_topicality:
 
 rule train_test_split:
     input:
-        nominated_novels=INTERMEDIATE_DATA['nominated_novels']
+        nominated_novels=INTERMEDIATE_DATA['nominated_novels'],
+        topicality_scores=INTERMEDIATE_DATA['topicality_scores'],
+        bestseller_stats=INTERMEDIATE_DATA['bestseller_stats']
     output:
         train_novels=PROCESSED_DATA['train_novels'],
         test_novels=PROCESSED_DATA['test_novels']
-    run:
-        df = pd.read_csv(input.nominated_novels)
-        topicality_scores = pd.read_csv(INTERMEDIATE_DATA['topicality_scores'])
-        df = df.merge(topicality_scores, on="work_qid", how="left")
-        df_train = df[(df["year"] < 2019) & (df["year"] >= 1959)]
-        df_test = df[(df["year"] >= 2019) & (df["year"] < 2025)]
-        df_train.to_csv(output.train_novels, index=False)
-        df_test.to_csv(output.test_novels, index=False)
+    message:
+        "Merging auxiliary data into nominee data and performing train-test split"
+    script:
+        "scripts/train_test_split.py"
