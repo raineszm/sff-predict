@@ -19,7 +19,7 @@ def normalize_doc(doc: Doc):
     Returns:
         A string of lemmatized words joined by spaces
     """
-    return " ".join([tok.lemma_ for tok in doc if not tok.is_stop and len(tok) > 2])
+    return " ".join([tok.text for tok in doc if not tok.is_stop and len(tok) > 2])
 
 
 def normalized_column(s: pd.Series, nlp: Language):
@@ -63,7 +63,7 @@ sff_novels = (
     novels.groupby("work_qid")
     .agg(
         {
-            "authorLabel": lambda x: " ".join(x),
+            "authorLabel": lambda x: " ".join(x.unique()),
             "title": "first",
             "year": "first",
         }
