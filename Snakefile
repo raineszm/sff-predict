@@ -73,6 +73,8 @@ INTERMEDIATE_DATA = {
     }.items()
 }
 
+MANUAL_DESCRIPTIONS = os.path.join(DATA_ROOT, 'manual_descriptions.csv')
+
 PROCESSED_DATA = {
     k: os.path.join(DATA_ROOT, v) for k, v in
     {
@@ -186,7 +188,8 @@ rule collect_descriptions:
         ol_works=KAGGLE_DATA['openlibrary_works'],
         nominated_novels=INTERMEDIATE_DATA['nominated_novels'],
         wikipedia=INTERMEDIATE_DATA['wikipedia'],
-        isbns=INTERMEDIATE_DATA['isbns']
+        isbns=INTERMEDIATE_DATA['isbns'],
+        manual_descriptions=MANUAL_DESCRIPTIONS
     output:
         descriptions=INTERMEDIATE_DATA['descriptions']
     script:

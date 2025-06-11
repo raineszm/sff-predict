@@ -151,4 +151,14 @@ n_works = duckdb.sql(
 ).fetchone()[0]
 print("Descriptions found for {}/{} works".format(descriptions.index.size, n_works))
 
+print(
+    "Filling in missing descriptions from {}".format(
+        snakemake.input.manual_descriptions
+    )
+)
+
+descriptions = descriptions.combine_first(
+    pd.read_csv(snakemake.input.manual_descriptions).dropna().set_index("work_qid")
+)
+
 descriptions.sort_values(by="work_qid").to_csv(snakemake.output["descriptions"])
