@@ -25,9 +25,11 @@ isbns.to_csv(snakemake.output["isbns"], index=False)
 wikipedia.to_csv(snakemake.output["wikipedia"])
 
 # Drop identifying information from awards dataframe
-awards = awards.drop(
-    columns=["openlibrary_id", "isbn", "wikipedia_url"]
-).drop_duplicates()
+awards = (
+    awards.drop(columns=["openlibrary_id", "isbn", "wikipedia_url"])
+    .sort_values(by="pubDate", ascending=True)
+    .drop_duplicates(["work_qid", "author_qid", "awardLabel"], keep="first")
+)
 
 group_keys = awards.columns.drop(["awardLabel", "status", "year"]).tolist()
 
