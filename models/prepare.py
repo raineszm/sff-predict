@@ -22,6 +22,10 @@ def reduce_authors(df: pd.DataFrame) -> pd.DataFrame:
     return pd.merge(non_author_data, author_data, on="work_qid", how="left")
 
 
+def fix_nom_counts(df: pd.DataFrame) -> pd.DataFrame:
+    return df.assign(n_nom_all=df["n_nom"] + df["n_win"]).drop(columns=["n_nom"])
+
+
 def prepare_bestseller_stats(df: pd.DataFrame) -> pd.DataFrame:
     return df.fillna({"max": 0, "count": 0, "median": 0}).rename(
         columns={
@@ -36,17 +40,13 @@ def compute_cohort_stats(df: pd.DataFrame) -> pd.DataFrame:
     return df.merge(
         df.groupby("year")
         .agg(
-            tot_cohort_nom=("n_nom", "sum"),
+            tot_cohort_nom=("n_nom_all", "sum"),
             tot_cohort_awards=("n_win", "sum"),
         )
         .reset_index(),
         on="year",
         how="outer",
     )
-
-
-def estimate_target(df: pd.DataFrame) -> pd.DataFrame:
-    return df.assign().drop(columns=["n_win"])
 
 
 def parse_dates(df: pd.DataFrame) -> pd.DataFrame:
@@ -58,6 +58,7 @@ def parse_dates(df: pd.DataFrame) -> pd.DataFrame:
 def prepare_df(df: pd.DataFrame) -> pd.DataFrame:
     return (
         df.pipe(reduce_authors)
+        .pipe(fix_nom_counts)
         .pipe(prepare_bestseller_stats)
         .pipe(parse_dates)
         .pipe(compute_cohort_stats)
