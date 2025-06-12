@@ -46,6 +46,7 @@ spacy = ">=3.8.6,<4"
 spacy-model-en_core_web_sm = { version = ">=3.8.0,<4", channel = "conda-forge" }
 unidecode = ">=1.3.8,<2"
 scikit-lego = ">=0.9.1,<0.10"
+xgboost = ">=3.0.2,<4"
 
 [pypi-dependencies]
 httpx-retries = ">=0.4.0, <0.5"
