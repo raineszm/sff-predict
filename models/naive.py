@@ -4,8 +4,9 @@ import numpy as np
 
 
 def naive_cohort_win_counts(df_year: pdt.DataFrameGroupBy) -> np.ndarray:
-    p = df_year["n_nom_all"] / df_year["tot_cohort_nom"]
-    k = df_year["tot_cohort_awards"].iat[0]
+    tot_cohort_nom = df_year["n_nom_all"].sum()
+    p = df_year["n_nom_all"] / tot_cohort_nom
+    k = df_year["n_win"].sum()
     return np.random.multinomial(k, p)
 
 
