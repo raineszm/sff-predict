@@ -41,3 +41,30 @@ class RowCountEncoder(TransformerMixin, BaseEstimator):
             .sum(),
             on=self.key_column,
         )
+
+
+def impute_topicality(df: pd.DataFrame) -> pd.DataFrame:
+    return df.assign(
+        topicality=df.groupby("year")["topicality"].transform(
+            lambda x: x.fillna(x.mean())
+        )
+    )
+
+
+def cohort_zscore(df: pd.DataFrame, columns: list[str]) -> pd.DataFrame:
+    return df.assign(
+        **{
+            column: (df[column] - df.groupby("year")[column].transform("mean"))
+            / df.groupby("year")[column].transform("std")
+            for column in columns
+        }
+    )
+
+
+def cohort_proportion(df: pd.DataFrame, columns: list[str]) -> pd.DataFrame:
+    return df.assign(
+        **{
+            column: df[column] / df.groupby("year")[column].transform("sum")
+            for column in columns
+        }
+    )

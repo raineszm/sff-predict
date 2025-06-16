@@ -366,7 +366,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/rope-1.13.0-pyhd8ed1ab_1.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/rpds-py-0.25.1-py311hf245fc6_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/safetensors-0.5.3-py311h3ff9189_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/scikit-learn-1.6.1-py311h47fa2fb_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/osx-arm64/scikit-learn-1.7.0-py311h47fa2fb_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/scikit-lego-0.9.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/scipy-1.15.2-py311h0675101_0.conda
       - conda: https://conda.anaconda.org/conda-forge/osx-arm64/scs-3.2.7.post2-default_py311h26e618d_0.conda
@@ -5560,26 +5560,27 @@ packages:
   - pkg:pypi/safetensors?source=hash-mapping
   size: 383141
   timestamp: 1740651856018
-- conda: https://conda.anaconda.org/conda-forge/osx-arm64/scikit-learn-1.6.1-py311h47fa2fb_0.conda
-  sha256: b1d4421c79924fea79c6fcb97b3acaf372119ccc75227abbfacefea0838b31f7
-  md5: ee3d19cd6f28ae1d3b986cfdad77b694
+- conda: https://conda.anaconda.org/conda-forge/osx-arm64/scikit-learn-1.7.0-py311h47fa2fb_1.conda
+  sha256: 157918a2cadd8d1ca683fd2ea015e39acd14498b8b768452c09f032715dfe151
+  md5: 8c92325001d751384c8e8d25431e2806
   depends:
   - __osx >=11.0
   - joblib >=1.2.0
   - libcxx >=18
   - llvm-openmp >=18.1.8
   - numpy >=1.19,<3
+  - numpy >=1.22.0
   - python >=3.11,<3.12.0a0
   - python >=3.11,<3.12.0a0 *_cpython
   - python_abi 3.11.* *_cp311
-  - scipy
+  - scipy >=1.8.0
   - threadpoolctl >=3.1.0
   license: BSD-3-Clause
   license_family: BSD
   purls:
   - pkg:pypi/scikit-learn?source=hash-mapping
-  size: 9960995
-  timestamp: 1736497301558
+  size: 9703440
+  timestamp: 1749488162435
 - conda: https://conda.anaconda.org/conda-forge/noarch/scikit-lego-0.9.1-pyhd8ed1ab_0.conda
   sha256: 3cfb935c79b178fd625c25517965b6bd99f6842690e66d86feb1e2557943dc10
   md5: 48d950cfccbcb7d28c155949d2288d64
