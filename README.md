@@ -4,23 +4,16 @@
 
 ### Problem Statement
 
-We want to better understand how to pick the winners of literary awards in
-science fiction and fantasy from a shortlist of nominees in a given year.
-
-This has potentially both a predictive and inferential component:
-
-- **Predictive**: We will construct a predictive model that assigns an award
-  worthiness score to novels published in a given year. When given a cohort of
-  such novels the score can be used to assign a probability of winning a
-  randomly chosen award for that year.
-
-- **Inferential**: We will also investigate how the distribution of award
-  winners has changed over time and try to identify trends in the makeup of the
-  award winners.
+This project aims to predict winners of science fiction and fantasy literary
+awards from shortlisted nominees. Using machine learning models trained on
+historical award data, author information, and book characteristics, we
+developed a system that assigns award worthiness scores to novels. Our best
+model achieves an F1 score of ~50%, more than doubling the baseline performance
+of ~23%.
 
 ### Stakeholders
 
-The predictive models would potentially be of use to:
+Our predictive models would potentially be of use to:
 
 - **Book publishers** looking for up and coming authors
 - **Media outlets** trying to decide which works to acquire rights to and where
@@ -31,7 +24,58 @@ in awareness coming from literary awards.
 
 ### Key Performance Indicators
 
-For our KPI we compute the balanced accuracy and F1 score of predicted Winners.
+For our KPI we compute the balanced accuracy and F1 score of predicted winners.
+
+## Current Results
+
+Our current implementation achieves:
+
+- **F1 Score**: ~50% with logistic regression models
+- **Performance Improvement**: More than doubles the baseline performance of
+  ~23%
+- **Multiple Models**: Logistic regression, decision trees, random forests, and
+  XGBoost all show similar performance
+
+For detailed model comparisons and performance analysis, see the
+`notebooks/CompareModels.ipynb` notebook.
+
+## Technical Approach
+
+### Data Sources
+
+Our model combines multiple data sources to predict award success:
+
+- **Award Data**: Historical nominations and winners from major science fiction
+  and fantasy awards
+- **Author Information**: Demographics, previous awards, and career trajectory
+- **Book Descriptions**: Text descriptions from multiple sources (OpenLibrary,
+  Wikipedia, Google Books)
+- **Commercial Success**: New York Times bestseller data when available
+- **Cultural Context**: Historical news headlines for topicality analysis
+
+### Machine Learning Pipeline
+
+1. **Data Processing**: Complex ETL pipeline using Snakemake to orchestrate data
+   collection, cleaning, and feature engineering
+2. **NLP Processing**: Book descriptions and news headlines are embedded using
+   advanced language models
+3. **Topicality Scoring**: Books are scored for how well their themes align with
+   contemporaneous news headlines
+4. **Binary Classification**: Models predict whether a book will win any awards
+   using standard classification algorithms
+5. **Robust Evaluation**: Training uses year-based grouping to prevent data
+   leakage and ensure reliable performance estimates
+
+For detailed technical information, see the methodology documentation:
+
+- [Project Overview](methodology/project_overview.md) - High-level approach and
+  current performance
+- [Data Pipeline](methodology/data_pipeline.md) - Detailed data processing
+  workflow
+- [Model Training](methodology/model_training.md) - Current modeling approach
+  and results
+- [Future Directions](methodology/future_directions.md) - Potential improvements
+  and extensions
 
 ## Getting Started
 
@@ -116,27 +160,6 @@ For our KPI we compute the balanced accuracy and F1 score of predicted Winners.
    bin/snakemake.sh
    ```
 
-## Project Approach
-
-This project uses a **cohort-based ranking approach** where books are grouped
-into yearly shortlists and trained to predict award winners within each cohort.
-The model assigns "award worthiness" scores that can be converted to winning
-probabilities.
-[Project Overview and Approach](methodology/project_overview.md) - High-level
-
-### Data Processing
-
-For detailed information about the data pipeline, see
-[Data Processing Pipeline](methodology/data_pipeline.md).
-
-### Model Training
-
-The model uses a multinomial cross-entropy loss function optimized for winner
-selection within shortlist cohorts.
-
-For the complete mathematical methodology and training process, see
-[Model Training Methodology](methodology/model_training.md).
-
 ## Development
 
 ### Environment Management
@@ -152,3 +175,11 @@ For the complete mathematical methodology and training process, see
 - Add new processing steps to `Snakefile`
 - Place scripts in `scripts/` directory
 - Place SQL or SPARQL queries in `scripts/queries`
+
+### Key Notebooks
+
+- `notebooks/CompareModels.ipynb` - Model comparison and performance analysis
+- `notebooks/EDA.ipynb` - Exploratory data analysis
+- `notebooks/Topicality.ipynb` - Topicality analysis and visualization
+- `notebooks/Logistic.ipynb` - Logistic regression modeling
+- `notebooks/Trees.ipynb` - Tree-based model analysis
