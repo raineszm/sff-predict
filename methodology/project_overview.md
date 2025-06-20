@@ -1,14 +1,5 @@
 # Project Overview and Approach
 
-## Project Concept
-
-The basic idea is to try break data into years and train a ranking model on each
-year's shortlist of nominated or candidate books.
-
-Schematically the idea can be depicted like the following:
-
-![Data flow diagram showing how shortlisted books are grouped into yearly cohorts and scored for award worthiness](../DataFlow.png)
-
 ## Current Features
 
 Our model considers multiple types of features to predict award worthiness:
