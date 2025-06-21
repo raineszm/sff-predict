@@ -18,6 +18,14 @@ The data processing pipeline uses Snakemake to orchestrate the following steps:
   - Publication information
   - Author details
 
+- **New York Times Bestsellers**: Downloads bestseller data from Kaggle,
+  including:
+  - Bestseller rankings and duration on lists
+  - Publication dates and sales performance
+
+- **New York Times Headlines**: Fetches historical headlines from NYT API to
+  provide cultural context for topicality analysis
+
 ### 2. Data Processing
 
 The pipeline processes the raw data to:
@@ -26,9 +34,22 @@ The pipeline processes the raw data to:
 - Match award entries with author data
 - Generate cumulative award statistics
 - Extract and organize book descriptions from multiple sources
+- Match books with bestseller data
+- Compute topicality scores using NLP embeddings
 - Create analysis-ready datasets
 
-### 3. Output Files
+### 3. NLP Processing
+
+The pipeline includes several NLP processing steps:
+
+- **Description Embeddings**: Book descriptions are embedded using the
+  `all-MiniLM-L6-v2` model
+- **Headline Embeddings**: NYT headlines are embedded for cultural context
+- **Debiasing**: Description embeddings are debiased using nullspace projection
+- **Topicality Computation**: Books are scored for topicality by comparing their
+  embeddings with contemporaneous news headlines
+
+### 4. Output Files
 
 The pipeline produces several key datasets:
 
@@ -47,11 +68,21 @@ The pipeline produces several key datasets:
   - Google Books (via ISBN)
   - Google Books (via title and author search)
 
-- Additional identifier files:
-  - `data/openlibrary_ids.csv`: Mapping between Wikidata work IDs and
-    OpenLibrary IDs
-  - `data/isbns.csv`: Mapping between Wikidata work IDs and ISBNs
-  - `data/wikipedia.csv`: Mapping between Wikidata work IDs and Wikipedia URLs
+- `data/description_embeddings.parquet`: Sentence embeddings of book
+  descriptions
+
+- `data/descriptions_debiased.parquet`: Debiased embeddings for fairer analysis
+
+- `data/headline_embeddings.parquet`: Embeddings of NYT headlines for topicality
+  analysis
+
+- `data/topicality_scores.csv`: Computed topicality scores for each book
+
+- `data/bestseller_stats.csv`: Bestseller performance statistics for matched
+  books
+
+- `data/train_novels.csv` and `data/test_novels.csv`: Final datasets ready for
+  modeling
 
 ## Data Files
 
@@ -95,6 +126,15 @@ workflow is run**
   - Publication information
   - Author details
 
+- `nyt_full.tsv`: Downloaded from Kaggle, contains:
+  - New York Times bestseller data
+  - Rankings and duration on lists
+  - Publication dates
+
+- `headlines.json`: Downloaded from NYT API, contains:
+  - Historical headlines from 1954-2024
+  - Used for topicality analysis
+
 ### Processed Files
 
 Located in `data/`:
@@ -117,6 +157,24 @@ Located in `data/`:
   - Wikipedia
   - Google Books (via ISBN)
   - Google Books (via title and author search)
+
+- `description_embeddings.parquet`: Sentence embeddings of book descriptions
+  using all-MiniLM-L6-v2
+
+- `descriptions_debiased.parquet`: Debiased embeddings using nullspace
+  projection
+
+- `headline_embeddings.parquet`: Embeddings of NYT headlines for topicality
+  analysis
+
+- `topicality_scores.csv`: Computed topicality scores comparing book embeddings
+  with contemporaneous headlines
+
+- `bestseller_stats.csv`: Bestseller performance statistics for books that
+  appear on NYT lists
+
+- `train_novels.csv` and `test_novels.csv`: Final datasets with all features
+  merged and ready for modeling
 
 ## Running the Pipeline
 

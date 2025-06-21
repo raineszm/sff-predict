@@ -5,111 +5,90 @@
 The model training pipeline for predicting book award winners involves the
 following key stages:
 
-### 1. **Data Ingestion**
+### 1. **Data Preparation**
 
-Multiple sources contribute data:
+The modeling pipeline starts with the processed datasets from the Snakemake
+pipeline:
 
-- **Wikidata**: Provides award nominations and winners, author biographical
-  information, and publication metadata
-- **OpenLibrary**: Supplies book descriptions and additional metadata
-- **Wikipedia**: Offers book descriptions and contextual information
-- **Google Books API**: Provides book descriptions and additional metadata
-- **World State** adds contextual information relevant to the publication year
-  (e.g., cultural or industry trends).
+- **Author Data Aggregation**: Multiple authors per book are aggregated by
+  taking means for numerical features and lists for categorical features
+- **Feature Engineering**:
+  - Nomination counts are adjusted to include wins
+  - Bestseller statistics are filled with zeros for missing values
+  - Publication dates are parsed to extract month information
+  - Topicality scores are imputed using year-level means
+  - Author categorical features (gender, birth country) are encoded using
+    one-hot encoding
+  - Numerical features (awards_as_of_year, topicality) are z-scored within year
+    cohorts
 
-### 2. **Data Preparation**
+### 2. **Model Architecture**
 
-All inputs are passed through a **Combine, Clean, & Fill Missing** step to
-create a unified and complete **Book Data Set**. This step resolves
-inconsistencies, integrates fields, and imputes missing values where necessary.
+The current implementation uses a pipeline approach with the following
+components:
 
-Key features extracted include:
+- **Data Preprocessing**: Imputation, encoding, and normalization steps
+- **Feature Engineering**: Custom transformers for author data encoding and
+  cohort-based normalization
+- **Classification Models**: Standard binary classification models including:
+  - Logistic Regression with cross-validation
+  - Decision Trees with hyperparameter tuning
+  - Random Forest with hyperparameter tuning
+  - XGBoost with hyperparameter tuning
 
-- **Bibliographic data**: Title, publication year, language
-- **Author information**: Gender, birth country, age at award
-- **Award history**: Previous awards won by the author
-- **Book descriptions**: Collected from multiple sources (OpenLibrary,
-  Wikipedia, Google Books)
+### 3. **Training Approach**
 
-### 3. **Cohort Definition**
+- **Binary Classification**: Models predict whether a book will win any awards
+  (n_win > 0)
+- **Grouped Cross-Validation**: Uses GroupKFold and StratifiedGroupKFold with
+  year as the grouping variable to prevent data leakage
+- **Threshold Tuning**: Uses TunedThresholdClassifierCV to optimize
+  classification thresholds for F1 score
+- **Sample Weighting**: Models are weighted by total nominations (n_nom_all) to
+  account for varying nomination counts
 
-Books are grouped into **Yearly Shortlist Cohorts**, representing the set of
-nominated or candidate works for each award and year. This framing allows the
-model to compare books within each shortlist for winner selection.
+### 4. **Evaluation Metrics**
 
-### 4. **Modeling Process**
+Models are evaluated using:
 
-- Each book in a shortlist cohort is assigned an **"Award Worthiness" Score** by
-  the model.
-- These scores are used to compute probabilities for winning the award within
-  the shortlist.
-- The model assumes a fixed number of winners per award per year.
+- **F1 Score**: Primary metric for imbalanced classification
+- **Balanced Accuracy**: Secondary metric to account for class imbalance
+- **Cross-Validation**: 5-fold grouped cross-validation to ensure robust
+  performance estimates
 
-### 5. **Loss Computation**
+### 5. **Baseline Comparison**
 
-A **Multinomial Cross-Entropy Loss Function** is computed for winner selection:
+Performance is compared against a naive baseline that randomly assigns wins
+based on nomination counts within each year cohort.
 
-$$L_{win} = -\sum_i \frac{N_i}{N_\text{win}} \log(\hat{p}_i)$$
+## Current Model Performance
 
-where $N_i$ is the observed win count for book $i$, $N_\text{win}$ is the total
-number of winners for that cohort, and $\hat{p}_i$ is the predicted probability
-of winning. This loss measures the divergence between the observed winner
-distribution and the model's predicted probabilities, respecting the fixed
-number of winners per shortlist.
+Based on the CompareModels notebook, the current best performing model is:
 
-## Mathematical Derivation
+- **Logistic Regression**: F1 score of ~0.50 (doubling the baseline performance
+  of ~0.23)
+- **Tree-based models**: Similar performance with F1 scores around 0.47-0.49
+- **All models**: Significantly outperform the naive baseline
 
-### Derivation of Scaled Cross-Entropy Loss for Winner Selection
+## Feature Importance
 
-Consider a shortlist cohort of $k$ books with:
+The current feature set includes:
 
-- Total winners $N_{\mathrm{win}}$.
-- For each book $i$: observed win count $N_i$; predicted probability $\hat p_i$.
+- **Author Demographics**: Gender, birth country, age at award
+- **Author History**: Cumulative awards won as of the award year
+- **Book Characteristics**: Publication month, topicality score
+- **Commercial Success**: Bestseller rankings and duration (when available)
 
-#### i. **Multinomial PMF for wins**
+## Limitations and Future Directions
 
-Model the allocation of exactly $N_{\mathrm{win}}$ win slots among the $k$
-books:
+The current implementation has several limitations:
 
-$$P(\{N_i\})
-     = \frac{N_{\mathrm{win}}!}{\prod_{i=1}^k N_i!}\;\prod_{i=1}^k \hat p_i^{\,N_i}.$$
+- **Binary Classification**: Treats winning as a binary outcome rather than
+  modeling the ranking within cohorts
+- **Feature Engineering**: Limited interaction between features
+- **Temporal Dynamics**: Does not explicitly model how award preferences change
+  over time
+- **Ensemble Methods**: Could benefit from combining multiple models
 
-This gives the likelihood of observing each book's win count.
-
-#### ii. **Negative log-likelihood**
-
-Transform products into sums:
-
-$$ -\ln P
-     = -\ln(N_{\mathrm{win}}!) \;+\; \sum_{i=1}^k \ln(N_i!) \;-\; \sum_{i=1}^k N_i\,\ln(\hat p_i).$$
-
-The first two terms are constant w.r.t.\ the model.
-
-#### iii. **Normalize by total winners**
-
-Divide by $N_{\mathrm{win}}$ to put different years on the same scale:
-
-$$  L_{\mathrm{win}}
-     = -\frac{1}{N_{\mathrm{win}}}\sum_{i=1}^k N_i\,\ln(\hat p_i)
-     = -\sum_{i=1}^k \frac{N_i}{N_{\mathrm{win}}}\,\ln(\hat p_i).$$
-
-Here $\frac{N_i}{N_{\mathrm{win}}}$ is the empirical win distribution over the
-shortlist cohort.
-
-#### iv. **Interpretation**
-
-- **Normalization** by $N_{\mathrm{win}}$ ensures comparability across years.
-- **Minimizing** this loss aligns the model's predicted distribution
-  $\{\hat p_i\}$ with the empirical distribution $\{N_i/N_{\mathrm{win}}\}$,
-  giving more weight to books with more wins.
-
-### 6. **Total Loss Aggregation**
-
-Losses are aggregated **across all shortlist cohorts**, potentially with
-weighted contributions based on the significance of awards, to compute the
-**Total Loss**.
-
-### 7. **Model Training**
-
-The **Total Loss** guides gradient-based optimization to train the model
-parameters.
+See `future_directions.md` for discussion of potential improvements including
+learning-to-rank approaches and enhanced topicality modeling.

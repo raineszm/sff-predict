@@ -36,19 +36,6 @@ def prepare_bestseller_stats(df: pd.DataFrame) -> pd.DataFrame:
     )
 
 
-def compute_cohort_stats(df: pd.DataFrame) -> pd.DataFrame:
-    return df.merge(
-        df.groupby("year")
-        .agg(
-            tot_cohort_nom=("n_nom_all", "sum"),
-            tot_cohort_awards=("n_win", "sum"),
-        )
-        .reset_index(),
-        on="year",
-        how="outer",
-    )
-
-
 def parse_dates(df: pd.DataFrame) -> pd.DataFrame:
     return df.assign(month=pd.to_datetime(df.pubDate).dt.month).drop(
         columns=["pubDate"]
@@ -61,5 +48,4 @@ def prepare_df(df: pd.DataFrame) -> pd.DataFrame:
         .pipe(fix_nom_counts)
         .pipe(prepare_bestseller_stats)
         .pipe(parse_dates)
-        .pipe(compute_cohort_stats)
     )
