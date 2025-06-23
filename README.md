@@ -178,8 +178,18 @@ For detailed technical information, see the methodology documentation:
 
 ### Key Notebooks
 
-- `notebooks/CompareModels.ipynb` - Model comparison and performance analysis
-- `notebooks/EDA.ipynb` - Exploratory data analysis
-- `notebooks/Topicality.ipynb` - Topicality analysis and visualization
-- `notebooks/Logistic.ipynb` - Logistic regression modeling
-- `notebooks/Trees.ipynb` - Tree-based model analysis
+#### Data Exploration
+
+- [Exploratory data analysis](notebooks/EDA.ipynb)
+- [Topicality analysis and visualization](notebooks/Topicality.ipynb)
+
+#### Model exploration
+
+- [Logistic regression modeling](notebooks/Logistic.ipynb)
+- [Tree-based model analysis](notebooks/Trees.ipynb)
+- [Linear regression analysis](notebooks/linear_ridge_lasso.ipynb)
+
+#### Evaluation
+
+- [Model comparison and performance analysis](notebooks/CompareModels.ipynb)
+- [Evaluation of model performance on test set](notebooks/ModelPerformance.ipynb)
