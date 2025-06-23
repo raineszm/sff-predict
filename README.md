@@ -187,7 +187,7 @@ For detailed technical information, see the methodology documentation:
 
 - [Logistic regression modeling](notebooks/Logistic.ipynb)
 - [Tree-based model analysis](notebooks/Trees.ipynb)
-- [Linear regression analysis](notebooks/linear_ridge_lasso.ipynb)
+- [Linear regression analysis](notebooks/LinearModels.ipynb)
 
 #### Evaluation
 

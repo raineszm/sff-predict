@@ -113,9 +113,6 @@ Performance is compared against:
 
 ## Current Model Performance
 
-Based on the CompareModels notebook and linear_ridge_lasso notebook, the current
-best performing models are:
-
 #### Binary Classification Performance
 
 - **Logistic Regression**: F1 score of ~0.50 (doubling the baseline performance
