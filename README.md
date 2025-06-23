@@ -191,5 +191,6 @@ For detailed technical information, see the methodology documentation:
 
 #### Evaluation
 
-- [Model comparison and performance analysis](notebooks/CompareModels.ipynb)
-- [Evaluation of model performance on test set](notebooks/ModelPerformance.ipynb)
+- [Classifier model comparison and performance analysis](notebooks/CompareModels.ipynb)
+- [Evaluation of classifier model performance on test set](notebooks/ModelPerformance.ipynb)
+- [Evaluation of regression model performance on test set](notebooks/LinearModelsPerformance.ipynb)
