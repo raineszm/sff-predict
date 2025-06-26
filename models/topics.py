@@ -180,6 +180,14 @@ class TopicExtractionModel:
     """
     Modeling class using BERTopic for topicality analysis.
 
+    This class is used in two steps:
+        1. Fit the model to a set of texts and embeddings.
+            - This identifies a set of "hot" topics.
+        2. Compute topicality scores for a new set of texts.
+            - This scores how well the new texts align with the "hot" topics.
+
+    In practice, the model is fit to the news headlines for a year and then used to score the book descriptions for the same year.
+
     Parameters
     ----------
     embedding_model : SentenceTransformer
